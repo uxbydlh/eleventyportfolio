@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="subpage-banner">
+    <a href="{{ eleventyNavigation.parent | toAbsoluteUrl }}" class="btn secondary"><i class="ri-arrow-left-line"></i> {{eleventyNavigation.parent}} </a>
+    <div class="banner-text">
+        <h1>{{ title }}</h1>
+        <h3>{{ subheading }}</h3>
+    </div>
+    <a class="btn secondary invisible"><i class="ri-arrow-left-line"></i> {{eleventyNavigation.parent}} </a>
+</div>
+
+<div class="content">
+    {{content | safe}}
+</div>

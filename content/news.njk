@@ -1,0 +1,65 @@
+---js
+//TODO: TEMPORARILY COMMENTED OUT OF NAVIGATION
+/*const eleventyNavigation = {
+	key: "News",
+	order: 5
+};*/
+
+const title = "News & Insights";
+const subheading = "Find out the latest news from Give & Grow down below. If you have a story, or want to discuss anything with our team, please email give.and.grow.cic (at) gmail.com";
+const heroImagePath = "../assets/images/hero/Hero-News.webp";
+const heroImageAlt = "Two young students read a newspaper together on a staircase";
+
+var pagination = {
+	data: "collections.news",
+	size: 2,
+	alias: "news"
+};
+
+---
+
+<section class="centre top">
+	<h1>Social Media</h1>
+	<div class="tagembed-widget" style="width:100%;height:100%;overflow:hidden;" data-widget-id="306144" data-website="1"></div><script src="https://widget.tagembed.com/embed.min.js" type="text/javascript"></script>
+	<a href="https://www.linkedin.com/company/give-and-grow-cic" target="_blank" rel="noopener" class="btn primary">Follow Us on LinkedIn<i class="ri-linkedin-fill"></i></i></a>
+</section>
+
+<div class="" id="News">
+
+	<!--<section class="centre top">
+		<h3 id="select-title">Category</h3>
+		<div class="custom-select" aria-labelledby="select-title">
+			<button id="selector-button" class="select-button" role="combobox"
+			aria-label="select button" aria-haspopup="listbox" aria-expanded="false"
+			aria-controls="select-dropdown">
+				<span class="selected-value">
+					Select Category
+				</span>
+				<i class="ri-arrow-down-s-line dropdown-arrow"></i>
+			</button>
+			<div class="select-dropdown-wrapper">
+				<ul class="select-dropdown hidden" role="listbox" id="select-dropdown"
+				aria-labelledby="selector-button">
+					{% for category in collections.categories %}
+					<a href="/news/{{category.slug}}"><li value="/news/{{category.slug}}">{{category.title}}</li></a>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<ol>
+		{%  for article in news %}
+			<li>
+				<a href="{{article.url}}">{{article.data.title}}</a>
+			</li>
+		{% endfor %}
+	</ol>
+
+	{% if pagination.href.previous %}<a href="{{pagination.href.previous}}">Back</a>{% endif %}
+
+	{% if pagination.href.next %}<a href={{pagination.href.next}}>Next</a>{% endif %}
+</section>-->
+
+
+<script>{% include "js/dropdown.js" %}</script>

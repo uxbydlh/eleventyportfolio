@@ -1,0 +1,124 @@
+---js
+const layout = "layouts/subpage.njk"
+
+const eleventyNavigation = {
+	key: "Become a Tutor",
+	parent: "Tutors"
+};
+
+const title = "Become a Tutor";
+const subheading = "We are currently recruiting tutors!";
+
+const availableSubjects = [
+	{
+		head: "GCSE",
+		bulletPoints: [
+			"Maths",
+			"English"
+		],
+		image: "../../assets/images/tutors/become-a-tutor/Blob-GCSE.svg",
+		altTxt: "A simple, hand-drawn illustration of a safety net"
+	},
+	{
+		head: "A-Level",
+		bulletPoints: [
+			"Biology",
+			"Psychology"
+		],
+		image: "../../assets/images/tutors/become-a-tutor/Blob-ALevel.svg",
+		altTxt: "A simple, hand-drawn illustration of a tutor holding a pointer"
+	}	
+];
+---
+
+<section class="top centre">
+	<h3>Looking to join a socially-driven tutoring initiative dedicated to reducing educational inequality in the UK?</h3>
+	<p>
+		Look no further! Give and Grow is connecting students who cannot afford tutoring
+		with <b>volunteer, remote tutors</b> as part of our <b>pilot programme</b>.
+	</p>
+	<p>
+		If you are passionate about learning, social change, and want to help us
+		bridge the education gap, this is an exciting opportunity to make a difference
+		in the lives of students.
+	</p>
+	<h1>Role Description</h1>
+</section>
+
+<section class="centre pink">
+	<div class="section-row image-right">
+		<div class="row-column text">
+			<h2>Responsibilities</h2>
+			<h3>What we expect you to do</h3>
+			<ul class="list-bullet">
+				<li>Create lesson plans</li>
+				<li>Deliver engaging educational content</li>
+				<li>Monitor student's progress</li>
+				<li>Provide constructive feedback</li>
+				<li>Collaborate with the Give and Grow CIC team to ensure equitable access to education</li>
+			</ul>
+		</div>
+		<div class="row-column image">
+			<img src="../../assets/images/tutors/become-a-tutor/Responsibilities-Blob.png" alt="Responsibilities">
+		</div>
+	</div>
+	<img class="divider-hr" src="../../assets/dividers/divider-hr-1.svg" alt="">
+	<div class="section-row">
+		<div class="row-column image">
+			<img src="../../assets/images/tutors/become-a-tutor/Qualifications-Blob.png" alt="Qualifications">
+		</div>
+		<div class="row-column text">
+			<h2>Qualifications</h2>
+			<h3>What we need you to have</h3>
+			<ul class="list-bullet">
+				<li>Enhanced DBS check (covered by us)</li>
+				<li>Be a current university student (undergraduate)</li>
+				<li>Minimum grade <b>B / 6</b> for GCSE and A Level subjects</li>
+				<li>Organized and reliable</li>
+				<li>Able to commit to at <b>at least 2 months</b> of regular tutoring</li>
+			</ul>
+		</div>
+	</div>
+	<img class="divider-hr" src="../../assets/dividers/divider-hr-1.svg" alt="">
+	<div class="section-row image-right">
+		<div class="row-column text">
+			<h2>You Gain</h2>
+			<h3>What's in it for you</h3>
+			<ul class="list-bullet">
+				<li>Hands-on tutoring and teaching experience</li>
+				<li>Grow your communication and problem-solving skills</li>
+				<li>Opportunities to advance into paid roles</li>
+				<li>Mentorship and CV support from the Give and Grow CIC team</li>
+			</ul>
+		</div>
+		<div class="row-column image">
+			<img src="../../assets/images/tutors/become-a-tutor/Gain-Blob.png" alt="Gain">
+		</div>
+	</div>
+</section>
+
+<section class="centre">
+	<h1>Subjects Available</h1>
+	<ul class="card-list">
+		{% for subject in availableSubjects %}
+			<li>
+				<div class="card-image">
+					<img src="{{subject.image}}" alt="alt">
+				</div>
+				<div class="card-text">
+					<h3>{{ subject.head }}</h3>
+					<ul class="list-bullet">
+						{% for point in subject.bulletPoints %}
+						<li>{{point}}</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</li>
+		{% endfor %}
+	</ul>
+	<h3>Ready to support the next generation of learners? We'd love to have you on board</h3>
+	<a href="https://www.linkedin.com/jobs/view/4335881362" class="btn primary" target="_blank" rel="noopener noreferrer">
+        <p>Apply Now</p>
+		<i class="ri-arrow-right-line"></i>
+    </a>
+</section>

@@ -1,0 +1,55 @@
+---js
+const layout = "layouts/subpage.njk";
+
+const eleventyNavigation = {
+	key: "Our Tutors",
+	parent: "Tutors"
+};
+
+const title = "Meet Our Tutors";
+const subheading = "Our hardworking, dedicated tutors are here to help you get the best out of your education.";
+const heroImagePath = "../assets/images/hero/Hero-Tutors.webp"
+
+const testimonialQuote = "Testimonial quote from a tutor, or quote from article in here";
+const testimonialSource = "Whoever or whatever this quote is from.";
+
+const tutorJob = {
+	photo: "../assets/images/tutors/Potential-Volunteer.png",
+	name: "You?",
+	subjects: ["Maths", "English", "Biology", "Psychology"],
+	link: "https://www.linkedin.com/jobs/view/4335881362"
+};
+---
+
+<section class="centre">
+	<ul class="tutor-list">
+		<!--{% for tutor in tutors%}
+			<li class="tutor-card">
+				<div class="tutor-photo">
+					<img src="{{tutor.photo}}"/>
+				</div>
+				<p class="tutor-name">{{tutor.name}}</p>
+				<ul>
+					{% for subject in tutor.subjects %}
+					<li>{{subject}}</li>
+					{% endfor %}
+				</ul>
+			</li>
+		{% endfor %} TEMPORARY-->
+		<li class="tutor-card">
+				<div class="tutor-photo">
+					<img src="../../assets/images/tutors/Potential-Volunteer.png" alt="Drawing of a blank, question-marked face representing a potential volunteer - you perhaps?"/>
+				</div>
+				<p class="tutor-name">{{tutorJob.name}}</p>
+				<ul>
+					{% for subject in tutorJob.subjects %}
+					<li>{{subject}}</li>
+					{% endfor %}
+				</ul>
+				<a class="btn primary" href="{{tutorJob.link}}">Apply Now</a>
+		</li>
+	</ul>
+	<div class="section-row">
+		<a class="btn primary">Become a Volunteer Tutor</a>
+	</div>
+</section>

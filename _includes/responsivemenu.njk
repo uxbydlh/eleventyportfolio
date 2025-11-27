@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+      <!--=============== CSS ===============-->
+      <style>{% include "css/styles.css"%}</style>
+      <style>{% getBundle "css" %}</style>
+
+      <title>Responsive dropdown menu - Bedimcode</title>
+   </head>
+   <body>
+      <!--=============== HEADER ===============-->
+      <header class="header">
+         <nav class="nav container">
+
+            <div class="nav__data">
+               <a href="/" class="nav__logo">
+                  <img eleventy:ignore src="{{'logo/GiveGrowLogo.svg' | toAbsoluteUrl }}" alt="Give and Grow Logo. Click to return to the homepage.">
+               </a>
+               
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line nav__burger"></i>
+                  <i class="ri-close-line nav__close"></i>
+               </div>
+            </div>
+            <!--=============== NAV MENU ===============-->
+
+            {##- TOP LEVEL NAVIGATION #}
+            {#- Attempting to add Eleventy Navigation to the template via a macro-#}
+                  {% set navPages = collections.all | eleventyNavigation %}
+                  {% macro renderNavListItem(index, entry) -%}
+                  {#- Check if the page has any sub-pages for list rendering-#}
+                     <li {%if entry.children.length%} class="dropdown__item" {%endif%} >
+                        {#- If the page has sub-pages, render it as a dropdown menu -#}
+                        {%- if entry.children.length -%}
+                        <div class="nav__link" id="dropdown{{index}}">
+                           <a href="{{ entry.url }}" {% if entry.url == page.url %} aria-current="page"{% endif %} >
+                              {{entry.title }} 
+                           </a>
+                           <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+                        <ul class="dropdown__menu">
+                           {%- for child in entry.children %}{{ renderDropdownItem(loop.index, child) }}{% endfor -%} 
+                        </ul>
+                        {#- Otherwise, render as a regular link-#}
+                        {%- else -%}
+                        <a href="{{ entry.url }}" class="nav__link" {% if entry.url == page.url %} aria-current="page"{% endif %} >
+                           {{ entry.title }} 
+                        </a>
+                        {%- endif -%}
+                     </li>
+                  {%- endmacro %}
+
+                  {##- SUB MENU NAVIGATION LEVEL DEPTH 1#}
+                  {% macro renderDropdownItem(index, entry) -%}
+                  {#- Check if the page has any sub-pages for list rendering-#}
+                     <li {%if entry.children.length%} class="dropdown__subitem" {%endif%} >
+                        {#- If the page has sub-pages, render it as a dropdown menu -#}
+                        {%- if entry.children.length -%}
+                        <div class="dropdown__link" id="dropdown1{{index}}">
+                           <a href="{{ entry.url }}" {% if entry.url == page.url %} aria-current="page"{% endif %} >
+                              {{entry.title }} 
+                           </a>
+                           <i class="ri-add-line dropdown__add"></i>
+                        </div>
+                        <ul class="dropdown__submenu">
+                           {%- for child in entry.children %}{{ renderDropdownItem(loop.index, child) }}{% endfor -%} 
+                        </ul>
+                        {#- Otherwise, render as a regular link-#}
+                        {%- else -%}
+                        <a href="{{ entry.url }}" class="dropdown__sublink" {% if entry.url == page.url %} aria-current="page"{% endif %} >
+                           {{ entry.title }} 
+                        </a>
+                        {%- endif -%}
+                     </li>
+                  {%- endmacro%}
+
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+
+                  {%- for entry in navPages -%}
+                  {{renderNavListItem(loop.index, entry)}}
+                  {%- endfor -%}
+
+               </ul>
+               <div class="nav__buttons">
+                  <a href="https://donate.stripe.com/eVqbJ16YggWiaA85l70co00" class="btn secondary">
+                     <i class="ri-service-line"></i>
+                     <p>Donate</p>
+                  </a>
+                  <!--<a href="#WIP" class="btn primary">
+                     <i class="ri-login-circle-line"></i>
+                     <p>Login</p>
+                  </a>-->
+                  <!--TEMPORARY-->
+               </div>
+            </div>
+
+               
+         </nav>
+      </header>
+
+      <!--=============== MAIN JS ===============-->
+      <script>{% include "js/main.js"%}</script>
+   </body>
+</html>

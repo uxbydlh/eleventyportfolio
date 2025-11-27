@@ -1,0 +1,16 @@
+---
+    layout: layouts/post.njk
+    permalink: /news/{{category.slug}}/index.html
+    pagination:
+        data: collections.categories
+        size: 1
+        alias: category
+    eleventyComputed: 
+        title: News entries with "{{category.title}}" category
+---
+
+<ul>
+{% for article in category.posts %}
+   <li> {{article.data.title}} </li>
+{% endfor %}
+</ul>

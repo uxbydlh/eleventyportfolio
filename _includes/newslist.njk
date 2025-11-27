@@ -1,0 +1,15 @@
+<ul reversed class="newsList">
+    {%- for article in newsList | reverse %}
+        <li class="newsList-item{% if article.url == url %} newsList-item-active{% endif %}">
+            <a href="{{ article.url }}" class="newsLink-link">
+                {% if article.data.title %}{{ article.data.title }}{% else %}<code>{{ article.url }}</code>{% endif %}
+            </a>
+            <time class="newsList-date" datetime="{{ article.date | htmlDateString }}">
+                {{ article.date | readableDate("LLLL yyyy")}}
+            </time>
+            <p>
+                {% excerpt article %}
+            </p>
+        </li>
+    {%- endfor %}
+</ul>

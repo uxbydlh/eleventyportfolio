@@ -1,0 +1,137 @@
+---
+eleventyNavigation:
+    key: "About"
+    order: 2
+
+title: About
+subheading: Give and Grow is a community interest company dedicated to identifying and supporting students who are unable to fund tutoring sessions, targeting particularly the students who are not eligible for any financial support from traditional systems.
+heroImagePath: ../assets/images/hero/Hero-About.webp
+
+testimonialQuote: Testimonial quote, or quote from article in here
+testimonialSource: Whoever or whatever this quote is from.
+
+---
+
+<section class="centre" id="about-purpose">
+    <div class="section-row image-right">
+        <div class="row-column text">
+            <h2>Our Purpose</h2>
+            <p>
+                This organisation was created to identify and support students who are unable to pay 
+                for additional tutoring services to supplement their education, because of financial 
+                restraints and burdens.<br><br>
+
+                Our services are unique in that they are not restricted to the traditional metrics
+                qualifying <b>'disadvantaged backgrounds'</b>, but will also include those who seem to be
+                financially secure on paper, <b>but are unable to fund these needs in reality</b>. Opening
+                these services to those who fall through the cracks will allow us to empower <b>all</b> students
+                to receive the guidance and support their needs.<br><br>
+                
+                We conduct regular tutoring sessions charged based on the financial capabilities of each individual
+                student. All monetary profits are <b>reinvested</b> to expand the range and quality of 
+                services and also increase the number of free students tutored. It's important to 
+                ensure the students who want to study are given the chance to, regardless of their
+                financial situation.
+            </p>
+        </div>
+        <div class ="row-column image">
+			<img src="../assets/images/about/Our-Purpose.webp" alt="A student and tutor talk to eachother, supported by a drawing of hands. The student has a drawing of a lightbulb above their head, indicating an idea.">
+		</div>
+    </div>
+    
+</section>
+
+<!--<div id="about-testimonial" class="testimonial">
+    <q>{{testimonialQuote}}</q>
+    <p>- {{testimonialSource}}</p>
+    <a class="btn primary">Find out more</a>
+</div> #TODO:UNCOMMENT WHEN RELEVANT-->
+
+<section class="centre" id="about-model">
+    <h1>Our Funding Model</h1>
+    <div class="diagram">  
+        <img src="../assets/images/about/Model-Diagram.svg" alt=""/>
+    </div>
+    <div class="section-row" id="2-col">
+        <div class="row-column text" id="col-1">
+            <h4>Donor-Funded</h4>
+            <p>
+                We are a community-driven initiative and offer our resources at no financial cost to our students.<br>
+                It's the generous donations from people like you are what keep our mission to provide quality, free tutoring alive.<br>
+                Any financial support that you give will go towards running our online platform and providing students with the educational resources that they need to succeed.
+            </p>
+        </div>
+        <div class="row-column text" id="col-2">
+            <h4>Volunteer-Driven</h4>
+            <p>
+                Give and Grow works with volunteer tutors who are currently studying at university.<br>
+                This ensures that we are able to keep our services free and keep our online platform running.<br>
+                When our volunteers give us their valuable time, they are able to grow alongside our students by gaining important work experience.
+            </p>
+        </div>
+    </div>
+    <a href="https://donate.stripe.com/eVqbJ16YggWiaA85l70co00" class="btn primary" target="_blank" rel="noopener noreferrer"><i class="ri-service-fill"></i>Donate</a>
+</section>
+
+<section class="centre">
+	<h1>Meet The Team</h1>
+	<p>Meet our dedicated volunteers working to keep Give and Grow running!</p>
+	<ul class="tutor-list">
+		{%set volList = volunteers | shuffle %}
+		{% for volunteer in volList.slice(0,4) %}
+			<li class="tutor-card">
+				<div class="tutor-photo">
+					<img src="{{volunteer.photo | toAbsoluteUrl}}"/>
+				</div>
+				<p class="tutor-name">{{volunteer.name}}</p>
+				<ul>
+					{% for role in volunteer.roles %}
+					<li>{{role}}</li>
+					{% endfor %}
+                    {% if volunteer.linkedIn %}
+                    <li class="btn primary"><a href="{{volunteer.linkedIn}}" target="_blank" rel="noopener noreferrer"><i class="ri-linkedin-fill"></i></a></li>
+                    {% endif %}
+                    {% if volunteer.website %}
+                    <li class="btn primary"><a href="{{volunteer.website}}" target="_blank" rel="noopener noreferrer"><i class="ri-global-line"></i></a></li>
+                    {% endif %}
+				</ul>
+                <q>
+                    <i class="ri-double-quotes-l"></i>
+                    <b>{{volunteer.quote}}</b>
+                </q>
+			</li>
+		{% endfor %}
+	</ul>
+	<div class="section-row">
+		<a class="btn primary" href="{{'/about/meet-the-team' | toAbsoluteUrl}}"> See All </a>
+		<a class="btn secondary" href="https://reachvolunteering.org.uk/org/give-and-grow-cic" target="_blank" rel="noopener noreferrer">Volunteer With Us</a>
+	</div>
+</section>
+
+<section class="centre" id="Policy Section">
+    <h1>Policies</h1>
+    <ol class="policy-list">
+        {% for policy in collections.policies %}
+        <li class="policy-card">
+            <a href="{{policy.url | toAbsoluteUrl }}" class="policy-card-link">
+                <img src='{{policy.data.blob.src}}' alt="">
+            </a>
+            <div>
+                <h3>{{policy.data.title}}</h3>
+                <p>{{policy.data.subheading}}</p>
+                <a class="btn transparent" href="{{policy.url | toAbsoluteUrl }}">Read More<i class="ri-arrow-right-line"></button>
+            </div>
+        </li>
+        {% endfor %}
+        <li class="policy-card">
+            <a href="{{'contactus/#FAQ' | toAbsoluteUrl }}" class="policy-card-link">
+                <img src='../assets/images/about/Blob-FAQ.webp' alt="">
+            </a>
+            <div>
+                <h3>FAQ</h3>
+                <p></p>
+                <a class="btn transparent" href="{{'contactus/#FAQ' | toAbsoluteUrl }}">Read More<i class="ri-arrow-right-line"></a>
+            </div>
+        </li>
+    </ol>
+</section>

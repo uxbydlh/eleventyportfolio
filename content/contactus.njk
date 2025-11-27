@@ -1,0 +1,169 @@
+---js
+const eleventyNavigation = {
+	key: "Contact Us",
+	order: 6
+};
+
+const title = "Contact Us";
+const subheading = "To learn more about our work, please feel free to get in touch. <br><br> Whether you want to volunteer, sign up for tutoring, or just ask a question, we're ready to hear from you! <br><br> Got a question? Check out our FAQ - we may have already answered your query!";
+const heroImagePath = "../assets/images/hero/Hero-Contact.webp";
+const heroBtn = {
+	sectionLink: "#FAQ",
+	txt: "Visit FAQ",
+	icon: "ri-arrow-right-line"
+};
+
+const contactInfo = [
+	{
+		type: "Email",
+		info: "give.and.grow.cic (at) gmail.com",
+		icon: "ri-mail-line"
+	},
+	{
+		type: "LinkedIn",
+		info: "Visit",
+		link: "https://www.linkedin.com/company/give-and-grow-cic",
+		icon: "ri-linkedin-box-fill"
+	}
+];
+
+const FAQs = [
+{
+id: "faq1",
+question: "What do I need to do to get free tutoring?",
+answer: `
+**Our tutoring acquisition process has two key stages:**  
+  
+### Stage One  
+- You will need to fill out a short, 5-question form on your situation.  
+- No ID documents or references will be required at this stage. However, they are appreciated and will help us with processing your application. 
+
+### Stage Two
+- At this stage, your application has been selected to be progressed.  
+- We will request proof of ID at this stage.  
+- We may also request supporting information to confirm your eligibility.  
+- **Supporting information may include:** A letter from your school, a note from a parent or guardian, etc.
+
+Any information that you share will be kept confidential and used only for assessing eligibility. Please view our [Privacy Policy](#WIPLINK) for more details.
+`
+},
+{
+id: "faq2",
+question: "How are free tutoring sessions funded?",
+answer: `
+For every paying student who books lessons, one free spot is created for a student in financial need.
+Additional support may come from grants and small community donations.
+It's a **community powered model** - where one student's access helps another.
+`,
+},
+{
+id: "faq3",
+question: "What subjects and year groups are available?",
+answer: `
+- **GCSE:** Maths, English, Biology
+- **A-level:** Psychology, Biology
+- University personal statement guidance
+All lessons are remotely held.
+`
+},
+{
+id: "faq4",
+question: "Who are your tutors?",
+answer: `
+- All tutors are DBS-checked and have been trained to deliver quality online sessions.
+- Many are university students with relevant subject expertise and a passion for education.
+- Tutors are also supported with ongoing guidance to ensure safe and effective learning.
+`
+}
+];
+---
+
+<section class="centre" id="contact-us">
+	<div class="section-row">
+		<div class="row-column text">
+			<h2>Contact Form</h2>	
+			<!--from https://web3forms.com/ -->
+			<form action="https://api.web3forms.com/submit" method="POST">
+
+				<!-- Replace with your Access Key -->
+				<input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+				<!-- Form Inputs. Each input must have a name="" attribute -->
+				<div>
+					<label for="input-name">Name (Required)</label>
+					<input type="text" name="name" id="input-name" required>
+				</div>
+				<div>
+					<label for="input-email">Email (Required)</label>
+					<input type="email" name="email" id="input-email" required>
+				</div>
+				<div class='text-area-container'>
+					<label for="input-message">Message (Required)</label><br>
+					<textarea name="message" id="input-message" maxlength="500" required></textarea><br>
+					<label for="input-message" class="below right" id="input-message-count"></label>
+				</div>
+
+				<!--Consent checkbox-->
+				<div>
+					<label for="input-consent">Consent</label><br>
+					<div class="check-with-desc">
+						<input type="checkbox" name="consent" id="input-consent" required>
+						<p>
+							Please check this box to consent to your data being stored in line with 
+							the guidelines set out in our <a class="inline">Privacy Policy</a>
+						</p>
+					</div>
+				</div>
+
+				<!-- Honeypot Spam Protection -->
+				<input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+				<!-- Custom Confirmation / Success Page -->
+				<!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+				<button class="btn primary" type="submit">Submit Form<i class="ri-arrow-right-line"></i></button>
+			</form>
+		</div>
+		<div class="row-column text" type="contact-info">
+			<h2> Contact Information </h2>
+			<ul class="icon-bullet">
+				{% for contact in contactInfo %}
+				<li>
+					<i class="{{contact.icon}} ri-xl"></i>
+					<div>
+						<label for="{{contact.type}}"><h3>{{contact.type}}</h3></label>
+						{% if contact.link %}
+						<a class="transparent smallBtn" href="{{contact.link}}" target="_blank" rel="noopener noreferrer">{{contact.info}}<i class="ri-arrow-right-line"></i></a>
+						{% else %}
+						<p id="{{contact.type}}">{{contact.info}}</p>
+						{% endif %}
+					</div>
+				</li>
+				{% endfor %}
+			</ul>
+			<br>
+			<h2>Got a question?</h2>
+			<p>Before getting in touch, consider visiting our <a href="#FAQ" class="inline">FAQ</a> - we may have already answered your query!</p>
+		</div>
+	</div>
+</section>
+
+<section id="FAQ" class="FAQ">
+	<h1> Frequently Asked Questions </h1>
+	<div class="faq-list">
+		{% for faq in FAQs%}
+			<details class="expand-box" id="{{faq.id}}" name="faq-question">
+				<summary><h3>{{faq.question}}</h3><i class="ri-add-line"></i></summary>
+				<div class="faq-answer">
+					{{ faq.answer | md  | safe}}
+				</div>
+			</details>
+		{% endfor %}
+	</div>
+</section>
+
+<script>
+	document.getElementById('input-message').onkeyup = function () {
+		document.getElementById('input-message-count').innerHTML = (500 - this.value.length) + "/500 </br>characters remaining";
+	};
+</script>
+

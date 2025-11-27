@@ -1,0 +1,43 @@
+---js
+const layout = "layouts/subpage.njk";
+
+const eleventyNavigation = {
+	key: "Meet the Team",
+	parent: "About"
+};
+
+const title = "Meet the Team";
+const subheading = "Meet our dedicated volunteers, working hard to keep Give and Grow running!";
+---
+
+<section class="centre">
+	<ul class="tutor-list">
+		{%set volList = volunteers | shuffle %}
+		{% for volunteer in volList %}
+			<li class="tutor-card">
+				<div class="tutor-photo">
+					<img src="{{volunteer.photo | toAbsoluteUrl}}"/>
+				</div>
+				<p class="tutor-name">{{volunteer.name}}</p>
+				<ul>
+					{% for role in volunteer.roles %}
+					<li>{{role}}</li>
+					{% endfor %}
+                    {% if volunteer.linkedIn %}
+                    <li class="btn primary"><a href="{{volunteer.linkedIn}}" target="_blank" rel="noopener noreferrer"><i class="ri-linkedin-fill"></i></a></li>
+                    {% endif %}
+                    {% if volunteer.website %}
+                    <li class="btn primary"><a href="{{volunteer.website}}" target="_blank" rel="noopener noreferrer"><i class="ri-global-line"></i></a></li>
+                    {% endif %}
+				</ul>
+                <q>
+                    <i class="ri-double-quotes-l"></i>
+                    <b>{{volunteer.quote}}</b>
+                </q>
+			</li>
+		{% endfor %}
+	</ul>
+	<h3>Think your name could be here?</h3>
+	<p>Volunteer with us! We're always looking to work with new people. See what roles we have open at the link below.</p>
+	<a class="btn primary" href="https://reachvolunteering.org.uk/org/give-and-grow-cic" target="_blank" rel="noopener noreferrer">View Open Roles</a>
+</section>

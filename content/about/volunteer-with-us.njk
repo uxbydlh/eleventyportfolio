@@ -1,0 +1,46 @@
+---js
+const layout = "layouts/subpage.njk";
+
+const eleventyNavigation = {
+	key: "Volunteer with Us",
+	parent: "About"
+};
+
+const title = "Volunteer With Us";
+const subheading = "Looking to make an impact on the lives of young students? Look no further.";
+
+const rolesToFill = [
+	{
+		role: "Safeguarding Officer Designated Lead",
+		location: "Remote: Welwyn GARDEN city",
+		hours: "0-5 hours per month",
+		requirements: ["Recognised safeguarding training.e.g. NSPCC, EduCare, Local Authority DSL training).", "Demonstrable experience in safeguarding roles, ideally within education, healthcare, or community settings."],
+		deadline: "27 January 2026",
+		link: "https://reachvolunteering.org.uk/opp/safeguarding-officer-designated-lead-0"
+	}
+];
+---
+
+<section class="centre">
+	<h3>We couldn't do what we do without support from our volunteers. Together we make a difference in students lives - and you can too!</h3>
+	<p>Right now, we are looking to fill the following roles:</p>
+	<ul class="tutor-list">
+		{% for role in rolesToFill %}
+		<li class="tutor-card">
+			<h3>{{role.role}}</h3>
+			<ul>
+				<li>{{role.location}}</li>
+				<li>{{role.hours}}</li>
+			</ul>
+			<h4>Requirements</h4>
+			{% for req in role.requirements %}
+				<p>{{req}}</p>
+			{% endfor %}
+				<a class="btn primary" href="{{role.link | toAbsoluteUrl }}" target="_blank" rel="noopener noreferrer">View Role<i class="ri-arrow-right-line"></a>
+				<b>Deadline: {{role.deadline}}</b>
+		</li>
+		{% endfor %}
+	</ul>
+	<h3>Don't see your skillset? Get in touch and let us know what you'd like to do for Give and Grow, and how many hours you can put in - we look forward to hearing from you!</h3>
+	<a class="btn primary" href="{{'/contactus' | toAbsoluteUrl }}">Contact Us</a>
+</section>
