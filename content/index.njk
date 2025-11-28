@@ -26,8 +26,8 @@ const title = 'Dorian H.';
 
 <section class="centre" id="FeaturedTest">
 	<h2>Featured Testimonials</h2>
-	<!--TODO RETRIEVE LIST OF TESTIMONIALS AND DISPLAY A FEW AT RANDOM-->
-	{% for testimonial in testimonials %}
+	{% set testList = testimonials | shuffle %}
+	{% for testimonial in testList.slice(0,3) %}
 		<q>{{testimonial.testimonial}}</q>
 		<p>{{testimonial.persona}}</p>
 	{% endfor %}
