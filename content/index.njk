@@ -1,4 +1,6 @@
 ---js
+const layout = "layouts/homepage.njk";
+
 const eleventyNavigation = {
 	key: "Home",
 	order: 1
@@ -7,111 +9,8 @@ const eleventyNavigation = {
 const numberOfLatestPostsToShow = 3;
 const latestNewsToShow = 4;
 
-const heroUpperHeading = "Give & Grow CIC";
-const title = 'Community-Powered Education for All';
-const subheading = "Give and Grow uses every paid tutoring session to fund free tutoring for those left behind by the system, proving that when a community gives, everyone grows."
-const heroBtn = {
-	link: "/about",
-	txt: "Find out more",
-	icon: "ri-arrow-right-line"
-};
-const heroImagePath = "../assets/images/hero/Hero-Index.webp";
-const heroImageAlt = "A group of three students sit down to study together. The student in the middle has a hand-drawn lightbulb over their head.";
+const title = 'Dorian H.';
 
-//HOW DOES IT WORK
-
-const modelStatement = "<b>Give and Grow</b> is a community interest company dedicated to <b>identifying and supporting students who are unable to fund tutoring sessions</b>, targeting the students who are <b>not eligible</b> for any financial support from <b>traditional systems</b>. This platform offers a <b>pay-it forward model</b> where proceeds from paid tutoring sessions are used to directly fund <b>free lessons for students in need</b>. The eligibility for free sessions are determined on a <b>case-by-case basis</b> and the individual context of each student.";
-const modelCards = [
-	{
-		head: "No One Falls Through",
-		bulletPoints: [
-			"Supports students let down by traditional aid.",
-			"Eligibility determined on a case-by-case basis with full confidentiality",
-			"Accessing support shouldn't depend on paperwork privilege or luck"
-		],
-		image: "../assets/images/home/blob-net.png",
-		altTxt: "A simple, hand-drawn illustration of a safety net"
-	},
-	{
-		head: "Why We're Different",
-		bulletPoints: [
-			"Our model is self-funding - donations help us, but we don't entirely rely on them.",
-			"Tutors gain real experience working with students and are provided with relevant, NTP-based training.",
-			"We have a trust-based system, which means students can get the help they need without being held back by countless forms."
-		],
-		image: "../assets/images/home/blob-tutor.png",
-		altTxt: "A simple, hand-drawn illustration of a tutor holding a pointer"
-	},
-	{
-		head: "Community-Driven",
-		bulletPoints: [
-			"This initiative works through the kindness of paying students who choose to help other students grow with them.",
-			"Our tutors are mission-driven, and mainly comprised of fellow university students seeking work experience.",
-			"We strive to create a supportive culture of mutual aid and learning together."
-		],
-		image: "../assets/images/home/blob-cycle.png",
-		altTxt: "A simple, hand-drawn illustration of two arrows forming a cycle"
-	}	
-];
-
-//TUTORS AND STUDENTS
-
-const tutorSect = {
-	title: "Tutors Gain Real Experience",
-	bulletPoints: [
-		"Take on both paid and volunteer tutoring opportunities with full flexibility to fit you.",
-		"Access free training and continuous feedback to grow your skills.",
-		"Get official work references after 3 months",
-		"Log verified volunteering hours for your professional development",
-		"Safe tutoring sessions covered by our Public Liability Insurance",
-		"Have your say in how we run this service and help us improve",
-		"Join a purpose-driven community where you can help others grow alongside you."
-	]
-};
-const tutorBtns = [
-	{
-		btnType: "primary",
-		btnText: "Join us",
-		btnLink: "tutors/become-a-tutor"
-	},
-	{
-		btnType: "secondary",
-		btnText: "More Information",
-		btnLink: "tutors"
-	}
-];
-
-const studentSect = {
-	title: "Students succeed here",
-	bulletPoints: [
-		"Simplified, active learning for GCSE and A-level students.",
-		"Personalised tutoring plans that suit your budget and needs.",
-		"Support and past-paper preparation for exams.",
-		"Tutors close to their own age who are more familiar with the current curriculum.",
-		"The ability to give feedback that helps tailor the tutoring to their personal requirements."
-	]
-};
-const studentBtns = [
-	{
-		btnType: "primary",
-		btnText: "Apply now",
-		btnLink: "students/get-assessed"
-	},
-	{
-		btnType: "secondary",
-		btnText: "More Information",
-		btnLink: "students"
-	},
-];
-
-const eleventyImport = {
-	collections: ["news"]
-};
-
-const newsBtn = {
-	btnText: "View More",
-	btnLink: "#wip"
-};
 ---
 
 <section class="top centre" id="Model">
