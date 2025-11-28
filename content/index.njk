@@ -27,6 +27,10 @@ const title = 'Dorian H.';
 <section class="centre" id="FeaturedTest">
 	<h2>Featured Testimonials</h2>
 	<!--TODO RETRIEVE LIST OF TESTIMONIALS AND DISPLAY A FEW AT RANDOM-->
+	{% for testimonial in testimonials %}
+		<q>{{testimonial.testimonial}}</q>
+		<p>{{testimonial.persona}}</p>
+	{% endfor %}
 	<div class="btn-row-inline">
 		<a class="btn primary" href="#WIP">View All Projects<i class="ri-arrow-right-s-fill"></i></a>
 		<a class="btn primary" href="#WIP">View All Projects<i class="ri-arrow-right-s-fill"></i></a>
