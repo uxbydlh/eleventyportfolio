@@ -14,100 +14,22 @@ const title = 'Dorian H.';
 ---
 
 <section class="top centre" id="Model">
-	<h1>How Does it Work?</h1>
-	<p>{{modelStatement | safe }}</p>
-	<ul class="card-list">
-		{% for card in modelCards %}
-			<li>
-				<div class="card-image">
-					<img src="{{card.image}}" alt="{{card.altTxt}}">
-				</div>
-				<div class="card-text">
-					<h3>{{ card.head }}</h3>
-					<ul class="list-bullet">
-						{% for point in card.bulletPoints %}
-						<li>{{point}}</li>
-						{% endfor %}
-					</ul>
-				</div>
-			</li>
-		{% endfor %}
-	</ul>
-	<a href="{{'/contactus/#FAQ' | toAbsoluteUrl }}" class="btn primary">
-        <p>Visit our FAQ</p>
-		<i class="ri-arrow-right-line"></i>
-    </a>
+	<h2>Companies I've worked with</h1>
+	<!--TODO: FILL WITH INFINITE CAROUSEL OF LOGOS-->
 </section>
 
-<section class="centre pink" id="TutorsStudents">
-	<div class="section-row image-right">
-		<div class="row-column text">
-			<h2>{{tutorSect.title}}</h2>
-			<p><b>Join our team of tutors and enjoy the benefits that come with working with Give and Grow, including:</b></p>
-			<ul class="list-bullet">
-				{%for point in tutorSect.bulletPoints%}
-				<li>{{ point | safe }}</li>
-				{%endfor%}
-			</ul>
-			<p><b>If you are interested in being a part of our mission, please reach out to <a class="inline" href="mailto:Give.and.grow.cic@gmail.com">Give.and.grow.cic@gmail.com</a></b></p>
-			<div class="btn-row-inline">
-			{% for btn in tutorBtns %}
-				<a class="btn {{btn.btnType}}" href="{{btn.btnLink}}">{{btn.btnText}}</a>
-			{% endfor %}
-			</div>
-		</div>
-		<div class ="row-column image">
-			<img src="../assets/images/home/Tutors-Section-Image.webp" alt="A student and tutor talk to eachother, surrounded by doodles and held by a drawing of a hand.">
-		</div>
-	</div>
-	<img class="divider-hr" src="../assets/dividers/divider-hr-1.svg" alt="">
-	<div class="section-row">
-		<div class ="row-column image">
-			<img src="../assets/images/home/Students-Section-Image.webp" alt="One student works on a laptop next to a doodle of a trophy. He is supported by a drawing of a hand.">
-		</div>
-		<div class="row-column text">
-			<h2>{{studentSect.title}}</h2>
-			<p><b>Give a little and grow a <i>lot</i> with other students. When you study with us, you enjoy the following benefits:</b></p>
-			<ul class="list-bullet">
-				{%for point in studentSect.bulletPoints%}
-				<li>{{point}}</li>
-				{%endfor%}
-			</ul>
-			<div class="btn-row-inline">
-				{% for btn in studentBtns %}
-					<a class="btn {{btn.btnType}}" href="{{btn.btnLink}}">{{btn.btnText}}</a>
-				{% endfor %}
-			</div>
-		</div>
-	</div>
+<section class="centre" id="LatestProj">
+	<h2>Latest Projects</h2>
+	<!--TODO: RETRIEVE LATEST PROJECTS AND DISPLAY THEM-->
+	<a class="btn primary" href="#WIP">View All Projects<i class="ri-arrow-right-s-fill"></i></a>
 </section>
 
-<section class="centre" id="open-roles">
-	<h1>Open Roles</h1>
-	<h3>We are currently looking for new talent to join our team of amazing volunteers</h3>
-	<ul class="tutor-list">
-		{% for role in openRoles %}
-		<li class="tutor-card">
-			<h3>{{role.role}}</h3>
-			<ul>
-				<li>{{role.location}}</li>
-				<li>{{role.hours}}</li>
-			</ul>
-			<h4>Requirements</h4>
-			{% for req in role.requirements %}
-				<p>{{req}}</p>
-			{% endfor %}
-				<a class="btn primary" href="{{role.link | toAbsoluteUrl }}" target="_blank" rel="noopener noreferrer">View Role<i class="ri-arrow-right-line"></a>
-				{%if role.deadline%}	
-				<b>Deadline: {{role.deadline}}</b>
-				{%endif%}
-		</li>
-		{% endfor %}
-	</ul>
-	<p>Don't see your skillset here? <a class="inline" href="{{'/contactus' | toAbsoluteUrl}}">Get in touch</a> and let us know what you'd like to do for give and grow, and how many hours you can put in - we look forward to hearing from you!</p>
+<section class="centre" id="FeaturedTest">
+	<h2>Featured Testimonials</h2>
+	<!--TODO RETRIEVE LIST OF TESTIMONIALS AND DISPLAY A FEW AT RANDOM-->
 	<div class="btn-row-inline">
-		<a class="btn primary" href="{{'/about/volunteer-with-us/' | toAbsoluteUrl}}">View More Roles</a>
-		<a class="btn secondary" href="https://www.linkedin.com/company/give-and-grow-cic" target="_blank" rel="noopener noreferrer"><i class="ri-linkedin-box-fill"></i>Visit our LinkedIn<i class="ri-arrow-right-line"></i></a>
+		<a class="btn primary" href="#WIP">View All Projects<i class="ri-arrow-right-s-fill"></i></a>
+		<a class="btn primary" href="#WIP">View All Projects<i class="ri-arrow-right-s-fill"></i></a>
 	</div>
 </section>
 
