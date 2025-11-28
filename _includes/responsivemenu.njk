@@ -38,7 +38,7 @@
                      <li {%if entry.children.length%} class="dropdown__item" {%endif%} >
                         {#- If the page has sub-pages, render it as a dropdown menu -#}
                         {%- if entry.children.length -%}
-                        <div class="nav__link" id="dropdown{{index}}">
+                        <div class="nav__link" id="dropdown-{{index}}">
                            <a href="{{ entry.url }}" {% if entry.url == page.url %} aria-current="page"{% endif %} >
                               {{entry.title }} 
                            </a>
@@ -62,7 +62,7 @@
                      <li {%if entry.children.length%} class="dropdown__subitem" {%endif%} >
                         {#- If the page has sub-pages, render it as a dropdown menu -#}
                         {%- if entry.children.length -%}
-                        <div class="dropdown__link" id="dropdown1{{index}}">
+                        <div class="dropdown__link" id="dropdown1-{{index}}">
                            <a href="{{ entry.url }}" {% if entry.url == page.url %} aria-current="page"{% endif %} >
                               {{entry.title }} 
                            </a>
@@ -79,6 +79,7 @@
                         {%- endif -%}
                      </li>
                   {%- endmacro%}
+
 
             <div class="nav__menu" id="nav-menu">
                <ul class="nav__list">
