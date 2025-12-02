@@ -1648,14 +1648,17 @@ div:has(.embedded-google-form) {
 
 /*#region LOOPING MARQUEE*/
 .marquee-wrapper {
+  display: flex;
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 16em;
+  height: 18em;
+  background-color: var(--pink-colour);
 }
 
 .marquee-track {
   display: flex;
+  align-self: center;
   justify-content: flex-start;
   align-items: center;
 
@@ -1704,17 +1707,36 @@ div:has(.embedded-google-form) {
 .marquee-image {
   position: relative;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
-  background-color: #DADEFF;
+  width: 16em;
+  height: 16em;
+  background-color: none;
   object-fit: contain;
+
+  /*un-hover tf stuff*/
+  transform: scale3d(1, 1, 1);
+  transform-style: preserve-3d;
+}
+
+.marquee-image:hover {
+  transform: scale3d(1.2, 1.2, 1);
+  transform-style: preserve-3d;
 }
 
 .marquee-image picture,
 .image {
-  width: 100%;
-  height: 100%;
+  width: 16em;
+  height: 16em;
   object-fit: contain;
+
+  /*un-hover tf stuff*/
+  transform: scale3d(1, 1, 1);
+  transform-style: preserve-3d;
+}
+
+.marquee-image:hover picture,
+.marquee-image:hover picture .image {
+  transform: translate3d(0px, 0px, 0px) scale3d(1.2, 1.2, 1) rotateX('0deg') rotateY('0deg') rotateZ('0deg') skew(0deg);
+  transform-style: preserve-3d;
 }
 
 /*#endregion LOOPING MARQUEE*/
