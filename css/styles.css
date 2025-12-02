@@ -1645,3 +1645,76 @@ div:has(.embedded-google-form) {
   height: 80vh;
 }
 /*#endregion StudentAssessment*/
+
+/*#region LOOPING MARQUEE*/
+.marquee-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 16em;
+}
+
+.marquee-track {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee-horizontal 10s linear infinite;
+}
+
+/*Make the marquee slide*/
+@keyframes marquee-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/*Pause the marquee on hover*/
+@media only screen and (min-width: 900px) {
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+}
+
+.marquee-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+
+.marquee-item {
+  display: flex;
+  width: 18em;
+  padding-left: 1em;
+  padding-right: 1em;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 0 0 auto;
+  border-left: 1px solid var(--deep-purple-colour);
+}
+
+.marquee-image {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: #DADEFF;
+  object-fit: contain;
+}
+
+.marquee-image picture,
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*#endregion LOOPING MARQUEE*/

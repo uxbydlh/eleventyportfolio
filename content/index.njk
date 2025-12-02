@@ -11,11 +11,30 @@ const latestNewsToShow = 4;
 
 const title = 'Dorian H.';
 
+const logos = ["logo-adenydd.png", "logo-DHH.png", "logo-dotdot.svg", "logo-EcoCentre.png", "logo-GiveGrow.svg", "logo-morses.svg", "logo-ncr.svg", "logo-oakbrook.svg", "logo-VED.webp"];
+
 ---
 
 <section class="top centre" id="Model">
-	<h2>Companies I've worked with</h1>
+	<h2>Companies I've worked with</h2>
 	<!--TODO: FILL WITH INFINITE CAROUSEL OF LOGOS-->
+	<div class="marquee-wrapper">
+		<div class="marquee-track">
+			 <div class="dynamic-logo-list">
+				<div class="marquee-list dynamic-items" role="list">
+					{% for i in range(0, 2)%}
+						{% for logo in logos %}
+						<div class="marquee-item dynamic-item" role="listitem">
+							<div class="marquee-image">
+								<img class="image" src="{{'../assets/images/3rd-party-logos/' + logo}}" loading="lazy" alt="WIP">
+							</div>
+						</div>
+						{% endfor %}
+					{% endfor %}
+				</div>
+			 </div>
+		</div>
+	</div>
 </section>
 
 <section class="centre" id="LatestProj">
