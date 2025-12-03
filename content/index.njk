@@ -11,7 +11,44 @@ const latestNewsToShow = 4;
 
 const title = 'Dorian H.';
 
-const logos = ["logo-adenydd.png", "logo-DHH.png", "logo-dotdot.svg", "logo-EcoCentre.png", "logo-GiveGrow.svg", "logo-morses.svg", "logo-ncr.svg", "logo-oakbrook.svg", "logo-VED.webp"];
+const logos = [
+	{
+		file: "logo-adenydd.png",
+		link: "#WIP"
+	},
+	{
+		file: "logo-DHH.png",
+		link: "#WIP"
+	},
+	{
+		file: "logo-dotdot.svg",
+		link: "#WIP"
+	},
+	{
+		file: "logo-EcoCentre.png",
+		link: "#WIP"
+	},
+	{
+		file: "logo-GiveGrow.svg",
+		link: "#WIP"
+	},
+	{
+		file: "logo-morses.svg",
+		link: "#WIP"
+	},
+	{
+		file: "logo-ncr.svg",
+		link: "#WIP"
+	},
+	{
+		file: "logo-oakbrook.svg",
+		link: "#WIP"
+	},
+	{
+		file: "logo-VED.webp",
+		link: "#WIP"
+	}
+];
 
 ---
 
@@ -24,11 +61,13 @@ const logos = ["logo-adenydd.png", "logo-DHH.png", "logo-dotdot.svg", "logo-EcoC
 				<div class="marquee-list dynamic-items" role="list">
 					{% for i in range(0, 2)%}
 						{% for logo in logos %}
-						<div class="marquee-item dynamic-item" role="listitem">
-							<div class="marquee-image">
-								<img class="image" src="{{'../assets/images/3rd-party-logos/' + logo}}" loading="lazy" alt="WIP">
+							<div class="marquee-item dynamic-item" role="listitem">
+								<div class="marquee-image">
+									<a href="{{logo.link}}">
+										<img class="image" src="{{'../assets/images/3rd-party-logos/' + logo.file}}" loading="lazy" alt="WIP">
+									</a>
+								</div>
 							</div>
-						</div>
 						{% endfor %}
 					{% endfor %}
 				</div>
@@ -46,10 +85,14 @@ const logos = ["logo-adenydd.png", "logo-DHH.png", "logo-dotdot.svg", "logo-EcoC
 <section class="centre" id="FeaturedTest">
 	<h2>Featured Testimonials</h2>
 	{% set testList = testimonials | shuffle %}
-	{% for testimonial in testList.slice(0,3) %}
-		<q>{{testimonial.testimonial}}</q>
-		<p>{{testimonial.persona}}</p>
-	{% endfor %}
+	<ul class="card-list">
+		{% for testimonial in testList.slice(0,3) %}
+		<li class="card testimonial">
+			<q>{{testimonial.testimonial}}</q>
+			<div class="persona"><i class="ri-chat-2-fill"></i><p>{{testimonial.persona}}</p></div>
+		</li>
+		{% endfor %}
+	</ul>
 	<div class="btn-row-inline">
 		<a class="btn primary" href="#WIP">View All Projects<i class="ri-arrow-right-s-fill"></i></a>
 		<a class="btn primary" href="#WIP">View All Projects<i class="ri-arrow-right-s-fill"></i></a>
