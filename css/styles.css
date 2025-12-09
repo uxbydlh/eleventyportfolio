@@ -9,6 +9,11 @@
   src: url('../assets/fonts/Speedtest-2O7nK.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: "Consolas";
+  src: url('../assets/fonts/CONSOLA.TTF') format('truetype');
+}
+
 /*=============== VARIABLES CSS ===============*/
 :root {
   /*#region Old CSS Variables*/
@@ -121,6 +126,7 @@
     --font-family-display: "Speedtest", serif;
     --font-family-heading: "open-sans-condensed", serif;
     --font-family-body: "open-sans", sans-serif;
+    --font-family-mono: "Consolas", monospace;
 
     --font-size-h1: 2.25rem;
     --line-height-h1: 2.5rem;
@@ -1538,6 +1544,8 @@ article p {
 
 .card.testimonial q {
   quotes: none;
+  font-family: var(--font-family-mono);
+  font-family:;
 
   display: flex;
   flex: 1 1 auto;
@@ -1562,6 +1570,9 @@ article p {
   text-align: left;
 
   width: 100%;
+
+  border-top: var(--border-primary) solid var(--border-width-sm);
+  background-color: var(--surface-nav);
 }
 
 .card .persona p {

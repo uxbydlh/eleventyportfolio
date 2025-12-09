@@ -14,39 +14,39 @@ const title = 'Dorian H.';
 const logos = [
 	{
 		file: "logo-adenydd.png",
-		link: "#WIP"
+		link: "#TODO"
 	},
 	{
 		file: "logo-DHH.png",
-		link: "#WIP"
+		link: "#TODO"
 	},
 	{
 		file: "logo-dotdot.svg",
-		link: "#WIP"
+		link: "#TODO"
 	},
 	{
 		file: "logo-EcoCentre.png",
-		link: "#WIP"
+		link: "#TODO"
 	},
 	{
 		file: "logo-GiveGrow.svg",
-		link: "#WIP"
+		link: "#TODO"
 	},
 	{
 		file: "logo-morses.svg",
-		link: "#WIP"
+		link: "#TODO"
 	},
 	{
 		file: "logo-ncr.svg",
-		link: "#WIP"
+		link: "#TODO"
 	},
 	{
 		file: "logo-oakbrook.svg",
-		link: "#WIP"
+		link: "#TODO"
 	},
 	{
 		file: "logo-VED.webp",
-		link: "#WIP"
+		link: "#TODO"
 	}
 ];
 
@@ -54,7 +54,6 @@ const logos = [
 
 <section class="top centre" id="Model">
 	<h2>Companies I've worked with</h2>
-	<!--TODO: FILL WITH INFINITE CAROUSEL OF LOGOS-->
 	<div class="marquee-wrapper">
 		<div class="marquee-track">
 			 <div class="dynamic-logo-list">
@@ -89,7 +88,7 @@ const logos = [
 		{% for testimonial in testList.slice(0,3) %}
 		<li class="card testimonial">
 			<q>{{testimonial.testimonial}}</q>
-			<div class="persona"><i class="ri-chat-2-fill"></i><p>{{testimonial.persona}}</p></div>
+			<div class="persona"><i class="ri-chat-2-fill"></i><p><b>{{testimonial.persona}}</b></p></div>
 		</li>
 		{% endfor %}
 	</ul>
