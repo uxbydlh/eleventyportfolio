@@ -660,10 +660,12 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  border-radius: 60px;
+  border-radius: 0px;
   border: none;
 
-  font-family: var(--body-font);
+  font-family: var(--font-family-heading);
+  font-weight: bold;
+  text-transform: uppercase;
   font-size: var(--normal-font-size);
 }
 
@@ -673,7 +675,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  border-radius: 60px;
+  border-radius: 0px;
   border: none;
 
   font-family: var(--body-font);
@@ -682,12 +684,13 @@ footer {
 
 .smallBtn.primary,
 .btn.primary {
-  background-color: var(--bright-purple-colour);
+  background-color: var(--surface-action);
   color: var(--text-light-colour);
+  border: var(--border-action) solid var(--border-width-md);
 }
 .smallBtn.primary:hover,
 .btn.primary:hover {
-  background-color: var(--bright-violet-colour);
+  background-color: var(--surface-action-hover-2);
 }
 .btn.primary[type=submit] {
   align-self: flex-end;
