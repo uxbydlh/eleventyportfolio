@@ -1706,8 +1706,9 @@ footer {
   padding-bottom: 64px;
   gap: 24px;
 
-  background-color: var(--deep-purple-colour);
+  background-color: var(--surface-nav);
   color: var(--text-light-colour);
+  border-top: var(--border-width-sm) solid var(--border-action);
   font-size: 1rem;
 }
 
