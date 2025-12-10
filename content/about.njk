@@ -28,22 +28,28 @@ description: "Designer, Developer, Dilligent-worker. Adept at creating design sy
     </div>
 </section>
 
-<section class="centre" id="CV">
+<section class="centre CV" id="CV">
     {% for job in cv %}
-        <h3>{{job.company}}</h3>
-        <img src="../assets/images/3rd-party-logos/{{job.logo}}" alt="logo">
-        <ul>
-            {% for role in job.roles %}
-            <li>{{role}}</li>
-            {% endfor %}
-        </ul>
-        <p>{{job.location}}, {{job.timePeriod}}</p>
-        <a class="btn small primary" href="{{job.link}}">Visit</a>
-        <ul>
-            {% for point in job.bulletPoints %}
-            <li>{{point}}</li>
-            {% endfor %}
-        </ul>
+    <div class="heading">
+        <div class="company-role">
+            <h3>{{job.company}}</h3>
+            <ul class="roles-list">
+                {% for role in job.roles %}
+                <li>{{role}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="location">
+            <p>{{job.location}}, {{job.timePeriod}}</p>
+            <a class="btn-small primary" href="{{job.link}}">Visit</a>
+        </div>
+    </div>
+    
+    <ul>
+        {% for point in job.bulletPoints %}
+        <li>{{point}}</li>
+        {% endfor %}
+    </ul>
         <div>
             {% for project in job.projects %}
             <a class="btn secondary" href="{{project.link}}">{{project.title}}</a>

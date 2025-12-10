@@ -245,16 +245,24 @@ a:hover .text-subdisplay {
 
 h3 {
   color: var(--text-selected);
-  font-family: var(--font-family-body);
+  font-family: var(--font-family-heading);
   font-size: var(--font-size-h3);
   font-weight: 700;
   line-height: var(--line-height-h3);
   text-transform: uppercase;
+
+  display: flex;
+  flex-grow: 1;
+  padding: var(--space-sm) 12%;
+  gap: var(--space-md);
+  border-top: 1px solid #4E5E5F;
+  border-bottom: 1px solid #4E5E5F;
+  background-color: var(--surface-primary);
 }
 
 h4 {
   color: var(--text-selected);
-  font-family: var(--font-family-body);
+  font-family: var(--font-family-heading);
   font-size: var(--font-size-h4);
   font-weight: 700;
   line-height: var(--line-height-h4);
@@ -1871,3 +1879,72 @@ div:has(.embedded-google-form) {
 }
 
 /*#endregion LOOPING MARQUEE*/
+
+/*#region CV*/
+
+.CV {
+
+}
+
+.CV .heading {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  padding-right: 6%;
+  padding-bottom: var(--space-sm);
+  border-top: 1px solid #4E5E5F;
+  border-bottom: 1px solid #4E5E5F;
+  background-color: var(--surface-primary);
+}
+
+.company-role {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-role h3 {
+  border-top: none;
+  border-bottom: none;
+  background-color: transparent;
+}
+
+.CV .roles-list {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-md);
+}
+
+.CV .roles-list li {
+  font-size: var(--font-size-body-sm);
+  text-align: center;
+
+  background-color: var(--surface-secondary);
+  border: var(--border-width-sm) solid var(--border-secondary);
+  padding: var(--space-xs) var(--space-md);
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 12%;
+}
+
+@media screen and (max-width: 800px) {
+  .CV .heading {
+    gap: var(--space-md);
+    padding-bottom: var(--space-md);
+  }
+  .company-role {
+    flex-direction: column;
+    align-items:flex-start ;
+    padding-left: 12%;
+  }
+  .company-role h3 {
+    padding-left: 0%;
+  }
+}
+
+/*#endregion CV*/
