@@ -4,13 +4,53 @@ eleventyNavigation:
     order: 2
 
 title: About
-subheading: Give and Grow is a community interest company dedicated to identifying and supporting students who are unable to fund tutoring sessions, targeting particularly the students who are not eligible for any financial support from traditional systems.
-heroImagePath: ../assets/images/hero/Hero-About.webp
 
-testimonialQuote: Testimonial quote, or quote from article in here
-testimonialSource: Whoever or whatever this quote is from.
+roles: "UX / UI | Web Design | Frontend"
+description: "Designer, Developer, Dilligent-worker. Adept at creating design systems suitable for a variety of scope sizes. Experienced mainly in the finance and non-profit sectors."
 
 ---
+<section class="centre" id="about-snippet">
+    <div class="section-row">
+        <div class="row-column text">
+            <h2 style="text-align: center;">{{roles}}</h2>
+            <p>{{description}}</p>
+            {% set testList = testimonials | shuffle %}
+            {% for testimonial in testList.slice(0,1) %}
+            <li class="card testimonial">
+                <q>{{testimonial.testimonial}}</q>
+                <div class="persona"><i class="ri-chat-2-fill"></i><p><b>{{testimonial.persona}}</b></p></div>
+            </li>
+            {% endfor %}
+        </div>
+        <div class ="row-column image">
+            <img src="https://picsum.photos/800/800">
+        </div>
+    </div>
+</section>
+
+<section class="centre" id="CV">
+    {% for job in cv %}
+        <h3>{{job.company}}</h3>
+        <img src="../assets/images/3rd-party-logos/{{job.logo}}" alt="logo">
+        <ul>
+            {% for role in job.roles %}
+            <li>{{role}}</li>
+            {% endfor %}
+        </ul>
+        <p>{{job.location}}, {{job.timePeriod}}</p>
+        <a class="btn small primary" href="{{job.link}}">Visit</a>
+        <ul>
+            {% for point in job.bulletPoints %}
+            <li>{{point}}</li>
+            {% endfor %}
+        </ul>
+        <div>
+            {% for project in job.projects %}
+            <a class="btn secondary" href="{{project.link}}">{{project.title}}</a>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</section>
 
 <section class="centre" id="about-purpose">
     <div class="section-row image-right">

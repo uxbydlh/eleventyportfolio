@@ -563,7 +563,7 @@ section.violet {
   align-self: center;
   justify-content: center;
   aspect-ratio: 16/9;
-  max-height: 300px;
+  max-height: 100%;
 }
 
 .diagram {
@@ -1854,7 +1854,7 @@ div:has(.embedded-google-form) {
 }
 
 .marquee-image picture,
-.image {
+.marquee-image .image {
   width: 16em;
   height: 16em;
   object-fit: contain;

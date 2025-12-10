@@ -1,0 +1,170 @@
+[
+    {
+        "company":"Give and Grow CIC",
+        "roles": ["Frontend Programming", "Web Design", "Brand Design"],
+        "logo": "logo-GiveGrow.svg",
+        "location": "Welwyn Garden City (Remote)",
+        "timePeriod": "Present",
+        "link": "https://www.giveandgrow.co.uk/",
+        "bulletPoints": [
+            "Designed and coded a website for an up and coming tutoring CIC, from wireframes to final product",
+            "Developed low to high-fidelity prototype designs in Figma",
+            "Created custom graphics and illustrations in Adobe Photoshop and Illustrator",
+            "Currently in the process of creating brand guidelines to allow work for the site to be passed on."],
+        "projects": [
+            {
+                "title":"Creation Process",
+                "link": "#TODO"
+            },
+            {
+                "title":"Graphic Gallery",
+                "link": "#TODO"
+            }
+        ]
+    },
+    {
+        "company":"Eco Centre CBS Limited",
+        "roles": ["UX Design", "UI Design", "User Research"],
+        "logo": "logo-EcoCentre.png",
+        "location": "Somerset (Remote)",
+        "timePeriod": "Present",
+        "link": "https://www.ecocentresw.org/",
+        "bulletPoints": [
+            "Head designer for an environmentally-conscious, money-saving app.",
+            "Developed tasks, paths, and questionnaires for testing the initial prototype application",
+            "Lead an in-person, qualitative study of potential users.",
+            "Designed and reworked page layouts and paths based on user research."],
+        "projects": [
+            {
+                "title":"Landing Page UXR",
+                "link": "#TODO"
+            }
+        ]
+    },
+    {
+        "company":"Adenydd",
+        "roles": ["UX Design", "Graphic Design", "Copywriting"],
+        "logo": "logo-adenydd.png",
+        "location": "Swansea (Remote)",
+        "timePeriod": "Present",
+        "link": "https://adenydd.org/",
+        "bulletPoints": [
+            "Overhauled website navigation for a Welsh charity, focused on children with Adverse Childhood Experiences and developmental trauma.",
+            "Created custom graphics to illustrate the site.",
+            "Reworked several page layouts across the site to be more readable.",
+            "Improved existing copy by simplifying case studies for those less familiar with ACEs."],
+        "projects": [
+            {
+                "title":"Website Comparison",
+                "link": "#TODO"
+            },
+            {
+                "title": "Newsletter Shoutout",
+                "link": "#TODO"
+            }
+        ]
+    },
+    {
+        "company":"V.E.D",
+        "roles": ["Web Design", "UX Design"],
+        "logo": "logo-VED.webp",
+        "location": "Dundee (Remote)",
+        "timePeriod": "2024",
+        "link": "https://veryevildemons.com/",
+        "bulletPoints": [
+            "Created wireframes for a website for an independent, worker-owned game studio.",
+            "Created navigation maps for the site.",
+            "Researched and supplied medieval illustrations to use as placeholder while custom graphics were created."
+        ],
+        "projects": [
+            {
+                "title":"Creation Process",
+                "link": "#TODO"
+            }
+        ]
+    },
+    {
+        "company":"Devon Healing Horsemanship",
+        "roles": ["Web Design", "UX Design", "Brand Design"],
+        "logo": "logo-DHH.png",
+        "location": "Devon (Remote)",
+        "timePeriod": "2024",
+        "link": "https://devonhh.org.uk/",
+        "bulletPoints": [
+            "Fully redesigned website with a focus on building trust and driving meaningful donations.",
+            "Redesigned branding with input from the founder to take the look in a modern direction.",
+            "Created a component library to hand off to the programmer."
+        ],
+        "projects": [
+            {
+                "title":"Creation Process",
+                "link": "#TODO"
+            },
+            {
+                "title":"Branding Gallery",
+                "link": "#TODO"
+            },
+            {
+                "title":"Component Library",
+                "link": "#TODO"
+            }
+        ]
+    },
+    {
+        "company":"Morses Club PLC",
+        "roles": ["UX Design", "UI Design", "User Research"],
+        "logo": "logo-morses.svg",
+        "location": "Nottingham (Remote)",
+        "timePeriod": "2022-2024",
+        "link": "https://www.linkedin.com/company/morses-club-plc/about/",
+        "bulletPoints": [
+            "Increased acquisition journey leads by 75% by designing an internal customer service tool to more efficiently manage the verification process.",
+            "Minimised risk by iterating on application form designs in collaboration with the internal compliance team",
+            "Reworked the customer dashboard to have a better focus on loan repayment and management"
+        ],
+        "projects": [
+            {
+                "title":"Dot Dot Loans",
+                "link": "#TODO"
+            },
+            {
+                "title":"Finance Portal",
+                "link": "#TODO"
+            },
+            {
+                "title":"Form Fatigue",
+                "link": "#TODO"
+            },
+            {
+                "title":"P.A.M",
+                "link": "#TODO"
+            }
+        ]
+    },
+    {
+        "company":"Oakbrook Finance Limited",
+        "roles": ["Software Engineer"],
+        "logo": "logo-oakbrook.svg",
+        "location": "Nottingham (Remote)",
+        "timePeriod": "2021-2022",
+        "link": "https://oakbrook.com/",
+        "bulletPoints": [
+            "Programmed customer-facing UI as part of the agile Customer Journeys team.",
+            "Worked with multiple teams across the organisation to push several different products at once.",
+            "Worked closely with the UX and UI team to create a company product style guide in Stylish Core."
+        ]
+    },
+    {
+        "company":"NCR Atleos",
+        "roles": ["Software Engineer"],
+        "logo": "logo-ncr.svg",
+        "location": "Dundee (Remote)",
+        "timePeriod": "2020-2021",
+        "link": "https://www.ncratleos.com/",
+        "bulletPoints": [
+            "Part of a multi-disciplinary team, handling hardware, C# web apps, VB6 legacy code and more.",
+            "Took on the solo-development of an internal-systems data-gathering application.",
+            "Directly communicated with multiple external partners."
+        ]
+    }
+]
