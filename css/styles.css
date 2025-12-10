@@ -1883,7 +1883,11 @@ div:has(.embedded-google-form) {
 /*#region CV*/
 
 .CV {
-
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--space-lg);
 }
 
 .CV .heading {
@@ -1932,6 +1936,31 @@ div:has(.embedded-google-form) {
   padding-left: 12%;
 }
 
+.job-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.job-info .text-div {
+  padding-left: 12%;
+}
+
+.job-info .image-div {
+  max-height: 100%;
+}
+
+.job-image {
+  max-width: 30%;
+  min-width: 30%;
+  max-height: 100%;
+}
+
+.job-image img {
+  max-width: 80%;
+  height: auto;
+}
+
 @media screen and (max-width: 800px) {
   .CV .heading {
     gap: var(--space-md);
@@ -1948,3 +1977,24 @@ div:has(.embedded-google-form) {
 }
 
 /*#endregion CV*/
+
+/*#region writing-blocks*/
+  .text-div {
+    display: flex;
+    align-self: stretch;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--space-lg);
+    background-color: var(--surface-primary);
+    padding: var(--space-lg) var(--space-ml);
+  }
+
+  .text-div ul {
+    list-style-type: square;
+  }
+
+  .text-div li + li {
+    margin-top: var(--space-md);
+  }
+/*#endregion writing-blocks*/

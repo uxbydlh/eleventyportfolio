@@ -13,7 +13,7 @@ description: "Designer, Developer, Dilligent-worker. Adept at creating design sy
     <div class="section-row">
         <div class="row-column text">
             <h2 style="text-align: center;">{{roles}}</h2>
-            <p>{{description}}</p>
+            <p class="text-div">{{description}}</p>
             {% set testList = testimonials | shuffle %}
             {% for testimonial in testList.slice(0,1) %}
             <li class="card testimonial">
@@ -28,33 +28,41 @@ description: "Designer, Developer, Dilligent-worker. Adept at creating design sy
     </div>
 </section>
 
-<section class="centre CV" id="CV">
+<section class="centre" id="CV">
     {% for job in cv %}
-    <div class="heading">
-        <div class="company-role">
-            <h3>{{job.company}}</h3>
-            <ul class="roles-list">
-                {% for role in job.roles %}
-                <li>{{role}}</li>
-                {% endfor %}
-            </ul>
+    <div class="CV">
+        <div class="heading">
+            <div class="company-role">
+                <h3>{{job.company}}</h3>
+                <ul class="roles-list">
+                    {% for role in job.roles %}
+                    <li>{{role}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="location">
+                <p>{{job.location}}, {{job.timePeriod}}</p>
+                <a class="btn-small primary" href="{{job.link}}">Visit</a>
+            </div>
         </div>
-        <div class="location">
-            <p>{{job.location}}, {{job.timePeriod}}</p>
-            <a class="btn-small primary" href="{{job.link}}">Visit</a>
+        <div class="job-info">
+            <div class="text-div">
+                <ul>
+                {% for point in job.bulletPoints %}
+                    <li>{{point}}</li>
+                {% endfor %}
+                </ul>
+                <div>
+                    {% for project in job.projects %}
+                    <a class="btn secondary" href="{{project.link}}">{{project.title}}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="row-column image job-image">
+                <img class="image" src="{{'../assets/images/3rd-party-logos/' + job.logo}}" loading="lazy" alt="logo">
+            </div>
         </div>
     </div>
-    
-    <ul>
-        {% for point in job.bulletPoints %}
-        <li>{{point}}</li>
-        {% endfor %}
-    </ul>
-        <div>
-            {% for project in job.projects %}
-            <a class="btn secondary" href="{{project.link}}">{{project.title}}</a>
-            {% endfor %}
-        </div>
     {% endfor %}
 </section>
 
