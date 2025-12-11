@@ -706,13 +706,13 @@ footer {
 
 .smallBtn.secondary,
 .btn.secondary {
-  background-color: var(--text-light-colour);
-  color: var(--text-dark-colour);
+  background-color: var(--surface-nav);
+  color: var(--text-on-action);
 }
 .smallBtn.secondary:hover,
 .btn.secondary:hover {
-  outline: 2px solid var(--bright-violet-colour);
-  color: var(--bright-purple-colour);
+  outline: 2px solid var(--surface-action);
+  color: var(--text-on-action);
 }
 
 .smallBtn.transparent,
@@ -840,8 +840,8 @@ picture:has(.divider-hr){
 .nav__logo picture,
 .nav__logo picture img,
 .nav__logo img {
-  height: 100%;
-  width: auto;
+  height: auto;
+  width: 100%;
 }
 
 .nav__logo i {
