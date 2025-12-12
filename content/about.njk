@@ -28,12 +28,13 @@ description: "Designer, Developer, Dilligent-worker. Adept at creating design sy
     </div>
 </section>
 
-<section class="centre" id="skills">
-    <div class="CV">
+<section class="centre" id="CV">
+    <div class="CV" id="skills">
         <div class="heading">
             <div class="company-role">
                 <h3>Tools and skills</h3>
                 <ul class="roles-list">
+
                     {% set categories = [] %}
                     {% for tool in tools %}
                         {% set categories = (categories.push(tool.type), categories) %}
@@ -46,6 +47,7 @@ description: "Designer, Developer, Dilligent-worker. Adept at creating design sy
                             {% endif %}
                         {% endfor %}
                     {% for uniqueCategory in uniqueCategories %}
+                    
                     <a href="#{{uniqueCategory}}">
                         <li>
                             {{uniqueCategory}}</a>
@@ -56,17 +58,18 @@ description: "Designer, Developer, Dilligent-worker. Adept at creating design sy
             </div>
         </div>
         <div class="job-info">
-            <ul class="tools" id="tools">
+            <ul class="tools-list" id="tools">
+                {% for tool in tools %}
                 <li>
-                    <img src="">
-                    <p></p>
+                    <div class="tool-icon">
+                        <img src="{{'../assets/images/3rd-party-logos/tools/' + tool.icon}}" loading="lazy" alt="#TODO">
+                    </div>
+                    <h5>{{tool.name}}</h5>
                 </li>
+                {% endfor %}
             </ul>
         </div>
     </div>
-</section>
-
-<section class="centre" id="CV">
     {% for job in cv %}
     <div class="CV">
         <div class="heading">
