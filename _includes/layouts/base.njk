@@ -38,7 +38,7 @@
 		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
 
 		{#- Add the heading-anchors web component to the JavaScript bundle #}
-		<script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
+		<script type="module">{% include 'node_modules/@zachleat/heading-anchors/heading-anchors.js' %}</script>
 	</head>
 	<body>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
@@ -90,5 +90,7 @@
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
 		<script>document.getElementById("currentYear").innerHTML = new Date().getFullYear();</script>
+		{#- Add Alpine from the JSDeliver CDN #}
+		<script src="/js/alpine.js?v={% version %}" defer></script>
 	</body>
 </html>

@@ -1989,7 +1989,7 @@ div:has(.embedded-google-form) {
 
 .tools-list {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; 
   flex-wrap: wrap;
   gap: var(--space-md);
 }
@@ -2000,8 +2000,8 @@ div:has(.embedded-google-form) {
   align-items: center;
   justify-content: space-evenly;
   padding: var(--space-sm);
-  height: 7vw;
-  width: 5vw;
+  height: 136px;
+  width: 96px;
   text-align: center;
   background-color: var(--surface-nav);
 }

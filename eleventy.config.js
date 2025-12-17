@@ -42,6 +42,11 @@ export default async function(eleventyConfig) {
 		.addPassthroughCopy("./assets/images/about/volunteers")
 		.addPassthroughCopy("./assets/fonts")
 		.addPassthroughCopy("./assets/images/UXBYDLHLogo.svg")
+		.addPassthroughCopy("./_data/tools.json")
+		.addPassthroughCopy("./assets/images/3rd-party-logos/tools")
+		.addPassthroughCopy({
+			'./node_modules/alpinejs/dist/cdn.js': './js/alpine.js',
+		}) //Alpine
 
 	// Run Eleventy when these files change:
 	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
@@ -141,6 +146,10 @@ export default async function(eleventyConfig) {
 	//Shortcode for excerpts
 	eleventyConfig.addShortcode("excerpt", (article) => extractExcerpt(article));
 	
+	//Shortcode for versioning/cache busting(?)
+	eleventyConfig.addShortcode('version', function () {
+		return String(Date.now());
+	});
 
 	//Parsing markdown excerpts for preview
 	eleventyConfig.setFrontMatterParsingOptions({ excerpt: true });

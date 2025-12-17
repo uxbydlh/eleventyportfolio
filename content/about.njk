@@ -50,23 +50,52 @@ description: "Designer, Developer, Dilligent-worker. Adept at creating design sy
                     
                     <a href="#{{uniqueCategory}}">
                         <li>
-                            {{uniqueCategory}}</a>
+                            {{uniqueCategory}}
                         </li>
                     </a>
                     {% endfor %}
                 </ul>
             </div>
         </div>
-        <div class="job-info">
+        <!--<div class="job-info">
             <ul class="tools-list" id="tools">
                 {% for tool in tools %}
                 <li>
-                    <div class="tool-icon">
+                    <div class="tool-icon" >
                         <img src="{{'../assets/images/3rd-party-logos/tools/' + tool.icon}}" loading="lazy" alt="#TODO">
                     </div>
                     <h5>{{tool.name}}</h5>
                 </li>
                 {% endfor %}
+            </ul>
+        </div>
+        <div class="job-info" x-init="toolsList = await (await fetch('../_data/tools.json')).json()" x-data="{ toolsList: [] }">
+            <ul class="tools-list">
+                <template x-for="tool in toolsList">
+                    <li>
+                        <div class="tool-icon" >
+                            <img :src="'../assets/images/3rd-party-logos/tools/' + tool.icon" loading="lazy" alt="#TODO">
+                        </div>
+                        <h5 x-text="tool.name"></h5>
+                    </li>
+                </template>
+            </ul>
+        </div>-->
+        <div class="job-info">
+            <ul class="tools-list" x-data="toolData">
+                <template x-if="!tools">
+                    <li>
+                        <p>loading...</p>
+                    </li>
+                </template>
+                <template x-for="tool in tools">
+                    <li>
+                        <div class="tool-icon" >
+                            <img :src="'../assets/images/3rd-party-logos/tools/' + tool.icon" loading="lazy" alt="#TODO">
+                        </div>
+                        <h5 x-text="tool.name"></h5>
+                    </li>
+                </template>
             </ul>
         </div>
     </div>
@@ -136,3 +165,15 @@ description: "Designer, Developer, Dilligent-worker. Adept at creating design sy
         </li>
     </ol>
 </section>
+
+<script>
+document.addEventListener('alpine:init', () => {
+  Alpine.data('toolData', () => ({
+    tools:null,
+    async init() {
+      let resp = await fetch('../_data/tools.json');
+      this.tools = await resp.json();
+    },
+  }))
+});
+</script>
