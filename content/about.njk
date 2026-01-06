@@ -160,11 +160,13 @@ document.addEventListener('alpine:init', () => {
       this.tools = this.fullTools;
     },
     changeFilter(filter) {
-        console.log("CHANGE FILTER ACTIVATED");
-        let toolsCopy = this.fullTools;
-        console.log(toolsCopy);
-        let filteredTools = toolsCopy.filter(tool => tool.type === filter);
-        this.tools = filteredTools;
+        if(filter === 'all') {
+            this.tools = this.fullTools;
+        } else {
+            let toolsCopy = this.fullTools;
+            let filteredTools = toolsCopy.filter(tool => tool.type === filter);
+            this.tools = filteredTools;
+        }
     }
   }))
 });
