@@ -48,16 +48,18 @@ description: "Designer, Developer, Dilligent-worker. Adept at creating design sy
                         {% endfor %}
                     {% for uniqueCategory in uniqueCategories %}
                     
-                    <a href="#{{uniqueCategory}}">
+                    <a  x-on:click="changeFilter('{{uniqueCategory}}')">
                         <li>
                             {{uniqueCategory}}
                         </li>
                     </a>
                     {% endfor %}
 
-                    <button x-on:click="changeFilter()">
-                            Click ME
-                    </button>
+                    <a x-on:click="changeFilter('all')">
+                        <li>
+                            all
+                        </li>
+                    </a>
                     
                 </ul>
             </div>
@@ -148,20 +150,21 @@ description: "Designer, Developer, Dilligent-worker. Adept at creating design sy
 </section>
 
 <script>
-//Defining an external JS function
-function changeFilter() {
-   console.log("You pressed me!");
-}
 
 document.addEventListener('alpine:init', () => {
   Alpine.data('toolData', () => ({
     tools:null,
     async init() {
       let resp = await fetch('../_data/tools.json');
-      this.tools = await resp.json();
+      this.fullTools = await resp.json();
+      this.tools = this.fullTools;
     },
-    changeFilter() {
+    changeFilter(filter) {
         console.log("CHANGE FILTER ACTIVATED");
+        let toolsCopy = this.fullTools;
+        console.log(toolsCopy);
+        let filteredTools = toolsCopy.filter(tool => tool.type === filter);
+        this.tools = filteredTools;
     }
   }))
 });
