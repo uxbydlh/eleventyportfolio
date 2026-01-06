@@ -8,7 +8,9 @@ layout: layouts/base.njk
                 <h2>{{ heroUpperHeading}}</h2>
                 {% endif %}
                 <h1>{{ title }}</h1>
+                {%if subheading %}
                 <h3>{{ subheading | safe}}</h3>
+                {% endif %}
                 {% if heroBtn %}
                     {% if heroBtn.sectionLink %}
                         <a href="{{heroBtn.sectionLink}}" class="btn secondary hug-content">

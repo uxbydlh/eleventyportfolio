@@ -119,38 +119,7 @@ description: "Designer, Developer, Dilligent-worker. Adept at creating design sy
     {% endfor %}
 </section>
 
-
-
-<section class="centre" id="Policy Section">
-    <h1>Policies</h1>
-    <ol class="policy-list">
-        {% for policy in collections.policies %}
-        <li class="policy-card">
-            <a href="{{policy.url | toAbsoluteUrl }}" class="policy-card-link">
-                <img src='{{policy.data.blob.src}}' alt="">
-            </a>
-            <div>
-                <h3>{{policy.data.title}}</h3>
-                <p>{{policy.data.subheading}}</p>
-                <a class="btn transparent" href="{{policy.url | toAbsoluteUrl }}">Read More<i class="ri-arrow-right-line"></button>
-            </div>
-        </li>
-        {% endfor %}
-        <li class="policy-card">
-            <a href="{{'contactus/#FAQ' | toAbsoluteUrl }}" class="policy-card-link">
-                <img src='../assets/images/about/Blob-FAQ.webp' alt="">
-            </a>
-            <div>
-                <h3>FAQ</h3>
-                <p></p>
-                <a class="btn transparent" href="{{'contactus/#FAQ' | toAbsoluteUrl }}">Read More<i class="ri-arrow-right-line"></a>
-            </div>
-        </li>
-    </ol>
-</section>
-
 <script>
-
 document.addEventListener('alpine:init', () => {
   Alpine.data('toolData', () => ({
     tools:null,
