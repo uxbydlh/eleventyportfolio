@@ -45,7 +45,7 @@
                            <i class="ri-arrow-down-s-line dropdown__arrow"></i>
                         </div>
                         <ul class="dropdown__menu">
-                           {%- for child in entry.children %}{{ renderDropdownItem(loop.index, child) }}{% endfor -%} 
+                           {%- for child in entry.children %}{{ renderDropdownItem(index, loop.index, child) }}{% endfor -%} 
                         </ul>
                         {#- Otherwise, render as a regular link-#}
                         {%- else -%}
@@ -57,22 +57,23 @@
                   {%- endmacro %}
 
                   {##- SUB MENU NAVIGATION LEVEL DEPTH 1#}
-                  {% macro renderDropdownItem(index, entry) -%}
+                  {% macro renderDropdownItem(parentIndex, index, entry) -%}
                   {#- Check if the page has any sub-pages for list rendering-#}
                      <li {%if entry.children.length%} class="dropdown__subitem" {%endif%} >
                         {#- If the page has sub-pages, render it as a dropdown menu -#}
                         {%- if entry.children.length -%}
-                        <div class="dropdown__link" id="dropdown1-{{index}}">
+                        <div class="dropdown__link" id="dropdown{{parentIndex}}-{{index}}">
                            <a href="{{ entry.url }}" {% if entry.url == page.url %} aria-current="page"{% endif %} >
                               {{entry.title }} 
                            </a>
                            <i class="ri-add-line dropdown__add"></i>
                         </div>
                         <ul class="dropdown__submenu">
-                           {%- for child in entry.children %}{{ renderDropdownItem(loop.index, child) }}{% endfor -%} 
+                           {%- for child in entry.children %}{{ renderDropdownItem(parentIndex, loop.index, child) }}{% endfor -%} 
                         </ul>
                         {#- Otherwise, render as a regular link-#}
                         {%- else -%}
+                        <script>console.log(entry)</script>
                         <a href="{{ entry.url }}" class="dropdown__sublink" {% if entry.url == page.url %} aria-current="page"{% endif %} >
                            {{ entry.title }} 
                         </a>
