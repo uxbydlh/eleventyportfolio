@@ -73,7 +73,6 @@
                         </ul>
                         {#- Otherwise, render as a regular link-#}
                         {%- else -%}
-                        <script>console.log(entry)</script>
                         <a href="{{ entry.url }}" class="dropdown__sublink" {% if entry.url == page.url %} aria-current="page"{% endif %} >
                            {{ entry.title }} 
                         </a>
