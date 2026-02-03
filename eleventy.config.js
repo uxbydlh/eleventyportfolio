@@ -171,6 +171,7 @@ export default async function(eleventyConfig) {
 	});
 
 	//Creating Excerpts ************
+	// From https://tylersticka.com/journal/simple-eleventy-3-excerpts/
 	//Set Markdown Library
 	const md = markdownIt({/*...*/});
 	eleventyConfig.setLibrary("md", md);
