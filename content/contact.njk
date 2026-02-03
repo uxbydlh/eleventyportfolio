@@ -149,16 +149,6 @@ answer: `
 
 <section id="FAQ" class="FAQ">
 	<h1> Frequently Asked Questions </h1>
-	<div class="faq-list">
-		{% for faq in FAQs%}
-			<details class="expand-box" id="{{faq.id}}" name="faq-question">
-				<summary><h3>{{faq.question}}</h3><i class="ri-add-line"></i></summary>
-				<div class="faq-answer">
-					{{ faq.answer | md  | safe}}
-				</div>
-			</details>
-		{% endfor %}
-	</div>
 </section>
 
 <script>

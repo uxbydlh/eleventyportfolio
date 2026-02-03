@@ -149,20 +149,11 @@ export default async function(eleventyConfig) {
 		return (new Date()).toISOString();
 	});
 	
-	//Shortcode for excerpts
-	eleventyConfig.addShortcode("excerpt", (article) => extractExcerpt(article));
-	
 	//Shortcode for versioning/cache busting(?)
 	eleventyConfig.addShortcode('version', function () {
 		return String(Date.now());
 	});
 
-	//Parsing markdown excerpts for preview
-	eleventyConfig.setFrontMatterParsingOptions({ excerpt: true });
-	// Add a markdown "md" filter for the excerpts
-	eleventyConfig.addFilter("md", function (content = "") {
-		return markdownIt({ html: true}).render(content);
-	});
 
 	//Auto-prefix for absolute URLs
 	eleventyConfig.addFilter('toAbsoluteUrl', toAbsoluteUrl);
@@ -179,6 +170,39 @@ export default async function(eleventyConfig) {
 		key: '2e45665c31ec4cf5b22c18d63cdebf2a'
 	});
 
+	//Creating Excerpts ************
+	//Set Markdown Library
+	const md = markdownIt({/*...*/});
+	eleventyConfig.setLibrary("md", md);
+
+	//Create computed data per page
+	eleventyConfig.addGlobalData("eleventyComputed.excerpt", () => (data) => {
+			// If property is explicitly set, use that
+			if (data.excerpt) {
+				return data.excerpt;
+			}
+
+			// Otherwise grab raw page content
+			let content = data.page.rawInput;
+
+			// If template uses Markdown, render it
+			if (data.page.templateSyntax.includes('md')) {
+				content = md.render(content);
+			}
+
+			// Vanilla paragraphs ending in period, question or exclamation
+			const matches = content.match(/<p>(.+[\.\?\!])<\/p>/);
+
+			// If found, return content
+			if (matches) {
+				return matches [1];
+			}
+
+			//not sure about returning null.
+			return null;
+		}	
+	);
+	//END Creating Excerpts ********
 
 	// Features to make your build faster (when you need them)
 
@@ -228,27 +252,4 @@ export const config = {
 	// pathPrefix: "/",
 };
 
-/**
- * EXCERPT EXTRACTION FUNCTION
- * Picks excerpts out of md files to fit
- * given criteria
- */
-function extractExcerpt(article) {
-  if (!article.hasOwnProperty("templateContent")) {
-    console.warn(
-      'Failed to extract excerpt: Document has no property "templateContent".'
-    );
-    return null;
-  }
-
-  let excerpt = null;
-  const content = article.templateContent;
-
-  excerpt = striptags(content)
-    .substring(0, 140) // Cap at 200 characters
-    .replace(/^\\s+|\\s+$|\\s+(?=\\s)/g, "")
-    .trim()
-    .concat("...");
-  return excerpt;
-};
 
