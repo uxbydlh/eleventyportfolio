@@ -70,9 +70,18 @@ const logos = [
 	</div>
 </section>
 
+<!--TODO FIX THIS LOOP AFTER ADDING A PROJECTS COLLECTION-->
 <section class="centre" id="LatestProj">
 	<h2>Latest Projects</h2>
 	<!--TODO: RETRIEVE LATEST PROJECTS AND DISPLAY THEM-->
+	<!--{%set latest = collections.projects | first %}
+	{%set top = 3 %}
+	{% for project in collections.projects %}
+		{# ensure that top does not exceed the length of the collection #}
+		{% if (loop.index <= top) and (top <= loop.length) %}
+			<div>{{project.title}}</div>
+		{% endif %}
+	{% endfor %}-->
 	<a class="btn primary" href="#WIP">View All Projects<i class="ri-arrow-right-s-fill"></i></a>
 </section>
 

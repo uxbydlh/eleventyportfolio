@@ -106,6 +106,12 @@ export default async function(eleventyConfig) {
 		}
 	});
 
+	//Adding a projects collection
+	eleventyConfig.addCollection("projects", function(collection) {
+		var projectCollection = collection.getFilteredByTag("project");
+		return projectCollection;
+	});
+
 	//Adding an images folder
 	eleventyConfig.addPassthroughCopy("/assets/images/logo");
 

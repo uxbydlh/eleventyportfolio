@@ -1,0 +1,14 @@
+---
+title: Collections Test
+---
+
+<h1>{{title}}</h1>
+<h2>New Post Collection</h2>
+<ul>
+    {% for item in collections.projects %}
+    <li>
+        <h4>{{item.data.title}}</h4>
+        {{item.templateContent | safe }}
+    </li>
+    {% endfor %}
+</ul>
