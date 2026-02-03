@@ -88,5 +88,10 @@
         "name":"vscode",
         "icon":"vscode.png",
         "type":"dev"
+    },
+    {
+        "name":"trello",
+        "icon":"trello.png",
+        "type":"mgmt"
     }
 ]
