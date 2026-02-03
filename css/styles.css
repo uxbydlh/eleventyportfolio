@@ -2032,7 +2032,8 @@ div:has(.embedded-google-form) {
 }
 
 .tool-icon picture,
-.tool-icon picture img {
+.tool-icon picture img,
+.tool-icon img {
   flex-shrink: 1;
   max-height: 64px;
   max-width: 100%;
