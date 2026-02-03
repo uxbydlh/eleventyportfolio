@@ -37,29 +37,5 @@ layout: layouts/base.njk
 
         <div class="content">
             {{ content | safe }}
-
-            {% if noDonate %}
-            <!--Nothing-->
-            {% else %}
-            <section class= "centre violet">
-                <div class="section-row">
-                    <div class="row-column image">
-                        <img src="../assets/images/donate-blob.webp" alt="Three students work together with a tutor on a laptop. They are supported by a drawing of two hands and surrounded by a heart, representing community.">
-                    </div>
-                    <div class="row-column text">
-                        <h2>Donate</h2>
-                        <p>Your donations help us provide tutoring sessions to students of all income levels at low or no cost. When you give, we grow.</p>
-                        <p>
-                            For each donation we receive, we can open up more tutoring spots for students in financial need.
-                            This model allows us to provide the best possible tutoring we can, <b>absolutely free of charge</b>.
-                        </p>
-                        <div class="btn-row-inline">
-                            <a class="btn primary" href="https://donate.stripe.com/eVqbJ16YggWiaA85l70co00" target="_blank" rel="noopener noreferrer">Donate</a>
-                            <!--<a class="btn secondary">Other ways to give</a> TEMPORARY-->
-                        </div>
-                    </div>
-                </div>
-            </section>
-            {% endif %}
         </div>
         
