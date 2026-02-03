@@ -69,14 +69,12 @@ const logos = [
 		</div>
 	</div>
 	<div class="btn-row-inline">
-		<a class="btn primary" href="#WIP">View CV<i class="ri-arrow-right-s-fill"></i></a>
+		<a class="btn primary" href="about/#tools-and-skills">View CV<i class="ri-arrow-right-s-fill"></i></a>
 	</div>
 </section>
 
-<!--TODO FIX THIS LOOP AFTER ADDING A PROJECTS COLLECTION-->
 <section class="centre" id="LatestProj">
 	<h2>Latest Projects</h2>
-	<!--TODO: RETRIEVE LATEST PROJECTS AND DISPLAY THEM-->
 	<ul>
 		{% set latest_projects = collections.projects | reverse %}
 		{% for item in latest_projects.slice(0,3) %}
@@ -91,7 +89,7 @@ const logos = [
 		</li>
 		{% endfor %}
 	</ul>
-	<a class="btn primary" href="#WIP">View All Projects<i class="ri-arrow-right-s-fill"></i></a>
+	<a class="btn primary" href="/tags/project">View All Projects<i class="ri-arrow-right-s-fill"></i></a>
 </section>
 
 <section class="centre" id="FeaturedTest">
@@ -106,8 +104,8 @@ const logos = [
 		{% endfor %}
 	</ul>
 	<div class="btn-row-inline">
-		<a class="btn primary" href="#WIP">More About Me<i class="ri-arrow-right-s-fill"></i></a>
-		<a class="btn primary" href="#WIP">All Testimonials<i class="ri-arrow-right-s-fill"></i></a>
+		<a class="btn primary" href="/about">More About Me<i class="ri-arrow-right-s-fill"></i></a>
+		<a class="btn primary" href="/about/#testimonials">All Testimonials<i class="ri-arrow-right-s-fill"></i></a>
 	</div>
 </section>
 
