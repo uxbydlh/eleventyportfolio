@@ -4,6 +4,7 @@ layout: layouts/base.njk
 {# Only include the syntax highlighter CSS on blog posts, included with the CSS per-page bundle #}
 <style>{% include "node_modules/prismjs/themes/prism-okaidia.css" %}</style>
 <style>{% include "css/prism-diff.css" %}</style>
+
 <h1>{{ title }}</h1>
 
 <ul class="post-metadata">
@@ -14,7 +15,9 @@ layout: layouts/base.njk
 	{%- endfor %}
 </ul>
 
-{{ content | safe }}
+<article>
+	{{ content | safe }}
+</article>
 
 {%- if collections.posts %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}
@@ -26,3 +29,7 @@ layout: layouts/base.njk
 </ul>
 {%- endif %}
 {%- endif %}
+
+<div class="scroll-top"> <!--scrollbar at the end of the main-->
+	<a class="scroll-top__link" href="#">Back to top</a> <!--href="#" navigate to the top of the page-->
+</div> 
