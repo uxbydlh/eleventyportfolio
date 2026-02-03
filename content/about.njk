@@ -119,6 +119,19 @@ description: "Designer, Developer, Dilligent-worker. Adept at creating design sy
     {% endfor %}
 </section>
 
+<section class="centre" id="testimonials">
+    <h2>Testimonials</h2>
+	{% set testList = testimonials | shuffle %}
+	<ul class="card-list">
+		{% for testimonial in testList %}
+		<li class="card testimonial">
+			<q>{{testimonial.testimonial}}</q>
+			<div class="persona"><i class="ri-chat-2-fill"></i><p><b>{{testimonial.persona}}</b></p></div>
+		</li>
+		{% endfor %}
+	</ul>
+</section>
+
 <script>
 document.addEventListener('alpine:init', () => {
   Alpine.data('toolData', () => ({
