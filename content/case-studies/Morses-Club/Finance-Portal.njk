@@ -10,10 +10,113 @@ const tags = ["project","morses","case-study"];
 
 const date = "2023-01-01";
 
-const title = "Finance Portal";
-const subheading = "for Morses Club";
+const title = "Morses Club Finance Portal";
+const subheading = "Enhanced Design for Managing Data, Payments, and Loans";
 ---
 
-The customer portal served as a vital hub for users to manage personal data, apply for finance, make payments, and access loan information. However, the platform design was outdated, and modifying it previously depended heavily on third party development.
+{#TODO: Banner Image#}
+<div class="article-section">
+	Account dashboard for finance applications, payments, loan details and personal data management. 
+	Created for Morses Club - a loan company that provided non-standard credit options.
+	{#TODO: Add a View all Screen button linking out to figma #}
+</div>
 
-The portal suffered from an outdated design that underutilised available screen space; lacking modern features and clear functionality. It also lacked crucial visual cues such as icons, badges and distinct button shapes, compromising its usability and clarity of purpose for users.
+<h2>Context</h2>
+<div class="article-section">
+	Morses Club PLC was a UK consumer finance company that offered a variety of loan products including home collected credit and online lending. 
+	At the time of this project, Morses were making a push to move the majority of their services to digital and improve the usability of their existing digital lending services.
+</div>
+
+<h2>Details</h2>
+<div class="article-section">
+	Scope
+	Full-time work, improvement on existing product
+	Role
+	Concept, Research, UX & UI design
+	Tools
+	Figma, HotJar
+</div>
+
+<h2>Impact</h2>
+<div class="article-section">
+	Streamlining the design of the customer portal gave the site better clarity of purpose.
+	Morses experienced a significant reduction in calls and complaints regarding the customer portal.
+</div>
+
+<h2>Problem</h2>
+<div class="article-section">
+	The customer portal served as a vital hub for users to manage personal data, apply for finance, make payments, and access loan information. 
+	However, the platform design was outdated, and modifying it previously depended heavily on third party development.
+	The portal suffered from an outdated design that underutilised available screen space; lacking modern features and clear functionality. 
+	It also lacked crucial visual cues such as icons, badges and distinct button shapes, compromising its usability and clarity of purpose for users.
+	{#TODO add image#}
+</div>
+<div class="article-section">
+	<h3>Key Question</h3>
+	How do we shift towards a more function-forward portal without stripping it of the brand's personality?
+</div>
+
+<h2>Proposed Solution</h2>
+<div class="article-section">
+
+</div>
+<div class="article-section">
+	Removing the non-functional “hero” banner and reducing the bright colours to declutter the visual layout while assigning meaning and recognition to the retained colours.
+	On-screen actions would be re-ordered based on user and business priorities. 
+	Icons and badges would be introduced with the aim of guiding customers towards frequently used and essential features.
+	The layout would also be newly optimised for mobile.
+</div>
+<div class="article-section">
+	<h3>Research</h3>
+	{#TODO Add Slideshow Images #}
+	<h4>Competitor Research</h4>
+	Upon comparison with our direct and indirect competitors, it became apparent that our portal fell short of customer expectations.
+	<h4>As Is: Product Analysis</h4>
+	While our portal had an inefficient “Hello” banner, competitors utilised their headers to deliver relevant product news and display customer balances, providing more valuable information.
+	Coloured buttons, while aligning with the brand, lacked clarity due to the absence of icons, vague action titles, and shared colours across unrelated features. 
+	This would pose challenges for users with impaired colour vision and situations requiring black-and-white displays, impeding action identification and page distinction.
+</div>
+<div class="article-section">
+	<h3>Ideation</h3>
+	{#TODO Add Slideshow Images #}
+	<h4>Wireframes</h4>
+	After creating the initial Figma design sketches, I collaborated with the Portal team, leveraging their experience with direct customer interaction. 
+	This collaboration spanned several weeks and involved multiple feedback sessions. 
+	Valuable insights emerged from this iterative process, indicating that customers would benefit from condensed announcements in a smaller header.
+	<h4>Minimum Viable Changes</h4>
+	Additionally, it was identified that prominently displaying customer number, balance, and customer service agent contact details on the initial home screen would provide easy access to vital information typically required when reaching out to us for assistance.
+</div>
+
+<h2>Visual Development</h2>
+<div class="article-section">
+	<h3>Branding</h3>
+	Third-party icons were utilised to expedite the process, and where required, custom vector icons were created for specific user needs, enhancing user comprehension and navigation through visual cues.
+	These icons, integrated into coloured spheres following the logo design, reinstated brand identity without compromising clarity.
+	Vital details such as announcements and customer information were deliberately presented in black-and-white high-contrast, ensuring enhanced readability and ease of location for users.
+	{#TODO: Add Colour Preview#}
+</div>
+<div class="article-section">
+	<h3>Component Library</h3>
+	Established a Figma Component Library post-wireframe development, housing reusable elements for consistency and scalability across current and future designs.
+	This approach streamlined implementation for programmers and QA testers by ensuring cohesion across current and future designs. The creation of this library promoted design consistency, easing implementation and facilitating efficient testing and development without extensive oversight.
+	{#TODO Add Library Preview #}
+</div>
+
+<h2>Screens</h2>
+<div class="article-section">
+	{#TODO: Add slideshow of screenshots #}
+</div>
+
+<h2>Testimonials</h2>
+<section class="centre" id="testimonials">
+	{% set testList = testimonials | shuffle %}
+	<ul class="card-list">
+		{% for testimonial in testList %}
+		<li class="card testimonial">
+			<q>{{testimonial.testimonial}}</q>
+			<div class="persona"><i class="ri-chat-2-fill"></i><p><b>{{testimonial.persona}}</b></p></div>
+		</li>
+		{% endfor %}
+	</ul>
+	{#TODO Only add Morses testimonials here - maybe we need tags?#}
+</section>
