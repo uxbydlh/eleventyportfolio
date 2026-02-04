@@ -10,14 +10,117 @@ const tags = ["design","project","morses","case-study"];
 
 const date = "2023-01-01";
 
-const title = "Dot Dot Loans";
-const subheading = "for Morses Club";
+const title = "UI/UX Groundwork for Dot Dot Loans";
+const subheading = "Design Systems and Customer Journeys";
 ---
 
+{#TODO ADD BANNER IMAGE#}
+
+<h2>Context</h2>
+<div class="article-section">
+	Dot Dot Loans were a subsidiary of Morses Club PLC a UK consumer finance company that offered a variety of loan products including home collected credit and online lending. 
+	Dot Dot Loans provided online loans between £100 and £1000. 
+	At the time of this project, Morses were making a push to move the majority of their services to digital and improve the usability of their existing digital lending services. 
+	They had a few screens already prepared in Figma representing the Dot Dot Loans brand, but not much more.
+</div>
+
+<h2>Details</h2>
+<div class="article-section">
+	Scope: Full-time, Improvement on existing product
+	Role: Research, UX & UI Design
+	Tools: Figma, HotJar
+</div>
+
+<h2>Impact</h2>
+<div class="article-section">
+	<h3>Design System and Interactive Journey</h3>
+	Building out the design system helped to maintain the consistency of visual elements across future designs. 
+	It also allowed for much faster prototyping of and iteration on new features. 
+	This increased overall confidence in new features before they were sent to the third-party to be implemented.
+	Recreating the customer journey allowed us to properly visualise and understand how users navigate through the website, leading to more informed decisions about what features could be added, moved, etc.
+	 Providing the third-party with clear, interactive reference also meant that less revisions needed to be made to the final product. 
+	This saved Morses both time and money.
+	The demos also served as a good visual guide to our journey for new team members, and aided with training and onboarding. 
+	They reduced set-up time for employee training, as new employees could be provided with a link right to the demos and a password, rather than waiting on accounts to be set up by IT.
+	<h3>Repayment Plan Tool</h3>
+	The Integration of this tool reduced the strain on DDL customer service agents, allowing for more journeys to be processed more efficiently.
+	Customer satisfaction also increased, as it allowed customers to partially progress with creating a repayment plan without having to wait or make any phone calls.
+	<h3>Maintenance Enhancements</h3>
+	These customer portal and journey enhancements created a more smooth and unified experience for customers of the brand, strengthening their trust.
+	There was a significant increase in journey acquisitions and positive customer feedback after the implementation of these designs.
+</div>
 
 
-Dot Dot Loans were a subsidiary of Morses Club PLC a UK consumer finance company that offered a variety of loan products including home collected credit and online lending. Dot Dot Loans provided online loans between £100 and £1000. The company entered administration on November 17, 2023, and is no longer offering new loans.
 
-At the time of this project, Morses were making a push to move the majority of their services to digital and improve the usability of their existing digital lending services. They had a few screens already prepared on Figma representing the Dot Dot Loans brand, but not much more.
+<h2>Design System and Interactive Journey</h2>
+<div class="article-section">
+	<h3>Problem</h3>
+	Morses were looking to expand the Dot Dot Loans product, but had no way of quickly prototyping out new features. 
+	At the time, they were relying on a third-party company to build out the DDL website. 
+	This meant that testing out new features, or even just getting an example of how they would look could sometimes take weeks. 
+	They needed a way to test out new features more quickly and a way to provide the third-party with a clearer reference point, so that there would be less need for revisions.
+</div>
+<div class="article-section">
+	<h3>Solution</h3>
+	The design system was built out with the intention of enabling faster prototyping of new features. 
+	It was created in Figma, based on assets from the existing Dot Dot Loans website and portal. 
+	Interactive components were modelled on existing interactions on the site.
+	{#TODO: Add an image - make sure it can be clicked on for a zoom#}
+	The design system was then used to build out screens for the existing customer portal and sales journeys available on Dot Dot Loans. 
+	The primary intent of this was to create a baseline to test new customer interactions on.
+	The secondary intent of this was to create more up to date employee training for customer agents, which could show them the most up to date screens that a customer would be working with. 
+	This was done by creating interactive figma demos based on the customer journeys.
+	{#TODO: Add Figma embed here#}
+</div>
+<div class="article-section">
+	<h3>Screens</h3>
+	{#TODO: Add Slideshow here#}
+	A small selection of the screens created
+	{#TODO Add a button linking to customer journey demos on figma #}
+</div>
 
-The majority of this work comes from the beginning of my time with Morses Club.
+<h2>Repayment Plan Tool</h2>
+<div class="article-section">
+	Designed a “Repayment Plan Tool” that would be seamlessly integrated into our contact form. 
+	Developed flows where user selects a query indicative of financial challenges i.e. “I am unable to make a payment”. 
+	On selection, users are given the option to redirect to the Repayment Plan Tool.
+	This tool acted as an early intervention mechanism for users facing such difficulties and allowed them to independently access help even when a customer service agent was unavailable.
+	{#TODO Add image #}
+</div>
+<div class="article-section">
+	<h3>Screens</h3>
+	{#TODO add slideshow here#}
+</div>
+<div class="article-section">
+	<h3>Demo</h3>
+	{#TODO add Figma Embed here#}
+</div>
+
+<h2>Maintenance Enhancements</h2>
+<div class="article-section">
+	Conducted comprehensive maintenance on the DDL main website and customer portal, prioritising user-centric design and addressing key usability concerns. 
+	Improvements were conceptualised based on direct customer feedback, and statistics from HotJar.
+	Notable enhancements include:
+	• Implementation of collapsible sections on the Terms & Conditions page for improved readability.
+	• Introduction of a dedicated “Money Worries” page and tab to assist financially unstable customers.
+	• Addition of “Add to Homescreen” notices within the portal to encourage users to bookmark the site on their mobile devices.
+	{#TODO add image here #}
+</div>
+<div class="article-section">
+	<h3>Demo</h3>
+	{#TODO add figma demo #}
+</div>
+
+<h2>Testimonials</h2>
+<section class="centre" id="testimonials">
+	{% set testList = testimonials | shuffle %}
+	<ul class="card-list">
+		{% for testimonial in testList %}
+		<li class="card testimonial">
+			<q>{{testimonial.testimonial}}</q>
+			<div class="persona"><i class="ri-chat-2-fill"></i><p><b>{{testimonial.persona}}</b></p></div>
+		</li>
+		{% endfor %}
+	</ul>
+	{#TODO Only add Morses testimonials here - maybe we need tags?#}
+</section>
