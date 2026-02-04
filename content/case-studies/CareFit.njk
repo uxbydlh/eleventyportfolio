@@ -14,12 +14,109 @@ const title = "CareFit";
 const subheading = "An Application to Encourage Exercise in Informal Carers";
 ---
 
+{#TODO: Create Banner Image#}
 
+<h2>Details</h2>
+<div class="article-section">
+	Scope
+	University dissertation project with approx. 10 weeks of programming & testing time
+	Role
+	UX & UI designer, Full stack programmer
+	Tools
+	Android Studio, Inkscape
+</div>
 
-The benefits of exercise are considered general knowledge. Still, most people cannot find time to get active. New tech and equipment makes it easier for us to keep up with an exercise routine, but the financial barrier for entry can be high.
+<h2>Outline</h2>
+<div class="article-section">
+	The benefits of exercise are considered general knowledge. Still, most people cannot find time to get active. New tech and equipment makes it easier for us to keep up with an exercise routine, but the financial barrier for entry can be high.
+	One in ten people in the UK are informal carers, and for them, that barrier for entry may look even higher. Many carers dedicate 50 or more hours a week to unpaid care duties, and many are also low-income.
+	Declining health among informal carers has been reported, but it can be difficult for them to slot in preventative behaviours like exercise.
+	CareFit was designed to encourage those informal carers to use exercise as a means of looking after their own health. It focussed heavily on user-driven development and designing for older adults.
+</div>
 
-One in ten people in the UK are informal carers, and for them, that barrier for entry may look even higher. Many carers dedicate 50 or more hours a week to unpaid care duties, and many are also low-income.
+<h2>Process</h2>
+<div class="article-section">
+	{#TODO Add slideshow images#}
+</div>
+<div class="article-section">
+	<h3>Rapid Prototyping</h3>
+	To facilitate fast usability testing, prototypes were created as quickly as possible. Going from the bare minimum wireframes – to account for the many changes that were requested by users – to the final product with each session.
+</div>
+<div class="article-section">
+	<h3>User Testing</h3>
+	Two testing sessions were run over the 10 week period. Testers consisted of carers over the age of 45. Tests were conducted by myself and monitored by my supervisor.
+	Testing consisted of 5 tasks, revolving around the different features of the app for example: “Find a medium intensity exercise”, “Change your exercise preferences”, etc.
+	Notes were made of user remarks, and any pain-points that were found in the process. Afterwards, users were asked to provide feedback in an anonymised survey.
+</div>
 
-Declining health among informal carers has been reported, but it can be difficult for them to slot in preventative behaviours like exercise.
+<h2>Constraints</h2>
+<div class="article-section">
+	<h3>Usability</h3>
+	The average carer in the UK is over the age of 50. Usability guidelines can only get you so far, and they would not cover aspects like what exercises to pick. Ideally, the exercises and the way they were presented would be tailored specifically to carers duties and needs.
+</div>
+<div class="article-section">
+	<h3>Income</h3>
+	Many carers are low-income, so the application had to be suitable for older and cheaper models of mobile phone.
+</div>
+<div class="article-section">
+	<h3>Motivation</h3>
+	Having the motivation to exercise requires more free time and energy than what a typical carer has to offer. We wanted to motivate carers in a way that appealed to their sense of practicality. Not overwhelm or patronise them.
+</div>
+<div class="article-section">
+	<h3>Time</h3>
+	This was a solo project with a 10 week timeframe. Multiple roles had to be juggled.
+</div>
 
-CareFit was designed to encourage those informal carers to use exercise as a means of looking after their own health. It focussed heavily on user-driven development and designing for older adults.
+<h2>Issues</h2>
+<div class="article-section">
+	At first, users said the application was visually appealing, and praised its vector illustrations. However, they found it difficult to navigate, and were confused by some of the features.
+	Users were unhappy with the initial reminder system. They stated that they would rather receive reminders on certain days of the week, routinely, instead of setting them for specific dates.
+	Users were also confused by the filter system, as many of them did not know what it actually meant to “filter” the list of exercises.
+
+</div>
+
+<h2>Suggestions</h2>
+<div class="article-section">
+	{#TODO add image #}
+	More high-intensity exercises were requested, so that users would not become bored if they became fitter as a result of the application. Built-in guidance was requested, in case the carer was less familiar with exercise apps, or had been unable to use the app for a while. In response to this, we tutorialised the onboarding process and created an option to revisit the tutorial at any time. During the tutorial, some options are greyed out to ensure users stay on the path.
+</div>
+
+<h2>Final Application</h2>
+<div class="article-section">
+	{#TODO Insert slideshow #}
+</div>
+
+<h2>Further Development</h2>
+<div class="article-section">
+	At the time, these were the ideas thought of for further development. Since then, the application has been picked up again, and further research has been conducted by a different student. Please contact Dr. Kieren Egan for further details.
+</div>
+<div class="article-section">
+	<h3>Features</h3>
+	In this state, the application cannot determine if an exercise is being performed correctly. Potential hardware solutions would include motion-tracking via a wearable device, phone camera, or phone gyroscope. All options would require further research.
+</div>
+<div class="article-section">
+	<h3>Testing</h3>
+	Testing with carers was an excellent start, but to further develop the actual exercise portion of the app, testing with fitness professionals should also be considered.
+</div>
+<div class="article-section">
+	<h3>Aesthetics</h3>
+	This version of the application prioritised function over form. While this is not a bad thing, the application could benefit from some visual tweaks. Colours could be easier on the eyes, text could be spaced out better so that it feels less cramped.
+	Further iterations could also benefit from the use of video, or animations for exercise guidance.
+</div>
+<div class="article-section">
+	Full dissertation available on request.
+</div>
+<h2>Testimonials</h2>
+<section class="centre" id="testimonials">
+	{% set testList = testimonials | shuffle %}
+	<ul class="card-list">
+		{% for testimonial in testList %}
+		<li class="card testimonial">
+			<q>{{testimonial.testimonial}}</q>
+			<div class="persona"><i class="ri-chat-2-fill"></i><p><b>{{testimonial.persona}}</b></p></div>
+		</li>
+		{% endfor %}
+	</ul>
+	{#TODO Only add Morses testimonials here - maybe we need tags?#}
+</section>
+

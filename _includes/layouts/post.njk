@@ -5,6 +5,8 @@ layout: layouts/base.njk
 <style>{% include "node_modules/prismjs/themes/prism-okaidia.css" %}</style>
 <style>{% include "css/prism-diff.css" %}</style>
 
+{#TODO Add contents to each article so it's easier to get to each section#}
+
 <h1>{{ title }}</h1>
 
 <ul class="post-metadata">
@@ -19,6 +21,7 @@ layout: layouts/base.njk
 	{{ content | safe }}
 </article>
 
+{#TODO make this use anything tagged project as an input#}
 {%- if collections.posts %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}
 {%- set nextPost = collections.posts | getNextCollectionItem %}
