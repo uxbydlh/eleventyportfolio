@@ -10,10 +10,118 @@ const tags = ["project","morses","case-study"];
 
 const date = "2023-01-01";
 
-const title = "Form Fatigue Solution";
-const subheading = "for Morses Club";
+const title = "Reducing Form Fatigue";
+const subheading = "With Strategic Income & Outgoings Page Enhancements";
 ---
 
-Having no existing customer data to rely on meant that the initial design for the digital customer journey had a degree of freedom and exploration in its design. However, it also meant that the initial Income and Expenditure page design was primarily driven by business interests and compliance guidelines, rather than being more tailored to fit Morses’ actual user base.
+{#TODO: Banner Image#}
+<div class="article-section">
+	Tackling pain points within the “Income and Outgoings” portion of the digital customer journey. Created for Morses Club - a loan company that provided non-standard credit options.
+	{#TODO: Add a View all Screen button linking out to figma #}
+</div>
 
-The Income and Expenditure section of our online form faced poor customer reception. Customers could not figure out the purpose of the disposable income calculation, or why certain inputs were required from them. This was not aided by the length of the page, which was much longer than other pages in the form.
+<h2>Context</h2>
+<div class="article-section">
+	Morses Club PLC was a UK consumer finance company that offered a variety of loan products including home collected credit and online lending. 
+	At the time of this project, Morses were making a push to move the majority of their services to digital and improve the usability of their existing digital lending services.
+</div>
+
+<h2>Details</h2>
+<div class="article-section">
+	Scope
+	Full-time work, improvement on existing product
+	Role
+	Concept, Research, UX & UI design
+	Tools
+	Figma, Figjam, HotJar
+</div>
+
+<h2>Impact</h2>
+<div class="article-section">
+	The implementation of the new Income and Outgoings structure resulted in an 18% increase in acquisition journey leads during it's first week in use.
+	Embracing the interspersed solution ensured that users had ample time to review and consider their answers, contributing to improved accuracy.
+	Further research and feedback revealed the necessity for a "summary" page, aggregating all Income and Outgoings inputs from the form, offering customers a final opportunity to rectify errors before proceeding.
+</div>
+
+<h2>Problem</h2>
+<div class="article-section">
+	Having no existing customer data to rely on meant that the initial design for the digital customer journey had a degree of freedom and exploration in its design. However, it also meant that the initial Income and Expenditure page design was primarily driven by business interests and compliance guidelines, rather than being more tailored to fit Morses’ actual user base.
+	The Income and Expenditure section of our online form faced poor customer reception. Customers could not figure out the purpose of the disposable income calculation, or why certain inputs were required from them. This was not aided by the length of the page, which was much longer than other pages in the form.
+</div>
+<div class="article-section">
+	<h3>Key Question</h3>
+	How can we reduce form-fatigue while still essentially keeping the same number of questions that we had before?
+</div>
+
+<h2>Proposed Solution</h2>
+<div class="article-section">
+	Rather than sticking with a single page, we opted to take the Income and Outgoings inputs and spread them across our existing form pages. Relevant Income and/or Outgoings questions would be grouped with other existing questions in a similar vein. For example: mortgage and rent payment questions would be placed next to address and household questions.
+	{#TODO Add the As-Is/To-be slideshow#}
+</div>
+
+<h2>Research</h2>
+<div class="article-section">
+	To gain a clearer understanding of where we stood among our competitors in terms of I\&E questions, other online lenders were examined. The majority of them had significantly shorter I\&E sections, with some of the longer variants splitting the questions across the rest of the form, and others providing a summary detailing the monetary amounts entered by the user.
+	HotJar analysis helped to determine which areas of the form were most likely to be filled incorrectly. It also revealed that users failed to make use of the tooltips most of the time. What was notable however, was that when a customer did manage to use the tooltips, they would go on to use them for most inputs on the form.
+	This made two things apparent:
+	• Customers did not know the majority of their I\&E input data off the top of their head, and were either filling them in incorrectly, or not at al
+	• Customers needed to be shown more information to feel like they could comfortably answer our questions.
+</div>
+<div class="article-section">
+	<h3>Research Presentation</h3>
+	{#TODO Add Slideshow Images #}
+</div>
+
+<h2>Ideation</h2>
+<div class="article-section">
+	Following data examination, a strategic choice was made to develop two distinct and innovative UX solutions, each presenting a radical departure from each other.
+</div>
+<div class="article-section">
+	<h3>Pure Progressive Disclosure</h3>
+	{#TODO Add Screen Preview #}
+	Initially, only the employment input would be shown to the user. Additional fields remain hidden until interaction with a checkbox or button triggers their display. This strategy aimed to create a more concise and approachable initial page and percent aimless scrolling through similar fields for a more focussed experience.
+</div>
+{#TODO add demo button #}
+<div class="article-section">
+	<h3>Interspersed</h3>
+	{#TODO: Add screen preview #}
+	Income and expenditure inquiries would be grouped with related questions. For example: housing benefits and rent payment questions would be situated alongside address-related questions. This arrangement aimed to deter question skipping, and ensure that customers were in the appropriate mindset to provide accurate responses.
+</div>
+{#TODO add demo button#}
+<div class="article-section">
+	<h3>Micro-Solutions</h3>
+	{#TODO: Add screen preview #}
+	Before the development of the two larger solutions, we prioritised the development of micro-solutions such as progressive disclosure and automatic tooltips. We did this to target specific pain-points in a shorter time before overhauling the whole page.
+	An “I need help” button was also implemented to facilitate direct customer contact for assistance with completing the page. This feature aimed to support users with the existing page, and served as a driving force for future user research and iterative improvements to enhance the pages’ usability.
+</div>
+
+<h2>Development</h2>
+<div class="article-section">
+	Opting for the “Interspersed” solution diversified the page layout, reducing the risk of visual overload that the original Income and Expenditure (I\&E) page carried. By breaking up the page across several existing pages, we reduced the monotony that was previously there when the user had to scroll through every I\&E question at once.
+	Replacing manual tooltip icon buttons with an automated process that makes additional information appear when the user clicks on the actual input reduces visual clutter. This enabled us to ask more elaborate questions where needed.
+	Implementing progressive disclosure allowed us to conceal non-applicable or optional questions, streamlining the user interaction for increased efficiency.
+</div>
+
+<h2>Demos</h2>
+<div class="article-section">
+	<h3>Input Demos</h3>
+	{#TODO Insert figma demo embed here#}
+</div>
+<div class="article-section">
+	<h3>Final Prototypes</h3>
+	{#TODO Insert figma demo embed here#}
+</div>
+
+<h2>Testimonials</h2>
+<section class="centre" id="testimonials">
+	{% set testList = testimonials | shuffle %}
+	<ul class="card-list">
+		{% for testimonial in testList %}
+		<li class="card testimonial">
+			<q>{{testimonial.testimonial}}</q>
+			<div class="persona"><i class="ri-chat-2-fill"></i><p><b>{{testimonial.persona}}</b></p></div>
+		</li>
+		{% endfor %}
+	</ul>
+	{#TODO Only add Morses testimonials here - maybe we need tags?#}
+</section>
