@@ -11,7 +11,94 @@ const tags = ["project","morses","case-study"];
 const date = "2023-01-01";
 
 const title = "Principle Application Manager";
-const subheading = "for Morses Club";
+const subheading = "Empowering MCL Employees with PAM for Efficient Customer Application Checks";
 ---
 
-Internal tool created for Morses Club, with intent to replace external tools for additional customer application checks. Its implementation resulted in a 75% increase in acquisition journey leads while reducing dependency on third-party tools, leading to cost savings for the business.
+{#TODO: Banner Image#}
+<div class="article-section">
+	Internal tool created for Morses Club, with intent to replace external tools for additional customer application checks. Its implementation resulted in a 75% increase in acquisition journey leads while reducing dependency on third-party tools, leading to cost savings for the business.
+	{#TODO: Add a View all Screen button linking out to figma #}
+</div>
+
+<h2>Context</h2>
+<div class="article-section">
+	Morses Club PLC was a UK consumer finance company that offered a variety of loan products including home collected credit and online lending. 
+	At the time of this project, Morses were making a push towards creating more internal tools that would empower their agents to process customer applications through an all-in-one system.
+</div>
+
+<h2>Details</h2>
+<div class="article-section">
+	Scope
+	Full-time work, improvement on existing product
+	Role
+	Concept, Research, UX & UI design
+	Tools
+	Figma, Figjam, User Feedback Forms (Various)
+</div>
+
+<h2>Impact</h2>
+<div class="article-section">
+	PAM empowered MCL employees to aid customers with applications and bolstered risk investigation, ensuring alignment with Consumer Duty and FCA guidelines. Its implementation resulted in a 75% increase in acquisition journey leads while reducing dependency on third-party tools, leading to cost savings for the business.
+</div>
+
+<h2>Problem</h2>
+<div class="article-section">
+	Previously, the customer application-checking process was fragmented, time-consuming and limited to specific managerial levels. This resulted in an unnecessarily prolonged and inconvenient journey for the customer.
+</div>
+<div class="article-section">
+	<h3>Key Question</h3>
+	How can we reduce form-fatigue while still essentially keeping the same number of questions that we had before?
+</div>
+
+<h2>Proposed Solution</h2>
+<div class="article-section">
+	{#TODO Add Old Flow/New Flow Image#}
+	We proposed to create a unified process, enabling all necessary internal staff to conduct customer check-ins through streamlined question-and-answer forms. The aim was to simplify the process for increased accessibility and efficiency.
+</div>
+
+<div class="article-section">
+	<h3>Research</h3>
+	Investigated the original MAP solution architecture to determine what features could be kept as is and what could be improved, cut or conglomerated.
+	Conducted Figjam-based Q&A sessions with Morses employees to prioritise essential customer information and features. This collaborative approach ensured alignment with user needs, enhancing the efficiency of feature prioritisation and ensuring a user-centric design focus.
+	{#TODO PDF embed of MAP PAM Q and A board#}
+</div>
+<div class="article-section">
+	<h3>Ideation</h3>
+	Developed two initial web-tool designs – a single-page solution and a multi-page solution. The single-page solution was determined to be too overwhelming, so we opted for navigation between multiple pages to answer the necessary forms.
+	Implemented iterative enhancements until all necessary features were incorporated. This iterative process allowed for continuous improvement, ensuring the final design included all essential features while refining usability and functionality based on users’ feedback and their evolving needs
+	{#TODO Add Slideshow Images #}
+</div>
+
+<h2>Visual Development</h2>
+<div class="article-section">
+	<h3>Branding</h3>
+	As an internal tool, the design did not require the same “flash” as that of the website. Simplicity was the aim from the start. The reduced need for strong branding was acknowledged, but there was still a desire to align with Morses’ colours.
+	Orange took on a primary role here, rather than its usual use as a secondary colour. This helped to maintain alignment with the brand, whilst differentiating it from what we would present to customers.
+	Consulting with employees throughout ensured strict prioritisation of necessary information and actions, enhancing clarity and usability within the interface.
+	{#TODO Colour preview #}
+</div>
+<div class="article-section">
+	<h3>Component Library</h3>
+	Established a Figma Component Library post-wireframe development, housing reusable elements for consistency and scalability across current and future designs.
+	This approach streamlined implementation for programmers and QA testers by ensuring cohesion across current and future designs. 
+	The library’s creation promoted design consistency, easting implementation and facilitating efficient testing and development without extensive oversight.
+	{#TODO Add Library Preview #}
+</div>
+<h2>Demos</h2>
+<div class="article-section">
+	{#TODO Insert figma demo embed here#}
+</div>
+
+<h2>Testimonials</h2>
+<section class="centre" id="testimonials">
+	{% set testList = testimonials | shuffle %}
+	<ul class="card-list">
+		{% for testimonial in testList %}
+		<li class="card testimonial">
+			<q>{{testimonial.testimonial}}</q>
+			<div class="persona"><i class="ri-chat-2-fill"></i><p><b>{{testimonial.persona}}</b></p></div>
+		</li>
+		{% endfor %}
+	</ul>
+	{#TODO Only add Morses testimonials here - maybe we need tags?#}
+</section>
