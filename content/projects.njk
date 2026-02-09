@@ -1,0 +1,46 @@
+---js
+const layout = "layouts/standard.njk";
+
+const title = "All Projects";
+
+var pagination = {
+    data: "collections.projects",
+    size: 100,
+    alias: "projects"
+};
+---
+
+<h2>Case Studies</h2>
+<ul>
+    {% for proj in projects %}
+    {%if 'case-study' in proj.data.tags %}
+    <li>
+        <a href="{{proj.url}}">{{proj.data.title}}</a>
+    </li> 
+    {% endif %}
+{% endfor %}
+</ul>
+
+<h2>Web Design</h2>
+<ul>
+    {% for proj in projects %}
+    {%if 'web-design' in proj.data.tags %}
+    <li>
+        <a href="{{proj.url}}">{{proj.data.title}}</a>
+    </li> 
+    {% endif %}
+{% endfor %}
+</ul>
+
+<h2>Other</h2>
+<ul>
+    {% for proj in projects %}
+    {%if 'misc' in proj.data.tags %}
+    <li>
+        <a href="{{proj.url}}">{{proj.data.title}}</a>
+    </li> 
+    {% endif %}
+{% endfor %}
+</ul>
+
+
