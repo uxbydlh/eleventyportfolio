@@ -3,11 +3,45 @@ eleventyNavigation:
     key: "Case Studies"
     order: 3
 
-title: About
-subheading: Give and Grow is a community interest company dedicated to identifying and supporting students who are unable to fund tutoring sessions, targeting particularly the students who are not eligible for any financial support from traditional systems.
-heroImagePath: ../assets/images/hero/Hero-About.webp
+title: Case Studies
+subheading: All Case Studies
 
-testimonialQuote: Testimonial quote, or quote from article in here
-testimonialSource: Whoever or whatever this quote is from.
+pagination:
+    data: collections.case-studies
+    size: 100
+    alias: studies
 
 ---
+
+<h2>E-Save</h2>
+<ul>
+    {% for case in studies %}
+        {%if 'e-save' in case.data.tags %}
+        <li>
+            <a href="{{case.url}}">{{case.data.title}}</a>
+        </li> 
+        {% endif %}
+{% endfor %}
+</ul>
+
+<h2>Morses Club</h2>
+<ul>
+    {% for case in studies %}
+        {%if 'morses' in case.data.tags %}
+        <li>
+            <a href="{{case.url}}">{{case.data.title}}</a>
+        </li> 
+        {% endif %}
+    {% endfor %}
+</ul>
+
+<h2>Other</h2>
+<ul>
+    {% for case in studies %}
+    {%if 'misc' in case.data.tags %}
+    <li>
+        <a href="{{case.url}}">{{case.data.title}}</a>
+    </li> 
+    {% endif %}
+{% endfor %}
+</ul>
