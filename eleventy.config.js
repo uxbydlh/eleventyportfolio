@@ -118,6 +118,12 @@ export default async function(eleventyConfig) {
 		return caseStudyCollection;
 	})
 
+	//Adding a web design collection
+	eleventyConfig.addCollection("web-design", function(collection) {
+		var webdesignCollection = collection.getFilteredByTag("web-design");
+		return webdesignCollection;
+	})
+
 	//Adding an images folder
 	eleventyConfig.addPassthroughCopy("/assets/images/logo");
 

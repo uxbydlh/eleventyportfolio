@@ -3,11 +3,23 @@ eleventyNavigation:
     key: "Web Design"
     order: 4
 
-title: About
-subheading: Give and Grow is a community interest company dedicated to identifying and supporting students who are unable to fund tutoring sessions, targeting particularly the students who are not eligible for any financial support from traditional systems.
-heroImagePath: ../assets/images/hero/Hero-About.webp
+title: Web Design
+subheading: All Web Design Projects
 
-testimonialQuote: Testimonial quote, or quote from article in here
-testimonialSource: Whoever or whatever this quote is from.
+pagination:
+    data: collections.web-design
+    size: 100
+    alias: websites
 
 ---
+
+Websites designed by me. Projects marked "dev" indicate that I worked on the site as a developer, too.
+
+<ul>
+    {% for site in websites %}
+        <li>
+            <a href="{{site.url}}">{{site.data.title}}</a>
+        </li>
+    {% endfor %}
+</ul>
+
