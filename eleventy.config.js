@@ -16,6 +16,9 @@ import dynamicCategories from "eleventy-plugin-dynamic-categories";
 //pdf embed plugin from raymondcamden
 import pluginPDFembed from "eleventy-plugin-pdfembed";
 
+//toc plugin from James Steinbach
+import pluginTOC from "eleventy-plugin-toc";
+
 //Ensure urls are converted to use site base (for images, navigation, etc.)
 import metadata from "./_data/metadata.js";
 const toAbsoluteUrl = (url) => {
@@ -157,6 +160,7 @@ export default async function(eleventyConfig) {
 		// selector: "h1,h2,h3,h4,h5,h6", // default
 	});
 
+
 	eleventyConfig.addShortcode("currentBuildDate", () => {
 		return (new Date()).toISOString();
 	});
@@ -181,6 +185,9 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginPDFembed, {
 		key: '2e45665c31ec4cf5b22c18d63cdebf2a'
 	});
+
+	//TOC Plugin
+	eleventyConfig.addPlugin(pluginTOC);
 
 	//Creating Excerpts ************
 	// From https://tylersticka.com/journal/simple-eleventy-3-excerpts/

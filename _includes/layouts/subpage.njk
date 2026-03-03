@@ -11,6 +11,9 @@ layout: layouts/base.njk
     <a class="btn secondary invisible"><i class="ri-arrow-left-line"></i> {{eleventyNavigation.parent}} </a>
 </div>
 
+<article>
+  {{ content | toc | safe }}
+</article>
 <div class="content">
-    {{content | safe}}
+    {{content | safe }}
 </div>
