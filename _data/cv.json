@@ -14,11 +14,11 @@
         "projects": [
             {
                 "title":"Creation Process",
-                "link": "#TODO"
+                "link": "web-design/Give-And-Grow/website-process/"
             },
             {
                 "title":"Graphic Gallery",
-                "link": "#TODO"
+                "link": "web-design/Give-And-Grow/graphic-gallery/"
             }
         ]
     },
@@ -37,7 +37,7 @@
         "projects": [
             {
                 "title":"Landing Page UXR",
-                "link": "#TODO"
+                "link": "/current-work/E-Save/UXR-Reports/"
             }
         ]
     },
@@ -55,8 +55,8 @@
             "Improved existing copy by simplifying case studies for those less familiar with ACEs."],
         "projects": [
             {
-                "title":"Website Comparison",
-                "link": "#TODO"
+                "title":"Website Redesign",
+                "link": "/web-design/Adenydd/"
             },
             {
                 "title": "Newsletter Shoutout",
@@ -79,7 +79,7 @@
         "projects": [
             {
                 "title":"Creation Process",
-                "link": "#TODO"
+                "link": "/web-design/VED/"
             }
         ]
     },
@@ -98,7 +98,7 @@
         "projects": [
             {
                 "title":"Creation Process",
-                "link": "#TODO"
+                "link": "/web-design/DHH/"
             },
             {
                 "title":"Branding Gallery",
@@ -125,19 +125,19 @@
         "projects": [
             {
                 "title":"Dot Dot Loans",
-                "link": "#TODO"
+                "link": "case-studies/Morses-Club/DDL/"
             },
             {
                 "title":"Finance Portal",
-                "link": "#TODO"
+                "link": "case-studies/Morses-Club/Finance-Portal/"
             },
             {
                 "title":"Form Fatigue",
-                "link": "#TODO"
+                "link": "case-studies/Morses-Club/Form-Fatigue/"
             },
             {
                 "title":"P.A.M",
-                "link": "#TODO"
+                "link": "case-studies/Morses-Club/PAM/"
             }
         ]
     },

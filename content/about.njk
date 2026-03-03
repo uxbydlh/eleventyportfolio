@@ -107,7 +107,7 @@ description: "Designer, Developer, Dilligent-worker. Adept at creating design sy
                 </ul>
                 <div class="btn-row-inline">
                     {% for project in job.projects %}
-                    <a class="btn secondary" href="{{project.link}}">{{project.title}}<i class="ri-arrow-right-s-fill"></i></a>
+                    <a class="btn secondary" href="{{project.link | toAbsoluteUrl}}">{{project.title}}<i class="ri-arrow-right-s-fill"></i></a>
                     {% endfor %}
                 </div>
             </div>
