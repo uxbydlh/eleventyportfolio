@@ -18,6 +18,10 @@ layout: layouts/base.njk
 </ul>
 
 <article>
+  {{ content | toc | safe }}
+</article>
+
+<article>
 	{{ content | safe }}
 </article>
 
