@@ -1439,6 +1439,32 @@ aside {
   top: calc(var(--header-height) + 4em );
 }
 
+/*#region table of contents*/
+
+/*nav.toc ol li a:has(~ol){
+  color: pink;
+}*/
+
+.contentParent a:has(~ol) {
+  color: pink;
+}
+
+.contentParent.closed ol {
+  display: none;
+}
+
+nav.toc ol li a:has(~ol):after {
+  content: "\ea4e";
+  font-family: 'remixicon' !important;
+  font-style: normal;
+}
+
+/*nav.toc ol li ol {
+  display: none;
+}*/
+
+/*#endregion table of contents*/
+
 article {
   display: flex;
   flex-direction: column;

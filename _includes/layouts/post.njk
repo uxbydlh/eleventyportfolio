@@ -9,25 +9,17 @@ layout: layouts/base.njk
 
 <h1>{{ title }}</h1>
 
-<div class="article-container">
-	<aside class="table-of-contents">
-			<ul class="post-metadata">
-				<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
-				{%- for tag in tags | filterTagList %}
-				{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-				<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
-				{%- endfor %}
-			</ul>
-			<h3>Contents</h3>
-			{{ content | toc | safe }}
-		</aside>
 
-	<article>
-		<div class="article-content">
-			{{ content | safe }}
-		</div>
-	</article>
+
+<div class="article-container">
+    <aside>
+    {{ content | toc | safe }}
+    </aside>
+    <div class="content">
+        {{content | safe }}
+    </div>
 </div>
+
 
 
 {#TODO make this use anything tagged project as an input#}
@@ -45,3 +37,17 @@ layout: layouts/base.njk
 <div class="scroll-top"> <!--scrollbar at the end of the main-->
 	<a class="scroll-top__link" href="#">Back to top</a> <!--href="#" navigate to the top of the page-->
 </div> 
+
+<ul class="post-metadata">
+				<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
+				{%- for tag in tags | filterTagList %}
+				{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+				<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
+				{%- endfor %}
+			</ul>
+
+<script>
+	var potentialDropdowns = document.querySelectorAll("nav.toc ol li");
+	console.log("hello world")
+	console.log(potentialDropdowns);
+</script>

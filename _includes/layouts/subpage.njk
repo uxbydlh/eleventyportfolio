@@ -11,9 +11,28 @@ layout: layouts/base.njk
     <a class="btn secondary invisible"><i class="ri-arrow-left-line"></i> {{eleventyNavigation.parent}} </a>
 </div>
 
-<article>
-  {{ content | toc | safe }}
-</article>
-<div class="content">
-    {{content | safe }}
+<div class="article-container">
+    <aside>
+    {{ content | toc | safe }}
+    </aside>
+    <div class="content">
+        {{content | safe }}
+    </div>
 </div>
+
+<script>
+	var potentialDropdowns = document.querySelectorAll("nav.toc ol li");
+    var potentialDropdownsCopy = Array.from(potentialDropdowns);
+
+    function hasChildren(obj, index, arr) {
+        return obj.children.length > 1;
+    }
+
+	var listsWithKids = potentialDropdownsCopy.filter(hasChildren);
+    console.log(listsWithKids);
+
+    listsWithKids.forEach(element => {
+        element.classList.add("contentParent");
+        element.classList.add("closed");
+    });
+</script>
