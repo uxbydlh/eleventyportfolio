@@ -21,6 +21,7 @@ layout: layouts/base.njk
 </div>
 
 <script>
+
 	var potentialDropdowns = document.querySelectorAll("nav.toc ol li");
     var potentialDropdownsCopy = Array.from(potentialDropdowns);
 
@@ -34,5 +35,9 @@ layout: layouts/base.njk
     listsWithKids.forEach(element => {
         element.classList.add("contentParent");
         element.classList.add("closed");
+        let linkChild = element.firstChild;
+        linkChild.addEventListener("click", function() {
+            element.classList.toggle("closed");
+        });
     });
 </script>
