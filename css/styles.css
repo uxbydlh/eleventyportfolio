@@ -1417,6 +1417,24 @@ input[type=checkbox] {
 
 /*#region Articles*/
 
+.article-container {
+  /*Page width stuff - may not be relevant later*/
+  max-width: 100em;
+  padding-inline: 3rem;
+  margin-inline: auto;
+
+  padding-block: 2rem;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: start;
+  gap: 2rem;
+}
+
+aside {
+  position: sticky;
+  top: calc(var(--header-height) + 4em );
+}
+
 article {
   display: flex;
   flex-direction: column;

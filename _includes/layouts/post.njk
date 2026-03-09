@@ -9,21 +9,26 @@ layout: layouts/base.njk
 
 <h1>{{ title }}</h1>
 
-<ul class="post-metadata">
-	<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
-	{%- for tag in tags | filterTagList %}
-	{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
-	{%- endfor %}
-</ul>
+<div class="article-container">
+	<aside class="table-of-contents">
+			<ul class="post-metadata">
+				<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
+				{%- for tag in tags | filterTagList %}
+				{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+				<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
+				{%- endfor %}
+			</ul>
+			<h3>Contents</h3>
+			{{ content | toc | safe }}
+		</aside>
 
-<article>
-  {{ content | toc | safe }}
-</article>
+	<article>
+		<div class="article-content">
+			{{ content | safe }}
+		</div>
+	</article>
+</div>
 
-<article>
-	{{ content | safe }}
-</article>
 
 {#TODO make this use anything tagged project as an input#}
 {%- if collections.posts %}
