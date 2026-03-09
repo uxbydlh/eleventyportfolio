@@ -35,8 +35,14 @@ layout: layouts/base.njk
     listsWithKids.forEach(element => {
         element.classList.add("contentParent");
         element.classList.add("closed");
+
+        //wrap "opener link" in a summary parent tag
         let linkChild = element.firstChild;
-        linkChild.addEventListener("click", function() {
+        $(linkChild).wrap('<div class="toc_nav_link"></div>');
+        $('<i class="ri-arrow-down-s-line dropdown__arrow"></i>').insertAfter(linkChild);
+
+        //provide function to the parent tag
+        linkChild.parentNode.addEventListener("click", function() {
             element.classList.toggle("closed");
         });
     });
