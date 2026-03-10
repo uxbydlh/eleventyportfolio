@@ -1437,21 +1437,29 @@ input[type=checkbox] {
 aside {
   position: sticky;
   top: calc(var(--header-height) + 4em );
+  background-color: var(--surface-nav);
+  border: var(--border-width-sm) solid var(--border-primary);
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
 /*#region table of contents*/
-
-/*nav.toc ol li a:has(~ol){
-  color: pink;
-}*/
 
 nav.toc ol li {
   border-top: var(--border-action) solid 1px;
   border-bottom: var(--border-action) solid 1px;
 }
 
+nav.toc ol li a {
+  color: var(--text-on-action);
+}
+
 .contentParent {
    cursor: pointer;
+}
+
+.contentParent .toc_nav_link i {
+  font-size: var(--font-size-h4);
 }
 
 .contentParent.closed ol {
@@ -1478,6 +1486,10 @@ nav.toc ol li {
   color: var(--text-action-hover);
 }
 
+.toc_nav_link:hover a {
+  color: var(--text-action-hover);
+}
+
 nav.toc ol li a:only-child {
   padding: var(--space-md);
   display: flex;
@@ -1487,6 +1499,7 @@ nav.toc ol li a:only-child {
 
 nav.toc ol li a:only-child:hover {
   background-color: var(--surface-action-hover);
+  color: var(--text-action-hover);
 }
 
 /*nav.toc ol li ol {
