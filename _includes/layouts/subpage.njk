@@ -13,7 +13,8 @@ layout: layouts/base.njk
 
 <div class="article-container">
     <aside>
-    {{ content | toc | safe }}
+        <h3>Contents</h3>
+        {{ content | toc | safe }}
     </aside>
     <div class="content">
         {{content | safe }}
@@ -39,7 +40,7 @@ layout: layouts/base.njk
         //wrap "opener link" in a summary parent tag
         let linkChild = element.firstChild;
         $(linkChild).wrap('<div class="toc_nav_link"></div>');
-        $('<i class="ri-arrow-down-s-line dropdown__arrow"></i>').insertAfter(linkChild);
+        $('<i class="ri-arrow-down-s-fill"></i>').insertBefore(linkChild);
 
         //provide function to the parent tag
         linkChild.parentNode.addEventListener("click", function() {

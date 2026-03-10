@@ -1429,7 +1429,7 @@ input[type=checkbox] {
 
   padding-block: 2rem;
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 300px 1fr;
   align-items: start;
   gap: 2rem;
 }
@@ -1445,18 +1445,48 @@ aside {
   color: pink;
 }*/
 
-.contentParent a:has(~ol) {
-  color: pink;
+nav.toc ol li {
+  border-top: var(--border-action) solid 1px;
+  border-bottom: var(--border-action) solid 1px;
+}
+
+.contentParent {
+   cursor: pointer;
 }
 
 .contentParent.closed ol {
   display: none;
 }
 
-nav.toc ol li a:has(~ol):after {
-  content: "\ea4e";
-  font-family: 'remixicon' !important;
-  font-style: normal;
+.contentParent.closed .toc_nav_link i {
+  transform: rotate(-90deg);
+}
+
+.contentParent ol li a{
+  padding-left: 2.5em !important;
+}
+
+.toc_nav_link {
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.toc_nav_link:hover {
+  background-color: var(--surface-action-hover);
+  color: var(--text-action-hover);
+}
+
+nav.toc ol li a:only-child {
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+nav.toc ol li a:only-child:hover {
+  background-color: var(--surface-action-hover);
 }
 
 /*nav.toc ol li ol {
