@@ -9,11 +9,10 @@ layout: layouts/base.njk
 
 <h1>{{ title }}</h1>
 
-
-
 <div class="article-container">
     <aside>
-    {{ content | toc | safe }}
+        <h3>Contents</h3>
+        {{ content | toc | safe }}
     </aside>
     <div class="content">
         {{content | safe }}
@@ -47,7 +46,29 @@ layout: layouts/base.njk
 			</ul>
 
 <script>
+
 	var potentialDropdowns = document.querySelectorAll("nav.toc ol li");
-	console.log("hello world")
-	console.log(potentialDropdowns);
+    var potentialDropdownsCopy = Array.from(potentialDropdowns);
+
+    function hasChildren(obj, index, arr) {
+        return obj.children.length > 1;
+    }
+
+	var listsWithKids = potentialDropdownsCopy.filter(hasChildren);
+    console.log(listsWithKids);
+
+    listsWithKids.forEach(element => {
+        element.classList.add("contentParent");
+        element.classList.add("closed");
+
+        //wrap "opener link" in a summary parent tag
+        let linkChild = element.firstChild;
+        $(linkChild).wrap('<div class="toc_nav_link"></div>');
+        $('<i class="ri-arrow-down-s-fill"></i>').insertBefore(linkChild);
+
+        //provide function to the parent tag
+        linkChild.parentNode.addEventListener("click", function() {
+            element.classList.toggle("closed");
+        });
+    });
 </script>
