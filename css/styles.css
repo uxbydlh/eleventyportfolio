@@ -1443,6 +1443,10 @@ aside {
   overflow-y: auto;
 }
 
+aside h3 {
+  justify-content: center;
+}
+
 /*#region table of contents*/
 
 nav.toc ol li {
