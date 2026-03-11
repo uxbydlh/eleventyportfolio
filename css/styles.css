@@ -759,6 +759,17 @@ footer {
   align-items: center;
   gap: 16px;
 }
+
+.icon-button {
+  color: var(--icon-action);
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+
 /*#endregion Buttons*/
 
 /*#region Lists*/
@@ -2143,6 +2154,7 @@ div:has(.embedded-google-form) {
 /*#endregion CV*/
 
 /*#region writing-blocks*/
+
   .text-div {
     display: flex;
     align-self: stretch;
@@ -2162,3 +2174,47 @@ div:has(.embedded-google-form) {
     margin-top: var(--space-md);
   }
 /*#endregion writing-blocks*/
+
+/*#region Image Styling*/
+
+/*#region button-control carousel*/
+.button-carousel {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  gap: var(--space-md);
+}
+
+.button-carousel-images {
+  max-height: 50vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  align-self: center;
+}
+
+.button-carousel-images a {
+  max-height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.buttons-carousel-images img {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: contain;
+}
+
+.button-carousel-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap:var(--space-lg)
+}
+/*#endregion button-control carousel*/
+
+/*#endregion Image Styling*/
