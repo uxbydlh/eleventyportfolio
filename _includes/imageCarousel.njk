@@ -7,9 +7,10 @@
    <div class="button-carousel">
       <div class="button-carousel-images">
          {% for image in params.images %}
-            <a rel="{{params.carouselId}}" class="{{params.carouselId}} swipebox" href="{{image}}" title="" style="">
+            <a rel="{{params.carouselId}}" class="{{params.carouselId}} swipebox" href="{{image}}" title="">
                <img src="{{image}}">
             </a>
+            <!--<img class="{{params.carouselId}}" src="{{image}}">-->
          {% endfor %}
       </div>
       <div class="row button-carousel-buttons">

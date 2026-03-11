@@ -49,6 +49,7 @@ export default async function(eleventyConfig) {
 		.addPassthroughCopy({
 			'./node_modules/alpinejs/dist/cdn.js': './js/alpine.js',
 		}) //Alpine
+		.addPassthroughCopy( "css/swipebox.css" ) //swipebox
 
 	// Run Eleventy when these files change:
 	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
