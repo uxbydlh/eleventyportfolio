@@ -43,6 +43,7 @@ export default async function(eleventyConfig) {
 		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl")
 		.addPassthroughCopy("js")
 		.addPassthroughCopy("./assets/fonts")
+		.addPassthroughCopy("./assets/icons")
 		.addPassthroughCopy("./assets/images/UXBYDLHLogo.svg")
 		.addPassthroughCopy("./_data/tools.json")
 		.addPassthroughCopy("./assets/images/3rd-party-logos/tools")
