@@ -42,7 +42,6 @@ export default async function(eleventyConfig) {
 		})
 		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl")
 		.addPassthroughCopy("js")
-		.addPassthroughCopy("./assets/images/about/volunteers")
 		.addPassthroughCopy("./assets/fonts")
 		.addPassthroughCopy("./assets/images/UXBYDLHLogo.svg")
 		.addPassthroughCopy("./_data/tools.json")

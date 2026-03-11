@@ -37,6 +37,15 @@ const subheading = "An Application to Encourage Exercise in Informal Carers";
 <h2 id="process">Process</h2>
 <div class="article-section">
 	{#TODO Add slideshow images#}
+	{%- from 'imageCarousel.njk' import carousel %}
+	{{ carousel({ carouselId: "processCarousel",
+					images: [
+						"https://picsum.photos/id/9/367/267",
+						"https://picsum.photos/id/10/367/267",
+						"https://picsum.photos/id/21/367/267"
+						] 
+				}) 
+	}}
 </div>
 <div class="article-section">
 	<h3 id="rapid-prototyping">Rapid Prototyping</h3>
