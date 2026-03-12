@@ -45,6 +45,7 @@ export default async function(eleventyConfig) {
 		.addPassthroughCopy("./assets/fonts")
 		.addPassthroughCopy("./assets/icons")
 		.addPassthroughCopy("./assets/images/UXBYDLHLogo.svg")
+		.addPassthroughCopy("./assets/images/case-studies") //slides and such for case studies
 		.addPassthroughCopy("./_data/tools.json")
 		.addPassthroughCopy("./assets/images/3rd-party-logos/tools")
 		.addPassthroughCopy({

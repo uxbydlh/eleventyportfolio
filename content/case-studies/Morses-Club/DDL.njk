@@ -74,7 +74,18 @@ const subheading = "Design Systems and Customer Journeys";
 </div>
 <div class="article-section">
 	<h3 id="design-system-screens">Screens</h3>
-	{#TODO: Add Slideshow here#}
+	{%- from 'imageCarousel.njk' import carousel %}
+	{{ carousel({ carouselId: "screensCarousel",
+					images: [
+						"assets/images/case-studies/Morses/Dot-Dot/Screens/screen1.webp",
+						"assets/images/case-studies/Morses/Dot-Dot/Screens/screen2.webp",
+						"assets/images/case-studies/Morses/Dot-Dot/Screens/screen3.webp",
+						"assets/images/case-studies/Morses/Dot-Dot/Screens/screen4.webp",
+						"assets/images/case-studies/Morses/Dot-Dot/Screens/screen5.webp",
+						"assets/images/case-studies/Morses/Dot-Dot/Screens/screen6.webp"
+						] 
+				}) 
+	}}
 	A small selection of the screens created
 	{#TODO Add a button linking to customer journey demos on figma #}
 </div>
@@ -89,7 +100,15 @@ const subheading = "Design Systems and Customer Journeys";
 </div>
 <div class="article-section">
 	<h3 id="repayment-tool-screens">Screens</h3>
-	{#TODO add slideshow here#}
+	{%- from 'imageCarousel.njk' import carousel %}
+	{{ carousel({ carouselId: "repaymentCarousel",
+					images: [
+						"assets/images/case-studies/Morses/Dot-Dot/Repayment/Repay1.webp",
+						"assets/images/case-studies/Morses/Dot-Dot/Repayment/Repay2.webp",
+						"assets/images/case-studies/Morses/Dot-Dot/Repayment/Repay3.webp"
+						] 
+				}) 
+	}}
 </div>
 <div class="article-section">
 	<h3 id="repayment-tool-demo">Demo</h3>

@@ -248,7 +248,32 @@ const subheading = "Full site redesign for an equine-assisted mental health char
 
 <h2 id="screens">Screens</h2>
 <div class="article-section">
-	{#TODO dhh desktop and mobile screen slideshows, side by side, labelled.#}
+	{%- from 'imageCarousel.njk' import carousel %}
+	{{ carousel({ carouselId: "desktopCarousel",
+					images: [
+						"assets/images/case-studies/DHH/screenshots/desktop/desktop1.webp",
+						"assets/images/case-studies/DHH/screenshots/desktop/desktop2.webp",
+						"assets/images/case-studies/DHH/screenshots/desktop/desktop3.webp",
+						"assets/images/case-studies/DHH/screenshots/desktop/desktop4.webp",
+						"assets/images/case-studies/DHH/screenshots/desktop/desktop5.webp",
+						"assets/images/case-studies/DHH/screenshots/desktop/desktop6.webp",
+						"assets/images/case-studies/DHH/screenshots/desktop/desktop7.webp"
+						] 
+				}) 
+	}}
+	{{ carousel({ carouselId: "mobileCarousel",
+					images: [
+						"assets/images/case-studies/DHH/screenshots/mobile/mobile1.webp",
+						"assets/images/case-studies/DHH/screenshots/mobile/mobile2.webp",
+						"assets/images/case-studies/DHH/screenshots/mobile/mobile3.webp",
+						"assets/images/case-studies/DHH/screenshots/mobile/mobile4.webp",
+						"assets/images/case-studies/DHH/screenshots/mobile/mobile5.webp",
+						"assets/images/case-studies/DHH/screenshots/mobile/mobile6.webp",
+						"assets/images/case-studies/DHH/screenshots/mobile/mobile7.webp",
+						"assets/images/case-studies/DHH/screenshots/mobile/mobile8.webp"
+						] 
+				}) 
+	}}
 </div>
 
 <h2 id="testimonial-section">Testimonials</h2>

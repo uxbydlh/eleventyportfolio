@@ -2201,8 +2201,8 @@ div:has(.embedded-google-form) {
   overflow: hidden;
 }
 
-.buttons-carousel-images img {
-  min-width: 100%;
+.button-carousel-images a img {
+  max-width: 100%;
   min-height: 100%;
   object-fit: contain;
 }

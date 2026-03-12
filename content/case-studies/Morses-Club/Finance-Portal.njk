@@ -65,7 +65,14 @@ const subheading = "Enhanced Design for Managing Data, Payments, and Loans";
 </div>
 <div class="article-section">
 	<h3 id="research">Research</h3>
-	{#TODO Add Slideshow Images #}
+	{%- from 'imageCarousel.njk' import carousel %}
+	{{ carousel({ carouselId: "researchCarousel",
+					images: [
+						"assets/images/case-studies/Morses/Finance-Portal/Research-Slides/CompetitorResearch.webp",
+						"assets/images/case-studies/Morses/Finance-Portal/Research-Slides/AsIsProductAnalysis.webp"
+						] 
+				}) 
+	}}
 	<h4>Competitor Research</h4>
 	Upon comparison with our direct and indirect competitors, it became apparent that our portal fell short of customer expectations.
 	<h4>As Is: Product Analysis</h4>
@@ -75,7 +82,14 @@ const subheading = "Enhanced Design for Managing Data, Payments, and Loans";
 </div>
 <div class="article-section">
 	<h3 id="ideation">Ideation</h3>
-	{#TODO Add Slideshow Images #}
+	{{ carousel({ carouselId: "ideationCarousel",
+					images: [
+						"assets/images/case-studies/Morses/Finance-Portal/Ideation-Slides/LofiWireframes.webp",
+						"assets/images/case-studies/Morses/Finance-Portal/Ideation-Slides/MinimumChanges.webp",
+						"assets/images/case-studies/Morses/Finance-Portal/Ideation-Slides/FinalVariants.webp"
+						] 
+				}) 
+	}}
 	<h4>Wireframes</h4>
 	After creating the initial Figma design sketches, I collaborated with the Portal team, leveraging their experience with direct customer interaction. 
 	This collaboration spanned several weeks and involved multiple feedback sessions. 
@@ -101,7 +115,17 @@ const subheading = "Enhanced Design for Managing Data, Payments, and Loans";
 
 <h2 id="screens">Screens</h2>
 <div class="article-section">
-	{#TODO: Add slideshow of screenshots #}
+	{{ carousel({ carouselId: "screenCarousel",
+					images: [
+						"assets/images/case-studies/Morses/Finance-Portal/Screens/screen1.webp",
+						"assets/images/case-studies/Morses/Finance-Portal/Screens/screen2.webp",
+						"assets/images/case-studies/Morses/Finance-Portal/Screens/screen3.webp",
+						"assets/images/case-studies/Morses/Finance-Portal/Screens/screen4.webp",
+						"assets/images/case-studies/Morses/Finance-Portal/Screens/screen5.webp",
+						"assets/images/case-studies/Morses/Finance-Portal/Screens/screen6.webp"
+						] 
+				}) 
+	}}
 </div>
 
 <h2 id="testimonial-section">Testimonials</h2>

@@ -7,9 +7,15 @@
    <div class="button-carousel">
       <div class="button-carousel-images">
          {% for image in params.images %}
-            <a rel="{{params.carouselId}}" class="{{params.carouselId}} swipebox" href="{{image}}" title="">
-               <img src="{{image}}">
-            </a>
+            {% if loop.first %}
+               <a rel="{{params.carouselId}}" class="{{params.carouselId}} swipebox" href="{{image | toAbsoluteUrl }}" title="">
+                  <img src="{{image | toAbsoluteUrl }}">
+               </a>
+            {% else %}
+               <a rel="{{params.carouselId}}" class="{{params.carouselId}} swipebox" href="{{image | toAbsoluteUrl }}" title="" style="display: none;">
+                  <img src="{{image | toAbsoluteUrl }}">
+               </a>
+            {% endif %}
             <!--<img class="{{params.carouselId}}" src="{{image}}">-->
          {% endfor %}
       </div>
@@ -23,7 +29,9 @@
       </div>
    </div>
 
-   <script>showDivs(slideIndex, '{{params.carouselId}}');</script>
+   <script>
+   (showDivs(slideIndex, '{{params.carouselId}}'));
+   </script>
 
 {%- endmacro -%}
 

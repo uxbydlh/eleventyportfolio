@@ -66,7 +66,14 @@ const subheading = "Empowering MCL Employees with PAM for Efficient Customer App
 	<h3 id="ideation">Ideation</h3>
 	Developed two initial web-tool designs – a single-page solution and a multi-page solution. The single-page solution was determined to be too overwhelming, so we opted for navigation between multiple pages to answer the necessary forms.
 	Implemented iterative enhancements until all necessary features were incorporated. This iterative process allowed for continuous improvement, ensuring the final design included all essential features while refining usability and functionality based on users’ feedback and their evolving needs
-	{#TODO Add Slideshow Images #}
+	{%- from 'imageCarousel.njk' import carousel %}
+	{{ carousel({ carouselId: "ideationCarousel",
+					images: [
+						"assets/images/case-studies/Morses/PAM/Ideation/ideation1.webp",
+						"assets/images/case-studies/Morses/PAM/Ideation/ideation2.webp"
+						] 
+				}) 
+	}}
 </div>
 
 <h2 id="visual-development">Visual Development</h2>
