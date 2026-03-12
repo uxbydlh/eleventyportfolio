@@ -31,6 +31,25 @@ const subheading = "Creating a functional website from the ground up for a tutor
 </div>
 
 <h2 id="impact">Impact</h2>
+<h3 id="completed-screens">Completed Screens</h3>
+<div class="article-section">
+	{%- from 'imageCarousel.njk' import carousel %}
+	{{ carousel({ carouselId: "completedCarousel",
+					images: [
+						"assets/images/case-studies/Give-and-Grow/Completed/homepage.webp",
+						"assets/images/case-studies/Give-and-Grow/Completed/about.webp",
+						"assets/images/case-studies/Give-and-Grow/Completed/meet-the-team.webp",
+						"assets/images/case-studies/Give-and-Grow/Completed/volunteer-with-us.webp",
+						"assets/images/case-studies/Give-and-Grow/Completed/students.webp",
+						"assets/images/case-studies/Give-and-Grow/Completed/assessment.webp",
+						"assets/images/case-studies/Give-and-Grow/Completed/tutors.webp",
+						"assets/images/case-studies/Give-and-Grow/Completed/become-a-tutor.webp",
+						"assets/images/case-studies/Give-and-Grow/Completed/meet-tutors.webp",
+						"assets/images/case-studies/Give-and-Grow/Completed/contact.webp"
+						] 
+				}) 
+	}}
+</div>
 <div class="article-section">
 	The site launched on 16/08/24.
 	Give and Grow is still in it’s early stages as a CIC and has not yet fully launched as a program to the public. Thanks to the website, they have successfully recruited a Safeguarding officer.
@@ -49,7 +68,18 @@ const subheading = "Creating a functional website from the ground up for a tutor
 <h2 id="initial-designs">Initial Designs</h2>
 <div class="article-section">
 	I initially met founder Eva Mamphilly via Zoom, where we discussed the purpose of the site and some potential visuals. Eva passed on a moodboard and web structure to me and I got to work on some basic layouts.
-	{#TODO ADD LANDING, ABOUT, TUTORS, STUDENTS AND CONTACT PAGE THUMBNAILS IN A SLIDESHOW.#}
+	{{ carousel({ carouselId: "initialCarousel",
+					images: [
+						"assets/images/case-studies/Give-and-Grow/landing-sticky.webp",
+						"assets/images/case-studies/Give-and-Grow/landing-edit.webp",
+						"assets/images/case-studies/Give-and-Grow/about.webp",
+						"assets/images/case-studies/Give-and-Grow/students.webp",
+						"assets/images/case-studies/Give-and-Grow/tutors.webp",
+						"assets/images/case-studies/Give-and-Grow/news.webp",
+						"assets/images/case-studies/Give-and-Grow/contact.webp"
+						] 
+				}) 
+	}}
 	Based on the initial moodboard, I created a higher fidelity version of the landing page. Colour contrast has to be increased from the original palette to meet readability guidelines.
 	{#TODO ADD MOODBOARD AND LANDING PAGE AS SIDE BY SIDE THUMBNAILS.#}
 	We met again to discuss these designs and the wireframes were approved. The landing page pass proved useful as the client realised that she wanted to take the sites visuals in a different direction, stating that the original palette and mountain motif looked too mature for our target audience of secondary school students and university candidates.
