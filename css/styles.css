@@ -2218,6 +2218,15 @@ div:has(.embedded-google-form) {
   object-position: top;
 }
 
+@media screen and (min-width: 700px) {
+  .button-carousel-images.slides-vert.slides-mobile-screens a img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
 .button-carousel-buttons {
   display: flex;
   flex-direction: row;
