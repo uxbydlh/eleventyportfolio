@@ -2204,6 +2204,7 @@ div:has(.embedded-google-form) {
   display: flex;
   justify-content: center;
   overflow: hidden;
+  cursor: zoom-in;
 }
 
 .button-carousel-images a img {
