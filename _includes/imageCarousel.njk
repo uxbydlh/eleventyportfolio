@@ -5,7 +5,7 @@
 {%- macro carousel(params) -%}
 
    <div class="button-carousel">
-      <div class="button-carousel-images {{params.orientation}} {{params.slideType}}">
+      <div class="button-carousel-images {{params.orientation}} {{params.slideType}} {{params.plurality}}">
          {% for image in params.images %}
             {% if loop.first %}
                <a rel="{{params.carouselId}}" class="{{params.carouselId}} swipebox" href="{{image | toAbsoluteUrl }}" title="">

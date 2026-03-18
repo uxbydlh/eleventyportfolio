@@ -2194,6 +2194,10 @@ div:has(.embedded-google-form) {
   background-color: var(--surface-action);
 }
 
+.button-carousel-images:not(.single-image) {
+  height: 50vh;
+}
+
 .button-carousel-images.slides-vert {
   mask-image: linear-gradient(to bottom, black calc(100% - 5%), transparent);
 }
