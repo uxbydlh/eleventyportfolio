@@ -13,7 +13,7 @@ const date = "2023-01-01";
 const title = "UI/UX Groundwork for Dot Dot Loans";
 const subheading = "Design Systems and Customer Journeys";
 ---
-
+{%- from 'imageCarousel.njk' import carousel %}
 {#TODO ADD BANNER IMAGE#}
 
 <h2 id="context">Context</h2>
@@ -65,7 +65,14 @@ const subheading = "Design Systems and Customer Journeys";
 	The design system was built out with the intention of enabling faster prototyping of new features. 
 	It was created in Figma, based on assets from the existing Dot Dot Loans website and portal. 
 	Interactive components were modelled on existing interactions on the site.
-	{#TODO: Add an image - make sure it can be clicked on for a zoom#}
+	{{ carousel({ carouselId: "des-sys-Carousel",
+					images: [
+						"assets/images/case-studies/Morses/Dot-Dot/2Solution.webp"
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
 	The design system was then used to build out screens for the existing customer portal and sales journeys available on Dot Dot Loans. 
 	The primary intent of this was to create a baseline to test new customer interactions on.
 	The secondary intent of this was to create more up to date employee training for customer agents, which could show them the most up to date screens that a customer would be working with. 
@@ -74,7 +81,7 @@ const subheading = "Design Systems and Customer Journeys";
 </div>
 <div class="article-section">
 	<h3 id="design-system-screens">Screens</h3>
-	{%- from 'imageCarousel.njk' import carousel %}
+	
 	{{ carousel({ carouselId: "screensCarousel",
 					images: [
 						"assets/images/case-studies/Morses/Dot-Dot/Screens/screen1.webp",
@@ -98,7 +105,15 @@ const subheading = "Design Systems and Customer Journeys";
 	Developed flows where user selects a query indicative of financial challenges i.e. “I am unable to make a payment”. 
 	On selection, users are given the option to redirect to the Repayment Plan Tool.
 	This tool acted as an early intervention mechanism for users facing such difficulties and allowed them to independently access help even when a customer service agent was unavailable.
-	{#TODO Add image #}
+	
+	{{ carousel({ carouselId: "repayment-plan-Carousel",
+					images: [
+						"assets/images/case-studies/Morses/Dot-Dot/4Repayment.webp"
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
 </div>
 <div class="article-section">
 	<h3 id="repayment-tool-screens">Screens</h3>
@@ -127,7 +142,15 @@ const subheading = "Design Systems and Customer Journeys";
 	• Implementation of collapsible sections on the Terms & Conditions page for improved readability.
 	• Introduction of a dedicated “Money Worries” page and tab to assist financially unstable customers.
 	• Addition of “Add to Homescreen” notices within the portal to encourage users to bookmark the site on their mobile devices.
-	{#TODO add image here #}
+	
+	{{ carousel({ carouselId: "maintenance-Carousel",
+					images: [
+						"assets/images/case-studies/Morses/Dot-Dot/5Maintenance.webp"
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
 </div>
 <div class="article-section">
 	<h3 id="maintenance-demo">Demo</h3>
