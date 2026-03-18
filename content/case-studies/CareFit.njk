@@ -91,8 +91,24 @@ const subheading = "An Application to Encourage Exercise in Informal Carers";
 
 <h2 is="suggestions">Suggestions</h2>
 <div class="article-section">
-	{#TODO add image #}
-	More high-intensity exercises were requested, so that users would not become bored if they became fitter as a result of the application. Built-in guidance was requested, in case the carer was less familiar with exercise apps, or had been unable to use the app for a while. In response to this, we tutorialised the onboarding process and created an option to revisit the tutorial at any time. During the tutorial, some options are greyed out to ensure users stay on the path.
+	<div class="section-row">
+		<div class="row-column image">
+			{{ carousel({ carouselId: "suggestionCarousel",
+					images: [
+						"assets/images/case-studies/CareFit/suggestions.webp"
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+			}}
+		</div>
+		<div class="row-column text">
+			More high-intensity exercises were requested, so that users would not become bored if they became fitter as a result of the application. 
+			Built-in guidance was requested, in case the carer was less familiar with exercise apps, or had been unable to use the app for a while. 
+			In response to this, we tutorialised the onboarding process and created an option to revisit the tutorial at any time. 
+			During the tutorial, some options are greyed out to ensure users stay on the path.
+		</div>
+	</div>
 </div>
 
 <h2 id="final">Final Application</h2>
