@@ -19,14 +19,16 @@
             <!--<img class="{{params.carouselId}}" src="{{image}}">-->
          {% endfor %}
       </div>
-      <div class="row button-carousel-buttons">
-         <button class="icon-button" onclick="plusDivs(-1, '{{params.carouselId}}')">
-            <i class="ri-arrow-left-s-fill"></i>
-        </button>
-        <button class="icon-button" onclick="plusDivs(1, '{{params.carouselId}}')">
-            <i class="ri-arrow-right-s-fill"></i>
-        </button>
-      </div>
+      {% if params.images.length > 1 %}
+         <div class="row button-carousel-buttons">
+            <button class="icon-button" onclick="plusDivs(-1, '{{params.carouselId}}')">
+               <i class="ri-arrow-left-s-fill"></i>
+         </button>
+         <button class="icon-button" onclick="plusDivs(1, '{{params.carouselId}}')">
+               <i class="ri-arrow-right-s-fill"></i>
+         </button>
+         </div>
+      {% endif %}
    </div>
 
    <script>

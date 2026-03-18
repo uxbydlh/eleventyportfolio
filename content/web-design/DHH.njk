@@ -13,7 +13,7 @@ const date = "2024-06-06";
 const title = "Devon Healing Horsemanship";
 const subheading = "Full site redesign for an equine-assisted mental health charity in Devon";
 ---
-
+{%- from 'imageCarousel.njk' import carousel %}
 {#TODO Banner Image#}
 <div class="article-section">
 	Devon Healing Horsemanship is a mental health charity specialising in horse-powered alternatives to talk-based therapy. I was a part of a challenging project to redesign their website in time for their first anniversary.
@@ -48,6 +48,13 @@ const subheading = "Full site redesign for an equine-assisted mental health char
 	DHH’s existing website – designed in 2023, was attempting to stand out among other providers of The Horse Course with its unique appearance. However, it did not reflect the founder’s distinct outlook, it wasn’t optimised for mobile, and it wasn’t driving donations.
 	It was time for a change.
 	{#TODO image of old site among other providers of the horse course #}
+	{{ carousel({ carouselId: "DHH1",
+							images: [
+								"assets/images/case-studies/DHH/CompetitorScreenshots.webp"
+								],
+							orientation: "slides-horiz"
+						}) 
+			}}
 </div>
 <div class="article-section">
 	<h3 id="challenge">Challenge</h3>
@@ -248,7 +255,6 @@ const subheading = "Full site redesign for an equine-assisted mental health char
 
 <h2 id="screens">Screens</h2>
 <div class="article-section">
-	{%- from 'imageCarousel.njk' import carousel %}
 	<div class="section-row">
 		<div class="row-column">
 			<h3>Desktop</h3>
