@@ -14,6 +14,8 @@ const title = "Morses Club Finance Portal";
 const subheading = "Enhanced Design for Managing Data, Payments, and Loans";
 ---
 
+{%- from 'imageCarousel.njk' import carousel %}
+
 {#TODO: Banner Image#}
 <div class="article-section">
 	Account dashboard for finance applications, payments, loan details and personal data management. 
@@ -45,11 +47,24 @@ const subheading = "Enhanced Design for Managing Data, Payments, and Loans";
 
 <h2 id="problem">Problem</h2>
 <div class="article-section">
-	The customer portal served as a vital hub for users to manage personal data, apply for finance, make payments, and access loan information. 
-	However, the platform design was outdated, and modifying it previously depended heavily on third party development.
-	The portal suffered from an outdated design that underutilised available screen space; lacking modern features and clear functionality. 
-	It also lacked crucial visual cues such as icons, badges and distinct button shapes, compromising its usability and clarity of purpose for users.
-	{#TODO add image#}
+	<div class="section-row">
+		<div class="row-column image">
+			{{ carousel({ carouselId: "problem-Carousel",
+					images: [
+						"/assets/images/case-studies/Morses/Finance-Portal/OldPortal.webp"
+					],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+			}}
+		</div>
+		<div class="row-column text">
+			The customer portal served as a vital hub for users to manage personal data, apply for finance, make payments, and access loan information. 
+			However, the platform design was outdated, and modifying it previously depended heavily on third party development.
+			The portal suffered from an outdated design that underutilised available screen space; lacking modern features and clear functionality. 
+			It also lacked crucial visual cues such as icons, badges and distinct button shapes, compromising its usability and clarity of purpose for users.
+		</div>
+	</div>
 </div>
 <div class="article-section">
 	<h3>Key Question</h3>
@@ -103,16 +118,37 @@ const subheading = "Enhanced Design for Managing Data, Payments, and Loans";
 <h2 id="vis-dev">Visual Development</h2>
 <div class="article-section">
 	<h3 id="branding">Branding</h3>
-	Third-party icons were utilised to expedite the process, and where required, custom vector icons were created for specific user needs, enhancing user comprehension and navigation through visual cues.
-	These icons, integrated into coloured spheres following the logo design, reinstated brand identity without compromising clarity.
-	Vital details such as announcements and customer information were deliberately presented in black-and-white high-contrast, ensuring enhanced readability and ease of location for users.
-	{#TODO: Add Colour Preview#}
+	<div class="section-row">
+		<div class="row-column image">
+			{{ carousel({ carouselId: "colour-Carousel",
+					images: [
+						"/assets/images/case-studies/Morses/Finance-Portal/Library.webp"
+					],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+			}}
+		</div>
+		<div class="row-column text">
+			Third-party icons were utilised to expedite the process, and where required, custom vector icons were created for specific user needs, enhancing user comprehension and navigation through visual cues.
+			These icons, integrated into coloured spheres following the logo design, reinstated brand identity without compromising clarity.
+			Vital details such as announcements and customer information were deliberately presented in black-and-white high-contrast, ensuring enhanced readability and ease of location for users.
+		</div>
+	</div>
 </div>
 <div class="article-section">
 	<h3 id="comp-lib">Component Library</h3>
 	Established a Figma Component Library post-wireframe development, housing reusable elements for consistency and scalability across current and future designs.
 	This approach streamlined implementation for programmers and QA testers by ensuring cohesion across current and future designs. The creation of this library promoted design consistency, easing implementation and facilitating efficient testing and development without extensive oversight.
-	{#TODO Add Library Preview #}
+
+	{{ carousel({ carouselId: "library-Carousel",
+					images: [
+						"/assets/images/case-studies/Morses/Finance-Portal/LibraryExpanded.webp"
+					],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
 </div>
 
 <h2 id="screens">Screens</h2>
