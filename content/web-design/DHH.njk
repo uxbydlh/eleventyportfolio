@@ -249,34 +249,42 @@ const subheading = "Full site redesign for an equine-assisted mental health char
 <h2 id="screens">Screens</h2>
 <div class="article-section">
 	{%- from 'imageCarousel.njk' import carousel %}
-	{{ carousel({ carouselId: "desktopCarousel",
-					images: [
-						"assets/images/case-studies/DHH/screenshots/desktop/desktop1.webp",
-						"assets/images/case-studies/DHH/screenshots/desktop/desktop2.webp",
-						"assets/images/case-studies/DHH/screenshots/desktop/desktop3.webp",
-						"assets/images/case-studies/DHH/screenshots/desktop/desktop4.webp",
-						"assets/images/case-studies/DHH/screenshots/desktop/desktop5.webp",
-						"assets/images/case-studies/DHH/screenshots/desktop/desktop6.webp",
-						"assets/images/case-studies/DHH/screenshots/desktop/desktop7.webp"
-						],
-					orientation: "slides-vert"
-				}) 
-	}}
-	{{ carousel({ carouselId: "mobileCarousel",
-					images: [
-						"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile1.webp",
-						"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile2.webp",
-						"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile3.webp",
-						"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile4.webp",
-						"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile5.webp",
-						"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile6.webp",
-						"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile7.webp",
-						"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile8.webp"
-						],
-					orientation: "slides-vert",
-					slideType: "slides-mobile-screens"
-				}) 
-	}}
+	<div class="section-row">
+		<div class="row-column">
+			<h3>Desktop</h3>
+			{{ carousel({ carouselId: "desktopCarousel",
+							images: [
+								"assets/images/case-studies/DHH/screenshots/desktop/desktop1.webp",
+								"assets/images/case-studies/DHH/screenshots/desktop/desktop2.webp",
+								"assets/images/case-studies/DHH/screenshots/desktop/desktop3.webp",
+								"assets/images/case-studies/DHH/screenshots/desktop/desktop4.webp",
+								"assets/images/case-studies/DHH/screenshots/desktop/desktop5.webp",
+								"assets/images/case-studies/DHH/screenshots/desktop/desktop6.webp",
+								"assets/images/case-studies/DHH/screenshots/desktop/desktop7.webp"
+								],
+							orientation: "slides-vert"
+						}) 
+			}}
+		</div>
+		<div class="row-column">
+			<h3>Mobile</h3>
+			{{ carousel({ carouselId: "mobileCarousel",
+							images: [
+								"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile1.webp",
+								"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile2.webp",
+								"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile3.webp",
+								"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile4.webp",
+								"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile5.webp",
+								"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile6.webp",
+								"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile7.webp",
+								"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile8.webp"
+								],
+							orientation: "slides-vert",
+							slideType: "slides-mobile-screens"
+						}) 
+			}}
+		</div>
+	</div>
 </div>
 
 <h2 id="testimonial-section">Testimonials</h2>

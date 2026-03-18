@@ -2191,6 +2191,7 @@ div:has(.embedded-google-form) {
   display: flex;
   overflow: hidden;
   align-self: center;
+  background-color: var(--surface-action);
 }
 
 .button-carousel-images.slides-vert {
