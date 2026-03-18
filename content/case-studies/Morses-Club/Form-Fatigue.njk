@@ -96,19 +96,54 @@ const subheading = "With Strategic Income & Outgoings Page Enhancements";
 </div>
 <div class="article-section">
 	<h3 id="id-prog-disc">Pure Progressive Disclosure</h3>
-	{#TODO Add Screen Preview #}
-	Initially, only the employment input would be shown to the user. Additional fields remain hidden until interaction with a checkbox or button triggers their display. This strategy aimed to create a more concise and approachable initial page and percent aimless scrolling through similar fields for a more focussed experience.
+	<div class="section-row">
+		<div class="row-column image">
+			{{ carousel({ carouselId: "ppdCarousel",
+					images: [
+						"/assets/images/case-studies/Morses/Form-Fatigue/2PPD.webp"
+						],
+					orientation: "slides-vert",
+					plurality: "single-image"
+				}) 
+			}}
+		</div>
+		<div class="row-column text">
+			Initially, only the employment input would be shown to the user. 
+			Additional fields remain hidden until interaction with a checkbox or button triggers their display. 
+			This strategy aimed to create a more concise and approachable initial page and percent aimless scrolling through similar fields for a more focussed experience.
+		</div>
+	</div>
 </div>
 {#TODO add demo button #}
 <div class="article-section">
 	<h3 id="id-int">Interspersed</h3>
-	{#TODO: Add screen preview #}
-	Income and expenditure inquiries would be grouped with related questions. For example: housing benefits and rent payment questions would be situated alongside address-related questions. This arrangement aimed to deter question skipping, and ensure that customers were in the appropriate mindset to provide accurate responses.
+	<div class="section-row">
+		<div class="row-column image">
+			{{ carousel({ carouselId: "interspersedCarousel",
+					images: [
+						"/assets/images/case-studies/Morses/Form-Fatigue/3Interspersed.webp"
+						],
+					orientation: "slides-vert",
+					plurality: "single-image"
+				}) 
+			}}
+		</div>
+		<div class="row-column text">
+			Income and expenditure inquiries would be grouped with related questions. For example: housing benefits and rent payment questions would be situated alongside address-related questions. This arrangement aimed to deter question skipping, and ensure that customers were in the appropriate mindset to provide accurate responses.
+		</div>
+	</div>
 </div>
 {#TODO add demo button#}
 <div class="article-section">
 	<h3 id="id-micro">Micro-Solutions</h3>
-	{#TODO: Add screen preview #}
+	{{ carousel({ carouselId: "microCarousel",
+					images: [
+						"/assets/images/case-studies/Morses/Form-Fatigue/4MicroSolutions.webp"
+						],
+					orientation: "slides-vert",
+					plurality: "single-image"
+				}) 
+			}}
 	Before the development of the two larger solutions, we prioritised the development of micro-solutions such as progressive disclosure and automatic tooltips. We did this to target specific pain-points in a shorter time before overhauling the whole page.
 	An “I need help” button was also implemented to facilitate direct customer contact for assistance with completing the page. This feature aimed to support users with the existing page, and served as a driving force for future user research and iterative improvements to enhance the pages’ usability.
 </div>
