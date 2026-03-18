@@ -35,7 +35,16 @@ const subheading = "Full site redesign for an equine-assisted mental health char
 	The Devon Healing Horsemanship website continues to be worked on by a team of skilled volunteers.
 	The component library and style guide have since been used to create a series of informational banners and leaflets for DHH’s stall at the Festival of the Iberian Horse.
 	{#TODO - check in with louise and see if she is still looking for specific volunteers #}
-	{#TODO - iberian horse festival slides #}
+	
+	{{ carousel({ carouselId: "festivalCarousel",
+							images: [
+								"assets/images/case-studies/DHH/festival-slides/festival1.webp",
+								"assets/images/case-studies/DHH/festival-slides/festival2.webp",
+								"assets/images/case-studies/DHH/festival-slides/festival3.webp"
+								],
+							orientation: "slides-horiz"
+						}) 
+			}}
 </div>
 
 <h2 id="background">Background</h2>
@@ -349,31 +358,79 @@ const subheading = "Full site redesign for an equine-assisted mental health char
 						}) 
 	}}
 	Adding the Support Us page makes it easier for visitors to find a way to support DHH that best suits them. It also means we don’t have to limit support to donations – the volunteering section allows people to offer up their skills instead.
-	{#TODO support us page#}
+	
+	{{ carousel({ carouselId: "DHH18",
+							images: [
+								"assets/images/case-studies/DHH/screenshots/desktop/desktop6.webp"
+								],
+							orientation: "slides-vert",
+							plurality: "single-image"
+						}) 
+	}}
 </div>
 
 <h2 id="dhh-navigation">Navigation</h2>
 <div class="article-section">
 	The original site already had a nav menu in the header, which was a good start. However, this was not compatible with mobile browsing, and required the user to scroll back to the top when looking through the site.
-	{#TODO old dhh navbar#}
+	
+	{{ carousel({ carouselId: "DHH19",
+							images: [
+								"assets/images/case-studies/DHH/OriginalNav.webp"
+								],
+							orientation: "slides-horiz",
+							plurality: "single-image"
+						}) 
+	}}
 	This was replaced with a sticky, mobile compatible variant, to begin tackling the site navigation.
-	{#TODO new dhh navbar#}
+	
+	{{ carousel({ carouselId: "DHH20",
+							images: [
+								"assets/images/case-studies/DHH/CompatibleNavBar.webp"
+								],
+							orientation: "slides-horiz",
+							plurality: "single-image"
+						}) 
+	}}
 </div>
 <div class="article-section">
 	<h3 id="mane-to-tail">Navigation from Mane to Tail</h3>
 	Navigation was also added to the footer, which was expanded again to contact links. This accounted for situations where the mobile menu may not be recognised by the user.
-	{#TODO dhh footer navigation #}
+	
+	{{ carousel({ carouselId: "DHH21",
+							images: [
+								"assets/images/case-studies/DHH/Footers.webp"
+								],
+							orientation: "slides-horiz",
+							plurality: "single-image"
+						}) 
+	}}
 </div>
 <div class="article-section">
 	<h3 id="menuless-nav">Menuless Navigation</h3>
 	To encourage visitors to explore more of the site, we wanted to ensure that it was easy to get around most of it without relying on the menus. This meant ensuring that we made good use of links and CTAs throughout our pages.
-	{#TODO dhh cta map#}
+	
+	{{ carousel({ carouselId: "DHH22",
+							images: [
+								"assets/images/case-studies/DHH/CTAMap.webp"
+								],
+							orientation: "slides-horiz",
+							plurality: "single-image"
+						}) 
+	}}
 </div>
 
 <h2 id="hand-off">Hand Off</h2>
 <div class="article-section">
 	With the majority of the design work finished, I would spend most of May and June working on polishing up the Figma library I had been working on in tandem with the site being built out. This would include proper documentation, so that the DHH team could understand it and potentially pass it on to another designer in future after my leaving.
-	{#TODO dhh library preview with contact info redacted. #}
+	
+	{{ carousel({ carouselId: "DHH23",
+							images: [
+								"assets/images/case-studies/DHH/ComponentLibraryPreview.webp"
+								],
+							orientation: "slides-horiz",
+							plurality: "single-image"
+						}) 
+	}}
 	I would also develop a short style guide based off of this library for the team to move forward with.
 </div>
 
