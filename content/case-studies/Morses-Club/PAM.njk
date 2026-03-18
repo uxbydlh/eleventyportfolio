@@ -14,6 +14,7 @@ const title = "Principle Application Manager";
 const subheading = "Empowering MCL Employees with PAM for Efficient Customer Application Checks";
 ---
 
+{%- from 'imageCarousel.njk' import carousel %}
 {#TODO: Banner Image#}
 <div class="article-section">
 	Internal tool created for Morses Club, with intent to replace external tools for additional customer application checks. Its implementation resulted in a 75% increase in acquisition journey leads while reducing dependency on third-party tools, leading to cost savings for the business.
@@ -52,7 +53,14 @@ const subheading = "Empowering MCL Employees with PAM for Efficient Customer App
 
 <h2 id="proposed-solution">Proposed Solution</h2>
 <div class="article-section">
-	{#TODO Add Old Flow/New Flow Image#}
+	{{ carousel({ carouselId: "oldNewFlowCarousel",
+					images: [
+						"/assets/images/case-studies/Morses/PAM/2OldFlowNewFlow.webp"
+						],
+					orientation: "slides-vert",
+					plurality: "single-image"
+				}) 
+			}}
 	We proposed to create a unified process, enabling all necessary internal staff to conduct customer check-ins through streamlined question-and-answer forms. The aim was to simplify the process for increased accessibility and efficiency.
 </div>
 
@@ -66,7 +74,6 @@ const subheading = "Empowering MCL Employees with PAM for Efficient Customer App
 	<h3 id="ideation">Ideation</h3>
 	Developed two initial web-tool designs – a single-page solution and a multi-page solution. The single-page solution was determined to be too overwhelming, so we opted for navigation between multiple pages to answer the necessary forms.
 	Implemented iterative enhancements until all necessary features were incorporated. This iterative process allowed for continuous improvement, ensuring the final design included all essential features while refining usability and functionality based on users’ feedback and their evolving needs
-	{%- from 'imageCarousel.njk' import carousel %}
 	{{ carousel({ carouselId: "ideationCarousel",
 					images: [
 						"assets/images/case-studies/Morses/PAM/Ideation/ideation1.webp",
@@ -80,17 +87,36 @@ const subheading = "Empowering MCL Employees with PAM for Efficient Customer App
 <h2 id="visual-development">Visual Development</h2>
 <div class="article-section">
 	<h3 id="branding">Branding</h3>
-	As an internal tool, the design did not require the same “flash” as that of the website. Simplicity was the aim from the start. The reduced need for strong branding was acknowledged, but there was still a desire to align with Morses’ colours.
-	Orange took on a primary role here, rather than its usual use as a secondary colour. This helped to maintain alignment with the brand, whilst differentiating it from what we would present to customers.
-	Consulting with employees throughout ensured strict prioritisation of necessary information and actions, enhancing clarity and usability within the interface.
-	{#TODO Colour preview #}
+	<div class="section-row">
+		<div class="row-column image">
+			{{ carousel({ carouselId: "brandingCarousel",
+					images: [
+						"/assets/images/case-studies/Morses/PAM/4VisDev.webp"
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+			}}
+		</div>
+		<div class="row-column text">
+			As an internal tool, the design did not require the same “flash” as that of the website. Simplicity was the aim from the start. The reduced need for strong branding was acknowledged, but there was still a desire to align with Morses’ colours.
+			Orange took on a primary role here, rather than its usual use as a secondary colour. This helped to maintain alignment with the brand, whilst differentiating it from what we would present to customers.
+			Consulting with employees throughout ensured strict prioritisation of necessary information and actions, enhancing clarity and usability within the interface.
+		</div>
 </div>
 <div class="article-section">
 	<h3 id="component-library">Component Library</h3>
+	{{ carousel({ carouselId: "componentCarousel",
+					images: [
+						"/assets/images/case-studies/Morses/PAM/5CompLib.webp"
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
 	Established a Figma Component Library post-wireframe development, housing reusable elements for consistency and scalability across current and future designs.
 	This approach streamlined implementation for programmers and QA testers by ensuring cohesion across current and future designs. 
 	The library’s creation promoted design consistency, easting implementation and facilitating efficient testing and development without extensive oversight.
-	{#TODO Add Library Preview #}
 </div>
 <h2 id="demos">Demos</h2>
 <div class="article-section">
