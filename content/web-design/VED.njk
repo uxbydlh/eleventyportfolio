@@ -13,7 +13,7 @@ const date = "2024-06-06";
 const title = "Very Evil Demons";
 const subheading = "Website Design";
 ---
-
+{%- from 'imageCarousel.njk' import carousel %}
 {#TODO: Banner Image - a look at the completed VED website. #}
 <div class="article-section">
 	Very Evil Demons are an independent, worker-owned, game development studio, based in Dundee, Scotland. 
@@ -45,12 +45,25 @@ const subheading = "Website Design";
 
 <h2 id="about-ved">About VED</h2>
 <div class="article-section">
-	{#TODO add VED logo #}
-	Founded in 2024, Very Evil Demons are an independent game-development studio. 
-	Though the company itself is fairly new, its members all have several years of game-development experience and numerous projects under their belts.
-	At the beginning of this project, they had no existing website, or social media presence to work from. 
-	They did however, have a strong brand guidelines document, and an extensive list of inspirations.
-	{#TODO add a slice of their moodboard docco #}
+	<div class="section-row">
+		<div class="row-column image">
+			{{ carousel({ carouselId: "moodboardCarousel",
+					images: [
+						"/assets/images/case-studies/VED/Inspo.webp"
+					],
+					orientation: "slides-vert",
+					plurality: "single-image"
+				}) 
+			}}
+		</div>
+		<div class="row-column text">
+			{#TODO add VED logo #}
+			Founded in 2024, Very Evil Demons are an independent game-development studio. 
+			Though the company itself is fairly new, its members all have several years of game-development experience and numerous projects under their belts.
+			At the beginning of this project, they had no existing website, or social media presence to work from. 
+			They did however, have a strong brand guidelines document, and an extensive list of inspirations.
+		</div>
+	</div>
 </div>
 
 <h2 id="challenge">Challenge</h2>
@@ -88,13 +101,34 @@ const subheading = "Website Design";
 <div class="article-section">
 	<h3>Bold and Illustrative</h3>
 	Many of the examined web pages utilised an assortment of custom illustrations to signpost different areas of the site.
-	{#TODO Add the inspo image with mork, sajan and louie #}
+	{{ carousel({ carouselId: "inspoCarousel",
+					images: [
+						"/assets/images/case-studies/VED/MorkRaiLouie.webp"
+					],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+			}}
 </div>
 <div class="article-section">
 	<h3>Gothic Mystery</h3>
-	{#TODO add vermis screenshots #}
+	{{ carousel({ carouselId: "vermisCarousel",
+					images: [
+						"/assets/images/case-studies/VED/Vermis.webp"
+					],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+			}}
 	VED sought to convey a mysterious, dark fantasy image. This can be a difficult task when the website’s primary function is to inform. However, it is still possible to achieve this through presentation, copy, and graphics.
-	{#TODO Add chimera screenshots #}
+	{{ carousel({ carouselId: "chimeraCarousel",
+					images: [
+						"/assets/images/case-studies/VED/Chimera.webp"
+					],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+			}}
 </div>
 
 <h2 id="deeper-insights">Deeper Insights</h2>
@@ -151,7 +185,14 @@ const subheading = "Website Design";
 	The new landing page acts as a concise introduction to VED, and a “hub” for everything that they want you to see.
 	{#TODO: Side by side prototype and final landing pages #}
 	From here, or the Nav Bar, you can move to any of the site's other main pages.
-	{#TODO high level VED sitemap #}
+	{{ carousel({ carouselId: "chimeraCarousel",
+					images: [
+						"/assets/images/case-studies/VED/Site-Map.webp"
+					],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
 	To ensure that the user would not reach a dead end, even the 404 page funnels into Contact Us.
 </div>
 <div class="article-section">
@@ -169,15 +210,34 @@ const subheading = "Website Design";
 	{#TODO contact, wip, news snippets #}
 </div>
 
-<h2 id="initial-screens">Initial Screens</h2>
-{%- from 'imageCarousel.njk' import carousel %}
-	{{ carousel({ carouselId: "initialCarousel",
+<h2 id="all-screens">Screens</h2>
+	{{ carousel({ carouselId: "wireCarousel",
 					images: [
-						"assets/images/case-studies/VED/Screenshots/screenshot-home.webp",
-						"assets/images/case-studies/VED/Screenshots/screenshot-about.webp",
-						"assets/images/case-studies/VED/Screenshots/screenshot-projects.webp",
-						"assets/images/case-studies/VED/Screenshots/screenshot-news.webp",
-						"assets/images/case-studies/VED/Screenshots/screenshot-contact.webp"
+						"assets/images/case-studies/VED/wires/wire-about.webp",
+						"assets/images/case-studies/VED/wires/wire-contact.webp",
+						"assets/images/case-studies/VED/wires/wire-news.webp"
+						],
+						orientation: "slides-vert" 
+				}) 
+	}}
+	{{ carousel({ carouselId: "protoCarousel",
+					images: [
+						"assets/images/case-studies/VED/proto/proto-home.webp",
+						"assets/images/case-studies/VED/proto/proto-about.webp",
+						"assets/images/case-studies/VED/proto/proto-proj.webp",
+						"assets/images/case-studies/VED/proto/proto-news.webp",
+						"assets/images/case-studies/VED/proto/proto-contact.webp"
+						],
+						orientation: "slides-vert" 
+				}) 
+	}}
+	{{ carousel({ carouselId: "finalCarousel",
+					images: [
+						"assets/images/case-studies/VED/final/final-home.webp",
+						"assets/images/case-studies/VED/final/final-about.webp",
+						"assets/images/case-studies/VED/final/final-services.webp",
+						"assets/images/case-studies/VED/final/final-news.webp",
+						"assets/images/case-studies/VED/final/final-contact.webp"
 						],
 						orientation: "slides-vert" 
 				}) 
