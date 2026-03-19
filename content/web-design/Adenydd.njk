@@ -13,7 +13,7 @@ const date = "2025-06-06";
 const title = "Adenydd";
 const subheading = "Website Redesign";
 ---
-
+{%- from 'imageCarousel.njk' import carousel %}
 {#TODO: Banner Image - a look at some sections of the revamped Adenydd website - perhaps a similar gradient to DHH #}
 <div class="article-section">
 	Adenydd is a Swansea-based charity that provides training for schools, services for families and projects for communities.
@@ -67,16 +67,36 @@ const subheading = "Website Redesign";
 
 <h3 id="meaning">Donations with Meaning</h3>
 <div class="article-section">
-	{#TODO - Insert Support Clwb Calon Image#}
-	{#TODO - Insert Donate with Neighbourly banner #}
+	{{ carousel({ carouselId: "CalonCarousel",
+					images: [
+						"assets/images/case-studies/Adenydd/support-clwb-calon.webp"
+					],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
 	Another new addition are prompts to donate on relevant pages and projects. This way, users of the site can see real examples of where their money is going.
-	{#TODO - Add the FEND banner#}
+	{{ carousel({ carouselId: "FENDCarousel",
+					images: [
+						"assets/images/case-studies/Adenydd/FEND-aim.webp"						
+					],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
 	The plan for the future is to include more real-world examples as we acquire them.
 </div>
 
 <h3 id="beyond-cash">Expanding Beyond Cash</h3>
 <div class="article-section">
-	{#TODO - insert supply donations image #}
+	{{ carousel({ carouselId: "supplyCarousel",
+					images: [
+						"assets/images/case-studies/Adenydd/supply-donations.webp"
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
 	We have placed an emphasis on things that can be donated beyond money, such as food, supplies, and most importantly: Time.
 </div>
 
@@ -88,7 +108,14 @@ const subheading = "Website Redesign";
 <h3 id="relevant-positions">Relevant Positions</h3>
 <div class="article-section">
 	We also have call outs to volunteer placed on relevant pages, encouraging those who have benefitted from those services to consider giving back if they can and also encouraging people with specific abilities to lend a hand.
-	{#TODO - Add DLA forms call out#}
+	{{ carousel({ carouselId: "DLACarousel",
+					images: [
+						"assets/images/case-studies/Adenydd/could-you-help.webp"
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
 	A snippet from the disability claims support page. {#TODO - rework into a caption#}
 </div>
 
@@ -113,11 +140,32 @@ const subheading = "Website Redesign";
 
 <h2 id="big-give-improvements">Improvements for Big Give Funders</h2>
 <div class="article-section">
-	{#TODO - Add the big give hero banner #}
+	{{ carousel({ carouselId: "bigGiveCarousel",
+					images: [
+						"assets/images/case-studies/Adenydd/give-big.webp"
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
 	I created a dedicated page for the Big Give campaign, allowing Adenydd to link it directly to prospective donors.
-	{#TODO - Insert why your donation matters segment#}
+	{{ carousel({ carouselId: "donationMattersCarousel",
+					images: [
+						"assets/images/case-studies/Adenydd/your-donation-matters.webp"
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
 	The page includes plenty of information about Adenydd’s work with Big Give over the years and even links back to the main website of the organisation for more information.
-	{#TODO - include previous campaigns image#}
+	{{ carousel({ carouselId: "prevCampaignsCarousel",
+					images: [
+						"assets/images/case-studies/Adenydd/prev-campaigns.webp"
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
 	Crucially, the page features specific amounts that were raised each year and links and information on what that money was put towards.
 </div>
 
@@ -142,11 +190,32 @@ const subheading = "Website Redesign";
 
 <h2 id="childcare-prof-improvements">Improvements for Childcare Professionals</h2>
 <div class="article-section">
-	{#TODO - Add the About This Course section image #}
+	{{ carousel({ carouselId: "aboutCourseCarousel",
+					images: [
+						"assets/images/case-studies/Adenydd/about-this-course.webp"
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
 	I ensured that information about dates, times and pricing was clearly visible near the top of the page for each course.
-	{#TODO - Insert Course content Image#}
+	{{ carousel({ carouselId: "courseContentCarousel",
+					images: [
+						"assets/images/case-studies/Adenydd/course-content.webp"
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
 	Content sections were also added for upcoming and currently running courses, to help people determine which course would be right for them without having to reach out or leave the site.
-	{#TODO - Insert the Booking section image#}
+	{{ carousel({ carouselId: "bookingCarousel",
+					images: [
+						"assets/images/case-studies/Adenydd/booking.webp"
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
 	Pages for upcoming and currently running courses also feature a prominent, convenient booking section, which links out to Adenydd’s forms.
 </div>
 
@@ -173,17 +242,31 @@ const subheading = "Website Redesign";
 
 <h2 id="parents-improvements">Improvements for Parents, Informal Carers and Guardians</h2>
 <div class="article-section">
-	{#TODO - Add service and project navigation images #}
+	{#TODO - Add service and project navigation images GALLERY #}
 	I ensured that services that were relevant to Families were labelled as such and that currently running projects were placed at the top of the navigation, to allow those who already have so little free time to find things easily.
 </div>
 
 <div class="article-section">
-	{#TODO - Add sensory regulation for parents page banner#}
+	{{ carousel({ carouselId: "parentsStudentsCarousel",
+					images: [
+						"assets/images/case-studies/Adenydd/sens-reg-parents-stud.webp"
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
 	Certain pages also have special ‘parent versions’ with a greater emphasis on parent participation, so that they are both easier to find via search engines, and more relevant to what parents and carers are actually looking for.
 </div>
 
 <div class="article-section">
-	{#TODO - Add price tiering image #}
+	{{ carousel({ carouselId: "priceCarousel",
+					images: [
+						"assets/images/case-studies/Adenydd/price-points.webp"
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
 	We also ensure wherever possible that courses and other paid offerings are tiered appropriately for parents or carers and that these tiered payment options are clearly labelled and easy to find.
 </div>
 
