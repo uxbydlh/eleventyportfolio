@@ -2243,4 +2243,24 @@ div:has(.embedded-google-form) {
 }
 /*#endregion button-control carousel*/
 
+/*#region gallery*/
+
+.swipe-gallery {
+  max-width: 100em;
+  gap: var(--space-lg);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.swipe-gallery a img {
+  max-width: 100%;
+}
+
+.swipe-gallery a img:hover {
+  cursor: zoom-in;
+}
+
+/*#endregion gallery*/
+
 /*#endregion Image Styling*/
