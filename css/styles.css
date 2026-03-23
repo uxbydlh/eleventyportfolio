@@ -2250,7 +2250,6 @@ div:has(.embedded-google-form) {
   gap: var(--space-lg);
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-  grid-template-rows: repeat(4, 1fr);
 }
 
 .swipe-gallery a img {

@@ -12,10 +12,25 @@ const title = "Graphic Gallery";
 const subheading = "...";
 ---
 
-<h2>Header Images</h2>
+<h2 id="headers">Header Images</h2>
 <div class="article-section">
 	{%- from 'imageGallery.njk' import gallery %}
 	{{ gallery({ galleryId: "ggHeaders",
+					images: [
+						"assets/images/case-studies/Give-and-Grow/Gallery/headers/homepage.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/headers/about.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/headers/students.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/headers/tutors.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/headers/news.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/headers/contact.webp"
+					]
+				})
+	}}
+</div>
+
+<h2 id="icons">Icons</h2>
+<div class="article-section">
+	{{ gallery({ galleryId: "ggIcons",
 					images: [
 						"assets/images/case-studies/Give-and-Grow/Gallery/headers/homepage.webp",
 						"assets/images/case-studies/Give-and-Grow/Gallery/headers/about.webp",
