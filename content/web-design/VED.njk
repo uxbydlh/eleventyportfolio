@@ -211,7 +211,11 @@ const subheading = "Website Design";
 </div>
 
 <h2 id="all-screens">Screens</h2>
-	{{ carousel({ carouselId: "wireCarousel",
+<div class="article-section">
+	<div class="section-row">
+		<div class="row-column">
+			<h3>Wireframes</h3>
+			{{ carousel({ carouselId: "wireCarousel",
 					images: [
 						"assets/images/case-studies/VED/wires/wire-about.webp",
 						"assets/images/case-studies/VED/wires/wire-contact.webp",
@@ -219,8 +223,11 @@ const subheading = "Website Design";
 						],
 						orientation: "slides-vert" 
 				}) 
-	}}
-	{{ carousel({ carouselId: "protoCarousel",
+			}}
+		</div>
+		<div class="row-column">
+			<h3>Prototypes</h3>
+			{{ carousel({ carouselId: "protoCarousel",
 					images: [
 						"assets/images/case-studies/VED/proto/proto-home.webp",
 						"assets/images/case-studies/VED/proto/proto-about.webp",
@@ -230,8 +237,11 @@ const subheading = "Website Design";
 						],
 						orientation: "slides-vert" 
 				}) 
-	}}
-	{{ carousel({ carouselId: "finalCarousel",
+			}}
+		</div>
+		<div class="row-column">
+			<h3>Final</h3>
+			{{ carousel({ carouselId: "finalCarousel",
 					images: [
 						"assets/images/case-studies/VED/final/final-home.webp",
 						"assets/images/case-studies/VED/final/final-about.webp",
@@ -241,7 +251,10 @@ const subheading = "Website Design";
 						],
 						orientation: "slides-vert" 
 				}) 
-	}}
+			}}
+		</div>
+	</div>
+</div>	
 
 <h2 id="testimonial-section">Testimonials</h2>
 <section class="centre" id="testimonials">
