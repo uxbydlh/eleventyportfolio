@@ -2253,6 +2253,12 @@ div:has(.embedded-google-form) {
   grid-auto-rows: minmax(0, auto);
 }
 
+.swipe-gallery.extra-long {
+  grid-auto-rows: minmax(0, 50vh);
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom, black calc(100% - 5%), transparent);
+}
+
 .swipe-gallery a {
   align-content: center;
 }

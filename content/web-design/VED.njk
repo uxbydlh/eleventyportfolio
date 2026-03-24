@@ -191,6 +191,14 @@ const subheading = "Website Design";
 	<h3 id="site-landing">Landing Page</h3>
 	The new landing page acts as a concise introduction to VED, and a “hub” for everything that they want you to see.
 	{#TODO: Side by side prototype and final landing pages #}
+	{{ gallery({ galleryId: "vedLandingGal",
+					images: [
+						"/assets/images/case-studies/VED/proto/proto-home.webp",
+						"/assets/images/case-studies/VED/final/final-home.webp"
+					],
+					imgLength: "extra-long"
+				})
+	}}
 	From here, or the Nav Bar, you can move to any of the site's other main pages.
 	{{ carousel({ carouselId: "chimeraCarousel",
 					images: [

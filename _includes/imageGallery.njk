@@ -1,6 +1,6 @@
 {%- macro gallery(params) -%}
 
-<div class="swipe-gallery">
+<div class="swipe-gallery {{params.imgLength}}">
     {% for image in params.images %}
         <a rel="{{params.galleryId}}" class="{{params.galleryId}} swipebox" href="{{image | toAbsoluteUrl}}" title="">
             <img src="{{image | toAbsoluteUrl}}">
