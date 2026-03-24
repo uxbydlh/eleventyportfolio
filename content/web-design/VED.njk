@@ -14,6 +14,7 @@ const title = "Very Evil Demons";
 const subheading = "Website Design";
 ---
 {%- from 'imageCarousel.njk' import carousel %}
+{%- from 'imageGallery.njk' import gallery %}
 {#TODO: Banner Image - a look at the completed VED website. #}
 <div class="article-section">
 	Very Evil Demons are an independent, worker-owned, game development studio, based in Dundee, Scotland. 
@@ -93,10 +94,16 @@ const subheading = "Website Design";
 	Those with their own websites or online content were prioritised, so that I could get a better idea of how they presented their works in a digital context.
 </div>
 <div class="article-section">
-	<h3>All In One</h3>>
+	<h3>All In One</h3>
 	Many of those web pages examined had the vast majority of the information the user would require within their landing page. 
 	Although this is considered a design standard, it is clear that in these cases, there is an artistic flair that sets them apart.
-	{#TODO Add morkborg and firewatch gifs - make sure they're formatted in a row.#}
+	{{ gallery({ galleryId: "vedAllInOne",
+					images: [
+						"assets/images/case-studies/VED/Firewatch.gif",
+						"assets/images/case-studies/VED/MorkBorg.gif"
+					]
+				})
+	}}
 </div>
 <div class="article-section">
 	<h3>Bold and Illustrative</h3>
