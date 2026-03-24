@@ -15,6 +15,7 @@ const subheading = "...";
 <h2 id="headers">Header Images</h2>
 <div class="article-section">
 	{%- from 'imageGallery.njk' import gallery %}
+	{%- from 'imageCarousel.njk' import carousel %}
 	{{ gallery({ galleryId: "ggHeaders",
 					images: [
 						"assets/images/case-studies/Give-and-Grow/Gallery/headers/homepage.webp",
@@ -32,13 +33,55 @@ const subheading = "...";
 <div class="article-section">
 	{{ gallery({ galleryId: "ggIcons",
 					images: [
-						"assets/images/case-studies/Give-and-Grow/Gallery/headers/homepage.webp",
-						"assets/images/case-studies/Give-and-Grow/Gallery/headers/about.webp",
-						"assets/images/case-studies/Give-and-Grow/Gallery/headers/students.webp",
-						"assets/images/case-studies/Give-and-Grow/Gallery/headers/tutors.webp",
-						"assets/images/case-studies/Give-and-Grow/Gallery/headers/news.webp",
-						"assets/images/case-studies/Give-and-Grow/Gallery/headers/contact.webp"
+						"assets/images/case-studies/Give-and-Grow/Gallery/icons/affordable.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/icons/alevel.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/icons/circular.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/icons/community.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/icons/cookies.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/icons/difference.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/icons/FAQ.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/icons/gcse.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/icons/growth.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/icons/healthsafety.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/icons/helpothers.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/icons/PLI.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/icons/privacy.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/icons/progress.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/icons/safeguarding.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/icons/safetynet.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/icons/workexp.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/icons/you.webp"
 					]
 				})
+	}}
+</div>
+
+<h2 id="photo-ill">Photo Illustrations</h2>
+<div class="article-section">
+	{{ gallery({ galleryId: "ggHeaders",
+					images: [
+						"assets/images/case-studies/Give-and-Grow/Gallery/illustrations/costconcern.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/illustrations/donate.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/illustrations/needtutor.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/illustrations/realexp.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/illustrations/ourpurpose.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/illustrations/succeed.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/illustrations/tutorgains.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/illustrations/tutorqual.webp",
+						"assets/images/case-studies/Give-and-Grow/Gallery/illustrations/tutorrespons.webp"
+					]
+				})
+	}}
+</div>
+
+<h2>Model Illustration</h2>
+<div class="article-section">
+	{{ carousel({ carouselId: "modelCarousel",
+					images: [
+						"assets/images/case-studies/Give-and-Grow/Gallery/illustrations/fundingmodel.webp"
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
 	}}
 </div>
