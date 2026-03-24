@@ -14,6 +14,7 @@ const title = "Adenydd";
 const subheading = "Website Redesign";
 ---
 {%- from 'imageCarousel.njk' import carousel %}
+{%- from 'imageGallery.njk' import gallery %}
 <img class="banner-image" src='{{"assets/images/case-studies/Adenydd/adenydd-banner.webp" | toAbsoluteUrl}}'>
 <div class="article-section">
 	Adenydd is a Swansea-based charity that provides training for schools, services for families and projects for communities.
@@ -242,7 +243,13 @@ const subheading = "Website Redesign";
 
 <h2 id="parents-improvements">Improvements for Parents, Informal Carers and Guardians</h2>
 <div class="article-section">
-	{#TODO - Add service and project navigation images GALLERY #}
+	{{ gallery({ galleryId: "serviceProjGal",
+					images: [
+						"assets/images/case-studies/Adenydd/services-menu.webp",
+						"assets/images/case-studies/Adenydd/our-projects-menu.webp"
+					]
+				})
+	}}
 	I ensured that services that were relevant to Families were labelled as such and that currently running projects were placed at the top of the navigation, to allow those who already have so little free time to find things easily.
 </div>
 
@@ -300,14 +307,28 @@ const subheading = "Website Redesign";
 
 <h3 id="improving-brand">Improving Brand Image</h3>
 <div class="article-section">
-	{#TODO add a row of three header images#}
+	{{ gallery({ galleryId: "headerGal",
+					images: [
+						"assets/images/case-studies/Adenydd/header-ballpit.webp",
+						"assets/images/case-studies/Adenydd/header-mural.webp",
+						"assets/images/case-studies/Adenydd/header-wibwob.webp"
+					]
+				})
+	}}
 	Created custom header assets that could be used across a variety of pages. A vector designed to look like the ‘helping hand’ in Adenydd’s logo cradles an header image that is relevant to each page. This allowed for Adenydd’s own photographs, custom illustrations and even the stock photos they had originally picked out to be displayed in a creative way that remained consistent to Adenydd’s unique brand.
-	{#TODO add a row of four vector icons#}
+	{{ gallery({ galleryId: "iconsGal",
+					images: [
+						"assets/images/case-studies/Adenydd/icon-big-toys.webp",
+						"assets/images/case-studies/Adenydd/icon-big-hands.webp",
+						"assets/images/case-studies/Adenydd/icon-big-carer.webp"
+					]
+				})
+	}}
 	Custom vectors were also created through a combination of icon libraries and the hand vector from the logo. These were used to separate and illustrate sections of case studies, course descriptions and more.
 </div>
 
 <div class="article-section">
-	{#TODO add "cover" for the components page similar to the DHH one #}
+	<img class="banner-image" src='{{"assets/images/case-studies/Adenydd/component-library.webp" | toAbsoluteUrl}}'>
 	Created sets of re-usable components for use across the site to further drive consistency. This was limited by this particular web builder not having an official way of saving re-usable components. However, a workaround was devised using a hidden, unpublished page. While this does allow everyone to access re-usable components, charitable organisations like Adenydd see frequent volunteer turnover and little time to train people how to use tools like the web builder, so some inconsistencies are inevitable.
 </div>
 
@@ -321,12 +342,24 @@ const subheading = "Website Redesign";
 
 <h3 id="improving-nav">Improving Navigation</h3>
 <div class="article-section">
-	{#TODO - add pictures of the 6 different button styles #}
+	{{ gallery({ galleryId: "buttonsGal",
+					images: [
+						"assets/images/case-studies/Adenydd/button-styles.webp",
+						"assets/images/case-studies/Adenydd/button-styles-2.webp",
+						"assets/images/case-studies/Adenydd/button-styles-3.webp"
+					]
+				})
+	}}
 	Created a small set of consistent button styles within the web builder that could easily be used by others working on the site.
 </div>
 
 <div class="article-section">
-	{#TODO - add pictures of navigation menu#}
+	{{ gallery({ galleryId: "naviGal",
+					images: [
+						"assets/images/case-studies/Adenydd/expanded-menus.webp"
+					]
+				})
+	}}
 	All menus artificially expanded via Inspect Element for clarity’s sake. Not an accurate reflection of the site.
 	Recategorised pages into projects and services. Also created a “More Projects” submenu to account for projects that were no longer running or relevant. Menu’s are now of a more even size and their items are labelled more descriptively.
 </div>

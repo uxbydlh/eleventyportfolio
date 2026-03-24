@@ -2264,7 +2264,9 @@ div:has(.embedded-google-form) {
 }
 
 .swipe-gallery a {
+  display: flex;
   align-content: center;
+  justify-content: center;
 }
 
 .swipe-gallery a img {
