@@ -190,7 +190,6 @@ const subheading = "Website Design";
 <div class="article-section">
 	<h3 id="site-landing">Landing Page</h3>
 	The new landing page acts as a concise introduction to VED, and a “hub” for everything that they want you to see.
-	{#TODO: Side by side prototype and final landing pages #}
 	{{ gallery({ galleryId: "vedLandingGal",
 					images: [
 						"/assets/images/case-studies/VED/proto/proto-home.webp",
@@ -214,9 +213,23 @@ const subheading = "Website Design";
 	<h3 id="site-illustrations">Illustrations</h3>
 	In my initial designs, I wanted to give VED a good idea of how to theme their sections and where they could put icons, illustrations and photos. 
 	VED expressed that they would prefer to use their own custom illustrations in the final product, but agreed that it would be good for me to use public domain, medieval artworks to help outline the “feel” for each page
-	{#TODO: Side by side prototype and final about pages #}
+	{{ gallery({ galleryId: "vedAboutGal",
+					images: [
+						"/assets/images/case-studies/VED/proto/proto-about.webp",
+						"/assets/images/case-studies/VED/final/final-about.webp"
+					],
+					imgLength: "extra-long"
+				})
+	}}
 	Using images sourced from the public domain meant that they could be added to the site in its early stages, affording VED more time to work on their custom pieces while still being able to seek work with their new site.
-	{#TODO Initial, mid, final landing page(s), in a row #}
+	{{ gallery({ galleryId: "vedGroteskGal",
+					images: [
+						"/assets/images/case-studies/VED/Landing-Proto.webp",
+						"/assets/images/case-studies/VED/Landing-Mid.webp",
+						"/assets/images/case-studies/VED/Landing-Final.webp"
+					]
+				})
+	}}
 </div>
 <div class="article-section">
 	<h3>Gothic Feel</h3>

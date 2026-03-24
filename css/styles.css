@@ -2265,6 +2265,11 @@ div:has(.embedded-google-form) {
 
 .swipe-gallery a img {
   max-width: 100%;
+  object-fit: cover;
+}
+
+.swipe-gallery:not(.extra-long) a img {
+  height: 100%;
 }
 
 .swipe-gallery a img:hover {
