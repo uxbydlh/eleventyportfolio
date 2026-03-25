@@ -15,6 +15,7 @@ const subheading = "Website Design";
 ---
 {%- from 'imageCarousel.njk' import carousel %}
 {%- from 'imageGallery.njk' import gallery %}
+{%- from 'filteredTestimonials.njk' import filteredTestimonials%}
 <img class="banner-image" src='{{"assets/images/case-studies/VED/VED-banner.webp" | toAbsoluteUrl}}'>
 <div class="article-section">
 	Very Evil Demons are an independent, worker-owned, game development studio, based in Dundee, Scotland. 
@@ -294,15 +295,8 @@ const subheading = "Website Design";
 
 <h2 id="testimonial-section">Testimonials</h2>
 <section class="centre" id="testimonials">
-	<ul class="card-list">
-		{% for testimonial in testimonials %}
-			{% if testimonial.company == "VED" %}
-				<li class="card testimonial">
-					<q>{{testimonial.testimonial}}</q>
-					<div class="persona"><i class="ri-chat-2-fill"></i><p><b>{{testimonial.persona}}</b></p></div>
-				</li>
-			{% endif %}
-		{% endfor %}
-	</ul>
-	{#TODO Only add VED testimonials here - maybe we need tags?#}
+	{{ filteredTestimonials({
+		listOfAll: testimonials,
+		filter: "VED"
+	}) }}
 </section>
