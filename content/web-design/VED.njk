@@ -294,13 +294,14 @@ const subheading = "Website Design";
 
 <h2 id="testimonial-section">Testimonials</h2>
 <section class="centre" id="testimonials">
-	{% set testList = testimonials | shuffle %}
 	<ul class="card-list">
-		{% for testimonial in testList %}
-		<li class="card testimonial">
-			<q>{{testimonial.testimonial}}</q>
-			<div class="persona"><i class="ri-chat-2-fill"></i><p><b>{{testimonial.persona}}</b></p></div>
-		</li>
+		{% for testimonial in testimonials %}
+			{% if testimonial.company == "VED" %}
+				<li class="card testimonial">
+					<q>{{testimonial.testimonial}}</q>
+					<div class="persona"><i class="ri-chat-2-fill"></i><p><b>{{testimonial.persona}}</b></p></div>
+				</li>
+			{% endif %}
 		{% endfor %}
 	</ul>
 	{#TODO Only add VED testimonials here - maybe we need tags?#}
