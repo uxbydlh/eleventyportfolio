@@ -1,0 +1,35 @@
+{%- macro personas(params) -%}
+
+<ul class="persona-card-list">
+    {% for persona in params.personas %}
+        <li class="table-card">
+            <div class="table-card-header">
+                <h4><i class="{{persona.icon}}">{{persona.name}}</h4>
+                <p>{{persona.subheading}}</p>
+            </div>
+            <div class="table-card-body">
+                {% if persona.goals %}
+                    <h4>Goals</h4>
+                    {% for goal in persona.goals %}
+                        <ul>
+                            <li>{{goal}}</li>
+                        </ul>
+                    {% endfor %}
+                {% endif %}
+                {% if persona.barriers %}
+                    <h4>Barriers</h4>
+                    {% for barrier in persona.barriers %}
+                        <ul>
+                            <li>{{barrier}}</li>
+                        </ul>
+                    {% endfor %}
+                {% endif %}
+                {% if persona.quote %}
+                    <q>{{persona.quote}}</q>
+                {% endif %}
+            </div>
+        </li>
+    {% endfor %}
+</ul>
+
+{%- endmacro -%}
