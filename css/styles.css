@@ -1632,6 +1632,10 @@ article p {
   justify-content: center;
 }
 
+.card-list.personas {
+  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); /*2 per row*/
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -1691,7 +1695,6 @@ article p {
 .card.testimonial q {
   quotes: none;
   font-family: var(--font-family-mono);
-  font-family:;
 
   display: flex;
   flex: 1 1 auto;
@@ -1704,30 +1707,39 @@ article p {
   padding: var(--space-xl) var(--space-md) var(--space-md) var(--space-md);
 }
 
-.card.testimonial .persona {
+.table-card {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  background-color: var(--surface-primary);
+}
+
+.table-card-header {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md) var(--space-lg);
+  padding-top: var(--space-ml);
+  background-color: var(--surface-nav);
+  gap: var(--space-sm);
+  border-bottom: var(--border-primary) solid var(--border-width-sm);
+}
+
+.table-card-header div {
   display: flex;
   flex-direction: row;
-  flex: 1 1 auto;
-  gap: var(--space-lg);
-  padding: var(--space-md);
-
+  gap: var(--space-md);
   align-items: center;
-  justify-content: center;
-  text-align: left;
-
-  width: 100%;
-
-  border-top: var(--border-primary) solid var(--border-width-sm);
-  background-color: var(--surface-nav);
 }
 
-.card .persona p {
-  width: 100%;
+.table-card-body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: var(--space-md) var(--space-lg);
+  padding-bottom: var(--space-lg);
+  gap: var(--space-md);
 }
 
-.card .persona i {
-  font-size: var(--font-size-h1);
-}
 /*#endregion Tutors*/
 
 /*#region FAQ*/

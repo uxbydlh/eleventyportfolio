@@ -1,10 +1,13 @@
 {%- macro personas(params) -%}
 
-<ul class="persona-card-list">
+<ul class="card-list personas">
     {% for persona in params.personas %}
         <li class="table-card">
             <div class="table-card-header">
-                <h4><i class="{{persona.icon}}">{{persona.name}}</h4>
+                <div>
+                    <i class="{{persona.icon}}"></i>
+                    <h4>{{persona.name}}</h4>
+                </div>
                 <p>{{persona.subheading}}</p>
             </div>
             <div class="table-card-body">
