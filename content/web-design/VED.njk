@@ -16,6 +16,8 @@ const subheading = "Website Design";
 {%- from 'imageCarousel.njk' import carousel %}
 {%- from 'imageGallery.njk' import gallery %}
 {%- from 'filteredTestimonials.njk' import filteredTestimonials%}
+{%- from 'personas.njk' import personas %}
+
 <img class="banner-image" src='{{"assets/images/case-studies/VED/VED-banner.webp" | toAbsoluteUrl}}'>
 <div class="article-section">
 	Very Evil Demons are an independent, worker-owned, game development studio, based in Dundee, Scotland. 
@@ -151,39 +153,47 @@ const subheading = "Website Design";
 	With suggestions from VED, I created a list of potential user archetypes, keeping the major goals for this project in mind.
 </div>
 {#TODO Make this card section mean something, css wise #}
-<div class="card-section">
-	<div class="persona">
-		<h4>{#TODO add icon#}
-			Potential Clients
-		</h4>
-		Larger game development studios, art galleries and other large-scale creative endeavours. Approached by VED.
-		<b>GOAL</b>
-		Want to know that VED is putting out good work before bringing them onto a project.
-		<b>BARRIER</b>
-		There is a lot of information to deliver on the landing page. 
-		We need a specialised projects page that can be linked to.
-	</div>
-	<div class="persona">
-		<h4>{#TODO add icon#}
-			Independent Creatives
-		</h4>
-		Individual or small team. May have found VED through social media, projects, or in-person events. May reach out first.
-		<b>GOAL</b>
-		Find out about VEDs work and get in contact with them about a potential project.
-		<b>BARRIER</b>
-		Contact forms are typically presented at the bottom of a page, if they do not have their own page. As the landing page grows, we need to implement some kind of shortcut to the Contact Us area
-	</div>
-	<div class="persona">
-		<h4>{#TODO add icon#}
-			Future Collaborators
-		</h4>
-		Skilled, creative individuals in game-development. May have found VED on career-focussed sites like LinkedIn, or through their works.
-		<b>GOAL</b>
-		Find out more about the VED team and their policies before making contact to discuss collaboration or becoming part of the team*
-		<b>BARRIER</b>
-		The landing page needs to focus more on tangible projects and outcomes. “About” information has a bit lower priority. It may be best to give it it’s own page
-	</div>
+
+<div class="article-section">
+	{{ personas({
+		personas: [
+			{
+				icon: "ri-cash-fill",
+				name: "Potential Clients",
+				subheading: "Larger game development studios, art galleries and other large-scale creative endeavours. Approached by VED.",
+				goals: [
+					"They want to know that VED is putting out good work before bringing them onto a project"
+				],
+				barriers: [
+					"There is a lot of information to deliver on the landing page. We need a specialised projects page that can be linked to."
+				]
+			},
+			{
+				icon: "ri-palette-fill",
+				name: "Independent Creatives",
+				subheading: "An individual or small team. May have found VED through social media, projects, or in-person events. May reach out first.",
+				goals: [
+					"Find out about VED's work and get in contact with them about a potential project."
+				],
+				barriers: [
+					"Contact forms are typically presented at the bottom of a page, if they do not have their own page. As the landing page grows, we need to implement some kind of shortcut to the Contact Us area."
+				]
+			},
+			{
+				icon: "ri-service-fill",
+				name: "Future Collaborators",
+				subheading: "Skilled, creative individuals in game-development. May have found VED on career-focussed sites like LinkedIn, or through their works.",
+				goals: [
+					"Find out more about the VED team and their policies before making contact to discuss collaboration or becoming part of the team*"
+				],
+				barriers: [
+					"The landing page needs to focus more on tangible projects and outcomes. “About” information has a bit lower priority. It may be best to give it it’s own page"
+				]
+			}
+		]
+	})}}
 </div>
+
 <div class="article-section">
 	<i>* Future Collaborators are not the primary target audience at this stage for the company. However, connecting with other creatives is useful for expanding one’s network, so it’s important to consider them.</i>
 </div>

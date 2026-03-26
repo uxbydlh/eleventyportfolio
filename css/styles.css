@@ -1633,7 +1633,12 @@ article p {
 }
 
 .card-list.personas {
-  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); /*2 per row*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
 }
 
 .card {
@@ -1710,6 +1715,7 @@ article p {
 .table-card {
   display: flex;
   flex-direction: column;
+  max-width: 45%;
   align-self: stretch;
   background-color: var(--surface-primary);
 }
