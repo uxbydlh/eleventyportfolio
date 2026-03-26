@@ -14,6 +14,7 @@ const title = "UI/UX Groundwork for Dot Dot Loans";
 const subheading = "Design Systems and Customer Journeys";
 ---
 {%- from 'imageCarousel.njk' import carousel %}
+{%- from 'filteredTestimonials.njk' import filteredTestimonials%}
 
 <img class="banner-image" src='{{"/assets/images/case-studies/Morses/Dot-Dot/1Banner.webp" | toAbsoluteUrl}}'>
 
@@ -187,14 +188,8 @@ const subheading = "Design Systems and Customer Journeys";
 
 <h2 id="testimonial-section">Testimonials</h2>
 <section class="centre" id="testimonials">
-	{% set testList = testimonials | shuffle %}
-	<ul class="card-list">
-		{% for testimonial in testList %}
-		<li class="card testimonial">
-			<q>{{testimonial.testimonial}}</q>
-			<div class="persona"><i class="ri-chat-2-fill"></i><p><b>{{testimonial.persona}}</b></p></div>
-		</li>
-		{% endfor %}
-	</ul>
-	{#TODO Only add Morses testimonials here - maybe we need tags?#}
+	{{ filteredTestimonials({
+		listOfAll: testimonials,
+		filter: "Morses"
+	}) }}
 </section>

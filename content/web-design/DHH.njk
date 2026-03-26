@@ -14,6 +14,7 @@ const title = "Devon Healing Horsemanship";
 const subheading = "Full site redesign for an equine-assisted mental health charity in Devon";
 ---
 {%- from 'imageCarousel.njk' import carousel %}
+{%- from 'filteredTestimonials.njk' import filteredTestimonials%}
 <img class="banner-image" src='{{"assets/images/case-studies/DHH/DHHMultibanner.webp" | toAbsoluteUrl}}'>
 <div class="article-section">
 	Devon Healing Horsemanship is a mental health charity specialising in horse-powered alternatives to talk-based therapy. I was a part of a challenging project to redesign their website in time for their first anniversary.
@@ -480,14 +481,8 @@ const subheading = "Full site redesign for an equine-assisted mental health char
 
 <h2 id="testimonial-section">Testimonials</h2>
 <section class="centre" id="testimonials">
-	{% set testList = testimonials | shuffle %}
-	<ul class="card-list">
-		{% for testimonial in testList %}
-		<li class="card testimonial">
-			<q>{{testimonial.testimonial}}</q>
-			<div class="persona"><i class="ri-chat-2-fill"></i><p><b>{{testimonial.persona}}</b></p></div>
-		</li>
-		{% endfor %}
-	</ul>
-	{#TODO Only add DHH testimonials here - maybe we need tags?#}
+	{{ filteredTestimonials({
+		listOfAll: testimonials,
+		filter: "DHH"
+	}) }}
 </section>

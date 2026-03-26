@@ -14,6 +14,8 @@ const title = "Reducing Form Fatigue";
 const subheading = "With Strategic Income & Outgoings Page Enhancements";
 ---
 
+{%- from 'filteredTestimonials.njk' import filteredTestimonials%}
+
 <img class="banner-image" src='{{"/assets/images/case-studies/Morses/Form-Fatigue/1Banner.webp" | toAbsoluteUrl}}'>
 <div class="article-section">
 	Tackling pain points within the “Income and Outgoings” portion of the digital customer journey. Created for Morses Club - a loan company that provided non-standard credit options.
@@ -173,14 +175,8 @@ const subheading = "With Strategic Income & Outgoings Page Enhancements";
 
 <h2 id="testimonial-section">Testimonials</h2>
 <section class="centre" id="testimonials">
-	{% set testList = testimonials | shuffle %}
-	<ul class="card-list">
-		{% for testimonial in testList %}
-		<li class="card testimonial">
-			<q>{{testimonial.testimonial}}</q>
-			<div class="persona"><i class="ri-chat-2-fill"></i><p><b>{{testimonial.persona}}</b></p></div>
-		</li>
-		{% endfor %}
-	</ul>
-	{#TODO Only add Morses testimonials here - maybe we need tags?#}
+	{{ filteredTestimonials({
+		listOfAll: testimonials,
+		filter: "Morses"
+	}) }}
 </section>
