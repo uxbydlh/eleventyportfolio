@@ -1641,6 +1641,11 @@ article p {
   gap: var(--space-lg);
 }
 
+.card-list.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -1710,6 +1715,23 @@ article p {
   text-align: justify;
 
   padding: var(--space-xl) var(--space-md) var(--space-md) var(--space-md);
+}
+
+.card.testimonial .persona {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+
+  padding: var(--space-md) var(--space-md);
+  padding-bottom: var(--space-ml);
+  background-color: var(--surface-nav);
+  gap: var(--space-md);
+  border-top: var(--border-primary) solid var(--border-width-sm);
+}
+
+.card.testimonial .persona i {
+  font-size: xx-large;
 }
 
 .table-card {

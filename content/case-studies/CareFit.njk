@@ -13,6 +13,7 @@ const date = "2019-01-01";
 const title = "CareFit";
 const subheading = "An Application to Encourage Exercise in Informal Carers";
 ---
+{%- from 'filteredTestimonials.njk' import filteredTestimonials%}
 
 <img class="banner-image" src='{{"assets/images/case-studies/CareFit/CareFit-Banner.webp" | toAbsoluteUrl}}'>
 
@@ -147,17 +148,12 @@ const subheading = "An Application to Encourage Exercise in Informal Carers";
 <div class="article-section">
 	Full dissertation available on request.
 </div>
+
 <h2 id="testimonial-section">Testimonials</h2>
 <section class="centre" id="testimonials">
-	{% set testList = testimonials | shuffle %}
-	<ul class="card-list">
-		{% for testimonial in testList %}
-		<li class="card testimonial">
-			<q>{{testimonial.testimonial}}</q>
-			<div class="persona"><i class="ri-chat-2-fill"></i><p><b>{{testimonial.persona}}</b></p></div>
-		</li>
-		{% endfor %}
-	</ul>
-	{#TODO Only add Carefit testimonials here - maybe we need tags?#}
+	{{ filteredTestimonials({
+		listOfAll: testimonials,
+		filter: "all"
+	}) }}
 </section>
 

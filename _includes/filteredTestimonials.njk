@@ -1,14 +1,24 @@
 {%- macro filteredTestimonials(params) -%}
 
-    <ul class="card-list">
-        {% for testimonial in params.listOfAll %}
-            {% if testimonial.company == params.filter %}
-                <li class="card testimonial">
-					<q>{{testimonial.testimonial}}</q>
-					<div class="persona"><i class="ri-chat-2-fill"></i><p><b>{{testimonial.persona}}</b></p></div>
-				</li>
-            {% endif %}
-        {% endfor %}
+    <ul class="card-list testimonials">
+        {% if params.filter == "all" %}
+            {% for testimonial in params.listOfAll %}
+                    <li class="card testimonial">
+                        <q>{{testimonial.testimonial}}</q>
+                        <div class="persona"><i class="ri-chat-2-fill"></i><p><b>{{testimonial.persona}}</b></p></div>
+                    </li>
+            {% endfor %}
+        {% else %}
+            {% for testimonial in params.listOfAll %}
+                {% if testimonial.company == params.filter %}
+                    <li class="card testimonial">
+                        <q>{{testimonial.testimonial}}</q>
+                        <div class="persona"><i class="ri-chat-2-fill"></i><p><b>{{testimonial.persona}}</b></p></div>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        
     </ul>
 
 {%- endmacro -%}
