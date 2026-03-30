@@ -1770,6 +1770,91 @@ article p {
 
 /*#endregion Tutors*/
 
+/*#region tables*/
+.table {
+  display: flex;
+  flex-direction: row;
+  
+  background-color: var(--surface-primary);
+}
+
+.table-column {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.table-header {
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+
+  color: var(--text-selected);
+  background-color: var(--surface-nav);
+}
+
+.table-column p {
+  min-height: 32px;
+  padding: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+  .table {
+    flex-direction: column;
+  }
+}
+
+.table-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 45%;
+  align-self: stretch;
+
+  background-color: var(--surface-primary);
+}
+
+@media only screen and (max-width: 600px) {
+  .table-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.table-card-header {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md) var(--space-md);
+  padding-top: var(--space-ml);
+  background-color: var(--surface-nav);
+  gap: var(--space-sm);
+  border-bottom: var(--border-primary) solid var(--border-width-sm);
+}
+
+.table-card-header h3 {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.table-card-body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  padding: var(--space-md) var(--space-lg);
+  padding-bottom: var(--space-lg);
+  gap: var(--space-sm);
+}
+
+.table-card-footer{
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md) var(--space-md);
+  padding-bottom: var(--space-ml);
+  background-color: var(--surface-nav);
+  gap: var(--space-sm);
+  border-top: var(--border-primary) solid var(--border-width-sm);
+}
+/*#endregion tables*/
+
 /*#region FAQ*/
 
 .FAQ {
