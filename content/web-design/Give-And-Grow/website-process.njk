@@ -12,10 +12,11 @@ const date = "2025-06-06";
 
 const title = "Give and Grow CIC";
 const subheading = "Creating a functional website from the ground up for a tutoring CIC based in London";
+const bannerImg = "assets/images/case-studies/Give-and-Grow/GAGBanner.webp";
 ---
 {%- from 'inlineTable.njk' import inlineTable %}
 
-<img class="banner-image" src='{{"assets/images/case-studies/Give-and-Grow/GAGBanner.webp" | toAbsoluteUrl}}'>
+<img class="banner-image" src='{{bannerImg | toAbsoluteUrl}}'>
 <div class="article-section">
 	Give and Grow is a community interest company dedicated to helping students who are unable to afford full-price tutoring sessions, but are also ineligible for financial support from traditional aid systems.
 	<a class="btn primary"

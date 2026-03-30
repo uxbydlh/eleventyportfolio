@@ -1660,10 +1660,9 @@ article p {
 .card-photo {
   display: inline-block;
   position: relative;
-  width: 160px;
-  height: 160px;
   overflow: hidden;
-  border-radius: 50%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .card-photo img{

@@ -12,12 +12,13 @@ const date = "2025-06-06";
 
 const title = "Adenydd";
 const subheading = "Website Redesign";
+const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 ---
 {%- from 'imageCarousel.njk' import carousel %}
 {%- from 'imageGallery.njk' import gallery %}
 {%- from 'inlineTable.njk' import inlineTable %}
 
-<img class="banner-image" src='{{"assets/images/case-studies/Adenydd/adenydd-banner.webp" | toAbsoluteUrl}}'>
+<img class="banner-image" src='{{bannerImg | toAbsoluteUrl}}'>
 <div class="article-section">
 	Adenydd is a Swansea-based charity that provides training for schools, services for families and projects for communities.
 	Whether you're a parent, a teacher, or anyone who cares, Adenydd can provide you with the tools to help children overcome adverse childhood experiences and live happy, successful lives.
