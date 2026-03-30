@@ -15,6 +15,7 @@ const subheading = "Design Systems and Customer Journeys";
 ---
 {%- from 'imageCarousel.njk' import carousel %}
 {%- from 'filteredTestimonials.njk' import filteredTestimonials%}
+{%- from 'inlineTable.njk' import inlineTable %}
 
 <img class="banner-image" src='{{"/assets/images/case-studies/Morses/Dot-Dot/1Banner.webp" | toAbsoluteUrl}}'>
 
@@ -45,9 +46,32 @@ const subheading = "Design Systems and Customer Journeys";
 
 <h2 id="details">Details</h2>
 <div class="article-section">
-	Scope: Full-time, Improvement on existing product
-	Role: Research, UX & UI Design
-	Tools: Figma, HotJar
+	{{ inlineTable ({
+			table: [
+				{
+					header: "Scope",
+					bodyItems: [
+						"Full-time",
+						"Improvement on existing product"
+					]
+				},
+				{
+					header: "Role",
+					bodyItems: [
+						"Research",
+						"UX & UI design"
+					]
+				},
+				{
+					header: "Tools",
+					bodyItems: [
+						"Figma",
+						"HotJar"
+					]
+				}
+			]
+		})
+	}}
 </div>
 
 <h2 id="impact">Impact</h2>
