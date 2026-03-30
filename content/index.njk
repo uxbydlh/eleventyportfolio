@@ -46,6 +46,7 @@ const logos = [
 ];
 
 ---
+{%- from 'projectCards.njk' import latestProjects %}
 
 <section class="top centre" id="Model">
 	<h2>Companies I've worked with</h2>
@@ -75,23 +76,7 @@ const logos = [
 
 <section class="centre" id="LatestProj">
 	<h2>Latest Projects</h2>
-	<ul class="card-list">
-		{% set latest_projects = collections.projects | reverse %}
-		{% for item in latest_projects.slice(0,3) %}
-		<a href="{{item.url | toAbsoluteUrl }}">
-			<li class="card">
-				<img class="card-photo" src="{{item.data.bannerImg | toAbsoluteUrl}}">
-				<h4>{{item.data.title}}</h4>
-				{% if item.templateContent %}
-					{% set safeExcerpt = item.templateContent | striptags | truncate(140, false, "...") %}
-					<p>{{safeExcerpt}}</p>
-					<meta name="description" content = "{{ safeExcerpt }}">
-					<meta property="og:description" content="{{ safeExcerpt }}">
-				{% endif%}
-			</li>
-		</a>
-		{% endfor %}
-	</ul>
+	{{ latestProjects ({ projectList: collections.projects }) }}
 	<a class="btn primary" href="/projects">View All Projects<i class="ri-arrow-right-s-fill"></i></a>
 </section>
 
