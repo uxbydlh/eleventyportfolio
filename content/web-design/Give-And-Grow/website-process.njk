@@ -13,21 +13,54 @@ const date = "2025-06-06";
 const title = "Give and Grow CIC";
 const subheading = "Creating a functional website from the ground up for a tutoring CIC based in London";
 ---
+{%- from 'inlineTable.njk' import inlineTable %}
 
-{#TODO Banner Image - a look at the completed Give and Grow website. #}
+<img class="banner-image" src='{{"assets/images/case-studies/Give-and-Grow/GAGBanner.webp" | toAbsoluteUrl}}'>
 <div class="article-section">
 	Give and Grow is a community interest company dedicated to helping students who are unable to afford full-price tutoring sessions, but are also ineligible for financial support from traditional aid systems.
-	{#TODO: Add a View all Screen button linking out to Give & Grow website #}
+	<a class="btn primary"
+				href="https://giveandgrowcic.co.uk/"
+				target="_blank" rel="noopener noreferrer">Visit Give & Grow<i class="ri-arrow-right-s-fill"></i></a>
 </div>
 
 <h2 id="details">Details</h2>
 <div class="article-section">
-	Scope
-	Founding volunteer, creator of design system and web branding, full-site development from scratch.
-	Role
-	UX & UI design, Copywriting, Graphic design, Web developer, Research
-	Tools
-	Figjam, Figma, VSCode, HTML, JS, CSS, Nunjucks, Adobe Photoshop, Adobe Illustrator
+	{{ inlineTable ({
+			table: [
+				{
+					header: "Scope",
+					bodyItems: [
+						"Founding volunteer",
+						"Creator of design system and branding",
+						"Full-site development from scratch"
+					]
+				},
+				{
+					header: "Role",
+					bodyItems: [
+						"Research",
+						"UX & UI design",
+						"Copywriting",
+						"Graphic Design",
+						"Web Development"
+					]
+				},
+				{
+					header: "Tools",
+					bodyItems: [
+						"Figma",
+						"Figjam",
+						"VSCode",
+						"HTML",
+						"CSS",
+						"Nunjucks",
+						"Adobe Photoshop",
+						"Adobe Illustrator"
+					]
+				}
+			]
+		})
+	}}
 </div>
 
 <h2 id="impact">Impact</h2>

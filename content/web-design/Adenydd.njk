@@ -15,6 +15,8 @@ const subheading = "Website Redesign";
 ---
 {%- from 'imageCarousel.njk' import carousel %}
 {%- from 'imageGallery.njk' import gallery %}
+{%- from 'inlineTable.njk' import inlineTable %}
+
 <img class="banner-image" src='{{"assets/images/case-studies/Adenydd/adenydd-banner.webp" | toAbsoluteUrl}}'>
 <div class="article-section">
 	Adenydd is a Swansea-based charity that provides training for schools, services for families and projects for communities.
@@ -26,12 +28,37 @@ const subheading = "Website Redesign";
 
 <h2 id="details">Details</h2>
 <div class="article-section">
-	Scope
-	Volunteer, redesign of existing website
-	Role
-	UX and UI design, Copywriting, Research, Graphic design (min)
-	Tools
-	Figjam, Figma, One dot com web builder, Adobe Photoshop, Adobe Illustrator
+	{{ inlineTable ({
+			table: [
+				{
+					header: "Scope",
+					bodyItems: [
+						"Volunteer",
+						"Redesign of existing website"
+					]
+				},
+				{
+					header: "Role",
+					bodyItems: [
+						"Research",
+						"UX & UI design",
+						"Copywriting",
+						"Graphic Design"
+					]
+				},
+				{
+					header: "Tools",
+					bodyItems: [
+						"Figma",
+						"Figjam",
+						"One dot com web builder",
+						"Adobe Photoshop",
+						"Adobe Illustrator"
+					]
+				}
+			]
+		})
+	}}
 </div>
 
 <h2 id="impact">Impact</h2>

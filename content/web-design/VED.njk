@@ -17,6 +17,7 @@ const subheading = "Website Design";
 {%- from 'imageGallery.njk' import gallery %}
 {%- from 'filteredTestimonials.njk' import filteredTestimonials%}
 {%- from 'personas.njk' import personas %}
+{%- from 'inlineTable.njk' import inlineTable %}
 
 <img class="banner-image" src='{{"assets/images/case-studies/VED/VED-banner.webp" | toAbsoluteUrl}}'>
 <div class="article-section">
@@ -32,12 +33,31 @@ const subheading = "Website Design";
 
 <h2 id="details">Details</h2>
 <div class="article-section">
-	Scope
-	Contract, prototype and wireframe creation to be passed onto a developer and illustrator.
-	Role
-	Concept, Research, UX & UI design
-	Tools
-	Figma
+	{{ inlineTable ({
+			table: [
+				{
+					header: "Scope",
+					bodyItems: [
+						"Contract Work",
+						"Prototype and wireframe creation to be passed onto a developer and illustrator"
+					]
+				},
+				{
+					header: "Role",
+					bodyItems: [
+						"Research",
+						"UX & UI design"
+					]
+				},
+				{
+					header: "Tools",
+					bodyItems: [
+						"Figma"
+					]
+				}
+			]
+		})
+	}}
 </div>
 
 <h2 id="impact">Impact</h2>

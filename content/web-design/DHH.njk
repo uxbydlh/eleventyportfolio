@@ -16,6 +16,7 @@ const subheading = "Full site redesign for an equine-assisted mental health char
 {%- from 'imageCarousel.njk' import carousel %}
 {%- from 'filteredTestimonials.njk' import filteredTestimonials %}
 {%- from 'personas.njk' import personas %}
+{%- from 'inlineTable.njk' import inlineTable %}
 
 <img class="banner-image" src='{{"assets/images/case-studies/DHH/DHHMultibanner.webp" | toAbsoluteUrl}}'>
 <div class="article-section">
@@ -25,12 +26,36 @@ const subheading = "Full site redesign for an equine-assisted mental health char
 
 <h2 id="details">Details</h2>
 <div class="article-section">
-	Scope
-	Part time volunteer work, re-design of existing website.
-	Role
-	Research, UX & UI design, Graphic Design, Photo Editing, Copywriting
-	Tools
-	Figma, Adobe Photoshop, Adobe Illustrator
+		{{ inlineTable ({
+			table: [
+				{
+					header: "Scope",
+					bodyItems: [
+						"Volunteer work",
+						"re-design of existing website"
+					]
+				},
+				{
+					header: "Role",
+					bodyItems: [
+						"Research",
+						"UX & UI design",
+						"Graphic Design",
+						"Photo Editing",
+						"Copywriting"
+					]
+				},
+				{
+					header: "Tools",
+					bodyItems: [
+						"Figma",
+						"Adobe Photoshop",
+						"Adobe Illustrator"
+					]
+				}
+			]
+		})
+	}}
 </div>
 
 <h2 id="impact">Impact</h2>

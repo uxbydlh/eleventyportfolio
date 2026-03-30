@@ -15,6 +15,7 @@ const subheading = "With Strategic Income & Outgoings Page Enhancements";
 ---
 
 {%- from 'filteredTestimonials.njk' import filteredTestimonials%}
+{%- from 'inlineTable.njk' import inlineTable %}
 
 <img class="banner-image" src='{{"/assets/images/case-studies/Morses/Form-Fatigue/1Banner.webp" | toAbsoluteUrl}}'>
 <div class="article-section">
@@ -32,12 +33,34 @@ const subheading = "With Strategic Income & Outgoings Page Enhancements";
 
 <h2 id="details">Details</h2>
 <div class="article-section">
-	Scope
-	Full-time work, improvement on existing product
-	Role
-	Concept, Research, UX & UI design
-	Tools
-	Figma, Figjam, HotJar
+	{{ inlineTable ({
+			table: [
+				{
+					header: "Scope",
+					bodyItems: [
+						"Full-time",
+						"Improvement on existing product"
+					]
+				},
+				{
+					header: "Role",
+					bodyItems: [
+						"Concept",
+						"Research",
+						"UX & UI design"
+					]
+				},
+				{
+					header: "Tools",
+					bodyItems: [
+						"Figma",
+						"Figjam",
+						"HotJar"
+					]
+				}
+			]
+		})
+	}}
 </div>
 
 <h2 id="impact">Impact</h2>

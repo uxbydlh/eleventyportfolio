@@ -16,6 +16,7 @@ const subheading = "Empowering MCL Employees with PAM for Efficient Customer App
 
 {%- from 'imageCarousel.njk' import carousel %}
 {%- from 'filteredTestimonials.njk' import filteredTestimonials%}
+{%- from 'inlineTable.njk' import inlineTable %}
 
 <img class="banner-image" src='{{"/assets/images/case-studies/Morses/PAM/1Banner.webp" | toAbsoluteUrl}}'>
 <div class="article-section">
@@ -33,12 +34,35 @@ const subheading = "Empowering MCL Employees with PAM for Efficient Customer App
 
 <h2 id="details">Details</h2>
 <div class="article-section">
-	Scope
-	Full-time work, improvement on existing product
-	Role
-	Concept, Research, UX & UI design
-	Tools
-	Figma, Figjam, User Feedback Forms (Various)
+	{{ inlineTable ({
+			table: [
+				{
+					header: "Scope",
+					bodyItems: [
+						"Full-time",
+						"Improvement on existing product"
+					]
+				},
+				{
+					header: "Role",
+					bodyItems: [
+						"Concept",
+						"Research",
+						"UX & UI design"
+					]
+				},
+				{
+					header: "Tools",
+					bodyItems: [
+						"Figma",
+						"Figjam",
+						"HotJar",
+						"User Feedback Forms (Various)"
+					]
+				}
+			]
+		})
+	}}
 </div>
 
 <h2 id="impact">Impact</h2>
