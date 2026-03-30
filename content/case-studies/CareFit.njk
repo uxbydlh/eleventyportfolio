@@ -13,18 +13,40 @@ const date = "2019-01-01";
 const title = "CareFit";
 const subheading = "An Application to Encourage Exercise in Informal Carers";
 ---
-{%- from 'filteredTestimonials.njk' import filteredTestimonials%}
+{%- from 'filteredTestimonials.njk' import filteredTestimonials %}
+{%- from 'inlineTable.njk' import inlineTable %}
 
 <img class="banner-image" src='{{"assets/images/case-studies/CareFit/CareFit-Banner.webp" | toAbsoluteUrl}}'>
 
 <h2 id="details">Details</h2>
 <div class="article-section">
-	Scope
-	University dissertation project with approx. 10 weeks of programming & testing time
-	Role
-	UX & UI designer, Full stack programmer
-	Tools
-	Android Studio, Inkscape
+	{{
+		inlineTable ({
+			table: [
+				{
+					header: "Scope",
+					bodyItems: [
+						"Dissertation project",
+						"approx. 10 weeks of programming and testing time"
+					]
+				},
+				{
+					header: "Role",
+					bodyItems: [
+						"UX/UI designer",
+						"Full stack developer"
+					]
+				},
+				{
+					header: "Tools",
+					bodyItems: [
+						"Android Studio",
+						"Inkscape"
+					]
+				}
+			]
+		})
+	}}
 </div>
 
 <h2 id="outline">Outline</h2>

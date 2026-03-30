@@ -1,0 +1,14 @@
+{%- macro inlineTable(params) -%}
+
+<div class="table">
+    {% for item in params.table %}
+        <div class="table-column">
+            <p class="table-header">{{item.header}}</p>
+            {% for bodyItem in item.bodyItems %}
+                <p>{{bodyItem}}</p>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+
+{%- endmacro -%}
