@@ -17,3 +17,27 @@
 		{% endfor %}
 	</ul>
 {%- endmacro -%}
+
+{%- macro filteredProjects(params) -%}
+    <ul class="card-list">
+		{% set latest_projects = params.projectList | reverse %}
+		{% for item in latest_projects %}
+            {% if params.filter in item.data.tags %}
+                <a href="{{item.url | toAbsoluteUrl }}">
+                    <li class="card">
+                        {%if item.data.bannerImg %}
+                            <img class="card-photo" src="{{item.data.bannerImg | toAbsoluteUrl}}">
+                        {%endif%}
+                        <h4>{{item.data.title}}</h4>
+                        {% if item.templateContent %}
+                            {% set safeExcerpt = item.templateContent | striptags | truncate(140, false, "...") %}
+                            <p>{{safeExcerpt}}</p>
+                            <meta name="description" content = "{{ safeExcerpt }}">
+                            <meta property="og:description" content="{{ safeExcerpt }}">
+                        {% endif%}
+                    </li>
+                </a>
+            {% endif %}    
+		{% endfor %}
+	</ul>
+{%- endmacro -%}
