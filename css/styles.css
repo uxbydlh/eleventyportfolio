@@ -1657,6 +1657,15 @@ article p {
   background-color: var(--surface-primary);
 }
 
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-body);
+}
+
 .card-photo {
   display: inline-block;
   position: relative;
@@ -1684,15 +1693,19 @@ article p {
   justify-content: center;
 }
 
-.card li {
-  padding: 4px 8px;
-  border-radius: 24px;
-  background-color: var(--pink-colour);
-  text-align: center;
-}
-
 .card li i {
   color: var(--text-light-colour);
+}
+
+.card-tags li {
+  font-family: var(--font-family-mono);
+  background-color: var(--surface-secondary);
+  border: var(--border-width-sm) solid var(--border-secondary);
+  padding: var(--space-sm) var(--space-sm);
+}
+
+.card-tags li a {
+  color: var(--text-on-action);
 }
 
 /*Variants on Card Type*/
