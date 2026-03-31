@@ -9,3 +9,10 @@ const eleventyNavigation = {
 const title = "Give and Grow CIC";
 const subheading = "...";
 ---
+
+{%- from 'projectCards.njk' import filteredProjects %}
+
+{{ filteredProjects ({ 
+        projectList: collections.projects,
+        filter: 'give-grow'
+     }) }}
