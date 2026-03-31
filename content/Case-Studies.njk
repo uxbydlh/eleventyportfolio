@@ -12,38 +12,25 @@ pagination:
     alias: studies
 
 ---
+{%- from 'projectCards.njk' import filteredProjects %}
 
 Longer-form projects with larger scopes. Think dashboards, saas, multiple research stages, etc.
 
 <h2>E-Save</h2>
-<ul>
-    {% for case in studies %}
-        {%if 'e-save' in case.data.tags %}
-        <li>
-            <a href="{{case.url}}">{{case.data.title}}</a>
-        </li> 
-        {% endif %}
-{% endfor %}
-</ul>
+
+{{ filteredProjects ({ 
+        projectList: studies,
+        filter: 'e-save'
+     }) }}
 
 <h2>Morses Club</h2>
-<ul>
-    {% for case in studies %}
-        {%if 'morses' in case.data.tags %}
-        <li>
-            <a href="{{case.url}}">{{case.data.title}}</a>
-        </li> 
-        {% endif %}
-    {% endfor %}
-</ul>
+    {{ filteredProjects ({ 
+        projectList: studies,
+        filter: 'morses'
+     }) }}
 
 <h2>Other</h2>
-<ul>
-    {% for case in studies %}
-    {%if 'misc' in case.data.tags %}
-    <li>
-        <a href="{{case.url}}">{{case.data.title}}</a>
-    </li> 
-    {% endif %}
-{% endfor %}
-</ul>
+    {{ filteredProjects ({ 
+        projectList: studies,
+        filter: 'misc'
+     }) }}

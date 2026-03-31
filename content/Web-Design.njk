@@ -12,14 +12,12 @@ pagination:
     alias: websites
 
 ---
+{%- from 'projectCards.njk' import filteredProjects %}
 
 Websites designed by me. Projects marked "dev" indicate that I worked on the site as a developer, too.
 
-<ul>
-    {% for site in websites %}
-        <li>
-            <a href="{{site.url}}">{{site.data.title}}</a>
-        </li>
-    {% endfor %}
-</ul>
+{{ filteredProjects ({ 
+        projectList: websites,
+        filter: 'web-design'
+     }) }}
 

@@ -10,4 +10,9 @@ const title = "Morses Club";
 const subheading = "...";
 ---
 
-//TODO - FILL THIS PAGE WITH APPROPRIATELY TAGGED PROJECTS
+{%- from 'projectCards.njk' import filteredProjects %}
+
+{{ filteredProjects ({ 
+        projectList: collections.projects,
+        filter: 'morses'
+     }) }}
