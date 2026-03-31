@@ -12,13 +12,14 @@ const date = "2023-01-01";
 
 const title = "Morses Club Finance Portal";
 const subheading = "Enhanced Design for Managing Data, Payments, and Loans";
+const bannerImg = "/assets/images/case-studies/Morses/Finance-Portal/Banner.webp";
 ---
 
 {%- from 'imageCarousel.njk' import carousel %}
 {%- from 'filteredTestimonials.njk' import filteredTestimonials%}
 {%- from 'inlineTable.njk' import inlineTable %}
 
-<img class="banner-image" src='{{"/assets/images/case-studies/Morses/Finance-Portal/Banner.webp" | toAbsoluteUrl}}'>
+<img class="banner-image" src='{{ bannerImg | toAbsoluteUrl}}'>
 <div class="article-section">
 	Account dashboard for finance applications, payments, loan details and personal data management. 
 	Created for Morses Club - a loan company that provided non-standard credit options.

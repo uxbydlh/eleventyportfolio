@@ -12,12 +12,13 @@ const date = "2023-01-01";
 
 const title = "UI/UX Groundwork for Dot Dot Loans";
 const subheading = "Design Systems and Customer Journeys";
+const bannerImg = "/assets/images/case-studies/Morses/Dot-Dot/1Banner.webp";
 ---
 {%- from 'imageCarousel.njk' import carousel %}
 {%- from 'filteredTestimonials.njk' import filteredTestimonials%}
 {%- from 'inlineTable.njk' import inlineTable %}
 
-<img class="banner-image" src='{{"/assets/images/case-studies/Morses/Dot-Dot/1Banner.webp" | toAbsoluteUrl}}'>
+<img class="banner-image" src='{{ bannerImg | toAbsoluteUrl}}'>
 
 <h2 id="context">Context</h2>
 <div class="article-section">

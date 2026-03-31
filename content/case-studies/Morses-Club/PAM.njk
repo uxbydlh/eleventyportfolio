@@ -12,13 +12,14 @@ const date = "2023-01-01";
 
 const title = "Principle Application Manager";
 const subheading = "Empowering MCL Employees with PAM for Efficient Customer Application Checks";
+const bannerImg = "/assets/images/case-studies/Morses/PAM/1Banner.webp";
 ---
 
 {%- from 'imageCarousel.njk' import carousel %}
 {%- from 'filteredTestimonials.njk' import filteredTestimonials%}
 {%- from 'inlineTable.njk' import inlineTable %}
 
-<img class="banner-image" src='{{"/assets/images/case-studies/Morses/PAM/1Banner.webp" | toAbsoluteUrl}}'>
+<img class="banner-image" src='{{ bannerImg | toAbsoluteUrl}}'>
 <div class="article-section">
 	Internal tool created for Morses Club, with intent to replace external tools for additional customer application checks. Its implementation resulted in a 75% increase in acquisition journey leads while reducing dependency on third-party tools, leading to cost savings for the business.
 	<a class="btn primary"

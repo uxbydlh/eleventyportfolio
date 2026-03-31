@@ -12,11 +12,12 @@ const date = "2019-01-01";
 
 const title = "CareFit";
 const subheading = "An Application to Encourage Exercise in Informal Carers";
+const bannerImg = "assets/images/case-studies/CareFit/CareFit-Banner.webp";
 ---
 {%- from 'filteredTestimonials.njk' import filteredTestimonials %}
 {%- from 'inlineTable.njk' import inlineTable %}
 
-<img class="banner-image" src='{{"assets/images/case-studies/CareFit/CareFit-Banner.webp" | toAbsoluteUrl}}'>
+<img class="banner-image" src='{{ bannerImg | toAbsoluteUrl}}'>
 
 <h2 id="details">Details</h2>
 <div class="article-section">

@@ -12,13 +12,14 @@ const date = "2024-06-06";
 
 const title = "Devon Healing Horsemanship";
 const subheading = "Full site redesign for an equine-assisted mental health charity in Devon";
+const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 ---
 {%- from 'imageCarousel.njk' import carousel %}
 {%- from 'filteredTestimonials.njk' import filteredTestimonials %}
 {%- from 'personas.njk' import personas %}
 {%- from 'inlineTable.njk' import inlineTable %}
 
-<img class="banner-image" src='{{"assets/images/case-studies/DHH/DHHMultibanner.webp" | toAbsoluteUrl}}'>
+<img class="banner-image" src='{{bannerImg | toAbsoluteUrl}}'>
 <div class="article-section">
 	Devon Healing Horsemanship is a mental health charity specialising in horse-powered alternatives to talk-based therapy. I was a part of a challenging project to redesign their website in time for their first anniversary.
 	Some information has been obfuscated or omitted from this case study in order to protect the privacy of others. All information presented in this case study is my own and does not necessarily reflect the views of Devon Healing Horsemanship.

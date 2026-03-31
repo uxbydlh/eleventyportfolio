@@ -12,6 +12,7 @@ const date = "2024-06-06";
 
 const title = "Very Evil Demons";
 const subheading = "Website Design";
+const bannerImg = "assets/images/case-studies/VED/VED-banner.webp";
 ---
 {%- from 'imageCarousel.njk' import carousel %}
 {%- from 'imageGallery.njk' import gallery %}
@@ -19,7 +20,7 @@ const subheading = "Website Design";
 {%- from 'personas.njk' import personas %}
 {%- from 'inlineTable.njk' import inlineTable %}
 
-<img class="banner-image" src='{{"assets/images/case-studies/VED/VED-banner.webp" | toAbsoluteUrl}}'>
+<img class="banner-image" src='{{ bannerImg | toAbsoluteUrl}}'>
 <div class="article-section">
 	Very Evil Demons are an independent, worker-owned, game development studio, based in Dundee, Scotland. 
 	They specialise in porting, prototyping, co-development and optimisation.

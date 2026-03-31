@@ -12,12 +12,13 @@ const date = "2023-01-01";
 
 const title = "Reducing Form Fatigue";
 const subheading = "With Strategic Income & Outgoings Page Enhancements";
+const bannerImg = "/assets/images/case-studies/Morses/Form-Fatigue/1Banner.webp";
 ---
 
 {%- from 'filteredTestimonials.njk' import filteredTestimonials%}
 {%- from 'inlineTable.njk' import inlineTable %}
 
-<img class="banner-image" src='{{"/assets/images/case-studies/Morses/Form-Fatigue/1Banner.webp" | toAbsoluteUrl}}'>
+<img class="banner-image" src='{{ bannerImg | toAbsoluteUrl}}'>
 <div class="article-section">
 	Tackling pain points within the “Income and Outgoings” portion of the digital customer journey. Created for Morses Club - a loan company that provided non-standard credit options.
 	<a class="btn primary"
