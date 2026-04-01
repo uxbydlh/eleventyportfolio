@@ -20,19 +20,40 @@ layout: layouts/base.njk
     </div>
 </div>
 
-{#TODO - add a button that links you back to the parent page - if such a page exists.#}
-
-{#TODO - add styling to these buttons#}
-{%- if collections.projects %}
-{%- set previousPost = collections.projects | getPreviousCollectionItem %}
-{%- set nextPost = collections.projects | getNextCollectionItem %}
-{%- if nextPost or previousPost %}
-<ul class="links-nextprev">
-	{%- if previousPost %}<li class="links-nextprev-prev">← Previous<br> <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-	{%- if nextPost %}<li class="links-nextprev-next">Next →<br><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-</ul>
-{%- endif %}
-{%- endif %}
+<div class="meta-container">
+    {%- if collections.projects %}
+            {%- set previousPost = collections.projects | getPreviousCollectionItem %}
+            {%- set nextPost = collections.projects | getNextCollectionItem %}
+            {%- if nextPost or previousPost %}
+            <ul class="links-nextprev">
+                {%- if previousPost %}
+                <a href="{{ previousPost.url }}">
+                    <li class="card links-nextprev-prev">
+                        <i class="ri-arrow-left-s-fill"></i>
+                        <div>
+                            <h4>Previous</h4>
+                            <h5>{{ previousPost.data.title }}</h5>
+                        </div>
+                    </li>{% endif %}
+                </a>
+                {%- if nextPost %}
+                <a href="{{ nextPost.url }}">
+                    <li class="card links-nextprev-next">
+                        <div>
+                            <h4>Next</h4>
+                            <h5>
+                                {{ nextPost.data.title }}
+                            </h5>
+                        </div>
+                        <i class="ri-arrow-right-s-fill"></i>
+                    </li>
+                </a>
+                
+                {% endif %}
+            </ul>
+        {%- endif %}
+    {%- endif %}
+</div>
 
 {#TODO ADD AN ICON TO THIS#}
 {#TODO ADD PROPER STYLING TO THIS SO IT LOOKS MORE LIKE A BUTTON#}

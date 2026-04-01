@@ -338,18 +338,45 @@ main:first-child {
 	z-index: 999;
 }
 
+.meta-container {
+  display: flex;
+  flex-grow: 1;
+  max-width: 100em;
+  width: 100em;
+  padding-inline: 3rem;
+  margin-inline: auto;
+}
+
 .links-nextprev {
 	display: flex;
 	justify-content: space-between;
+  width: 100%;
 	gap: .5em 1em;
 	list-style: "";
 	border-top: 1px dashed var(--color-gray-20);
 	padding: 1em 0;
 }
+
 .links-nextprev > * {
 	flex-grow: 1;
+  max-width: 20%;
 }
+
+.links-nextprev li i {
+  font-size: xx-large;
+  color: var(--text-on-action);
+}
+
+.links-nextprev-prev {
+  flex-direction: row !important;
+}
+
+.card.links-nextprev-next {
+  justify-content: end;
+}
+
 .links-nextprev-next {
+  flex-direction: row !important;
 	text-align: right;
 }
 
