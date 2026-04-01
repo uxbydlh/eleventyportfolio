@@ -65,7 +65,7 @@ const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 
 <h2 id="impact">Impact</h2>
 <div class="article-section">
-	{#TODO get this information from Dafydd#}
+	{#TODO AWAITING RESPONSE - get this information from Dafydd#}
 </div>
 
 <h2 id="research-u-a">Research - User Archetypes</h2>
@@ -142,13 +142,16 @@ const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 	We also have call outs to volunteer placed on relevant pages, encouraging those who have benefitted from those services to consider giving back if they can and also encouraging people with specific abilities to lend a hand.
 	{{ carousel({ carouselId: "DLACarousel",
 					images: [
-						"assets/images/case-studies/Adenydd/could-you-help.webp"
+							{
+								src: "assets/images/case-studies/Adenydd/could-you-help.webp",
+								caption: "A snippet from the disability claims support page."
+							}
 						],
 					orientation: "slides-horiz",
 					plurality: "single-image"
 				}) 
 	}}
-	A snippet from the disability claims support page. {#TODO - rework into a caption#}
+	 {#TODO - rework into a caption#}
 </div>
 
 <hr>
