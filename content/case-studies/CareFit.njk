@@ -64,14 +64,17 @@ const bannerImg = "assets/images/case-studies/CareFit/CareFit-Banner.webp";
 	{%- from 'imageCarousel.njk' import carousel %}
 	{{ carousel({ carouselId: "processCarousel",
 					images: [
-						"/assets/images/case-studies/CareFit/process-slides/process1.webp",
-						"/assets/images/case-studies/CareFit/process-slides/process2.webp",
-						"/assets/images/case-studies/CareFit/process-slides/process3.webp",
-						"/assets/images/case-studies/CareFit/process-slides/process4.webp",
-						"/assets/images/case-studies/CareFit/process-slides/process5.webp",
-						"/assets/images/case-studies/CareFit/process-slides/process6.webp",
-						"/assets/images/case-studies/CareFit/process-slides/process7.webp",
-						"/assets/images/case-studies/CareFit/process-slides/process8.webp"
+						{src:"/assets/images/case-studies/CareFit/process-slides/process1.webp",
+						caption: "test1"},
+						{src:"/assets/images/case-studies/CareFit/process-slides/process2.webp",
+						caption: "test2"},
+						{src:"/assets/images/case-studies/CareFit/process-slides/process3.webp",
+						caption: "test3"},
+						{src:"/assets/images/case-studies/CareFit/process-slides/process4.webp", caption:"test4"},
+						{src:"/assets/images/case-studies/CareFit/process-slides/process5.webp", caption:"test5"},
+						{src:"/assets/images/case-studies/CareFit/process-slides/process6.webp", caption:"test6"},
+						{src:"/assets/images/case-studies/CareFit/process-slides/process7.webp", caption:"test7"},
+						{src:"/assets/images/case-studies/CareFit/process-slides/process8.webp", caption:"test8"}
 						],
 					orientation: "slides-horiz" 
 				}) 

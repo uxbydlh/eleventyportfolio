@@ -5,15 +5,13 @@
          {% for image in params.images %}
             {% if loop.first %}
                <a rel="{{params.carouselId}}" class="{{params.carouselId}} swipebox" href="{{image.src | toAbsoluteUrl }}" title="{{image.caption}}">
-                  <div>
-                     <img src="{{image.src | toAbsoluteUrl }}">
-                     <p>{{image.caption}}</p> 
-                  </div>   
-                    
+                  <img src="{{image.src | toAbsoluteUrl }}"> 
+                  <p>{{image.caption}}</p>
                </a>
             {% else %}
                <a rel="{{params.carouselId}}" class="{{params.carouselId}} swipebox" href="{{image | toAbsoluteUrl }}" title="" style="display: none;">
-                  <img src="{{image | toAbsoluteUrl }}">
+                  <img src="{{image.src | toAbsoluteUrl }}">
+                  <p>{{image.caption}}</p> 
                </a>
             {% endif %}
             
