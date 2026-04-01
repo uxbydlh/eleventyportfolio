@@ -679,6 +679,7 @@ footer {
 
 /*#region Buttons*/
 
+/*TODO SET A MAX WIDTH*/
 .btn {
   display: flex;
   padding: 12px 20px;

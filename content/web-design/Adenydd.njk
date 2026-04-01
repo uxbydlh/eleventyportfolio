@@ -396,4 +396,17 @@ const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 
 <h2 id="testimonials">Testimonials</h2>
 {#TODO Add testimonial from Dafydd here#}
-{#TODO Add newsletter shoutout here and make it linkable#}
+
+<h2 id="newsletter">Newsletter Shoutout</h2>
+<div class="article-section">
+	I was delighted to receive a shoutout in Adenydd's September 2025 newsletter.
+	{{ gallery({ galleryId: "newsGal",
+					images: [
+						"assets/images/case-studies/Adenydd/newsletterShoutout.webp"
+					]
+				})
+	}}
+	<a class="btn primary"
+		href="https://docs.google.com/viewer?url=http%3A%2F%2Fadenydd.org%2Fonewebmedia%2FSeptember%2520Newsletter%25202025.pdf&embedded=true"
+		target="_blank" rel="noopener noreferrer">Read Newsletter<i class="ri-arrow-right-s-fill"></i></a>
+</div>
