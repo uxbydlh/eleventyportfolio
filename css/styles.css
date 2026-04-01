@@ -664,6 +664,7 @@ section.violet {
 
 /*#endregion Labels*/
 
+/*TODO ENSURE THAT THIS HAS A GAP - CHANGE HOW IT DISPLAYS PERHAPS*/
 .content {
   background-color: var(--deep-green);
 }
@@ -990,6 +991,7 @@ picture:has(.divider-hr){
 }
 
 /*back to top button*/
+/*TODO ADD AESTHETIC STYLING THAT GOES BEYOND POSITION*/
 .scroll-top {
   position: absolute; /* relative to its positioned parent */
   top: 120vh; /* starts below the bottom of the screen */
@@ -1457,6 +1459,8 @@ aside {
 aside h3 {
   justify-content: center;
 }
+
+/*TODO CREATE STYLING FOR ARTICLE-SECTION*/
 
 /*#region table of contents*/
 
@@ -2194,6 +2198,8 @@ div:has(.embedded-google-form) {
   gap: var(--space-md);
 }
 
+/*TODO CHANGE THE TEXT COLOUR TO BE ON ACTION*/
+/*TODO CHANGE HOW THE SURFACE ACTS ON HOVER*/
 .CV .roles-list li {
   font-size: var(--font-size-body-sm);
   text-align: center;
@@ -2202,6 +2208,8 @@ div:has(.embedded-google-form) {
   border: var(--border-width-sm) solid var(--border-secondary);
   padding: var(--space-xs) var(--space-md);
 }
+
+
 
 .location {
   display: flex;

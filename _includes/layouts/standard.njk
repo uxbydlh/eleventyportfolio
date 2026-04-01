@@ -9,6 +9,7 @@ layout: layouts/base.njk
                 {% endif %}
                 <h1>{{ title }}</h1>
                 {%if subheading %}
+                {#TODO - GIVE THIS A CLASS AND CHANGE HOW IT DISPLAYS TO REMOVE THE BLACK BARS#}
                 <h3>{{ subheading | safe}}</h3>
                 {% endif %}
                 {% if heroBtn %}
@@ -29,6 +30,7 @@ layout: layouts/base.njk
                     {% endif %}
                 {% endif %}
             </div>
+            {#TODO HER IMAGES NOW EXIST AS VOLUNTARY BANNERS - REMOVE#}
             <div class="heroRight">
                 <img src="{{heroImagePath}}" alt="{{heroImageAlt}}"/>
                 {% block heroRight %}{% endblock %}

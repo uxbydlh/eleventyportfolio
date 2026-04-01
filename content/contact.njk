@@ -77,10 +77,13 @@ answer: `
 }
 ];
 ---
+{#TODO REWRITE SUBHEADING AS MORE APPROPRIATE MESSAGE#}
+{#TODO REMOVE OR CHANGE FAQS#}
 
 <section class="centre" id="contact-us">
 	<div class="section-row">
 		<div class="row-column text">
+			{#TODO ADD CLASSES AND STYLING TO THIS FORM#}
 			<h2>Contact Form</h2>	
 			<!--from https://web3forms.com/ -->
 			<form action="https://api.web3forms.com/submit" method="POST">
@@ -130,6 +133,8 @@ answer: `
 				<li>
 					<i class="{{contact.icon}} ri-xl"></i>
 					<div>
+						{#TODO CHANGE EMAIL TO BE CORRECT#}
+						{#TODO CHANGE LINKEDIN TO BE CORRECT#}
 						<label for="{{contact.type}}"><h3>{{contact.type}}</h3></label>
 						{% if contact.link %}
 						<a class="transparent smallBtn" href="{{contact.link}}" target="_blank" rel="noopener noreferrer">{{contact.info}}<i class="ri-arrow-right-line"></i></a>
@@ -141,6 +146,7 @@ answer: `
 				{% endfor %}
 			</ul>
 			<br>
+			{#TODO REMOVE OR CHANGE#}
 			<h2>Got a question?</h2>
 			<p>Before getting in touch, consider visiting our <a href="#FAQ" class="inline">FAQ</a> - we may have already answered your query!</p>
 		</div>
