@@ -23,7 +23,6 @@
 		{% set latest_projects = params.projectList | reverse %}
 		{% for item in latest_projects %}
             {% if params.filter in item.data.tags %}
-                
                     <li class="card">
 						<a class="card-content" href="{{item.url | toAbsoluteUrl }}">
 							{%if item.data.bannerImg %}

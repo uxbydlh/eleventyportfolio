@@ -1626,7 +1626,7 @@ article p {
   width: 100%;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30%, 30%));
   grid-auto-rows: minmax(0, auto);
   gap: 24px;
   justify-content: center;
@@ -1649,6 +1649,7 @@ article p {
 .card {
   display: flex;
   flex-direction: column;
+  height: 100%;
   align-items: center;
   justify-content: start;
   gap: 12px;
@@ -1664,6 +1665,7 @@ article p {
   align-items: center;
   justify-content: center;
   color: var(--text-body);
+  gap: var(--space-md);
 }
 
 .card-photo {
