@@ -2418,6 +2418,15 @@ div:has(.embedded-google-form) {
   }
 }
 
+.carousel-caption {
+  background-color: var(--surface-nav);
+  text-decoration: none;
+  color: var(--text-body);
+  text-align: center;
+  padding: var(--space-sm);
+  padding-bottom: var(--space-md);
+}
+
 .button-carousel-buttons {
   display: flex;
   flex-direction: row;

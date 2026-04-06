@@ -6,12 +6,12 @@
             {% if loop.first %}
                <a rel="{{params.carouselId}}" class="{{params.carouselId}} swipebox" href="{{image.src | toAbsoluteUrl }}" title="{{image.caption}}">
                   <img src="{{image.src | toAbsoluteUrl }}"> 
-                  <p>{{image.caption}}</p>
+                  <p class="carousel-caption">{{image.caption}}</p>
                </a>
             {% else %}
                <a rel="{{params.carouselId}}" class="{{params.carouselId}} swipebox" href="{{image | toAbsoluteUrl }}" title="" style="display: none;">
                   <img src="{{image.src | toAbsoluteUrl }}">
-                  <p>{{image.caption}}</p> 
+                  <p class="carousel-caption">{{image.caption}}</p> 
                </a>
             {% endif %}
             
