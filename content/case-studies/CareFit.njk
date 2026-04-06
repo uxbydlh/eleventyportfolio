@@ -64,17 +64,14 @@ const bannerImg = "assets/images/case-studies/CareFit/CareFit-Banner.webp";
 	{%- from 'imageCarousel.njk' import carousel %}
 	{{ carousel({ carouselId: "processCarousel",
 					images: [
-						{src:"/assets/images/case-studies/CareFit/process-slides/process1.webp",
-						caption: "test1"},
-						{src:"/assets/images/case-studies/CareFit/process-slides/process2.webp",
-						caption: "test2"},
-						{src:"/assets/images/case-studies/CareFit/process-slides/process3.webp",
-						caption: "test3"},
-						{src:"/assets/images/case-studies/CareFit/process-slides/process4.webp", caption:"test4"},
-						{src:"/assets/images/case-studies/CareFit/process-slides/process5.webp", caption:"test5"},
-						{src:"/assets/images/case-studies/CareFit/process-slides/process6.webp", caption:"test6"},
-						{src:"/assets/images/case-studies/CareFit/process-slides/process7.webp", caption:"test7"},
-						{src:"/assets/images/case-studies/CareFit/process-slides/process8.webp", caption:"test8"}
+						{src:"/assets/images/case-studies/CareFit/process-slides/process1.webp"},
+						{src:"/assets/images/case-studies/CareFit/process-slides/process2.webp"},
+						{src:"/assets/images/case-studies/CareFit/process-slides/process3.webp"},
+						{src:"/assets/images/case-studies/CareFit/process-slides/process4.webp"},
+						{src:"/assets/images/case-studies/CareFit/process-slides/process5.webp"},
+						{src:"/assets/images/case-studies/CareFit/process-slides/process6.webp"},
+						{src:"/assets/images/case-studies/CareFit/process-slides/process7.webp"},
+						{src:"/assets/images/case-studies/CareFit/process-slides/process8.webp"}
 						],
 					orientation: "slides-horiz" 
 				}) 
@@ -123,7 +120,8 @@ const bannerImg = "assets/images/case-studies/CareFit/CareFit-Banner.webp";
 		<div class="row-column image">
 			{{ carousel({ carouselId: "suggestionCarousel",
 					images: [
-						"assets/images/case-studies/CareFit/suggestions.webp"
+						{src: "assets/images/case-studies/CareFit/suggestions.webp",
+							caption: "Homepage with tutorial"}
 						],
 					orientation: "slides-horiz",
 					plurality: "single-image"
@@ -143,12 +141,12 @@ const bannerImg = "assets/images/case-studies/CareFit/CareFit-Banner.webp";
 <div class="article-section">
 	{{ carousel({ carouselId: "finalCarousel",
 					images: [
-						"assets/images/case-studies/CareFit/final-slides/final1.webp",
-						"assets/images/case-studies/CareFit/final-slides/final2.webp",
-						"assets/images/case-studies/CareFit/final-slides/final3.webp",
-						"assets/images/case-studies/CareFit/final-slides/final4.webp",
-						"assets/images/case-studies/CareFit/final-slides/final5.webp",
-						"assets/images/case-studies/CareFit/final-slides/final6.webp"
+						{src:"assets/images/case-studies/CareFit/final-slides/final1.webp"},
+						{src:"assets/images/case-studies/CareFit/final-slides/final2.webp"},
+						{src:"assets/images/case-studies/CareFit/final-slides/final3.webp"},
+						{src:"assets/images/case-studies/CareFit/final-slides/final4.webp"},
+						{src:"assets/images/case-studies/CareFit/final-slides/final5.webp"},
+						{src:"assets/images/case-studies/CareFit/final-slides/final6.webp"}
 						],
 					orientation: "slides-horiz" 
 				}) 
