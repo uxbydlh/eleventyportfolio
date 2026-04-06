@@ -112,7 +112,7 @@ const bannerImg = "/assets/images/case-studies/Morses/Dot-Dot/1Banner.webp";
 	Interactive components were modelled on existing interactions on the site.
 	{{ carousel({ carouselId: "des-sys-Carousel",
 					images: [
-						"assets/images/case-studies/Morses/Dot-Dot/2Solution.webp"
+						{src:"assets/images/case-studies/Morses/Dot-Dot/2Solution.webp"}
 						],
 					orientation: "slides-horiz",
 					plurality: "single-image"
@@ -132,12 +132,18 @@ const bannerImg = "/assets/images/case-studies/Morses/Dot-Dot/1Banner.webp";
 	
 	{{ carousel({ carouselId: "screensCarousel",
 					images: [
-						"assets/images/case-studies/Morses/Dot-Dot/Screens/screen1.webp",
-						"assets/images/case-studies/Morses/Dot-Dot/Screens/screen2.webp",
-						"assets/images/case-studies/Morses/Dot-Dot/Screens/screen3.webp",
-						"assets/images/case-studies/Morses/Dot-Dot/Screens/screen4.webp",
-						"assets/images/case-studies/Morses/Dot-Dot/Screens/screen5.webp",
-						"assets/images/case-studies/Morses/Dot-Dot/Screens/screen6.webp"
+						{src:"assets/images/case-studies/Morses/Dot-Dot/Screens/screen1.webp",
+						caption: "Login | Click to view more"},
+						{src:"assets/images/case-studies/Morses/Dot-Dot/Screens/screen2.webp",
+						caption: "2 | Click to view more"},
+						{src:"assets/images/case-studies/Morses/Dot-Dot/Screens/screen3.webp",
+						caption: "3 | Click to view more"},
+						{src:"assets/images/case-studies/Morses/Dot-Dot/Screens/screen4.webp",
+						caption: "4 | Click to view more"},
+						{src:"assets/images/case-studies/Morses/Dot-Dot/Screens/screen5.webp",
+						caption: "5 | Click to view more"},
+						{src:"assets/images/case-studies/Morses/Dot-Dot/Screens/screen6.webp",
+						caption: "6 | Click to view more"}
 						],
 					orientation: "slides-vert",
 					slideType: "slides-mobile-screens"

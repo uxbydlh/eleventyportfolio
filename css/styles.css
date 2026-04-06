@@ -2388,6 +2388,10 @@ div:has(.embedded-google-form) {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  margin: auto;
   overflow: hidden;
   cursor: zoom-in;
 }
@@ -2414,11 +2418,12 @@ div:has(.embedded-google-form) {
     width: 50%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: top center;
   }
 }
 
 .carousel-caption {
+  width: 100%;
   background-color: var(--surface-nav);
   font-family: var(--font-family-mono);
   text-decoration: none;
