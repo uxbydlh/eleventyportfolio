@@ -88,8 +88,8 @@ const bannerImg = "/assets/images/case-studies/Morses/Form-Fatigue/1Banner.webp"
 	{%- from 'imageCarousel.njk' import carousel %}
 	{{ carousel({ carouselId: "asistobeCarousel",
 					images: [
-						"assets/images/case-studies/Morses/Form-Fatigue/AsIs-ToBe/1AsIs.webp",
-						"assets/images/case-studies/Morses/Form-Fatigue/AsIs-ToBe/2ToBe.webp"
+						{src:"assets/images/case-studies/Morses/Form-Fatigue/AsIs-ToBe/1AsIs.webp"},
+						{src:"assets/images/case-studies/Morses/Form-Fatigue/AsIs-ToBe/2ToBe.webp"}
 						],
 					orientation: "slides-horiz"
 				}) 
@@ -108,11 +108,11 @@ const bannerImg = "/assets/images/case-studies/Morses/Form-Fatigue/1Banner.webp"
 	<h3 id="research-presentation">Research Presentation</h3>
 	{{ carousel({ carouselId: "researchCarousel",
 					images: [
-						"assets/images/case-studies/Morses/Form-Fatigue/Research/research1.webp",
-						"assets/images/case-studies/Morses/Form-Fatigue/Research/research2.webp",
-						"assets/images/case-studies/Morses/Form-Fatigue/Research/research3.webp",
-						"assets/images/case-studies/Morses/Form-Fatigue/Research/research4.webp",
-						"assets/images/case-studies/Morses/Form-Fatigue/Research/research5.webp"
+						{src:"assets/images/case-studies/Morses/Form-Fatigue/Research/research1.webp"},
+						{src:"assets/images/case-studies/Morses/Form-Fatigue/Research/research2.webp"},
+						{src:"assets/images/case-studies/Morses/Form-Fatigue/Research/research3.webp"},
+						{src:"assets/images/case-studies/Morses/Form-Fatigue/Research/research4.webp"},
+						{src:"assets/images/case-studies/Morses/Form-Fatigue/Research/research5.webp"}
 						],
 					orientation: "slides-horiz"
 				}) 
@@ -129,7 +129,8 @@ const bannerImg = "/assets/images/case-studies/Morses/Form-Fatigue/1Banner.webp"
 		<div class="row-column image">
 			{{ carousel({ carouselId: "ppdCarousel",
 					images: [
-						"/assets/images/case-studies/Morses/Form-Fatigue/2PPD.webp"
+						{src:"/assets/images/case-studies/Morses/Form-Fatigue/2PPD.webp",
+						caption: "Click for full view"}
 						],
 					orientation: "slides-vert",
 					plurality: "single-image"
@@ -152,7 +153,8 @@ const bannerImg = "/assets/images/case-studies/Morses/Form-Fatigue/1Banner.webp"
 		<div class="row-column image">
 			{{ carousel({ carouselId: "interspersedCarousel",
 					images: [
-						"/assets/images/case-studies/Morses/Form-Fatigue/3Interspersed.webp"
+						{src:"/assets/images/case-studies/Morses/Form-Fatigue/3Interspersed.webp",
+						caption:"Click for full view"}
 						],
 					orientation: "slides-vert",
 					plurality: "single-image"
@@ -171,7 +173,7 @@ const bannerImg = "/assets/images/case-studies/Morses/Form-Fatigue/1Banner.webp"
 	<h3 id="id-micro">Micro-Solutions</h3>
 	{{ carousel({ carouselId: "microCarousel",
 					images: [
-						"/assets/images/case-studies/Morses/Form-Fatigue/4MicroSolutions.webp"
+						{src:"/assets/images/case-studies/Morses/Form-Fatigue/4MicroSolutions.webp"}
 						],
 					orientation: "slides-vert",
 					plurality: "single-image"
