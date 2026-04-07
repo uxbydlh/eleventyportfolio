@@ -53,4 +53,9 @@ export default function(eleventyConfig) {
 		}
 		return shuffledArray;
 	});
+
+	//jsonify
+	eleventyConfig.addFilter("jsonify", function (variable) {
+    	return JSON.stringify(variable);
+  	});
 };

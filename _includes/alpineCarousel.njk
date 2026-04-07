@@ -1,0 +1,26 @@
+{%- macro alpineCarousel(params) -%}
+
+<div x-data="{images:{{params.images | jsonify}}, activeSlide: 0}"class="button-carousel">
+    {#TODO SWAP OUT URL BEFORE GO LIVE#}
+    <template x-for="(image, index) in images" :key="index">
+        <div x-show="activeSlide === index" class="button-carousel-images {{params.orientation}} {{params.slideType}} {{params.plurality}}">
+            <a rel="{{params.carouselId}}" class>
+                <img :src="new URL(`${image.src}`,'http://localhost:8080/').href">
+                <p x-text="image.caption"></p>
+                <p x-text="activeSlide"></p>
+            </a>
+        </div>
+    </template>
+    {% if params.images.length > 1 %}
+         <div class="row button-carousel-buttons">
+            <button class="icon-button" x-on:click="activeSlide = activeSlide === 0 ? images.length-1 : activeSlide - 1">
+               <i class="ri-arrow-left-s-fill"></i>
+         </button>
+         <button class="icon-button" x-on:click="activeSlide = activeSlide === images.length-1 ? 0 : activeSlide + 1">
+               <i class="ri-arrow-right-s-fill"></i>
+         </button>
+         </div>
+      {% endif %}
+</div>
+
+{%- endmacro -%}
