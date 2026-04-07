@@ -85,9 +85,9 @@ const bannerImg = "/assets/images/case-studies/Morses/PAM/1Banner.webp";
 <div class="article-section">
 	{{ carousel({ carouselId: "oldNewFlowCarousel",
 					images: [
-						"/assets/images/case-studies/Morses/PAM/2OldFlowNewFlow.webp"
+						{src:"/assets/images/case-studies/Morses/PAM/2OldFlowNewFlow.webp"}
 						],
-					orientation: "slides-vert",
+					orientation: "slides-horiz",
 					plurality: "single-image"
 				}) 
 			}}
@@ -100,7 +100,8 @@ const bannerImg = "/assets/images/case-studies/Morses/PAM/1Banner.webp";
 	Conducted Figjam-based Q&A sessions with Morses employees to prioritise essential customer information and features. This collaborative approach ensured alignment with user needs, enhancing the efficiency of feature prioritisation and ensuring a user-centric design focus.
 	{{ carousel({ carouselId: "comparisonCarousel",
 					images: [
-						"assets/images/case-studies/Morses/PAM/Analysis.webp"
+						{src:"assets/images/case-studies/Morses/PAM/Analysis.webp",
+						caption: "Click for full view"}
 						],
 					orientation: "slides-vert",
 					plurality: "single-image"
@@ -114,8 +115,8 @@ const bannerImg = "/assets/images/case-studies/Morses/PAM/1Banner.webp";
 	Implemented iterative enhancements until all necessary features were incorporated. This iterative process allowed for continuous improvement, ensuring the final design included all essential features while refining usability and functionality based on users’ feedback and their evolving needs
 	{{ carousel({ carouselId: "ideationCarousel",
 					images: [
-						"assets/images/case-studies/Morses/PAM/Ideation/ideation1.webp",
-						"assets/images/case-studies/Morses/PAM/Ideation/ideation2.webp"
+						{src:"assets/images/case-studies/Morses/PAM/Ideation/ideation1.webp"},
+						{src:"assets/images/case-studies/Morses/PAM/Ideation/ideation2.webp"}
 						],
 					orientation: "slides-horiz"
 				}) 
@@ -129,7 +130,7 @@ const bannerImg = "/assets/images/case-studies/Morses/PAM/1Banner.webp";
 		<div class="row-column image">
 			{{ carousel({ carouselId: "brandingCarousel",
 					images: [
-						"/assets/images/case-studies/Morses/PAM/4VisDev.webp"
+						{src:"/assets/images/case-studies/Morses/PAM/4VisDev.webp"}
 						],
 					orientation: "slides-horiz",
 					plurality: "single-image"
@@ -146,7 +147,7 @@ const bannerImg = "/assets/images/case-studies/Morses/PAM/1Banner.webp";
 	<h3 id="component-library">Component Library</h3>
 	{{ carousel({ carouselId: "componentCarousel",
 					images: [
-						"/assets/images/case-studies/Morses/PAM/5CompLib.webp"
+						{src:"/assets/images/case-studies/Morses/PAM/5CompLib.webp"}
 						],
 					orientation: "slides-horiz",
 					plurality: "single-image"
