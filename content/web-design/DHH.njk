@@ -35,7 +35,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 					header: "Scope",
 					bodyItems: [
 						"Volunteer work",
-						"re-design of existing website"
+						"Re-design of existing website"
 					]
 				},
 				{
@@ -69,9 +69,9 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	
 	{{ carousel({ carouselId: "festivalCarousel",
 							images: [
-								"assets/images/case-studies/DHH/festival-slides/festival1.webp",
-								"assets/images/case-studies/DHH/festival-slides/festival2.webp",
-								"assets/images/case-studies/DHH/festival-slides/festival3.webp"
+								{src:"assets/images/case-studies/DHH/festival-slides/festival1.webp"},
+								{src:"assets/images/case-studies/DHH/festival-slides/festival2.webp"},
+								{src:"assets/images/case-studies/DHH/festival-slides/festival3.webp"}
 								],
 							orientation: "slides-horiz"
 						}) 
@@ -91,7 +91,8 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	It was time for a change.
 	{{ carousel({ carouselId: "DHH1",
 							images: [
-								"assets/images/case-studies/DHH/CompetitorScreenshots.webp"
+								{src:"assets/images/case-studies/DHH/CompetitorScreenshots.webp",
+								caption: "Original DHH homepage (center) surrounded by webpages of other 'The Horse Course' providers"}
 								],
 							orientation: "slides-horiz",
 							plurality: "single-image"
@@ -148,7 +149,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	Most competitor sites speak to the user directly with calls to action. They concisely explain their mission with copy that appeals to the user’s emotions.
 	{{ carousel({ carouselId: "DHH2",
 							images: [
-								"assets/images/case-studies/DHH/MissionStatements.webp"
+								{src:"assets/images/case-studies/DHH/MissionStatements.webp"}
 								],
 							orientation: "slides-horiz",
 							plurality: "single-image"
@@ -158,7 +159,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	Across other sites, users were constantly being given reasons to donate and invitations to give.
 	{{ carousel({ carouselId: "DHH3",
 							images: [
-								"/assets/images/case-studies/DHH/CallsToDonate.webp"
+								{src:"/assets/images/case-studies/DHH/CallsToDonate.webp"}
 								],
 							orientation: "slides-horiz",
 							plurality: "single-image"
@@ -250,7 +251,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	
 	{{ carousel({ carouselId: "DHH4",
 							images: [
-								"/assets/images/case-studies/DHH/AnnotatedHomepage.webp"
+								{src:"/assets/images/case-studies/DHH/AnnotatedHomepage.webp"}
 								],
 							orientation: "slides-horiz",
 							plurality: "single-image"
@@ -260,7 +261,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	
 	{{ carousel({ carouselId: "DHH5",
 							images: [
-								"/assets/images/case-studies/DHH/ImprovedHomepage.webp"
+								{src:"/assets/images/case-studies/DHH/ImprovedHomepage.webp"}
 								],
 							orientation: "slides-horiz",
 							plurality: "single-image"
@@ -273,7 +274,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	
 	{{ carousel({ carouselId: "DHH6",
 							images: [
-								"/assets/images/case-studies/DHH/AnnotatedAbout.webp"
+								{src:"/assets/images/case-studies/DHH/AnnotatedAbout.webp"}
 								],
 							orientation: "slides-horiz",
 							plurality: "single-image"
@@ -283,7 +284,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	
 	{{ carousel({ carouselId: "DHH7",
 							images: [
-								"/assets/images/case-studies/DHH/ImprovedAboutUs.webp"
+								{src:"/assets/images/case-studies/DHH/ImprovedAboutUs.webp"}
 								],
 							orientation: "slides-horiz",
 							plurality: "single-image"
@@ -296,7 +297,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	
 	{{ carousel({ carouselId: "DHH8",
 							images: [
-								"/assets/images/case-studies/DHH/AnnotedEvidence.webp"
+								{src:"/assets/images/case-studies/DHH/AnnotedEvidence.webp"}
 								],
 							orientation: "slides-horiz",
 							plurality: "single-image"
@@ -306,7 +307,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	
 	{{ carousel({ carouselId: "DHH9",
 							images: [
-								"/assets/images/case-studies/DHH/ImprovedEvidence.webp"
+								{src:"/assets/images/case-studies/DHH/ImprovedEvidence.webp"}
 								],
 							orientation: "slides-horiz",
 							plurality: "single-image"
@@ -322,7 +323,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	
 	{{ carousel({ carouselId: "DHH10",
 							images: [
-								"/assets/images/case-studies/DHH/OriginalNav.webp"
+								{src:"/assets/images/case-studies/DHH/OriginalNav.webp"}
 								],
 							orientation: "slides-horiz",
 							plurality: "single-image"
@@ -332,7 +333,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	
 	{{ carousel({ carouselId: "DHH11",
 							images: [
-								"/assets/images/case-studies/DHH/NewCallToDonateBar.webp"
+								{src:"/assets/images/case-studies/DHH/NewCallToDonateBar.webp"}
 								],
 							orientation: "slides-horiz",
 							plurality: "single-image"
@@ -345,8 +346,10 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	Donors appreciate knowing the impact of their generosity. To encourage this, we created a widget that allows for monthly and one-off donations. The widget offers suggested payment amounts, with short descriptions of what that donation can cover.
 	{{ carousel({ carouselId: "DHH12",
 							images: [
-								"/assets/images/case-studies/DHH/DonateWidgetDesktop.webp",
-								"/assets/images/case-studies/DHH/DonateWidgetMobile.webp"
+								{src:"/assets/images/case-studies/DHH/DonateWidgetDesktop.webp",
+								caption:"Desktop"},
+								{src:"/assets/images/case-studies/DHH/DonateWidgetMobile.webp",
+								caption:"Mobile"}
 								],
 							orientation: "slides-horiz"
 						}) 
@@ -359,8 +362,10 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 
 	{{ carousel({ carouselId: "DHH13",
 							images: [
-								"/assets/images/case-studies/DHH/DonateMonthly.webp",
-								"/assets/images/case-studies/DHH/DonateOneTime.webp"
+								{src:"/assets/images/case-studies/DHH/DonateMonthly.webp",
+								caption:"Monthly donation"},
+								{src:"/assets/images/case-studies/DHH/DonateOneTime.webp",
+								caption:"One-off donation"}
 								],
 							orientation: "slides-horiz"
 						}) 
@@ -370,7 +375,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	
 	{{ carousel({ carouselId: "DHH14",
 							images: [
-								"/assets/images/case-studies/DHH/DonationOpportunities.webp"
+								{src:"/assets/images/case-studies/DHH/DonationOpportunities.webp"}
 								],
 							orientation: "slides-horiz",
 							plurality: "single-image"
@@ -380,7 +385,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	
 	{{ carousel({ carouselId: "DHH15",
 							images: [
-								"/assets/images/case-studies/DHH/LongTermDonationGoals.webp"
+								{src: "/assets/images/case-studies/DHH/LongTermDonationGoals.webp"}
 								],
 							orientation: "slides-horiz",
 							plurality: "single-image"
@@ -390,7 +395,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	
 	{{ carousel({ carouselId: "DHH16",
 							images: [
-								"/assets/images/case-studies/DHH/NewsletterSignup.webp"
+								{src:"/assets/images/case-studies/DHH/NewsletterSignup.webp"}
 								],
 							orientation: "slides-horiz",
 							plurality: "single-image"
@@ -402,7 +407,8 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	Devon Healing Horsemanship was actually partnered with several different incentive-based giving services before their site redesign. However, they were scattered across a number of external sites, with no central hub to find them all.
 	{{ carousel({ carouselId: "DHH17",
 							images: [
-								"/assets/images/case-studies/DHH/Affiliates.webp"
+								{src:"/assets/images/case-studies/DHH/Affiliates.webp",
+								caption: "Partners: Exeter Community Lottery, EasyFundraising, Kwil"}
 								],
 							orientation: "slides-horiz",
 							plurality: "single-image"
@@ -412,7 +418,8 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	
 	{{ carousel({ carouselId: "DHH18",
 							images: [
-								"assets/images/case-studies/DHH/screenshots/desktop/desktop6.webp"
+								{src:"assets/images/case-studies/DHH/screenshots/desktop/desktop6.webp",
+								caption: "Support Us | Click for full view"}
 								],
 							orientation: "slides-vert",
 							plurality: "single-image"
@@ -426,7 +433,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	
 	{{ carousel({ carouselId: "DHH19",
 							images: [
-								"assets/images/case-studies/DHH/OriginalNav.webp"
+								{src:"assets/images/case-studies/DHH/OriginalNav.webp"}
 								],
 							orientation: "slides-horiz",
 							plurality: "single-image"
@@ -436,7 +443,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	
 	{{ carousel({ carouselId: "DHH20",
 							images: [
-								"assets/images/case-studies/DHH/CompatibleNavBar.webp"
+								{src:"assets/images/case-studies/DHH/CompatibleNavBar.webp"}
 								],
 							orientation: "slides-horiz",
 							plurality: "single-image"
@@ -449,7 +456,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	
 	{{ carousel({ carouselId: "DHH21",
 							images: [
-								"assets/images/case-studies/DHH/Footers.webp"
+								{src:"assets/images/case-studies/DHH/Footers.webp"}
 								],
 							orientation: "slides-horiz",
 							plurality: "single-image"
@@ -462,7 +469,8 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	
 	{{ carousel({ carouselId: "DHH22",
 							images: [
-								"assets/images/case-studies/DHH/CTAMap.webp"
+								{src:"assets/images/case-studies/DHH/CTAMap.webp",
+								caption: "Mapping out the site's calls to action"}
 								],
 							orientation: "slides-horiz",
 							plurality: "single-image"
@@ -476,7 +484,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	
 	{{ carousel({ carouselId: "DHH23",
 							images: [
-								"assets/images/case-studies/DHH/ComponentLibraryPreview.webp"
+								{src:"assets/images/case-studies/DHH/ComponentLibraryPreview.webp"}
 								],
 							orientation: "slides-horiz",
 							plurality: "single-image"
@@ -492,13 +500,17 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 			<h3>Desktop</h3>
 			{{ carousel({ carouselId: "desktopCarousel",
 							images: [
-								"assets/images/case-studies/DHH/screenshots/desktop/desktop1.webp",
-								"assets/images/case-studies/DHH/screenshots/desktop/desktop2.webp",
-								"assets/images/case-studies/DHH/screenshots/desktop/desktop3.webp",
-								"assets/images/case-studies/DHH/screenshots/desktop/desktop4.webp",
-								"assets/images/case-studies/DHH/screenshots/desktop/desktop5.webp",
-								"assets/images/case-studies/DHH/screenshots/desktop/desktop6.webp",
-								"assets/images/case-studies/DHH/screenshots/desktop/desktop7.webp"
+								{src:"assets/images/case-studies/DHH/screenshots/desktop/desktop5.webp",
+								caption:"Home"},
+								{src:"assets/images/case-studies/DHH/screenshots/desktop/desktop2.webp",
+								caption:"About Us"},
+								{src:"assets/images/case-studies/DHH/screenshots/desktop/desktop1.webp"},
+								
+								{src:"assets/images/case-studies/DHH/screenshots/desktop/desktop3.webp"},
+								{src:"assets/images/case-studies/DHH/screenshots/desktop/desktop4.webp"},
+								
+								{src:"assets/images/case-studies/DHH/screenshots/desktop/desktop6.webp"},
+								{src:"assets/images/case-studies/DHH/screenshots/desktop/desktop7.webp"}
 								],
 							orientation: "slides-vert"
 						}) 
@@ -508,14 +520,16 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 			<h3>Mobile</h3>
 			{{ carousel({ carouselId: "mobileCarousel",
 							images: [
-								"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile1.webp",
-								"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile2.webp",
-								"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile3.webp",
-								"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile4.webp",
-								"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile5.webp",
-								"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile6.webp",
-								"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile7.webp",
-								"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile8.webp"
+								{src:"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile1.webp",
+								caption:"Home"},
+								{src:"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile2.webp",
+								caption:"About Us"},
+								{src:"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile3.webp"},
+								{src:"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile4.webp"},
+								{src:"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile5.webp"},
+								{src:"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile6.webp"},
+								{src:"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile7.webp"},
+								{src:"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile8.webp"}
 								],
 							orientation: "slides-vert",
 							slideType: "slides-mobile-screens"

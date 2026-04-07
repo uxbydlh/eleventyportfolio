@@ -6,8 +6,7 @@
       var slideIndex = 1;
 
       function showDivs(n, slideshowid) {
-         console.log(n);
-         console.log(slideshowid);
+         console.log(slideIndex);
          var i;
          var x = document.getElementsByClassName(slideshowid);
          if(n > x.length) { slideIndex = 1 }
