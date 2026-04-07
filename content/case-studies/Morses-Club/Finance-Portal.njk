@@ -79,7 +79,8 @@ const bannerImg = "/assets/images/case-studies/Morses/Finance-Portal/Banner.webp
 		<div class="row-column image">
 			{{ carousel({ carouselId: "problem-Carousel",
 					images: [
-						"/assets/images/case-studies/Morses/Finance-Portal/OldPortal.webp"
+						{src:"/assets/images/case-studies/Morses/Finance-Portal/OldPortal.webp",
+						caption:"Original dashboard"}
 					],
 					orientation: "slides-horiz",
 					plurality: "single-image"
@@ -111,8 +112,8 @@ const bannerImg = "/assets/images/case-studies/Morses/Finance-Portal/Banner.webp
 	{%- from 'imageCarousel.njk' import carousel %}
 	{{ carousel({ carouselId: "researchCarousel",
 					images: [
-						"assets/images/case-studies/Morses/Finance-Portal/Research-Slides/CompetitorResearch.webp",
-						"assets/images/case-studies/Morses/Finance-Portal/Research-Slides/AsIsProductAnalysis.webp"
+						{src:"assets/images/case-studies/Morses/Finance-Portal/Research-Slides/CompetitorResearch.webp"},
+						{src:"assets/images/case-studies/Morses/Finance-Portal/Research-Slides/AsIsProductAnalysis.webp"}
 						],
 					orientation: "slides-horiz"
 				}) 
@@ -128,9 +129,12 @@ const bannerImg = "/assets/images/case-studies/Morses/Finance-Portal/Banner.webp
 	<h3 id="ideation">Ideation</h3>
 	{{ carousel({ carouselId: "ideationCarousel",
 					images: [
-						"assets/images/case-studies/Morses/Finance-Portal/Ideation-Slides/LofiWireframes.webp",
-						"assets/images/case-studies/Morses/Finance-Portal/Ideation-Slides/MinimumChanges.webp",
-						"assets/images/case-studies/Morses/Finance-Portal/Ideation-Slides/FinalVariants.webp"
+						{src:"assets/images/case-studies/Morses/Finance-Portal/Ideation-Slides/LofiWireframes.webp",
+						caption: "Lo-fi wireframes"},
+						{src:"assets/images/case-studies/Morses/Finance-Portal/Ideation-Slides/MinimumChanges.webp",
+						caption: "Minimum viable changes"},
+						{src:"assets/images/case-studies/Morses/Finance-Portal/Ideation-Slides/FinalVariants.webp",
+						caption: "Final designs"}
 						],
 					orientation: "slides-horiz" 
 				}) 
@@ -150,7 +154,7 @@ const bannerImg = "/assets/images/case-studies/Morses/Finance-Portal/Banner.webp
 		<div class="row-column image">
 			{{ carousel({ carouselId: "colour-Carousel",
 					images: [
-						"/assets/images/case-studies/Morses/Finance-Portal/Library.webp"
+						{src:"/assets/images/case-studies/Morses/Finance-Portal/Library.webp"}
 					],
 					orientation: "slides-horiz",
 					plurality: "single-image"
@@ -171,7 +175,7 @@ const bannerImg = "/assets/images/case-studies/Morses/Finance-Portal/Banner.webp
 
 	{{ carousel({ carouselId: "library-Carousel",
 					images: [
-						"/assets/images/case-studies/Morses/Finance-Portal/LibraryExpanded.webp"
+						{src:"/assets/images/case-studies/Morses/Finance-Portal/LibraryExpanded.webp"}
 					],
 					orientation: "slides-horiz",
 					plurality: "single-image"
@@ -183,14 +187,21 @@ const bannerImg = "/assets/images/case-studies/Morses/Finance-Portal/Banner.webp
 <div class="article-section">
 	{{ carousel({ carouselId: "screenCarousel",
 					images: [
-						"assets/images/case-studies/Morses/Finance-Portal/Screens/screen1.webp",
-						"assets/images/case-studies/Morses/Finance-Portal/Screens/screen2.webp",
-						"assets/images/case-studies/Morses/Finance-Portal/Screens/screen3.webp",
-						"assets/images/case-studies/Morses/Finance-Portal/Screens/screen4.webp",
-						"assets/images/case-studies/Morses/Finance-Portal/Screens/screen5.webp",
-						"assets/images/case-studies/Morses/Finance-Portal/Screens/screen6.webp"
+						{src:"assets/images/case-studies/Morses/Finance-Portal/Screens/screen1.webp",
+						caption:"New dashboard - top"},
+						{src:"assets/images/case-studies/Morses/Finance-Portal/Screens/screen2.webp",
+						caption: "My Loans"},
+						{src:"assets/images/case-studies/Morses/Finance-Portal/Screens/screen3.webp",
+						caption: "Make a Payment"},
+						{src:"assets/images/case-studies/Morses/Finance-Portal/Screens/screen4.webp",
+						caption: "My Profile"},
+						{src:"assets/images/case-studies/Morses/Finance-Portal/Screens/screen5.webp",
+						caption: "Contact"},
+						{src:"assets/images/case-studies/Morses/Finance-Portal/Screens/screen6.webp",
+						caption: "Money Worries"}
 						],
-					orientation: "slides-vert" 
+					orientation: "slides-vert",
+					slideType: "slides-mobile-screens" 
 				}) 
 	}}
 </div>
