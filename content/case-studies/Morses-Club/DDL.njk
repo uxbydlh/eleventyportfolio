@@ -135,15 +135,15 @@ const bannerImg = "/assets/images/case-studies/Morses/Dot-Dot/1Banner.webp";
 						{src:"assets/images/case-studies/Morses/Dot-Dot/Screens/screen1.webp",
 						caption: "Login | Click to view more"},
 						{src:"assets/images/case-studies/Morses/Dot-Dot/Screens/screen2.webp",
-						caption: "2 | Click to view more"},
+						caption: "Home Screen | Click to view more"},
 						{src:"assets/images/case-studies/Morses/Dot-Dot/Screens/screen3.webp",
-						caption: "3 | Click to view more"},
+						caption: "Approval | Click to view more"},
 						{src:"assets/images/case-studies/Morses/Dot-Dot/Screens/screen4.webp",
-						caption: "4 | Click to view more"},
+						caption: "Active Loan | Click to view more"},
 						{src:"assets/images/case-studies/Morses/Dot-Dot/Screens/screen5.webp",
-						caption: "5 | Click to view more"},
+						caption: "Inbox | Click to view more"},
 						{src:"assets/images/case-studies/Morses/Dot-Dot/Screens/screen6.webp",
-						caption: "6 | Click to view more"}
+						caption: "Add to Home Screen | Click to view more"}
 						],
 					orientation: "slides-vert",
 					slideType: "slides-mobile-screens"
@@ -161,7 +161,7 @@ const bannerImg = "/assets/images/case-studies/Morses/Dot-Dot/1Banner.webp";
 	
 	{{ carousel({ carouselId: "repayment-plan-Carousel",
 					images: [
-						"assets/images/case-studies/Morses/Dot-Dot/4Repayment.webp"
+						{src:"assets/images/case-studies/Morses/Dot-Dot/4Repayment.webp"}
 						],
 					orientation: "slides-horiz",
 					plurality: "single-image"
@@ -173,9 +173,12 @@ const bannerImg = "/assets/images/case-studies/Morses/Dot-Dot/1Banner.webp";
 	{%- from 'imageCarousel.njk' import carousel %}
 	{{ carousel({ carouselId: "repaymentCarousel",
 					images: [
-						"assets/images/case-studies/Morses/Dot-Dot/Repayment/Repay1.webp",
-						"assets/images/case-studies/Morses/Dot-Dot/Repayment/Repay2.webp",
-						"assets/images/case-studies/Morses/Dot-Dot/Repayment/Repay3.webp"
+						{src:"assets/images/case-studies/Morses/Dot-Dot/Repayment/Repay1.webp",
+						caption: "Opening the contact form"},
+						{src:"assets/images/case-studies/Morses/Dot-Dot/Repayment/Repay2.webp",
+						caption: "Selecting an option that indicates financial difficulty"},
+						{src:"assets/images/case-studies/Morses/Dot-Dot/Repayment/Repay3.webp",
+						caption: "Being redirected to the repayment tool"}
 						],
 					orientation: "slides-vert",
 					slideType: "slides-mobile-screens"
@@ -201,7 +204,7 @@ const bannerImg = "/assets/images/case-studies/Morses/Dot-Dot/1Banner.webp";
 	
 	{{ carousel({ carouselId: "maintenance-Carousel",
 					images: [
-						"assets/images/case-studies/Morses/Dot-Dot/5Maintenance.webp"
+						{src:"assets/images/case-studies/Morses/Dot-Dot/5Maintenance.webp"}
 						],
 					orientation: "slides-horiz",
 					plurality: "single-image"
