@@ -1,7 +1,5 @@
 /*JQUERY SWIPEBOX FUNCTIONALITY*/
-      ;(function($) {
-         $('.swipebox').swipebox();
-      }) (jQuery);
+      
 
       var slideIndex = 1;
 

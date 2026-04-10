@@ -100,5 +100,11 @@
 		<script>document.getElementById("currentYear").innerHTML = new Date().getFullYear();</script>
 		{#- Add Alpine from the JSDeliver CDN #}
 		<script src="/js/alpine.js?v={% version %}" defer></script>
+		{#- swipebox -#}
+		<script>
+			;(function($) {
+         	$('.swipebox').swipebox();
+      }) (jQuery);
+		</script>
 	</body>
 </html>

@@ -799,6 +799,22 @@ footer {
   text-decoration: none;
 }
 
+.selector-button {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--border-radius-round);
+  border: var(--border-width-md) solid var(--border-action);
+  background: var(--surface-action-2);
+}
+
+.selector-button:hover {
+  background: var(--surface-action-hover);
+}
+
+.selector-button.selected {
+  background: var(--surface-action-hover)
+}
+
 /*#endregion Buttons*/
 
 /*#region Lists*/
