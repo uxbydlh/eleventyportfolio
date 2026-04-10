@@ -16,7 +16,8 @@
                 <i class="ri-arrow-left-s-fill"></i>
             </button>
 
-            <template x-for="(image, index) in images" :key="index">
+            <div class="selector-button-section">
+                <template x-for="(image, index) in images" :key="index">
                 <button :class="{
                     'selector-button selected' : activeSlide === index,
                     'selector-button' : activeSlide !== index
@@ -24,6 +25,7 @@
                 x-on:click="activeSlide = index"
                 ></button>
             </template>
+            </div> 
 
             <button class="icon-button" x-on:click="activeSlide = activeSlide === images.length-1 ? 0 : activeSlide + 1">
                 <i class="ri-arrow-right-s-fill"></i>

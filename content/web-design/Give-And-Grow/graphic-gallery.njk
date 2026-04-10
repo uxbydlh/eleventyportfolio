@@ -17,7 +17,6 @@ const bannerImg = "assets/images/case-studies/Give-and-Grow/Gallery/gagGalleryBa
 <h2 id="headers">Header Images</h2>
 <div class="article-section">
 	{%- from 'imageGallery.njk' import gallery %}
-	{%- from 'imageCarousel.njk' import carousel %}
 	{%- from 'alpineCarousel.njk' import alpineCarousel %}
 	{{ gallery({ galleryId: "ggHeaders",
 					images: [
@@ -79,38 +78,13 @@ const bannerImg = "assets/images/case-studies/Give-and-Grow/Gallery/gagGalleryBa
 
 <h2>Model Illustration</h2>
 <div class="article-section">
-	{{ carousel({ carouselId: "modelCarousel",
+	{{ alpineCarousel({ carouselId: "modelCarousel",
 					images: [
 						{src:"assets/images/case-studies/Give-and-Grow/Gallery/illustrations/fundingmodel.webp"}
 						],
 					orientation: "slides-horiz",
 					plurality: "single-image"
 				}) 
-	}}
-
-	{{ alpineCarousel ({
-		carouselId: 1,
-		images: [
-						{src:"assets/images/case-studies/Give-and-Grow/Gallery/illustrations/costconcern.webp",
-							caption: "test caption one"},
-						{src:"assets/images/case-studies/Give-and-Grow/Gallery/illustrations/donate.webp",
-							caption: "test caption two"},
-						{src:"assets/images/case-studies/Give-and-Grow/Gallery/illustrations/needtutor.webp",
-							caption: "test caption three"}
-					]
-		})
-	}}
-
-	{{ alpineCarousel ({
-		carouselId: 2,
-		images: [
-						{src:"assets/images/case-studies/Give-and-Grow/Gallery/illustrations/costconcern.webp",
-							caption: "test caption one"},
-						{src:"assets/images/case-studies/Give-and-Grow/Gallery/illustrations/donate.webp",
-							caption: "test caption two"},
-						{src:"assets/images/case-studies/Give-and-Grow/Gallery/illustrations/needtutor.webp"}
-					]
-		})
 	}}
 
 

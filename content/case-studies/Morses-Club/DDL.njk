@@ -15,7 +15,7 @@ const title = "UI/UX Groundwork for Dot Dot Loans";
 const subheading = "Design Systems and Customer Journeys";
 const bannerImg = "/assets/images/case-studies/Morses/Dot-Dot/1Banner.webp";
 ---
-{%- from 'imageCarousel.njk' import carousel %}
+{%- from 'alpineCarousel.njk' import alpineCarousel %}
 {%- from 'filteredTestimonials.njk' import filteredTestimonials%}
 {%- from 'inlineTable.njk' import inlineTable %}
 
@@ -110,7 +110,7 @@ const bannerImg = "/assets/images/case-studies/Morses/Dot-Dot/1Banner.webp";
 	The design system was built out with the intention of enabling faster prototyping of new features. 
 	It was created in Figma, based on assets from the existing Dot Dot Loans website and portal. 
 	Interactive components were modelled on existing interactions on the site.
-	{{ carousel({ carouselId: "des-sys-Carousel",
+	{{ alpineCarousel({ carouselId: "des-sys-Carousel",
 					images: [
 						{src:"assets/images/case-studies/Morses/Dot-Dot/2Solution.webp"}
 						],
@@ -130,7 +130,7 @@ const bannerImg = "/assets/images/case-studies/Morses/Dot-Dot/1Banner.webp";
 <div class="article-section">
 	<h3 id="design-system-screens">Screens</h3>
 	
-	{{ carousel({ carouselId: "screensCarousel",
+	{{ alpineCarousel({ carouselId: "screensCarousel",
 					images: [
 						{src:"assets/images/case-studies/Morses/Dot-Dot/Screens/screen1.webp",
 						caption: "Login | Click to view more"},
@@ -159,7 +159,7 @@ const bannerImg = "/assets/images/case-studies/Morses/Dot-Dot/1Banner.webp";
 	On selection, users are given the option to redirect to the Repayment Plan Tool.
 	This tool acted as an early intervention mechanism for users facing such difficulties and allowed them to independently access help even when a customer service agent was unavailable.
 	
-	{{ carousel({ carouselId: "repayment-plan-Carousel",
+	{{ alpineCarousel({ carouselId: "repayment-plan-Carousel",
 					images: [
 						{src:"assets/images/case-studies/Morses/Dot-Dot/4Repayment.webp"}
 						],
@@ -170,8 +170,7 @@ const bannerImg = "/assets/images/case-studies/Morses/Dot-Dot/1Banner.webp";
 </div>
 <div class="article-section">
 	<h3 id="repayment-tool-screens">Screens</h3>
-	{%- from 'imageCarousel.njk' import carousel %}
-	{{ carousel({ carouselId: "repaymentCarousel",
+	{{ alpineCarousel({ carouselId: "repaymentCarousel",
 					images: [
 						{src:"assets/images/case-studies/Morses/Dot-Dot/Repayment/Repay1.webp",
 						caption: "Opening the contact form"},
@@ -202,7 +201,7 @@ const bannerImg = "/assets/images/case-studies/Morses/Dot-Dot/1Banner.webp";
 	• Introduction of a dedicated “Money Worries” page and tab to assist financially unstable customers.
 	• Addition of “Add to Homescreen” notices within the portal to encourage users to bookmark the site on their mobile devices.
 	
-	{{ carousel({ carouselId: "maintenance-Carousel",
+	{{ alpineCarousel({ carouselId: "maintenance-Carousel",
 					images: [
 						{src:"assets/images/case-studies/Morses/Dot-Dot/5Maintenance.webp"}
 						],

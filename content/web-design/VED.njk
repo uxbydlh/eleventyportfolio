@@ -15,7 +15,7 @@ const title = "Very Evil Demons";
 const subheading = "Website Design";
 const bannerImg = "assets/images/case-studies/VED/VED-banner.webp";
 ---
-{%- from 'imageCarousel.njk' import carousel %}
+{%- from 'alpineCarousel.njk' import alpineCarousel %}
 {%- from 'imageGallery.njk' import gallery %}
 {%- from 'filteredTestimonials.njk' import filteredTestimonials%}
 {%- from 'personas.njk' import personas %}
@@ -74,9 +74,9 @@ const bannerImg = "assets/images/case-studies/VED/VED-banner.webp";
 <div class="article-section">
 	<div class="section-row">
 		<div class="row-column image">
-			{{ carousel({ carouselId: "moodboardCarousel",
+			{{ alpineCarousel({ carouselId: "moodboardCarousel",
 					images: [
-						"/assets/images/case-studies/VED/Inspo.webp"
+						{src:"/assets/images/case-studies/VED/Inspo.webp"}
 					],
 					orientation: "slides-vert",
 					plurality: "single-image"
@@ -134,9 +134,9 @@ const bannerImg = "assets/images/case-studies/VED/VED-banner.webp";
 <div class="article-section">
 	<h3>Bold and Illustrative</h3>
 	Many of the examined web pages utilised an assortment of custom illustrations to signpost different areas of the site.
-	{{ carousel({ carouselId: "inspoCarousel",
+	{{ alpineCarousel({ carouselId: "inspoCarousel",
 					images: [
-						"/assets/images/case-studies/VED/MorkRaiLouie.webp"
+						{src:"/assets/images/case-studies/VED/MorkRaiLouie.webp"}
 					],
 					orientation: "slides-horiz",
 					plurality: "single-image"
@@ -145,18 +145,18 @@ const bannerImg = "assets/images/case-studies/VED/VED-banner.webp";
 </div>
 <div class="article-section">
 	<h3>Gothic Mystery</h3>
-	{{ carousel({ carouselId: "vermisCarousel",
+	{{ alpineCarousel({ carouselId: "vermisCarousel",
 					images: [
-						"/assets/images/case-studies/VED/Vermis.webp"
+						{src:"/assets/images/case-studies/VED/Vermis.webp"}
 					],
 					orientation: "slides-horiz",
 					plurality: "single-image"
 				}) 
 			}}
 	VED sought to convey a mysterious, dark fantasy image. This can be a difficult task when the website’s primary function is to inform. However, it is still possible to achieve this through presentation, copy, and graphics.
-	{{ carousel({ carouselId: "chimeraCarousel",
+	{{ alpineCarousel({ carouselId: "chimeraCarousel",
 					images: [
-						"/assets/images/case-studies/VED/Chimera.webp"
+						{src:"/assets/images/case-studies/VED/Chimera.webp"}
 					],
 					orientation: "slides-horiz",
 					plurality: "single-image"
@@ -232,9 +232,9 @@ const bannerImg = "assets/images/case-studies/VED/VED-banner.webp";
 				})
 	}}
 	From here, or the Nav Bar, you can move to any of the site's other main pages.
-	{{ carousel({ carouselId: "chimeraCarousel",
+	{{ alpineCarousel({ carouselId: "chimeraCarousel",
 					images: [
-						"/assets/images/case-studies/VED/Site-Map.webp"
+						{src:"/assets/images/case-studies/VED/Site-Map.webp"}
 					],
 					orientation: "slides-horiz",
 					plurality: "single-image"
@@ -283,11 +283,11 @@ const bannerImg = "assets/images/case-studies/VED/VED-banner.webp";
 	<div class="section-row">
 		<div class="row-column">
 			<h3>Wireframes</h3>
-			{{ carousel({ carouselId: "wireCarousel",
+			{{ alpineCarousel({ carouselId: "wireCarousel",
 					images: [
-						"assets/images/case-studies/VED/wires/wire-about.webp",
-						"assets/images/case-studies/VED/wires/wire-contact.webp",
-						"assets/images/case-studies/VED/wires/wire-news.webp"
+						{src:"assets/images/case-studies/VED/wires/wire-about.webp"},
+						{src:"assets/images/case-studies/VED/wires/wire-contact.webp"},
+						{src:"assets/images/case-studies/VED/wires/wire-news.webp"}
 						],
 						orientation: "slides-vert" 
 				}) 
@@ -295,13 +295,13 @@ const bannerImg = "assets/images/case-studies/VED/VED-banner.webp";
 		</div>
 		<div class="row-column">
 			<h3>Prototypes</h3>
-			{{ carousel({ carouselId: "protoCarousel",
+			{{ alpineCarousel({ carouselId: "protoCarousel",
 					images: [
-						"assets/images/case-studies/VED/proto/proto-home.webp",
-						"assets/images/case-studies/VED/proto/proto-about.webp",
-						"assets/images/case-studies/VED/proto/proto-proj.webp",
-						"assets/images/case-studies/VED/proto/proto-news.webp",
-						"assets/images/case-studies/VED/proto/proto-contact.webp"
+						{src:"assets/images/case-studies/VED/proto/proto-home.webp"},
+						{src:"assets/images/case-studies/VED/proto/proto-about.webp"},
+						{src:"assets/images/case-studies/VED/proto/proto-proj.webp"},
+						{src:"assets/images/case-studies/VED/proto/proto-news.webp"},
+						{src:"assets/images/case-studies/VED/proto/proto-contact.webp"}
 						],
 						orientation: "slides-vert" 
 				}) 
@@ -309,13 +309,13 @@ const bannerImg = "assets/images/case-studies/VED/VED-banner.webp";
 		</div>
 		<div class="row-column">
 			<h3>Final</h3>
-			{{ carousel({ carouselId: "finalCarousel",
+			{{ alpineCarousel({ carouselId: "finalCarousel",
 					images: [
-						"assets/images/case-studies/VED/final/final-home.webp",
-						"assets/images/case-studies/VED/final/final-about.webp",
-						"assets/images/case-studies/VED/final/final-services.webp",
-						"assets/images/case-studies/VED/final/final-news.webp",
-						"assets/images/case-studies/VED/final/final-contact.webp"
+						{src:"assets/images/case-studies/VED/final/final-home.webp"},
+						{src:"assets/images/case-studies/VED/final/final-about.webp"},
+						{src:"assets/images/case-studies/VED/final/final-services.webp"},
+						{src:"assets/images/case-studies/VED/final/final-news.webp"},
+						{src:"assets/images/case-studies/VED/final/final-contact.webp"}
 						],
 						orientation: "slides-vert" 
 				}) 

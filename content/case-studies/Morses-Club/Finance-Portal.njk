@@ -16,7 +16,7 @@ const subheading = "Enhanced Design for Managing Data, Payments, and Loans";
 const bannerImg = "/assets/images/case-studies/Morses/Finance-Portal/Banner.webp";
 ---
 
-{%- from 'imageCarousel.njk' import carousel %}
+{%- from 'alpineCarousel.njk' import alpineCarousel %}
 {%- from 'filteredTestimonials.njk' import filteredTestimonials%}
 {%- from 'inlineTable.njk' import inlineTable %}
 
@@ -77,7 +77,7 @@ const bannerImg = "/assets/images/case-studies/Morses/Finance-Portal/Banner.webp
 <div class="article-section">
 	<div class="section-row">
 		<div class="row-column image">
-			{{ carousel({ carouselId: "problem-Carousel",
+			{{ alpineCarousel({ carouselId: "problem-Carousel",
 					images: [
 						{src:"/assets/images/case-studies/Morses/Finance-Portal/OldPortal.webp",
 						caption:"Original dashboard"}
@@ -109,8 +109,7 @@ const bannerImg = "/assets/images/case-studies/Morses/Finance-Portal/Banner.webp
 </div>
 <div class="article-section">
 	<h3 id="research">Research</h3>
-	{%- from 'imageCarousel.njk' import carousel %}
-	{{ carousel({ carouselId: "researchCarousel",
+	{{ alpineCarousel({ carouselId: "researchCarousel",
 					images: [
 						{src:"assets/images/case-studies/Morses/Finance-Portal/Research-Slides/CompetitorResearch.webp"},
 						{src:"assets/images/case-studies/Morses/Finance-Portal/Research-Slides/AsIsProductAnalysis.webp"}
@@ -127,7 +126,7 @@ const bannerImg = "/assets/images/case-studies/Morses/Finance-Portal/Banner.webp
 </div>
 <div class="article-section">
 	<h3 id="ideation">Ideation</h3>
-	{{ carousel({ carouselId: "ideationCarousel",
+	{{ alpineCarousel({ carouselId: "ideationCarousel",
 					images: [
 						{src:"assets/images/case-studies/Morses/Finance-Portal/Ideation-Slides/LofiWireframes.webp",
 						caption: "Lo-fi wireframes"},
@@ -152,7 +151,7 @@ const bannerImg = "/assets/images/case-studies/Morses/Finance-Portal/Banner.webp
 	<h3 id="branding">Branding</h3>
 	<div class="section-row">
 		<div class="row-column image">
-			{{ carousel({ carouselId: "colour-Carousel",
+			{{ alpineCarousel({ carouselId: "colour-Carousel",
 					images: [
 						{src:"/assets/images/case-studies/Morses/Finance-Portal/Library.webp"}
 					],
@@ -173,7 +172,7 @@ const bannerImg = "/assets/images/case-studies/Morses/Finance-Portal/Banner.webp
 	Established a Figma Component Library post-wireframe development, housing reusable elements for consistency and scalability across current and future designs.
 	This approach streamlined implementation for programmers and QA testers by ensuring cohesion across current and future designs. The creation of this library promoted design consistency, easing implementation and facilitating efficient testing and development without extensive oversight.
 
-	{{ carousel({ carouselId: "library-Carousel",
+	{{ alpineCarousel({ carouselId: "library-Carousel",
 					images: [
 						{src:"/assets/images/case-studies/Morses/Finance-Portal/LibraryExpanded.webp"}
 					],
@@ -185,7 +184,7 @@ const bannerImg = "/assets/images/case-studies/Morses/Finance-Portal/Banner.webp
 
 <h2 id="screens">Screens</h2>
 <div class="article-section">
-	{{ carousel({ carouselId: "screenCarousel",
+	{{ alpineCarousel({ carouselId: "screenCarousel",
 					images: [
 						{src:"assets/images/case-studies/Morses/Finance-Portal/Screens/screen1.webp",
 						caption:"New dashboard - top"},

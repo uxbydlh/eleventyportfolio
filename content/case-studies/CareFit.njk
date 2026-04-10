@@ -61,8 +61,8 @@ const bannerImg = "assets/images/case-studies/CareFit/CareFit-Banner.webp";
 
 <h2 id="process">Process</h2>
 <div class="article-section">
-	{%- from 'imageCarousel.njk' import carousel %}
-	{{ carousel({ carouselId: "processCarousel",
+	{%- from 'alpineCarousel.njk' import alpineCarousel %}
+	{{ alpineCarousel({ carouselId: "processCarousel",
 					images: [
 						{src:"/assets/images/case-studies/CareFit/process-slides/process1.webp"},
 						{src:"/assets/images/case-studies/CareFit/process-slides/process2.webp"},
@@ -118,7 +118,7 @@ const bannerImg = "assets/images/case-studies/CareFit/CareFit-Banner.webp";
 <div class="article-section">
 	<div class="section-row">
 		<div class="row-column image">
-			{{ carousel({ carouselId: "suggestionCarousel",
+			{{ alpineCarousel({ carouselId: "suggestionCarousel",
 					images: [
 						{src: "assets/images/case-studies/CareFit/suggestions.webp",
 							caption: "Homepage with tutorial"}
@@ -139,7 +139,7 @@ const bannerImg = "assets/images/case-studies/CareFit/CareFit-Banner.webp";
 
 <h2 id="final">Final Application</h2>
 <div class="article-section">
-	{{ carousel({ carouselId: "finalCarousel",
+	{{ alpineCarousel({ carouselId: "finalCarousel",
 					images: [
 						{src:"assets/images/case-studies/CareFit/final-slides/final1.webp"},
 						{src:"assets/images/case-studies/CareFit/final-slides/final2.webp"},

@@ -15,7 +15,7 @@ const title = "Adenydd";
 const subheading = "Website Redesign";
 const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 ---
-{%- from 'imageCarousel.njk' import carousel %}
+{%- from 'alpineCarousel.njk' import alpineCarousel %}
 {%- from 'imageGallery.njk' import gallery %}
 {%- from 'inlineTable.njk' import inlineTable %}
 
@@ -99,18 +99,18 @@ const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 
 <h3 id="meaning">Donations with Meaning</h3>
 <div class="article-section">
-	{{ carousel({ carouselId: "CalonCarousel",
+	{{ alpineCarousel({ carouselId: "CalonCarousel",
 					images: [
-						"assets/images/case-studies/Adenydd/support-clwb-calon.webp"
+						{src:"assets/images/case-studies/Adenydd/support-clwb-calon.webp"}
 					],
 					orientation: "slides-horiz",
 					plurality: "single-image"
 				}) 
 	}}
 	Another new addition are prompts to donate on relevant pages and projects. This way, users of the site can see real examples of where their money is going.
-	{{ carousel({ carouselId: "FENDCarousel",
+	{{ alpineCarousel({ carouselId: "FENDCarousel",
 					images: [
-						"assets/images/case-studies/Adenydd/FEND-aim.webp"						
+						{src:"assets/images/case-studies/Adenydd/FEND-aim.webp"}						
 					],
 					orientation: "slides-horiz",
 					plurality: "single-image"
@@ -121,9 +121,9 @@ const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 
 <h3 id="beyond-cash">Expanding Beyond Cash</h3>
 <div class="article-section">
-	{{ carousel({ carouselId: "supplyCarousel",
+	{{ alpineCarousel({ carouselId: "supplyCarousel",
 					images: [
-						"assets/images/case-studies/Adenydd/supply-donations.webp"
+						{src:"assets/images/case-studies/Adenydd/supply-donations.webp"}
 						],
 					orientation: "slides-horiz",
 					plurality: "single-image"
@@ -140,7 +140,7 @@ const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 <h3 id="relevant-positions">Relevant Positions</h3>
 <div class="article-section">
 	We also have call outs to volunteer placed on relevant pages, encouraging those who have benefitted from those services to consider giving back if they can and also encouraging people with specific abilities to lend a hand.
-	{{ carousel({ carouselId: "DLACarousel",
+	{{ alpineCarousel({ carouselId: "DLACarousel",
 					images: [
 							{
 								src: "assets/images/case-studies/Adenydd/could-you-help.webp",
@@ -151,7 +151,6 @@ const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 					plurality: "single-image"
 				}) 
 	}}
-	 {#TODO - rework into a caption#}
 </div>
 
 <hr>
@@ -175,27 +174,27 @@ const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 
 <h2 id="big-give-improvements">Improvements for Big Give Funders</h2>
 <div class="article-section">
-	{{ carousel({ carouselId: "bigGiveCarousel",
+	{{ alpineCarousel({ carouselId: "bigGiveCarousel",
 					images: [
-						"assets/images/case-studies/Adenydd/give-big.webp"
+						{src:"assets/images/case-studies/Adenydd/give-big.webp"}
 						],
 					orientation: "slides-horiz",
 					plurality: "single-image"
 				}) 
 	}}
 	I created a dedicated page for the Big Give campaign, allowing Adenydd to link it directly to prospective donors.
-	{{ carousel({ carouselId: "donationMattersCarousel",
+	{{ alpineCarousel({ carouselId: "donationMattersCarousel",
 					images: [
-						"assets/images/case-studies/Adenydd/your-donation-matters.webp"
+						{src:"assets/images/case-studies/Adenydd/your-donation-matters.webp"}
 						],
 					orientation: "slides-horiz",
 					plurality: "single-image"
 				}) 
 	}}
 	The page includes plenty of information about Adenydd’s work with Big Give over the years and even links back to the main website of the organisation for more information.
-	{{ carousel({ carouselId: "prevCampaignsCarousel",
+	{{ alpineCarousel({ carouselId: "prevCampaignsCarousel",
 					images: [
-						"assets/images/case-studies/Adenydd/prev-campaigns.webp"
+						{src:"assets/images/case-studies/Adenydd/prev-campaigns.webp"}
 						],
 					orientation: "slides-horiz",
 					plurality: "single-image"
@@ -225,27 +224,27 @@ const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 
 <h2 id="childcare-prof-improvements">Improvements for Childcare Professionals</h2>
 <div class="article-section">
-	{{ carousel({ carouselId: "aboutCourseCarousel",
+	{{ alpineCarousel({ carouselId: "aboutCourseCarousel",
 					images: [
-						"assets/images/case-studies/Adenydd/about-this-course.webp"
+						{src:"assets/images/case-studies/Adenydd/about-this-course.webp"}
 						],
 					orientation: "slides-horiz",
 					plurality: "single-image"
 				}) 
 	}}
 	I ensured that information about dates, times and pricing was clearly visible near the top of the page for each course.
-	{{ carousel({ carouselId: "courseContentCarousel",
+	{{ alpineCarousel({ carouselId: "courseContentCarousel",
 					images: [
-						"assets/images/case-studies/Adenydd/course-content.webp"
+						{src:"assets/images/case-studies/Adenydd/course-content.webp"}
 						],
 					orientation: "slides-horiz",
 					plurality: "single-image"
 				}) 
 	}}
 	Content sections were also added for upcoming and currently running courses, to help people determine which course would be right for them without having to reach out or leave the site.
-	{{ carousel({ carouselId: "bookingCarousel",
+	{{ alpineCarousel({ carouselId: "bookingCarousel",
 					images: [
-						"assets/images/case-studies/Adenydd/booking.webp"
+						{src:"assets/images/case-studies/Adenydd/booking.webp"}
 						],
 					orientation: "slides-horiz",
 					plurality: "single-image"
@@ -288,9 +287,9 @@ const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 </div>
 
 <div class="article-section">
-	{{ carousel({ carouselId: "parentsStudentsCarousel",
+	{{ alpineCarousel({ carouselId: "parentsStudentsCarousel",
 					images: [
-						"assets/images/case-studies/Adenydd/sens-reg-parents-stud.webp"
+						{src:"assets/images/case-studies/Adenydd/sens-reg-parents-stud.webp"}
 						],
 					orientation: "slides-horiz",
 					plurality: "single-image"
@@ -300,9 +299,9 @@ const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 </div>
 
 <div class="article-section">
-	{{ carousel({ carouselId: "priceCarousel",
+	{{ alpineCarousel({ carouselId: "priceCarousel",
 					images: [
-						"assets/images/case-studies/Adenydd/price-points.webp"
+						{src:"assets/images/case-studies/Adenydd/price-points.webp"}
 						],
 					orientation: "slides-horiz",
 					plurality: "single-image"

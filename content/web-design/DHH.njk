@@ -16,7 +16,7 @@ const subheading = "Full site redesign for an equine-assisted mental health char
 const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 ---
 
-{%- from 'imageCarousel.njk' import carousel %}
+{%- from 'alpineCarousel.njk' import alpineCarousel %}
 {%- from 'filteredTestimonials.njk' import filteredTestimonials %}
 {%- from 'personas.njk' import personas %}
 {%- from 'inlineTable.njk' import inlineTable %}
@@ -67,7 +67,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	The component library and style guide have since been used to create a series of informational banners and leaflets for DHH’s stall at the Festival of the Iberian Horse.
 	{#TODO - check in with louise and see if she is still looking for specific volunteers #}
 	
-	{{ carousel({ carouselId: "festivalCarousel",
+	{{ alpineCarousel({ carouselId: "festivalCarousel",
 							images: [
 								{src:"assets/images/case-studies/DHH/festival-slides/festival1.webp"},
 								{src:"assets/images/case-studies/DHH/festival-slides/festival2.webp"},
@@ -89,7 +89,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 <div class="article-section">
 	DHH’s existing website – designed in 2023, was attempting to stand out among other providers of The Horse Course with its unique appearance. However, it did not reflect the founder’s distinct outlook, it wasn’t optimised for mobile, and it wasn’t driving donations.
 	It was time for a change.
-	{{ carousel({ carouselId: "DHH1",
+	{{ alpineCarousel({ carouselId: "DHH1",
 							images: [
 								{src:"assets/images/case-studies/DHH/CompetitorScreenshots.webp",
 								caption: "Original DHH homepage (center) surrounded by webpages of other 'The Horse Course' providers"}
@@ -147,7 +147,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	8 websites were examined with the goal of understanding what makes them trustworthy to those that need their services and attractive to those looking to donate.
 	<h4>Speaking to the Heart</h4>
 	Most competitor sites speak to the user directly with calls to action. They concisely explain their mission with copy that appeals to the user’s emotions.
-	{{ carousel({ carouselId: "DHH2",
+	{{ alpineCarousel({ carouselId: "DHH2",
 							images: [
 								{src:"assets/images/case-studies/DHH/MissionStatements.webp"}
 								],
@@ -157,7 +157,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	}}
 	<h4>Donation Opportunities</h4>
 	Across other sites, users were constantly being given reasons to donate and invitations to give.
-	{{ carousel({ carouselId: "DHH3",
+	{{ alpineCarousel({ carouselId: "DHH3",
 							images: [
 								{src:"/assets/images/case-studies/DHH/CallsToDonate.webp"}
 								],
@@ -249,7 +249,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	<h3 id="landing-page">Landing Page Elevator Pitch</h3>
 	The original site did not sell itself as well as its competitors. At a glance, it was difficult to tell who this service was for and what its benefits were.
 	
-	{{ carousel({ carouselId: "DHH4",
+	{{ alpineCarousel({ carouselId: "DHH4",
 							images: [
 								{src:"/assets/images/case-studies/DHH/AnnotatedHomepage.webp"}
 								],
@@ -259,7 +259,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	}}
 	DHH sported experienced instructors, happy participants, and well-trained horses, but the original homepage put more emphasis on how new the charity was as an organisation. Equine-assisted therapy is a concept that not many people have even heard of, so it was important to emphasise what it could do and why you could trust DHH to facilitate it.
 	
-	{{ carousel({ carouselId: "DHH5",
+	{{ alpineCarousel({ carouselId: "DHH5",
 							images: [
 								{src:"/assets/images/case-studies/DHH/ImprovedHomepage.webp"}
 								],
@@ -272,7 +272,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 <div class="article-section">
 	<h3 id="about-page">All About DHH</h3>
 	
-	{{ carousel({ carouselId: "DHH6",
+	{{ alpineCarousel({ carouselId: "DHH6",
 							images: [
 								{src:"/assets/images/case-studies/DHH/AnnotatedAbout.webp"}
 								],
@@ -282,7 +282,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	}}
 	As a locally focussed charity, it was important that people could get to know the team that they would be entrusting with their time, money and community. The original page featured a mission statement and a bit about the team and their values as a whole. However, it didn’t introduce the team – or the horses – as individuals.
 	
-	{{ carousel({ carouselId: "DHH7",
+	{{ alpineCarousel({ carouselId: "DHH7",
 							images: [
 								{src:"/assets/images/case-studies/DHH/ImprovedAboutUs.webp"}
 								],
@@ -295,7 +295,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 <div class="article-section">
 	<h3 id="evidence">Effective Evidence</h3>
 	
-	{{ carousel({ carouselId: "DHH8",
+	{{ alpineCarousel({ carouselId: "DHH8",
 							images: [
 								{src:"/assets/images/case-studies/DHH/AnnotedEvidence.webp"}
 								],
@@ -305,7 +305,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	}}
 	The Horse Course ReStart and its outcomes have been studied in many academic papers. These can be found on DHH’s “Evidence” page, but the average reader doesn’t have time to sift through them all to figure out what they can get out of the course.
 	
-	{{ carousel({ carouselId: "DHH9",
+	{{ alpineCarousel({ carouselId: "DHH9",
 							images: [
 								{src:"/assets/images/case-studies/DHH/ImprovedEvidence.webp"}
 								],
@@ -321,7 +321,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	<h3 id="reason-based">Reason-Based Donation</h3>
 	Donors want to be part of something meaningful. The site’s original sole donation link – “Do something GREAT; click here to DONATE” shows understanding of this. Despite being highly prominent sitting in the middle of the navbar, it wasn’t pulling in donations the way that was expected.
 	
-	{{ carousel({ carouselId: "DHH10",
+	{{ alpineCarousel({ carouselId: "DHH10",
 							images: [
 								{src:"/assets/images/case-studies/DHH/OriginalNav.webp"}
 								],
@@ -331,7 +331,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	}}
 	A minor tweak brought this feature more inline with where people expect it to be. It became a button in the upper-right corner. The copy was also adjusted to reflect how much a donation means to the organisation – *you* make it possible. Additionally, it now brought the user to an in-built donation widget, rather than off-site.
 	
-	{{ carousel({ carouselId: "DHH11",
+	{{ alpineCarousel({ carouselId: "DHH11",
 							images: [
 								{src:"/assets/images/case-studies/DHH/NewCallToDonateBar.webp"}
 								],
@@ -344,7 +344,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	<h3 id="impact-based">Impact-Based Donation</h3>
 	<h4>On-site Widget</h4>
 	Donors appreciate knowing the impact of their generosity. To encourage this, we created a widget that allows for monthly and one-off donations. The widget offers suggested payment amounts, with short descriptions of what that donation can cover.
-	{{ carousel({ carouselId: "DHH12",
+	{{ alpineCarousel({ carouselId: "DHH12",
 							images: [
 								{src:"/assets/images/case-studies/DHH/DonateWidgetDesktop.webp",
 								caption:"Desktop"},
@@ -360,7 +360,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	<h5>Unexpected Constraints</h5>
 	Budget constraints were tight, and we could not afford to implement a widget that accurately represented the designs. While I still think the core elements of impact-based donation are there, I had hoped to include it in the Monthly section as well as the One-Off section. In the future, we may be able to cover the cost of a more accurate widget.
 
-	{{ carousel({ carouselId: "DHH13",
+	{{ alpineCarousel({ carouselId: "DHH13",
 							images: [
 								{src:"/assets/images/case-studies/DHH/DonateMonthly.webp",
 								caption:"Monthly donation"},
@@ -373,7 +373,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	<h4>Something Meaningful</h4>
 	Donation opportunities are now spread throughout the site. When shown the price of a service for example, the viewer is invited to donate towards covering its costs for someone who needs it.
 	
-	{{ carousel({ carouselId: "DHH14",
+	{{ alpineCarousel({ carouselId: "DHH14",
 							images: [
 								{src:"/assets/images/case-studies/DHH/DonationOpportunities.webp"}
 								],
@@ -383,7 +383,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	}}
 	Alongside venue info, potential donors are also invited to improve venue accessibility by helping DHH to meet some of their long term goals.
 	
-	{{ carousel({ carouselId: "DHH15",
+	{{ alpineCarousel({ carouselId: "DHH15",
 							images: [
 								{src: "/assets/images/case-studies/DHH/LongTermDonationGoals.webp"}
 								],
@@ -393,7 +393,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	}}
 	Additionally, all visitors of the site are invited to sign up to the DHH newsletter so that they can receive updates on their meaningful work and receive further calls to donate right in their inbox.
 	
-	{{ carousel({ carouselId: "DHH16",
+	{{ alpineCarousel({ carouselId: "DHH16",
 							images: [
 								{src:"/assets/images/case-studies/DHH/NewsletterSignup.webp"}
 								],
@@ -405,7 +405,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 <div class="article-section">
 	<h3 id="incentive-based">Incentive-Based Giving</h3>
 	Devon Healing Horsemanship was actually partnered with several different incentive-based giving services before their site redesign. However, they were scattered across a number of external sites, with no central hub to find them all.
-	{{ carousel({ carouselId: "DHH17",
+	{{ alpineCarousel({ carouselId: "DHH17",
 							images: [
 								{src:"/assets/images/case-studies/DHH/Affiliates.webp",
 								caption: "Partners: Exeter Community Lottery, EasyFundraising, Kwil"}
@@ -416,7 +416,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	}}
 	Adding the Support Us page makes it easier for visitors to find a way to support DHH that best suits them. It also means we don’t have to limit support to donations – the volunteering section allows people to offer up their skills instead.
 	
-	{{ carousel({ carouselId: "DHH18",
+	{{ alpineCarousel({ carouselId: "DHH18",
 							images: [
 								{src:"assets/images/case-studies/DHH/screenshots/desktop/desktop6.webp",
 								caption: "Support Us | Click for full view"}
@@ -431,7 +431,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 <div class="article-section">
 	The original site already had a nav menu in the header, which was a good start. However, this was not compatible with mobile browsing, and required the user to scroll back to the top when looking through the site.
 	
-	{{ carousel({ carouselId: "DHH19",
+	{{ alpineCarousel({ carouselId: "DHH19",
 							images: [
 								{src:"assets/images/case-studies/DHH/OriginalNav.webp"}
 								],
@@ -441,7 +441,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	}}
 	This was replaced with a sticky, mobile compatible variant, to begin tackling the site navigation.
 	
-	{{ carousel({ carouselId: "DHH20",
+	{{ alpineCarousel({ carouselId: "DHH20",
 							images: [
 								{src:"assets/images/case-studies/DHH/CompatibleNavBar.webp"}
 								],
@@ -454,7 +454,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	<h3 id="mane-to-tail">Navigation from Mane to Tail</h3>
 	Navigation was also added to the footer, which was expanded again to contact links. This accounted for situations where the mobile menu may not be recognised by the user.
 	
-	{{ carousel({ carouselId: "DHH21",
+	{{ alpineCarousel({ carouselId: "DHH21",
 							images: [
 								{src:"assets/images/case-studies/DHH/Footers.webp"}
 								],
@@ -467,7 +467,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	<h3 id="menuless-nav">Menuless Navigation</h3>
 	To encourage visitors to explore more of the site, we wanted to ensure that it was easy to get around most of it without relying on the menus. This meant ensuring that we made good use of links and CTAs throughout our pages.
 	
-	{{ carousel({ carouselId: "DHH22",
+	{{ alpineCarousel({ carouselId: "DHH22",
 							images: [
 								{src:"assets/images/case-studies/DHH/CTAMap.webp",
 								caption: "Mapping out the site's calls to action"}
@@ -482,7 +482,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 <div class="article-section">
 	With the majority of the design work finished, I would spend most of May and June working on polishing up the Figma library I had been working on in tandem with the site being built out. This would include proper documentation, so that the DHH team could understand it and potentially pass it on to another designer in future after my leaving.
 	
-	{{ carousel({ carouselId: "DHH23",
+	{{ alpineCarousel({ carouselId: "DHH23",
 							images: [
 								{src:"assets/images/case-studies/DHH/ComponentLibraryPreview.webp"}
 								],
@@ -498,7 +498,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 	<div class="section-row">
 		<div class="row-column">
 			<h3>Desktop</h3>
-			{{ carousel({ carouselId: "desktopCarousel",
+			{{ alpineCarousel({ carouselId: "desktopCarousel",
 							images: [
 								{src:"assets/images/case-studies/DHH/screenshots/desktop/desktop5.webp",
 								caption:"Home"},
@@ -518,7 +518,7 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 		</div>
 		<div class="row-column">
 			<h3>Mobile</h3>
-			{{ carousel({ carouselId: "mobileCarousel",
+			{{ alpineCarousel({ carouselId: "mobileCarousel",
 							images: [
 								{src:"assets/images/case-studies/DHH/screenshots/mobile/dhhmobile1.webp",
 								caption:"Home"},

@@ -799,6 +799,14 @@ footer {
   text-decoration: none;
 }
 
+.selector-button-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
 .selector-button {
   width: 24px;
   height: 24px;
@@ -2451,8 +2459,8 @@ div:has(.embedded-google-form) {
 
 .button-carousel-buttons {
   display: flex;
+  max-width: 100%;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap:var(--space-lg)

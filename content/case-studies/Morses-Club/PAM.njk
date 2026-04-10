@@ -16,7 +16,7 @@ const subheading = "Empowering MCL Employees with PAM for Efficient Customer App
 const bannerImg = "/assets/images/case-studies/Morses/PAM/1Banner.webp";
 ---
 
-{%- from 'imageCarousel.njk' import carousel %}
+{%- from 'alpineCarousel.njk' import alpineCarousel %}
 {%- from 'filteredTestimonials.njk' import filteredTestimonials%}
 {%- from 'inlineTable.njk' import inlineTable %}
 
@@ -83,7 +83,7 @@ const bannerImg = "/assets/images/case-studies/Morses/PAM/1Banner.webp";
 
 <h2 id="proposed-solution">Proposed Solution</h2>
 <div class="article-section">
-	{{ carousel({ carouselId: "oldNewFlowCarousel",
+	{{ alpineCarousel({ carouselId: "oldNewFlowCarousel",
 					images: [
 						{src:"/assets/images/case-studies/Morses/PAM/2OldFlowNewFlow.webp"}
 						],
@@ -98,7 +98,7 @@ const bannerImg = "/assets/images/case-studies/Morses/PAM/1Banner.webp";
 	<h3 id="research">Research</h3>
 	Investigated the original MAP solution architecture to determine what features could be kept as is and what could be improved, cut or conglomerated.
 	Conducted Figjam-based Q&A sessions with Morses employees to prioritise essential customer information and features. This collaborative approach ensured alignment with user needs, enhancing the efficiency of feature prioritisation and ensuring a user-centric design focus.
-	{{ carousel({ carouselId: "comparisonCarousel",
+	{{ alpineCarousel({ carouselId: "comparisonCarousel",
 					images: [
 						{src:"assets/images/case-studies/Morses/PAM/Analysis.webp",
 						caption: "Click for full view"}
@@ -113,7 +113,7 @@ const bannerImg = "/assets/images/case-studies/Morses/PAM/1Banner.webp";
 	<h3 id="ideation">Ideation</h3>
 	Developed two initial web-tool designs – a single-page solution and a multi-page solution. The single-page solution was determined to be too overwhelming, so we opted for navigation between multiple pages to answer the necessary forms.
 	Implemented iterative enhancements until all necessary features were incorporated. This iterative process allowed for continuous improvement, ensuring the final design included all essential features while refining usability and functionality based on users’ feedback and their evolving needs
-	{{ carousel({ carouselId: "ideationCarousel",
+	{{ alpineCarousel({ carouselId: "ideationCarousel",
 					images: [
 						{src:"assets/images/case-studies/Morses/PAM/Ideation/ideation1.webp"},
 						{src:"assets/images/case-studies/Morses/PAM/Ideation/ideation2.webp"}
@@ -128,7 +128,7 @@ const bannerImg = "/assets/images/case-studies/Morses/PAM/1Banner.webp";
 	<h3 id="branding">Branding</h3>
 	<div class="section-row">
 		<div class="row-column image">
-			{{ carousel({ carouselId: "brandingCarousel",
+			{{ alpineCarousel({ carouselId: "brandingCarousel",
 					images: [
 						{src:"/assets/images/case-studies/Morses/PAM/4VisDev.webp"}
 						],
@@ -145,7 +145,7 @@ const bannerImg = "/assets/images/case-studies/Morses/PAM/1Banner.webp";
 </div>
 <div class="article-section">
 	<h3 id="component-library">Component Library</h3>
-	{{ carousel({ carouselId: "componentCarousel",
+	{{ alpineCarousel({ carouselId: "componentCarousel",
 					images: [
 						{src:"/assets/images/case-studies/Morses/PAM/5CompLib.webp"}
 						],
