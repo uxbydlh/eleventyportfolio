@@ -11,6 +11,20 @@
                 <p>{{persona.subheading}}</p>
             </div>
             <div class="table-card-body">
+                {% if persona.age and persona.location and persona.profession %}
+                    <h4>Info</h4>
+                    <ul>
+                        <li>
+                            {{persona.age}}
+                        </li>
+                        <li>
+                            {{persona.location}}
+                        </li>
+                        <li>
+                            {{persona.profession}}
+                        </li>
+                    </ul>
+                {% endif %}
                 {% if persona.goals %}
                     <h4>Goals</h4>
                     {% for goal in persona.goals %}

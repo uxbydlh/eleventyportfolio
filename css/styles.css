@@ -2487,6 +2487,10 @@ div:has(.embedded-google-form) {
   display: flex;
   align-content: center;
   justify-content: center;
+
+  max-height: 50vh;
+  width: 100%;
+  overflow: hidden;
 }
 
 .swipe-gallery a img {
