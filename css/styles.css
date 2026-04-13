@@ -1486,6 +1486,13 @@ input[type=checkbox] {
 
 /*#region Articles*/
 
+.article-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding-top: 3rem;
+}
+
 .article-container {
   /*Page width stuff - may not be relevant later*/
   max-width: 100em;
@@ -1578,6 +1585,42 @@ nav.toc ol li a:only-child:hover {
 }*/
 
 /*#endregion table of contents*/
+
+/*#region post metadata*/
+
+.post-metadata-container {
+  border-top: 1px solid var(--border-action);
+  border-bottom: 1px solid var(--border-action);
+  background-color: var(--surface-primary);
+}
+
+.post-metadata {
+  display: flex;
+  gap: var(--space-md);
+
+  max-width: 100em;
+  margin-inline: auto;
+  padding-inline: 3rem;
+  padding-block: 1rem;
+}
+
+.post-metadata .date {
+  flex-grow: 1;
+}
+
+.post-metadata .tag {
+  font-size: var(--font-size-body-sm);
+  text-align: center;
+  background-color: var(--surface-secondary);
+  border: var(--border-width-sm) solid var(--border-secondary);
+  padding: var(--space-xs) var(--space-md);
+}
+
+.post-tag { 
+  color: var(--text-on-action);
+}
+
+/*#endRegion post metadata*/
 
 article {
   display: flex;

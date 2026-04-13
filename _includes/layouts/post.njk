@@ -5,7 +5,19 @@ layout: layouts/base.njk
 <style>{% include "node_modules/prismjs/themes/prism-okaidia.css" %}</style>
 <style>{% include "css/prism-diff.css" %}</style>
 
-<h1>{{ title }}</h1>
+<div class="article-header">
+    <h1>{{ title }}</h1>
+    <div class="post-metadata-container">
+        <ul class="post-metadata">
+                        <li class="date"><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
+                        <li>Tags:</li>
+                        {%- for tag in tags | filterTagList %}
+                        {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+                        <li class="tag"><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
+                        {%- endfor %}
+        </ul>
+    </div>
+</div>
 
 <div class="article-container">
     <aside>
@@ -18,6 +30,7 @@ layout: layouts/base.njk
     <div class="content">
         {{content | safe }}
     </div>
+        
 </div>
 
 <div class="meta-container">
@@ -59,14 +72,6 @@ layout: layouts/base.njk
 	<a class=" btn primary scroll-top__link" href="#"><i class="ri-arrow-up-s-line"></i></a> <!--href="#" navigate to the top of the page-->
 </div> 
 
-{#TODO GIVE THE METADATA SOME PROPER STYLE#}
-<ul class="post-metadata">
-				<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
-				{%- for tag in tags | filterTagList %}
-				{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-				<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
-				{%- endfor %}
-			</ul>
 
 <script>
 
