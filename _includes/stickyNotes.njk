@@ -1,0 +1,12 @@
+{%- macro stickyNotes(params) -%}
+
+<ul class="card-list stickies">
+    {% for note in params.notes %}
+        <li class="sticky-card">
+            <i class="ri-pushpin-fill"></i>
+            <p>"{{note}}"</p>
+        </li>
+    {% endfor %}
+</ul>
+
+{%- endmacro -%}

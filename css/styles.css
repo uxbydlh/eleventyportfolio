@@ -1922,6 +1922,31 @@ article p {
   gap: var(--space-md);
 }
 
+.sticky-card {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 250px;
+  padding: var(--space-md);
+  padding-bottom: var(--space-xl);
+  color: var(--text-body-dark);
+  background-color: var(--surface-action-hover);
+  border: 2px solid var(--border-action);
+}
+
+.sticky-card p {
+  font-family: var(--font-family-mono);
+  text-align: justify;
+  flex-grow: 1;
+  align-content: center;
+}
+
+.sticky-card i {
+  font-size: xx-large;
+  align-self: center;
+  color: var(--border-action);
+}
+
 /*#endregion Tutors*/
 
 /*#region tables*/

@@ -14,6 +14,7 @@ const title = "Confirm Action";
 const bannerImg = "assets/images/case-studies/ESAVE/Confirm-Action/ESAVEBanner.webp"
 ---
 {%- from 'inlineTable.njk' import inlineTable %}
+{%- from 'stickyNotes.njk' import stickyNotes-%}
 
 <img class="banner-image" src="{{bannerImg | toAbsoluteUrl}}">
 
@@ -75,3 +76,13 @@ const bannerImg = "assets/images/case-studies/ESAVE/Confirm-Action/ESAVEBanner.w
 
 <h2 id="info-gathering">Info Gathering: User Survey</h2>
 <h3 id="info-comments">User Comments</h3>
+
+{{ stickyNotes ({
+			notes: [
+            "I feel like it's better to put all this info at the start rather than after I've done it.",
+            "That's a really small amount of text for an (information) popup",
+            "Why doesn't it give me the full information before I make the saving?",
+            "This feels like it's for people who already know what they need to do to be eco friendly, but I'm a complete beginner"
+        ]
+    })
+}}
