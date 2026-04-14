@@ -29,13 +29,7 @@ layout: layouts/base.njk
                     {% endif %}
                 {% endif %}
             </div>
-            {#TODO HER IMAGES NOW EXIST AS VOLUNTARY BANNERS - REMOVE#}
-            <div class="heroRight">
-                <img src="{{heroImagePath}}" alt="{{heroImageAlt}}"/>
-                {% block heroRight %}{% endblock %}
-            </div>
         </div>
-
         <div class="content">
             {{ content | safe }}
         </div>
