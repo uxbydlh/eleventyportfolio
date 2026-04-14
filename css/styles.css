@@ -1780,6 +1780,7 @@ article p {
   padding: 24px;
 
   background-color: var(--surface-primary);
+  color: var(--text-on-action);
 }
 
 .card-content {
