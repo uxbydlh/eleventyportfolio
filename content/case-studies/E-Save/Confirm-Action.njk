@@ -1,0 +1,77 @@
+---js
+const layout = "layouts/post.njk";
+
+const eleventyNavigation = {
+	key: "Confirm Action",
+	parent: "E-Save",
+	parentUrl: "/Case-Studies/E-Save"
+};
+
+const tags = ["project", "UXR", "case-studies", "UX Design", "Research"]
+
+
+const title = "Confirm Action";
+const bannerImg = "assets/images/case-studies/ESAVE/Confirm-Action/ESAVEBanner.webp"
+---
+{%- from 'inlineTable.njk' import inlineTable %}
+
+<img class="banner-image" src="{{bannerImg | toAbsoluteUrl}}">
+
+<h2 id="context">Context</h2>
+<div class="article-section">
+    Eco Centre SW is a Somerset-based Charitable Comminity Benefit Society. 
+    They are currently working on 'E-SAVE' - a web application focussed on helping people to both save money and cut their carbon emissions by guiding them towards environmentally friendly money saving practices. 
+    I ran UXR Surveys on behalf of E-Save and used the results to present potential feature changes. 
+    Below, you can read the presentation for suggested changes to the "Confirm Action" feature. 
+</div>
+
+<h2 id="details">Details</h2>
+<div class="article-section">
+		{{ inlineTable ({
+			table: [
+				{
+					header: "Scope",
+					bodyItems: [
+						"Volunteer work",
+						"Improving design for prototype web-app"
+					]
+				},
+				{
+					header: "Role",
+					bodyItems: [
+						"Research",
+						"UX & UI design"
+					]
+				},
+				{
+					header: "Tools",
+					bodyItems: [
+						"Figma",
+                        "Figjam",
+                        "Adobe Acrobat"
+					]
+				}
+			]
+		})
+	}}
+</div>
+
+<h2 id="impact">Impact</h2>
+<div class="article-section">
+    The suggested feature change was received well, but is yet to be completed, as Eco Centre SW are still looking for skilled backend and frontend code volunteers to help with E-SAVE.  
+    If you think this is a role that you could fill, please visit their Reach Volunteering page, or message them via LinkedIn or their website.
+</div>
+<div class="btn row">
+    <a class="btn primary"
+		href="https://reachvolunteering.org.uk/org/eco-centre"
+		target="_blank" rel="noopener noreferrer">Reach Volunteering<i class="ri-arrow-right-s-fill"></i></a>
+        <a class="btn primary"
+		href="https://www.linkedin.com/company/ecocentresouthwest/?originalSubdomain=uk"
+		target="_blank" rel="noopener noreferrer">LinkedIn<i class="ri-arrow-right-s-fill"></i></a>
+        <a class="btn primary"
+		href="https://www.ecocentresw.org/get-involved/"
+		target="_blank" rel="noopener noreferrer">Contact<i class="ri-arrow-right-s-fill"></i></a>
+</div>
+
+<h2 id="info-gathering">Info Gathering: User Survey</h2>
+<h3 id="info-comments">User Comments</h3>
