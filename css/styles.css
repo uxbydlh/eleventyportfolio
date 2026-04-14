@@ -1507,12 +1507,14 @@ input[type=checkbox] {
 }
 
 aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+
   position: sticky;
   top: calc(var(--header-height) + 4em );
-  background-color: var(--surface-nav);
-  border: var(--border-width-sm) solid var(--border-primary);
+  
   max-height: 80vh;
-  overflow-y: auto;
 }
 
 aside h3 {
@@ -1522,6 +1524,21 @@ aside h3 {
 /*TODO CREATE STYLING FOR ARTICLE-SECTION*/
 
 /*#region table of contents*/
+
+.toc-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: auto;
+
+  border: var(--border-width-sm) solid var(--border-primary);
+  background-color: var(--surface-nav);
+}
+
+nav.toc {
+  flex-shrink: 1;
+  overflow-y: auto;
+}
 
 nav.toc ol li {
   border-top: var(--border-action) solid 1px;

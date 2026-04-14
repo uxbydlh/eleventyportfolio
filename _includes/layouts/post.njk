@@ -24,8 +24,10 @@ layout: layouts/base.njk
         {% if eleventyNavigation.parent %}
             <a href="{{eleventyNavigation.parentUrl | toAbsoluteUrl }}" class="btn primary"><i></i>Back to {{eleventyNavigation.parent}}</a>
         {% endif %}
-        <h3>Contents</h3>
-        {{ content | toc | safe }}
+        <div class="toc-container">
+            <h3>Contents</h3>
+            {{ content | toc | safe }}
+        </div>
     </aside>
     <div class="content">
         {{content | safe }}
