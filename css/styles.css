@@ -1783,6 +1783,12 @@ article p {
   color: var(--text-on-action);
 }
 
+.card.project:hover {
+  background-color: var(--surface-action-hover-2);
+  color: var(--text-selected);
+  outline: 2px solid var(--border-action);
+}
+
 .card-content {
   display: flex;
   flex-direction: column;

@@ -1,5 +1,3 @@
-
-{#TODO ADD STYLING THAT CHANGES HOW THE CARD LOOKS ON HOVER #}
 {#TODO ADD AN OBVIOUS "VIEW MORE" BUTTON ALONGSIDE THE TEXT EXCERPT#}
 
 {%- macro latestProjects(params) -%}
@@ -7,7 +5,7 @@
 		{% set latest_projects = params.projectList | reverse %}
 		{% for item in latest_projects.slice(0,3) %}
 		<a href="{{item.url | toAbsoluteUrl }}">
-			<li class="card">
+			<li class="card project">
 				<img class="card-photo" src="{{item.data.bannerImg | toAbsoluteUrl}}">
 				<h4>{{item.data.title}}</h4>
 				{% if item.templateContent %}
@@ -27,7 +25,7 @@
 		{% set latest_projects = params.projectList | reverse %}
 		{% for item in latest_projects %}
             {% if params.filter in item.data.tags %}
-                    <li class="card">
+                    <li class="card project">
 						<a class="card-content" href="{{item.url | toAbsoluteUrl }}">
 							{%if item.data.bannerImg %}
 								<img class="card-photo" src="{{item.data.bannerImg | toAbsoluteUrl}}">
