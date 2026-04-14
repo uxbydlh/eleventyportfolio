@@ -9,8 +9,7 @@ layout: layouts/base.njk
                 {% endif %}
                 <h1>{{ title }}</h1>
                 {%if subheading %}
-                {#TODO - GIVE THIS A CLASS AND CHANGE HOW IT DISPLAYS TO REMOVE THE BLACK BARS#}
-                <h3>{{ subheading | safe}}</h3>
+                <h3 class="subheading">{{ subheading | safe}}</h3>
                 {% endif %}
                 {% if heroBtn %}
                     {% if heroBtn.sectionLink %}

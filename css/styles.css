@@ -262,6 +262,14 @@ h3 {
   background-color: var(--surface-primary);
 }
 
+h3.subheading{
+  background-color: transparent;
+  border-top: none;
+  align-self: center;
+  width: 100%;
+  justify-content: center;
+}
+
 h4 {
   color: var(--text-selected);
   font-family: var(--font-family-heading);
