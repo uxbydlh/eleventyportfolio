@@ -739,7 +739,7 @@ footer {
   border-radius: 0px;
   border: none;
 
-  font-family: var(--body-font);
+  font-family: var(--font-family-mono);
   font-size: var(--normal-font-size);
 }
 
@@ -752,6 +752,7 @@ footer {
 .smallBtn.primary:hover,
 .btn.primary:hover {
   background-color: var(--surface-action-hover-2);
+  cursor: pointer;
 }
 .btn.primary[type=submit] {
   align-self: flex-end;
@@ -1787,6 +1788,14 @@ article p {
   background-color: var(--surface-action-hover-2);
   color: var(--text-selected);
   outline: 2px solid var(--border-action);
+}
+
+.card.project p {
+  flex-grow: 1;
+}
+
+.card.project button {
+  align-self: flex-end;
 }
 
 .card-content {

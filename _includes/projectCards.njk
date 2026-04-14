@@ -1,5 +1,3 @@
-{#TODO ADD AN OBVIOUS "VIEW MORE" BUTTON ALONGSIDE THE TEXT EXCERPT#}
-
 {%- macro latestProjects(params) -%}
     <ul class="card-list">
 		{% set latest_projects = params.projectList | reverse %}
@@ -14,6 +12,7 @@
 					<meta name="description" content = "{{ safeExcerpt }}">
 					<meta property="og:description" content="{{ safeExcerpt }}">
 				{% endif%}
+				<button class="smallBtn primary">Read More<i class="ri-arrow-right-s-fill"></i></button>
 			</li>
 		</a>
 		{% endfor %}
@@ -47,6 +46,9 @@
 								</a>
 							</li>
 							{%- endfor %}
+							<li>
+								Read More<i class="ri-arrow-right-s-fill"></i>
+							</li>
 						</ul>
                     </li>
                 </a>
