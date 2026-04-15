@@ -7,7 +7,7 @@ const eleventyNavigation = {
 	parentUrl: "/Case-Studies/E-Save"
 };
 
-const tags = ["project", "UXR", "case-studies", "UX Design", "Research"]
+const tags = ["project", "UXR", "case-study", "UX Design", "e-save"]
 
 
 const title = "Confirm Action";
@@ -15,6 +15,8 @@ const bannerImg = "assets/images/case-studies/ESAVE/Confirm-Action/ESAVEBanner.w
 ---
 {%- from 'inlineTable.njk' import inlineTable %}
 {%- from 'stickyNotes.njk' import stickyNotes-%}
+{%- from 'imageGallery.njk' import gallery %}
+{%- from 'alpineCarousel.njk' import alpineCarousel %}
 
 <img class="banner-image" src="{{bannerImg | toAbsoluteUrl}}">
 
@@ -77,6 +79,12 @@ const bannerImg = "assets/images/case-studies/ESAVE/Confirm-Action/ESAVEBanner.w
 <h2 id="info-gathering">Info Gathering: User Survey</h2>
 <h3 id="info-comments">User Comments</h3>
 
+<div class="article-container">
+	I conducted an in-person observation session with 6 users individually.
+	Users were asked to perform a series of short tasks within the web-app and explain what they were doing and feeling out loud to me.
+	Users were then given a short, paper survey to fill out about the tasks they performed.
+</div>
+
 {{ stickyNotes ({
 			notes: [
             "I feel like it's better to put all this info at the start rather than after I've done it.",
@@ -86,3 +94,171 @@ const bannerImg = "assets/images/case-studies/ESAVE/Confirm-Action/ESAVEBanner.w
         ]
     })
 }}
+
+<h3 id="info-problems">Problems to Solve</h3>
+
+{{ gallery ({
+		galleryId: "infoProblemsGallery",
+		images: [
+			"assets/images/case-studies/ESAVE/Confirm-Action/CavityWallExample.webp"
+		]
+	})}}
+
+<h4 id="info-problems-cost">Upfront Cost & Savings</h4>
+<div class="article-section">
+	Although at first glance this looks like a useful collection of info, surveyed users did not feel like we were providing enough and some questioned it's relevance.
+	We should aim to make this section stand out more, and make it feel like a "quick breakdown" of the action.
+</div>
+
+<h4 id="info-problems-info">Red Info Button</h4>
+<div class="article-section">
+	This button was ignored by most surveyed users and those that did press it didn't feel that the information provided was extensive enough to warrant hiding it behind another button press.
+</div>
+
+<h4 id="info-problems-save">Save Every Year</h4>
+<div class="article-section">
+	The wording of "Save every year" implied that the user is making the decision to add this action to their savings right there on the preview page. 
+	Surveyed users expressed anxiety around this. 
+	One user asked: "Why doesn't it give me the full information before I make the saving?"
+	We may require 'softer' wording here.
+</div>
+
+<h4 id="info-problems-overview">Overview</h4>
+<div class="article-section">
+	Overall, when we look at these problems together, we can determine that we must try to provide the user with more relevant information about the action upfront without overwhelming them.
+</div>
+
+<h2 id="more-to-show">More to Show</h2>
+<h3>What can we learn from our "Confirm Your Savings" screen?</h3>
+{{ gallery ({
+		galleryId: "moreToShowGallery",
+		images: [
+			"assets/images/case-studies/ESAVE/Confirm-Action/ConfirmSavingsExample.webp"
+		]
+	})}}
+<h4>Professional - call in the experts</h4>
+<div class="article-section">
+	Based on the comment "This feels like it's for people who already know what they need to do to be eco-friendly, but I'm a total beginner": 
+	It would be useful to display this information upfront on the preview card.
+</div>
+<h4>Installing cavity wall insulation...</h4>
+<div class="article-section">
+	We can also include a preview of this information upfront rather than hide it in another popup box.
+</div>
+<h3 id="more-to-show-images">Images</h3>
+<h4>One comment stated:</h4>
+{{ stickyNotes ({
+			notes: [
+            "I want a picture of the dark cookware I'm meant to be buying"
+        ]
+    })
+}}
+<div class="article-section">
+	It may helpful to our users to include a related image as part of the preview.
+</div>
+
+<h2 id="new-cards">Potential New Card Design</h2>
+<h3>Example Cards from Existing Actions</h3>
+{{ gallery ({
+		galleryId: "newCardGallery",
+		images: [
+			"assets/images/case-studies/ESAVE/Confirm-Action/NewCardExamples.webp"
+		]
+	})
+}}
+<h3 id="new-cards-actions">Changes</h3>
+<div class="article-section">
+	<ol>
+		<li>Upfront cost has been highlighted in pale green to better stand out to the user</li>
+		<li>Rather than hiding the info/blurb behind a button, we condense it and display it to the user directly</li>
+		<li>Star rating pulled from the "Confirm Your Savings" page</li>
+		<li>Primary CTA text changed from "Save Every Year" to "Find Out More" to lower the perceived level of commitment and to give some flexibility for actions that occur more often than annually</li>
+		<li>Images added to illustrate what these actions could look like. Royalty-free images were used in this case, but we could take our own photos for simple tasks and contact local companies for photographs of more complicated tasks</li>
+	</ol>
+</div>
+
+<h2 id="rating-frames">Rating Frames</h2>
+<h3>A Closer Look At The Component</h3>
+{{ gallery ({
+		galleryId: "moodboardGallery",
+		images: [
+			"assets/images/case-studies/ESAVE/Confirm-Action/LevelFrameComponent.png"
+		]
+	})
+}}
+<div class="article-section">
+	<ol>
+		<li>Rating copy based on existing rating copy, just slightly shortened to allow for easier display.</li>
+		<li>Changed ranking icon from wrenches to stars. Some users were mistaking the wrench emojis for bones at a small size.</li>
+		<li>Colour-coding added to indicate difficulty at a glance.</li>
+		<li>Five-star rating changed to professionals only. The vast majority of users will need to call in help and spend a fair amount of money to accomplish these tasks. 
+			This is not to gatekeep these tasks, but to prevent potentially unsafe DIY decisions.
+		</li>
+	</ol>
+</div>
+
+<h2 id="taking-further">Taking It Further</h2>
+<h3>Applying our findings to the "Confirm Your Savings" screen</h3>
+{{ gallery ({
+		galleryId: "furtherGallery",
+		images: [
+			"assets/images/case-studies/ESAVE/Confirm-Action/ConfirmSavingsExample.webp"
+		]
+	})
+}}
+<h3 id="taking-further-comments">Relevant User Comments</h3>
+{{ stickyNotes ({
+			notes: [
+            "Oh I didn't know these were links (about Learn More / Read More / View Tips)",
+			"(User lingered over the 'Back' button before clicking confirm)",
+			"It needs like a 'did you know?' style section or something like 'here's some resources to get you started'"
+        ]
+    })
+}}
+<h3 id="taking-further-changes">Suggested Changes</h3>
+<div class="article-section">
+	<ol>
+		<li>We received several comments asking for a "did you know?" style call to action. 
+			We also had requests for "resources to get started".
+			This may indicate that we need to improve the visibility of this section.</li>
+		<li>
+			We also had some comments about the clarity of links.
+			Many users did not click on anything in the 'More Info' section, and those that did were surprised by new pages opening up.
+			This may indicate that we need to improve our clarity here.
+		</li>
+		<li>
+			Some users lingered over the 'Confirm' and 'Back' buttons for a while.
+			Expectations and best practices indicate that primary actions (confirm) should be right-most and more brightly coloured than secondary actions (back).
+		</li>
+	</ol>
+</div>
+
+<h2 id-="new-confirm">New "Confirm Your Savings"</h2>
+<h3>A desktop redesign based on the comments and feedback provided.</h3>
+<p class="carousel-caption">View plain and annotated redesigns below</p>
+{{ alpineCarousel({ carouselId: "newConfirmCarousel",
+					images: [
+						{
+							src:"assets/images/case-studies/ESAVE/Confirm-Action/NewConfirmPlain.webp",
+							caption: "Plain"
+						},
+						{
+							src:"assets/images/case-studies/ESAVE/Confirm-Action/NewConfirmAnnotated.webp",
+							caption: "Annotated"
+						}
+						],
+						orientation: "slides-vert"
+				}) 
+	}}
+<h3>Mobile Redesign</h3>
+{{ alpineCarousel({ carouselId: "mobileConfirmCarousel",
+					images: [
+						{
+							src:"assets/images/case-studies/ESAVE/Confirm-Action/NewConfirmMobile.webp"
+						}
+						],
+						orientation: "slides-vert",
+						slideType: "slides-mobile-screens"
+				}) 
+	}}
+
