@@ -1,0 +1,259 @@
+---js
+const layout = "layouts/post.njk";
+const eleventyNavigation = {
+    key: "Dashboard Changes",
+    parent: "E-Save",
+    parentUrl: "/Case-Studies/E-Save"
+};
+
+const tags = ["project", "UXR", "case-study", "UX Design", "e-save"];
+
+const title = "Dashboard Changes";
+const bannerImg = "assets/images/case-studies/ESAVE/Help-Me-Save/HelpSaveBanner.webp"
+---
+{%- from 'inlineTable.njk' import inlineTable %}
+{%- from 'stickyNotes.njk' import stickyNotes-%}
+{%- from 'imageGallery.njk' import gallery %}
+{%- from 'alpineCarousel.njk' import alpineCarousel %}
+{%- from 'imageCards.njk' import imageCards %}
+
+<img class="banner-image" src="{{bannerImg | toAbsoluteUrl}}">
+
+<h2 id="context">Context</h2>
+<div class="article-section">
+    Eco Centre SW is a Somerset-based Charitable Comminity Benefit Society. 
+    They are currently working on 'E-SAVE' - a web application focussed on helping people to both save money and cut their carbon emissions by guiding them towards environmentally friendly money saving practices. 
+    I ran UXR Surveys on behalf of E-Save and used the results to present potential feature changes. 
+    Below, you can read the presentation I created to put forth potential changes to the app's dashboard. 
+</div>
+
+<h2 id="details">Details</h2>
+<div class="article-section">
+		{{ inlineTable ({
+			table: [
+				{
+					header: "Scope",
+					bodyItems: [
+						"Volunteer work",
+						"Improving design for prototype web-app"
+					]
+				},
+				{
+					header: "Role",
+					bodyItems: [
+						"Research",
+						"UX & UI design"
+					]
+				},
+				{
+					header: "Tools",
+					bodyItems: [
+						"Figma",
+                        "Figjam",
+                        "Adobe Acrobat"
+					]
+				}
+			]
+		})
+	}}
+</div>
+
+<h2 id="impact">Impact</h2>
+<div class="article-section">
+    The suggested feature changes were received well, but is yet to be completed, as Eco Centre SW are still looking for skilled backend and frontend code volunteers to help with E-SAVE.  
+    If you think this is a role that you could fill, please visit their Reach Volunteering page, or message them via LinkedIn or their website.
+</div>
+<div class="btn row">
+    <a class="btn primary"
+		href="https://reachvolunteering.org.uk/org/eco-centre"
+		target="_blank" rel="noopener noreferrer">Reach Volunteering<i class="ri-arrow-right-s-fill"></i></a>
+        <a class="btn primary"
+		href="https://www.linkedin.com/company/ecocentresouthwest/?originalSubdomain=uk"
+		target="_blank" rel="noopener noreferrer">LinkedIn<i class="ri-arrow-right-s-fill"></i></a>
+        <a class="btn primary"
+		href="https://www.ecocentresw.org/get-involved/"
+		target="_blank" rel="noopener noreferrer">Contact<i class="ri-arrow-right-s-fill"></i></a>
+</div>
+
+<h2 id="mvp-dash">MVP Dashboard Changes</h2>
+<h3>What can we do right now to improve the dashboard experience?</h3>
+<h3 id="og-user-flow">Original User Flow</h3>
+<h4>Navigating to the dashboard</h4>
+{{ gallery ({
+		galleryId: "ogDashFlowGallery",
+		images: [
+			"assets/images/case-studies/ESAVE/Dashboard/MVP-OG-Flow.webp"
+		]
+	})}}
+<h3 id="new-user-flow">Proposed New User Flow</h3>
+<h4>Navigating to the dashboard</h4>
+{{ gallery ({
+		galleryId: "newDashFlowGallery",
+		images: [
+			"assets/images/case-studies/ESAVE/Dashboard/MVP-New-Flow.webp"
+		]
+	})}}
+<div class="article-section">
+    <h5>Logged In Users</h5>
+    <ul>
+        <li>Already using the app - don't need to be sold on it via the homepage</li>
+        <li>Want to quickly get into logging their savings - by removing a click from the equation via the logged-in conditional redirect, we take away an obstacle to that.</li>
+    </ul>
+</div>
+
+<h3 id="homepage-breakdown">Homepage Breakdown</h3>
+{{ alpineCarousel({ carouselId: "desktopcompleteCarousel",
+					images: [
+						{src:"assets/images/case-studies/ESAVE/Help-Me-Save/Examples/desktop.webp"}
+						],
+						orientation: "slides-vert"
+				}) 
+	}}
+
+{{ gallery ({
+		galleryId: "cardsGallery",
+		images: [
+			"assets/images/case-studies/ESAVE/Help-Me-Save/HelpSaveBanner.webp"
+		]
+	})}}
+
+<div class="article-section">
+    <h5>"Start Saving"</h5>
+    <ul>
+        <li>Double of "Start Savings" from the dashboard</li>
+        <li>Very similar to "My Savings" from the dashboard</li>
+    </ul>
+</div>
+
+{{ gallery ({
+		galleryId: "cardsGallery",
+		images: [
+			"assets/images/case-studies/ESAVE/Help-Me-Save/HelpSaveBanner.webp"
+		]
+	})}}
+
+<div class="article-section">
+    <h5>E-SAVE Pitch</h5>
+    <ul>
+        <li>Good, but large image places it below the fold</li>
+        <li>Tells logged-in users to sign up</li>
+        <li>Doesn't include hyperlinks or a button to take potential users to the sign up page</li>
+    </ul>
+</div>
+
+{{ gallery ({
+		galleryId: "cardsGallery",
+		images: [
+			"assets/images/case-studies/ESAVE/Help-Me-Save/HelpSaveBanner.webp"
+		]
+	})}}
+
+<div class="article-section">
+    <h5>"Did You Know?"</h5>
+    <ul>
+        <li>Like a lengthened version of Quick Energy Tips</li>
+        <li>May better serve in its own section, with a prompt for the user</li>
+    </ul>
+</div>
+
+<div class="article-section">
+    <h5>"Quick Energy Tips"</h5>
+    <ul>
+        <li>Feel most appropriate for new users and beginners</li>
+    </ul>
+</div>
+
+<div class="article-section">
+    <h5>Weekly Challenge</h5>
+    <ul>
+        <li>Would best serve logged-in users</li>
+        <li>Currently non-functional</li>
+        <li>No CTA - users should be able to log their challenges</li>
+    </ul>
+</div>
+
+<h3 id="dash-breakdown">Dashboard Breakdown</h3>
+{{ alpineCarousel({ carouselId: "desktopcompleteCarousel",
+					images: [
+						{src:"assets/images/case-studies/ESAVE/Help-Me-Save/Examples/desktop.webp"}
+						],
+						orientation: "slides-vert"
+				}) 
+}}
+
+TODO: IMAGE HERE
+
+<div class="article-section">
+    <h5>"Start Savings"</h5>
+    <ul>
+        <li>Lacks Context</li>
+        <li>Placed higher in hierarchy than "My Savings", which may receive more daily use</li>
+    </ul>
+</div>
+
+TODO: IMAGE HERE
+
+<div class="article-section">
+    <h5>My Savings</h5>
+    <ul>
+        <li>Sends the user elsewhere, but doesn't actually tell them anything.</li>
+        <li>If savings don't need to be logged daily, perhaps they don't belong on the dashboard.</li>
+    </ul>
+</div>
+
+TODO: IMAGE HERE
+
+<div class="article-section">
+    <h5>Total Savings</h5>
+    <ul>
+        <li>Placed top and central - the most important section with information that the user should see on every login</li>
+    </ul>
+</div>
+
+<div class="article-section">
+    <h5>Log-in Greeting</h5>
+    <ul>
+        <li>Displays at the bottom of the page, below another welcome message.</li>
+        <li>Should be cut, or attached to the original welcome message to prevent clutter.</li>
+    </ul>
+</div>
+
+TODO: IMAGE HERE
+
+<div class="article-section">
+    <h5>"Your Challenge"</h5>
+    <ul>
+        <li>Different from the challenge on the homepage.</li>
+        <li>Offers no prompts or suggestions on how to complete.</li>
+    </ul>
+</div>
+
+TODO: IMAGE HERE
+
+<div class="article-section">
+    <h5>"Your Reward Points"</h5>
+    <ul>
+        <li>The purpose of a dashboard is to present information to the user.</li>
+        <li>By hiding the number of reward points in a different section, or behind a click, we take away from that purpose.</li>
+    </ul>
+</div>
+
+<h3 id="reworked-mvp-home">Reworked Homepage</h3>
+<h4>(MVP Sketch)</h4>
+
+TODO: IMAGE HERE 
+
+<h3 id="reworked-mvp-dash">Reworked Dashboard</h3>
+<h4>(MVP Sketch)</h4>
+
+TODO: IMAGE HERE
+
+<h2 id="dash-rethink">Rethinking The Dashboard</h2>
+<h3>Encouraging passively sustainable users to become eco-frontrunners</h3>
+
+<h3 id="sus-personas">Sustainability Personas</h3>
+<h4>Adapted from KerryDigest - The Four Personas of Sustainability-minded Consumers</h4>
+
+
+
+
