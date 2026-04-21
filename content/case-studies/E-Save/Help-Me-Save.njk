@@ -1,0 +1,270 @@
+---js
+const layout = "layouts/post.njk";
+const eleventyNavigation = {
+    key: "Help Me Save",
+    parent: "E-Save",
+    parentUrl: "/Case-Studies/E-Save"
+};
+
+const tags = ["project", "UXR", "case-study", "UX Design", "e-save"];
+
+const title = "Help Me Save";
+const bannerImg = "assets/images/case-studies/ESAVE/Help-Me-Save/HelpSaveBanner.webp"
+---
+{%- from 'inlineTable.njk' import inlineTable %}
+{%- from 'stickyNotes.njk' import stickyNotes-%}
+{%- from 'imageGallery.njk' import gallery %}
+{%- from 'alpineCarousel.njk' import alpineCarousel %}
+
+<img class="banner-image" src="{{bannerImg | toAbsoluteUrl}}">
+
+<h2 id="context">Context</h2>
+<div class="article-section">
+    Eco Centre SW is a Somerset-based Charitable Comminity Benefit Society. 
+    They are currently working on 'E-SAVE' - a web application focussed on helping people to both save money and cut their carbon emissions by guiding them towards environmentally friendly money saving practices. 
+    I ran UXR Surveys on behalf of E-Save and used the results to present potential feature changes. 
+    Below, you can read the presentation for suggested changes to the "Help Me Save" feature. 
+</div>
+
+<h2 id="details">Details</h2>
+<div class="article-section">
+		{{ inlineTable ({
+			table: [
+				{
+					header: "Scope",
+					bodyItems: [
+						"Volunteer work",
+						"Improving design for prototype web-app"
+					]
+				},
+				{
+					header: "Role",
+					bodyItems: [
+						"Research",
+						"UX & UI design"
+					]
+				},
+				{
+					header: "Tools",
+					bodyItems: [
+						"Figma",
+                        "Figjam",
+                        "Adobe Acrobat"
+					]
+				}
+			]
+		})
+	}}
+</div>
+
+<h2 id="impact">Impact</h2>
+<div class="article-section">
+    The suggested feature change was received well, but is yet to be completed, as Eco Centre SW are still looking for skilled backend and frontend code volunteers to help with E-SAVE.  
+    If you think this is a role that you could fill, please visit their Reach Volunteering page, or message them via LinkedIn or their website.
+</div>
+<div class="btn row">
+    <a class="btn primary"
+		href="https://reachvolunteering.org.uk/org/eco-centre"
+		target="_blank" rel="noopener noreferrer">Reach Volunteering<i class="ri-arrow-right-s-fill"></i></a>
+        <a class="btn primary"
+		href="https://www.linkedin.com/company/ecocentresouthwest/?originalSubdomain=uk"
+		target="_blank" rel="noopener noreferrer">LinkedIn<i class="ri-arrow-right-s-fill"></i></a>
+        <a class="btn primary"
+		href="https://www.ecocentresw.org/get-involved/"
+		target="_blank" rel="noopener noreferrer">Contact<i class="ri-arrow-right-s-fill"></i></a>
+</div>
+
+<h2 id="info-gathering">Info Gathering: User Survey</h2>
+<h3 id="info-comments">User Comments</h3>
+
+<div class="article-section">
+	I conducted an in-person observation session with 6 users individually.
+	Users were asked to perform a series of short tasks within the web-app and explain what they were doing and feeling out loud to me.
+	Users were then given a short, paper survey to fill out about the tasks they performed.
+</div>
+
+{{ stickyNotes ({
+			notes: [
+            "I don't know my energy efficiency, so I'm just gonna make it up",
+            "This feels like it's for people who already know what they need to do to be eco friendly, but I'm a complete beginner",
+            "Where is it getting that value from? That's a lot of money. I definitely don't spend that much on clothes in a year",
+            "Lack of context made the information provided seem less reputable, as it seemed rushed"
+        ]
+    })
+}}
+
+<h3 id="info-problems">Problems to Solve</h3>
+<div class="article-section">
+    <ul>
+        <li>Users feel like they need more context around how our savings (both carbon and monetary) are calculated.</li>
+        <li>Users don't know household energy related values off the top of their heads and require some guidance in making a calculation.</li>
+        <li>Some users will guess or make up values if they are unsure, others will ignore them entirely.</li>
+    </ul>
+</div>
+
+<h4 id="info-problems-overview">Overview</h4>
+<div class="article-section">
+	<ul>
+        <li>We must create ways for users to accurately calculate and understand their current energy usage so they can more clearly see the difference they are making.</li>
+        <li>We must signpost and integrate these guides and calculators at appropriate points within the app so that users can easily find them.</li>
+    </ul>
+</div>
+
+<h2 id="user-guide">Guiding the User</h2>
+<h3>How can we expand on our existing 'Help With Savings' Page?</h3>
+{{ gallery ({
+		galleryId: "infoProblemsGallery",
+		images: [
+			"assets/images/case-studies/ESAVE/Help-Me-Save/HelpSavePage.webp"
+		]
+	})}}
+
+<h3 id="user-guide-copy">Copy</h3>
+<div class="article-section">
+    Simplify the copy a bit. What we have here works great as a mission statement for the organisation.
+    We want to tell the user exactly what this page is for and what they can do here.
+</div>
+
+<h3 id="user-guide-cards">Cards</h3>
+{{ gallery ({
+		galleryId: "infoProblemsCards",
+		images: [
+			"assets/images/case-studies/ESAVE/Help-Me-Save/Help-Cards-Og.webp"
+		]
+	})}}
+<div class="article-section">
+    These are good and concise, but very similar to the "how to start saving" section below it.
+    Here would be a good place to tell the user what info they need to track this energy and
+    provide a link to a good internal (or external) calculator/guide for that energy type.
+</div>
+
+<h3 id="user-guide-how">"How to Start Saving"</h3>
+{{ gallery ({
+		galleryId: "infoProblemsHow",
+		images: [
+			"assets/images/case-studies/ESAVE/Help-Me-Save/HowToStart.webp"
+		]
+	})}}
+<div class="article-section">
+    Very similar to above.
+    I noticed that users had a lot of questions when they were trying out the app.
+    It may be useful to convert this area into more of an FAQ section, since we don't already have one.
+</div>
+
+<h3 id="user-guide-simple">Keep It Simple</h3>
+<div class="article-section">
+    New users will have a lot of questions, especially if they are a bit new to being eco friendly in general.
+    Simple language and easy-to-find guides will really allow this page to shine.
+</div>
+
+<h2 id="copy">Copy</h2>
+<h3>A Suggested Simplification</h3>
+<h4 id="copy-title">Title Change</h4>
+<div class="article-section">
+    A more direct Call To Action. Phrased how a user might request this aloud. Shorter.
+    Invites Extension:
+    <ul>
+        <li>"Help Me Save" ... The Planet</li>
+        <li>"Help Me Save" ... Some Money</li>
+    </ul>
+</div>
+{{ gallery ({
+		galleryId: "copyGallery",
+		images: [
+			"assets/images/case-studies/ESAVE/Help-Me-Save/Copy.webp"
+		]
+	})}}
+
+<h4 id="copy-Resources">Resources Money</h4>
+<div class="article-section">
+    "Resources" may be better understood by those who are more on board with eco-friendliness.
+    However, the app does encourage money-saving, which is a good angle for bringing in those who feel that being eco-friendly is out of their budget.
+    Additionally, people are more likely to look up money-saving terms on search engines.
+</div>
+
+<h4 id="copy-live">"Live more sustainably, for less"</h4>
+<div class="article-section">
+    <ul>
+        <li>"More for less" - common phrase - should help your concept stick in people's heads.</li>
+        <li>"Save...Save..." - repetition, see above.</li>
+    </ul>
+</div>
+
+<h4 id="copy-explainer">Explainer</h4>
+<div class="article-section">
+    "Here, you can track and optimise ... " - Tells the user what this page is for upfront.
+</div>
+
+<h2 id="cards-section">Cards</h2>
+<h3>Conversion to Calculation</h3>
+{{ gallery ({
+		galleryId: "cardsGallery",
+		images: [
+			"assets/images/case-studies/ESAVE/Help-Me-Save/HelpSaveBanner.webp"
+		]
+	})}}
+<h4>New Illustrations</h4>
+<div class="article-section">
+    Following the style from the previous "Saving Cards" TODO:TURN THIS INTO A LINK presentation.
+</div>
+<h4>Directions</h4>
+<div class="article-section">
+    During research, users were surprised by the household energy rating question, as they didn't have it memorised. 
+    Telling the user what they require upfront will prepare them for whatever's next.
+</div>
+{{ stickyNotes ({
+			notes: [
+            "I don't know my energy efficiency, so I'm just gonna make it up"
+        ]
+    })
+}}
+<h3 id="card-calculators">Calculators, Surveys, Quizzes</h3>
+<div class="article-section">
+    These could be done internally, or we could send the user to an external calculation resource or guide and have them type in the values they get.
+</div>
+<h4 id="card-calc-int">Internal Calculators</h4>
+<div class="section-row">
+    <div class="row-column">
+        <h4>Pros</h4>
+        <div class="article-section">
+            <ul>
+                <li>User never leaves the site</li>
+                <li>Customisable questions</li>
+                <li>Can use data from survey questions from elsewhere within the app</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row-column">
+        <h4>Cons</h4>
+        <div class="article-section">
+            <ul>
+                <li>Costly for development time</li>
+                <li>Would take a while to test and implement correctly</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<h4 id="card-calc-ext">External Calculators</h4>
+<div class="section-row">
+    <div class="row-column">
+        <h4>Pros</h4>
+        <div class="article-section">
+            <ul>
+                <li>Much less development time</li>
+                <li>Established and reliable methods of measurement</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row-column">
+        <h4>Cons</h4>
+        <div class="article-section">
+            <ul>
+                <li>User has to leave the site</li>
+                <li>We lose out on some helpful data</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h2 id="Calculators and Questions"></h2>
+
