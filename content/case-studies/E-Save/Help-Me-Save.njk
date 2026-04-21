@@ -15,6 +15,7 @@ const bannerImg = "assets/images/case-studies/ESAVE/Help-Me-Save/HelpSaveBanner.
 {%- from 'stickyNotes.njk' import stickyNotes-%}
 {%- from 'imageGallery.njk' import gallery %}
 {%- from 'alpineCarousel.njk' import alpineCarousel %}
+{%- from 'imageCards.njk' import imageCards %}
 
 <img class="banner-image" src="{{bannerImg | toAbsoluteUrl}}">
 
@@ -266,5 +267,96 @@ const bannerImg = "assets/images/case-studies/ESAVE/Help-Me-Save/HelpSaveBanner.
     </div>
 </div>
 
-<h2 id="Calculators and Questions"></h2>
+<h2 id="Calculators and Questions">Calculators and Questionnaires</h2>
+<h3>External Examples</h3>
+{{
+    imageCards({
+        cards: [
+            {
+                img: {
+                    src: "assets/images/case-studies/ESAVE/Help-Me-Save/icons/heating.webp" ,
+                    alt: "sun and flame icon"
+                },
+                titleText: "Heating",
+                subtitle: "Sust-It",
+                text: "Site with a number of different calculators for a variety of heating types - electric, storage, immersion and more",
+                link: "https://www.sust-it.net/storage-heater-energy-calculator.php"
+            },
+            {
+                img: {
+                    src: "assets/images/case-studies/ESAVE/Help-Me-Save/icons/water.webp" ,
+                    alt: "tap and water cup icon"
+                },
+                titleText: "Water",
+                subtitle: "Water Footprint Calculator",
+                text: "Framed as a calculator, but is actually (mostly,) a simple, multiple choice quiz.",
+                link: "https://watercalculator.org/wfc2"
+            },
+            {
+                img: {
+                    src: "assets/images/case-studies/ESAVE/Help-Me-Save/icons/waste.webp" ,
+                    alt: "waste bin and recycling symbol icon"
+                },
+                titleText: "Household Waste",
+                subtitle: "Bristol Waste Company - Waste Nothing Challenge",
+                text: "It was difficult to find a good guide for measuring household waste. This one from Bristol Waste is simple and nicely illustrated, but requires hanging scale equipment.",
+                link: "https://bristolwastecompany.co.uk/wp-content/uploads/2020/08/WNC_weighing_guide.pdf"
+            },
+            {
+                img: {
+                    src: "assets/images/case-studies/ESAVE/Help-Me-Save/icons/co2.webp" ,
+                    alt: "car and exhaust icon"
+                },
+                titleText: "CO₂",
+                subtitle: "WWF Footprint Calculator",
+                text: "Another simple quiz format. Also includes fun facts about carbon usage.",
+                link: "https://footprint.wwf.org.uk/questionnaire"
+            }
+        ]
+    })
+}}
+
+<h2 id="faq-direct">FAQ</h2>
+<h3>Direct Help - affected by the end-user</h3>
+<h3 id="faq-direct-closed">Closed Question</h3>
+{{ gallery ({
+		galleryId: "faqClosedGallery",
+		images: [
+			"assets/images/case-studies/ESAVE/Help-Me-Save/FAQ/ClosedFAQ.webp"
+		]
+	})}}
+<h4>Plus Icon</h4>
+<div class="article-section">
+    Implies expansion on click.
+</div>
+<h4>Progressive Disclosure</h4>
+<div class="article-section">
+    To not overwhelm the user with information, we hide the answer until the question is clicked.
+</div>
+
+<h3 id="faq-direct-open">Open Question</h3>
+{{ gallery ({
+		galleryId: "faqOpenGallery",
+		images: [
+			"assets/images/case-studies/ESAVE/Help-Me-Save/FAQ/OpenFAQ.webp"
+		]
+	})}}
+<h4>Open and Close</h4>
+<div class="article-section">
+    User can close question manually by re-clicking it, or question will close automatically when another question is opened.
+</div>
+<h4>Lead the User</h4>
+<div class="article-section">
+    Including relevant links (e.g. View Heating Savings) is a good way to lead the user to parts of the webapp that they may not have discovered themselves yet.
+</div>
+<h4>Help the User, Help SEO</h4>
+<div class="article-section">
+    By incorporating good keywords into the FAQ answers, and answering questions that are typically searched for, EcoSave’s SEO ranking may improve
+</div>
+
+<h2 id="internal-links">Internal Links</h2>
+<h3>Take the user where they need to go</h3>
+<div class="article-section">
+    Ending each major section of the page with relevant copy and a link to another area of the app may improve the amount of time users spend on the site.
+</div>
 
