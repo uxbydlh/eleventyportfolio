@@ -3,13 +3,11 @@
 <ul class="card-list">
     {% for card in params.cards %}
     <li class="card">
-        <img src="{{card.img.src | toAbsoluteUrl }}" alt={{card.img.alt}}">
         <h4>{{card.titleText}}</h4>
         <h5>{{card.subtitle}}</h5>
-        <p>{{card.text}}</p>
-        <a class="btn secondary" href="{{card.link}}" target="_blank" rel="noopener noreferrer">
-            Visit <i class="ri-arrow-drop-right-fill"></i>
-        </a>
+        <ul>
+            {%%}
+        </ul>
     </li>
     {% endfor %}
 </ul>
