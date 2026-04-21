@@ -359,4 +359,32 @@ const bannerImg = "assets/images/case-studies/ESAVE/Help-Me-Save/HelpSaveBanner.
 <div class="article-section">
     Ending each major section of the page with relevant copy and a link to another area of the app may improve the amount of time users spend on the site.
 </div>
+{{ alpineCarousel({ carouselId: "internalCarousel",
+					images: [
+						{src:"assets/images/case-studies/ESAVE/Help-Me-Save/InternalLinks/GotoEcoSave.webp",
+						caption: "Takes the user to the EcoSave dashboard or to the Login/Signup screen"},
+                        {src:"assets/images/case-studies/ESAVE/Help-Me-Save/InternalLinks/ContactUs.webp",
+						caption: "Takes the user to the Contact Us page"}
+					]
+				}) 
+	}} 
+
+<h2 id="desktop-example">Desktop Example Page</h2>
+{{ alpineCarousel({ carouselId: "desktopcompleteCarousel",
+					images: [
+						{src:"assets/images/case-studies/ESAVE/Help-Me-Save/Examples/desktop.webp"}
+						],
+						orientation: "slides-vert"
+				}) 
+	}}
+
+<h2 id="mobile-example">Mobile Example Page</h2>
+{{ alpineCarousel({ carouselId: "mobilecompleteCarousel",
+					images: [
+						{src:"assets/images/case-studies/ESAVE/Help-Me-Save/Examples/mobile.webp"}
+						],
+						orientation: "slides-vert",
+                        slideType: "slides-mobile-screens"
+				}) 
+	}}
 

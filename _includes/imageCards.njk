@@ -1,8 +1,8 @@
 {%-macro imageCards(params)-%}
 
-<div class="cards-list">
+<ul class="card-list">
     {% for card in params.cards %}
-    <div class="card">
+    <li class="card">
         <img src="{{card.img.src | toAbsoluteUrl }}" alt={{card.img.alt}}">
         <h4>{{card.titleText}}</h4>
         <h5>{{card.subtitle}}</h5>
@@ -10,8 +10,8 @@
         <a class="btn secondary" href="{{card.link}}" target="_blank" rel="noopener noreferrer">
             Visit <i class="ri-arrow-drop-right-fill"></i>
         </a>
-    </div>
+    </li>
     {% endfor %}
-</div>
+</ul>
 
 {%- endmacro -%}
