@@ -640,7 +640,7 @@ TODO: MAKE THIS SECTION POSSIBLE VIA THE IMAGECARDS INCLUDE
     imageCards({
         cards: [
             {
-                titleText: "What is a low-commitment action?",
+                subtitle: "What is a low-commitment action?",
                 listItems: [
                     "An action that requires minimal effort, cost or lifestyle change",
                     "An action that could be performed regularly",
@@ -649,14 +649,14 @@ TODO: MAKE THIS SECTION POSSIBLE VIA THE IMAGECARDS INCLUDE
                 ]
             },
             {
-                titleText: "What changes?",
+                subtitle: "What changes?",
                 listItems: [
                     "Smaller amounts of monetary and CO₂ savings",
                     'Users have the option to "tick off" this action without going through all screens or multiple steps.'
                 ]
             },
             {
-                titleText: 'What are the benefits?',
+                subtitle: 'What are the benefits?',
                 listItems: [
                     "Users return to the app on a more regular basis",
                     'Users are encouraged to build daily eco habits',
@@ -688,45 +688,66 @@ TODO: MAKE THIS SECTION POSSIBLE VIA THE IMAGECARDS INCLUDE
 
 <h3 id="rethink-high-savings">Rethink: My Savings</h3>
 <h4>A look at "high-commitment" actions</h4>
-<div class="section-row">
-    <div class="row-column">
-        TODO: ADD IMAGE 
-    </div>
-    <div class="row-column">
-        <div class="article-section">
-            <h5>What is a high commitment action?</h5>
-            <ul>
-                <li>An action that requires a high amount of effort, costs, or lifestyle changes</li>
-                <li>An action that is likely only to be performed once or twice in total by the user</li>
-                <li>An action with multiple steps and stages that takes more than a single day to perform.</li>
-            </ul>
-        </div>
-        <div class="article-section">
-            <h5>What changes?</h5>
-            <ul>
-                <li>“High-commitment” actions are split into multiple stages, rather than being monolithic.</li>
-                <li>Users can “tick off” action stages right from the dashboard</li>
-                <li>Reward points may be offered for action stages if desired, but financial and CO₂ savings cannot be recorded until entire action is complete.</li>
-            </ul>
-        </div>
-        <div class="article-section">
-            <h5>What are the benefits?</h5>
-            <ul>
-                <li>Checkbox stages display below daily actions, so they serve as a daily reminder of what needs to be done next.</li>
-                <li>Task is broken down into smaller stages, making it feel more manageable for the user.</li>
-                <li>We rely less on user memory and the honour system for these tasks and are more able to track them.</li>
-            </ul>
-        </div>
-    </div>
-</div>
+        {{ gallery ({
+		galleryId: "nuHighComGal",
+		images: [
+			"assets/images/case-studies/ESAVE/Dashboard/Full-Scale/high-com-action.webp"
+		]
+	    })}}
+
+                {{
+                    imageCards({
+                        cards: [
+                            {
+                                subtitle: "What is a high commitment action?",
+                                listItems: [
+                                    "An action that requires a high amount of effort, costs, or lifestyle changes",
+                                    "An action that is likely only to be performed once or twice in total by the user",
+                                    "An action with multiple steps and stages that takes more than a single day to perform."
+
+                                ]
+                            },
+                            {
+                                subtitle: "What changes?",
+                                listItems: [
+                                    "“High-commitment” actions are split into multiple stages, rather than being monolithic",
+                                    'Users can “tick off” action stages right from the dashboard',
+                                    "Reward points may be offered for action stages if desired, but financial and CO₂ savings cannot be recorded until entire action is complete"
+                                ]
+                            },
+                            {
+                                subtitle: 'What are the benefits?',
+                                listItems: [
+                                    "Checkbox stages display below daily actions, so they serve as a daily reminder of what needs to be done next",
+                                    'Task is broken down into smaller stages, making it feel more manageable for the user',
+                                    "Users see the benefits building in real time",
+                                    "We rely less on user memory and the honour system for these tasks and are more able to track them."
+                                ]
+                            }
+                        ]
+                    })
+                }}
+
 
 <h4 id="og-save-flow">Original User Flow</h4>
-<h4>Performing a "high-commitment" action</h4>
-TODO: ADD IMAGE 
+<h5>Performing a "high-commitment" action</h5>
+{{ gallery ({
+		galleryId: "ogHiComFloGal",
+		images: [
+			"assets/images/case-studies/ESAVE/Dashboard/Full-Scale/og-high-com-flo.webp"
+		]
+	})
+}}
 
 <h4 id="new-save-flow">Proposed New User Flow</h4>
-<h4>Performing a "high-commitment" action</h4>
-TODO: ADD IMAGE
+<h5>Performing a "high-commitment" action</h5>
+{{ gallery ({
+		galleryId: "nuHiComFloGal",
+		images: [
+			"assets/images/case-studies/ESAVE/Dashboard/Full-Scale/nu-high-com-flo.webp"
+		]
+	})
+}}
 
 <h2 id="put-it-all-together">Putting it all together</h2>
 <h3>Combining all feature suggestions into a single dashboard</h3>
@@ -734,4 +755,11 @@ TODO: ADD IMAGE
 <h3 id="reworked-dash-sketch">Reworked Dashboard Sketch</h3>
 <h4>All proposed changes implemented</h4>
 
-TODO: Add Image
+{{ alpineCarousel({ carouselId: "reworkCarousel",
+					images: [
+						{src:"assets/images/case-studies/ESAVE/Dashboard/ReworkedDashSketch.webp",
+						caption: "Click to view full sketch"}
+					],
+                    orientation: "slides-vert"
+				}) 
+	}} 
