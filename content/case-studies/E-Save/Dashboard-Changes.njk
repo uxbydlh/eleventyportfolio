@@ -102,151 +102,153 @@ const bannerImg = "assets/images/case-studies/ESAVE/Help-Me-Save/HelpSaveBanner.
 </div>
 
 <h3 id="homepage-breakdown">Homepage Breakdown</h3>
-{{ alpineCarousel({ carouselId: "desktopcompleteCarousel",
-					images: [
-						{src:"assets/images/case-studies/ESAVE/Help-Me-Save/Examples/desktop.webp"}
-						],
-						orientation: "slides-vert"
-				}) 
-	}}
 
-{{ gallery ({
-		galleryId: "cardsGallery",
+<hr>
+<div class="section-row">
+    <div class="row-column">
+        {{ gallery ({
+		galleryId: "welcomeGallery",
 		images: [
-			"assets/images/case-studies/ESAVE/Help-Me-Save/HelpSaveBanner.webp"
+			"assets/images/case-studies/ESAVE/Dashboard/Homepage-Breakdown/welcome.webp"
 		]
-	})}}
-
-<div class="article-section">
-    <h5>"Start Saving"</h5>
-    <ul>
-        <li>Double of "Start Savings" from the dashboard</li>
-        <li>Very similar to "My Savings" from the dashboard</li>
-    </ul>
-</div>
-
-{{ gallery ({
-		galleryId: "cardsGallery",
+	    })}}
+        <div class="article-section">
+            <h5>"Start Saving"</h5>
+            <ul>
+                <li>Double of "Start Savings" from the dashboard</li>
+                <li>Very similar to "My Savings" from the dashboard</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row-column">
+        {{ gallery ({
+		galleryId: "pitchGallery",
 		images: [
-			"assets/images/case-studies/ESAVE/Help-Me-Save/HelpSaveBanner.webp"
+			"assets/images/case-studies/ESAVE/Dashboard/Homepage-Breakdown/pitch.webp"
 		]
-	})}}
-
-<div class="article-section">
-    <h5>E-SAVE Pitch</h5>
-    <ul>
-        <li>Good, but large image places it below the fold</li>
-        <li>Tells logged-in users to sign up</li>
-        <li>Doesn't include hyperlinks or a button to take potential users to the sign up page</li>
-    </ul>
+	    })}}
+        <div class="article-section">
+            <h5>E-SAVE Pitch</h5>
+            <ul>
+                <li>Good, but large image places it below the fold</li>
+                <li>Tells logged-in users to sign up</li>
+                <li>Doesn't include hyperlinks or a button to take potential users to the sign up page</li>
+            </ul>
+        </div>
+    </div>
 </div>
-
-{{ gallery ({
-		galleryId: "cardsGallery",
+<hr>
+<div class="section-row">
+    <div class="row-column">
+        {{ gallery ({
+		galleryId: "energySaveGallery",
 		images: [
-			"assets/images/case-studies/ESAVE/Help-Me-Save/HelpSaveBanner.webp"
+			"assets/images/case-studies/ESAVE/Dashboard/Homepage-Breakdown/energy-savings.webp"
 		]
-	})}}
-
-<div class="article-section">
-    <h5>"Did You Know?"</h5>
-    <ul>
-        <li>Like a lengthened version of Quick Energy Tips</li>
-        <li>May better serve in its own section, with a prompt for the user</li>
-    </ul>
-</div>
-
-<div class="article-section">
-    <h5>"Quick Energy Tips"</h5>
-    <ul>
-        <li>Feel most appropriate for new users and beginners</li>
-    </ul>
-</div>
-
-<div class="article-section">
-    <h5>Weekly Challenge</h5>
-    <ul>
-        <li>Would best serve logged-in users</li>
-        <li>Currently non-functional</li>
-        <li>No CTA - users should be able to log their challenges</li>
-    </ul>
+	    })}}
+    </div>
+    <div class="row-column">
+        <div class="article-section">
+            <h5>"Did You Know?"</h5>
+            <ul>
+                <li>Like a lengthened version of Quick Energy Tips</li>
+                <li>May better serve in its own section, with a prompt for the user</li>
+            </ul>
+        </div>
+        <div class="article-section">
+            <h5>"Quick Energy Tips"</h5>
+            <ul>
+                <li>Feel most appropriate for new users and beginners</li>
+            </ul>
+        </div>
+        <div class="article-section">
+            <h5>Weekly Challenge</h5>
+            <ul>
+                <li>Would best serve logged-in users</li>
+                <li>Currently non-functional</li>
+                <li>No CTA - users should be able to log their challenges</li>
+            </ul>
+        </div>
+    </div>
 </div>
 
 <h3 id="dash-breakdown">Dashboard Breakdown</h3>
-{{ alpineCarousel({ carouselId: "desktopcompleteCarousel",
+{{ alpineCarousel({ carouselId: "dashBreakdownlCarousel",
 					images: [
-						{src:"assets/images/case-studies/ESAVE/Help-Me-Save/Examples/desktop.webp"}
-						],
-						orientation: "slides-vert"
+						{src:"assets/images/case-studies/ESAVE/Dashboard/Homepage-Breakdown/og-homepage.webp"},
+                        {src:"assets/images/case-studies/ESAVE/Dashboard/Homepage-Breakdown/captioned-homepage.webp"}
+					]
 				}) 
+	}} 
+
+{{
+    imageCards({
+        cards: [
+            {
+                titleText: '"Start Savings"',
+                listItems: [
+                    "Lacks Context",
+                    'Placed higher in hierarchy than "My Savings", which may receive more daily use'
+                ]
+            },
+            {
+                titleText: "My Savings",
+                listItems: [
+                    "Sends the user elsewhere, but doesn't actually tell them anything.",
+                    "If savings don't need to be logged daily, perhaps they don't belong on the dashboard."
+                ]
+            },
+            {
+                titleText: "Total Savings",
+                listItems: [
+                    "Placed top and central - the most important section with information that the user should see on every login"
+                ]
+            },
+            {
+                titleText: "Log-in Greeting",
+                listItems: [
+                    "Displays at the bottom of the page, below another welcome message.",
+                    "Should be cut, or attached to the original welcome message to prevent clutter."
+                ]
+            },
+            {
+                titleText: '"Your Challenge"',
+                listItems: [
+                    "Different from the challenge on the homepage.",
+                    "Offers no prompts or suggestions on how to complete."
+                ]
+            },
+            {
+                titleText: '"Your Reward Points"',
+                listItems: [
+                    "The purpose of a dashboard is to present information to the user.",
+                    "By hiding the number of reward points in a different section, or behind a click, we take away from that purpose."
+                ]
+            }
+        ]
+    })
 }}
-
-TODO: IMAGE HERE
-
-<div class="article-section">
-    <h5>"Start Savings"</h5>
-    <ul>
-        <li>Lacks Context</li>
-        <li>Placed higher in hierarchy than "My Savings", which may receive more daily use</li>
-    </ul>
-</div>
-
-TODO: IMAGE HERE
-
-<div class="article-section">
-    <h5>My Savings</h5>
-    <ul>
-        <li>Sends the user elsewhere, but doesn't actually tell them anything.</li>
-        <li>If savings don't need to be logged daily, perhaps they don't belong on the dashboard.</li>
-    </ul>
-</div>
-
-TODO: IMAGE HERE
-
-<div class="article-section">
-    <h5>Total Savings</h5>
-    <ul>
-        <li>Placed top and central - the most important section with information that the user should see on every login</li>
-    </ul>
-</div>
-
-<div class="article-section">
-    <h5>Log-in Greeting</h5>
-    <ul>
-        <li>Displays at the bottom of the page, below another welcome message.</li>
-        <li>Should be cut, or attached to the original welcome message to prevent clutter.</li>
-    </ul>
-</div>
-
-TODO: IMAGE HERE
-
-<div class="article-section">
-    <h5>"Your Challenge"</h5>
-    <ul>
-        <li>Different from the challenge on the homepage.</li>
-        <li>Offers no prompts or suggestions on how to complete.</li>
-    </ul>
-</div>
-
-TODO: IMAGE HERE
-
-<div class="article-section">
-    <h5>"Your Reward Points"</h5>
-    <ul>
-        <li>The purpose of a dashboard is to present information to the user.</li>
-        <li>By hiding the number of reward points in a different section, or behind a click, we take away from that purpose.</li>
-    </ul>
-</div>
 
 <h3 id="reworked-mvp-home">Reworked Homepage</h3>
 <h4>(MVP Sketch)</h4>
+{{ gallery ({
+		galleryId: "mvpHomeGallery",
+		images: [
+			"assets/images/case-studies/ESAVE/Dashboard/Homepage-Breakdown/MVPReworkedHomepage.webp"
+		]
+	})}}
 
-TODO: IMAGE HERE 
 
 <h3 id="reworked-mvp-dash">Reworked Dashboard</h3>
 <h4>(MVP Sketch)</h4>
+{{ gallery ({
+		galleryId: "mvpDashGallery",
+		images: [
+			"assets/images/case-studies/ESAVE/Dashboard/Dash-Breakdown/MVPREworkedDash.webp"
+		]
+	})}}
 
-TODO: IMAGE HERE
+
 
 <h2 id="dash-rethink">Rethinking The Dashboard</h2>
 <h3>Encouraging passively sustainable users to become eco-frontrunners</h3>
@@ -254,7 +256,7 @@ TODO: IMAGE HERE
 <h3 id="sus-personas">Sustainability Personas</h3>
 <h4>Adapted from KerryDigest - The Four Personas of Sustainability-minded Consumers</h4>
 <div class="article-section">
-    <ul class="card-list">
+    <ul class="card-list testimonials">
         <li class="card">
             <h4>Inactive</h4>
             <ul>
@@ -317,9 +319,12 @@ TODO: IMAGE HERE
         </li>
     </ul>
 </div>
-<a class="btn secondary" href="https://www.kerry.com/insights/kerrydigest/2021/sustainability-persona" target="_blank" rel="noopener noreferrer">
+<div class="btn row">
+    <a class="btn secondary" href="https://www.kerry.com/insights/kerrydigest/2021/sustainability-persona" target="_blank" rel="noopener noreferrer">
             Visit <i class="ri-arrow-drop-right-fill"></i>
-</a>
+    </a>
+</div>
+
 
 <h3 id="how-do-fit">How do they fit?</h3>
 <h4>Where do these sustainability personas align with research for E-SAVE?</h4>
@@ -381,39 +386,39 @@ TODO: IMAGE HERE
 
 <h3 id="meeting-expectations">Meeting Expectations</h3>
 <h4>What might users want from a dashboard?</h4>
-<ul class="card-list">
+<ul class="card-list testimonials">
     <li class="card">
         <h5>Inactive</h5>
         <p>Beginner: Maybe doing some recycling, but more focussed on other priorities.</p>
+        <img src="{{ 'assets/images/case-studies/ESAVE/Dashboard/Meeting-Expectations/didyoukno.webp' | toAbsoluteUrl}}">
         <ul>
             <li>Information/Tips on how sustainability affects the world around them, and how it relates to their carbon saved.</li>
         </ul>
-        TODO: ADD IMAGE
     </li>
     <li class="card">
         <h5>Passive</h5>
         <p>Developing eco-awareness: Starting to incorporate eco-friendly practices and learning more about sustainable living.</p>
+        <img src="{{ 'assets/images/case-studies/ESAVE/Dashboard/Meeting-Expectations/mysavings.webp' | toAbsoluteUrl}}">
         <ul>
             <li>Easy, daily, eco-friendly actions that can be tracked instantly (think daily recycling, making a journey on foot or by bus instead of using the car).</li>
         </ul>
-        TODO: ADD IMAGE
     </li>
     <li class="card">
         <h5>Follower</h5>
         <p>Moderately eco-minded: Make conscious efforts to reduce environmental impact in daily routines.</p>
+        <img src="{{ 'assets/images/case-studies/ESAVE/Dashboard/Meeting-Expectations/yourchallenge.webp' | toAbsoluteUrl}}">
         <ul>
             <li>Challenges and suggestions that will take them from Follower to Frontrunner</li>
         </ul>
-        TODO: ADD IMAGE
     </li>
     <li class="card">
         <h5>Frontrunner</h5>
         <p>Very eco-minded: Actively seek out sustainable options in all aspects of life.</p>
+        <img src="{{ 'assets/images/case-studies/ESAVE/Dashboard/Meeting-Expectations/referafriend.webp' | toAbsoluteUrl}}">
         <ul>
             <li>Pushes towards some of the bigger impact options (changing home insulation, etc.)</li>
             <li>Encouragement to spread the word to others</li>
         </ul>
-        TODO: ADD IMAGE
     </li>
 </ul>
 <div class="article-section">
@@ -428,7 +433,7 @@ TODO: IMAGE HERE
     Ideally, we want to encourage all of them to move towards the Frontrunner persona.
 </div>
 <div class="section-row">
-    <div class="article-container row-column">
+    <div class="row-column article-section ">
         <h5>Our Current Approach</h5>
         <ul>
             <li>The Saving actions we currently show the user are presented as yearly savings
@@ -449,7 +454,7 @@ TODO: IMAGE HERE
             </li>
         </ul>
     </div>
-    <div class="article-container row-column">
+    <div class="row-column article-section ">
         <h5>An Approach that may reach this goal</h5>
         <ul>
             <li>Providing the user with multiple weekly - or even daily - saving actions.</li>
@@ -468,8 +473,8 @@ TODO: MAKE THIS SECTION POSSIBLE VIA THE IMAGECARDS INCLUDE
         cards: [
             {
                 img: {
-                    src: "TODO" ,
-                    alt: "TODO"
+                    src: "assets/images/case-studies/ESAVE/Dashboard/PassiveToFront/calendar.webp" ,
+                    alt: "calendar icon"
                 },
                 titleText: "Weekly/Daily Saving Actions",
                 listItems: [
@@ -480,8 +485,8 @@ TODO: MAKE THIS SECTION POSSIBLE VIA THE IMAGECARDS INCLUDE
             },
             {
                 img: {
-                    src: "TODO" ,
-                    alt: "TODO"
+                    src: "assets/images/case-studies/ESAVE/Dashboard/PassiveToFront/target.webp" ,
+                    alt: "target icon"
                 },
                 titleText: "Challenges & Goals",
                 listItems: [
@@ -493,8 +498,8 @@ TODO: MAKE THIS SECTION POSSIBLE VIA THE IMAGECARDS INCLUDE
             },
             {
                 img: {
-                    src: "TODO" ,
-                    alt: "TODO"
+                    src: "assets/images/case-studies/ESAVE/Dashboard/PassiveToFront/medal.webp" ,
+                    alt: "medal icon"
                 },
                 titleText: "Rewarding small wins",
                 listItems: [
@@ -504,8 +509,8 @@ TODO: MAKE THIS SECTION POSSIBLE VIA THE IMAGECARDS INCLUDE
             },
             {
                 img: {
-                    src: "TODO" ,
-                    alt: "TODO"
+                    src: "assets/images/case-studies/ESAVE/Dashboard/PassiveToFront/speech.webp" ,
+                    alt: "speech bubble icon"
                 },
                 titleText: "Suggested Actions",
                 listItems: [
@@ -513,7 +518,8 @@ TODO: MAKE THIS SECTION POSSIBLE VIA THE IMAGECARDS INCLUDE
                     "Experienced users won't stagnate in their eco habits - encouraged to try something new"
                 ]
             }
-        ]
+        ],
+        width: "testimonials"
     })
 }}
 
@@ -522,28 +528,47 @@ TODO: MAKE THIS SECTION POSSIBLE VIA THE IMAGECARDS INCLUDE
 
 <h3 id="rethink-challenges">Rethinking: Challenges</h3>
 <h4>(Presumed new flow implemented)</h4>
-<div class="section-row">
-    <div class="row-column article-section">
-        <h5>Weekly Challenge</h5>
-        Limited time option takes priority, so sits on top.
-    </div>
-    <div class="row-column article-section">
-        <h5>Saves/Reward</h5>
-        Clear labelling so the user knows the environmental and personal benefits at a glance.
-    </div>
-    <div class="row-column article-section">
-        <h5>"Log This Challenge" (Temp Wording)</h5>
-        <ul>
-            <li>Button label and link may be challenge-dependent.</li>
-            <li>In this case, perhaps it takes the user to a short-form where they fill out what devices they unplugged.</li>
-        </ul>
-    </div>
-    <div class="row-column article-section">
-        <h5>Make More Savings</h5>
-        Link could change depending on challenge e.g. Could have a cooking or household waste theme.
-    </div>
-</div>
 
+{{ gallery ({
+	galleryId: "challengesGallery",
+	images: [
+		"assets/images/case-studies/ESAVE/Dashboard/Small-Scale/weeklyChallengeWire.webp"
+	]
+})}}
+{{
+    imageCards({
+        cards: [
+            {
+                titleText: "Weekly Challenge",
+                listItems: [
+                    "Limited time option takes priority, so sits on top."
+                ]
+            },
+            {
+                titleText: "Saves/Reward",
+                listItems: [
+                    "Clear labelling so the user knows the environmental and personal benefits at a glance."
+                ]
+            },
+            {
+                titleText: '"Log This Challenge"',
+                subtitle: "Temp. Wording",
+                listItems: [
+                    "Button label and link may be challenge-dependent.",
+                    "In this case, perhaps it takes the user to a short-form where they fill out what devices they unplugged."
+                ]
+            },
+            {
+                titleText: "Make More Savings",
+                listItems: [
+                    "Link could change depending on challenge e.g. Could have a cooking or household waste theme."
+                ]
+            }
+        ],
+        width: "testimonials"
+    })
+}}
+    
 <h4>Things to think on:</h4>
 <div class="article-section">
     <ul>
@@ -554,5 +579,142 @@ TODO: MAKE THIS SECTION POSSIBLE VIA THE IMAGECARDS INCLUDE
 </div>
 
 <h3 id="rethink-start-savings">Rethinking: Start Savings</h3>
+<h4>Helping users find new actions</h4>
 
 
+<div class="section-row">
+    <div class="row-column">
+        {{ gallery ({
+		galleryId: "newStartSavingsGallery",
+		images: [
+			"assets/images/case-studies/ESAVE/Dashboard/Small-Scale/newStartSaving.webp"
+		]
+	    })}}
+    </div>
+    <div class="row-column">
+        {{
+    imageCards({
+        cards: [
+            {
+                titleText: "As of now",
+                listItems: [
+                    "Users are expected to find all new savings actions by themselves",
+                    "This means looking through potentially all categories and actions to find something they can do"
+                ]
+            },
+            {
+                titleText: "What this feature could be",
+                listItems: [
+                    "User is shown at least one action card they haven't tried before (an action not present in My Savings) on the dashboard",
+                    "Actions shown depend on the user's profile"
+                ]
+            },
+            {
+                titleText: 'What are the benefits?',
+                listItems: [
+                    "Some friction taken away from the user finding new actions to try",
+                    'Allows you to provide a "starting point" for new users',
+                    "Users may be encouraged to try actions and browse categories that they would have been more hesitant to look at"
+                ]
+            }
+        ],
+        width: "full-width"
+    })
+}}
+    </div>
+</div>
+
+<h2 id="full-scale-changes">Full-Scale Changes</h2>
+<h3>Reworking saving actions to build consistent habits in users</h3>
+
+<h3 id="rethink-my-savings">Rethink: My Savings</h3>
+<h4>A Look at our "low-commitment" actions</h4>
+
+TODO: ADD IMAGE
+
+<div class="section-row">
+    <div class="row-column article-section">
+        <h5>What is a low-commitment action?</h5>
+        <ul>
+            <li>An action that requires minimal effort, cost or lifestyle change</li>
+            <li>An action that could be performed regularly</li>
+            <li>An action that can be performed continuously as a habit</li>
+        </ul>
+    </div>
+    <div class="row-column article-section">
+        <h5>What changes?</h5>
+        <ul>
+            <li>Smaller amounts of monetary and CO₂ savings</li>
+            <li>Users have the option to "tick off" this action without going through all screens or multiple steps.</li>
+        </ul>
+    </div>
+</div>
+<div class="article-section">
+        <h5>What are the benefits?</h5>
+        <ul>
+            <li>Users return to the app on a more regular basis</li>
+            <li>Users are encouraged to build daily eco habits</li>
+            <li>Users see the benefits building in real time</li>
+            <li>We rely less on user memory and the honour system for these tasks and are able to track them in more detail</li>
+        </ul>
+</div>
+
+<h4 id="og-action-flow">Original User Flow</h3>
+<h4>Repeating a "low commitment" action</h4>
+
+TODO: ADD IMAGE 
+
+<h4 id="new-action-flow">Proposed New User Flow</h3>
+<h4>Repeating a "low commitment" action</h4>
+
+TODO: ADD IMAGE
+
+<h3 id="rethink-high-savings">Rethink: My Savings</h3>
+<h4>A look at "high-commitment" actions</h4>
+<div class="section-row">
+    <div class="row-column">
+        TODO: ADD IMAGE 
+    </div>
+    <div class="row-column">
+        <div class="article-section">
+            <h5>What is a high commitment action?</h5>
+            <ul>
+                <li>An action that requires a high amount of effort, costs, or lifestyle changes</li>
+                <li>An action that is likely only to be performed once or twice in total by the user</li>
+                <li>An action with multiple steps and stages that takes more than a single day to perform.</li>
+            </ul>
+        </div>
+        <div class="article-section">
+            <h5>What changes?</h5>
+            <ul>
+                <li>“High-commitment” actions are split into multiple stages, rather than being monolithic.</li>
+                <li>Users can “tick off” action stages right from the dashboard</li>
+                <li>Reward points may be offered for action stages if desired, but financial and CO₂ savings cannot be recorded until entire action is complete.</li>
+            </ul>
+        </div>
+        <div class="article-section">
+            <h5>What are the benefits?</h5>
+            <ul>
+                <li>Checkbox stages display below daily actions, so they serve as a daily reminder of what needs to be done next.</li>
+                <li>Task is broken down into smaller stages, making it feel more manageable for the user.</li>
+                <li>We rely less on user memory and the honour system for these tasks and are more able to track them.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<h4 id="og-save-flow">Original User Flow</h4>
+<h4>Performing a "high-commitment" action</h4>
+TODO: ADD IMAGE 
+
+<h4 id="new-save-flow">Proposed New User Flow</h4>
+<h4>Performing a "high-commitment" action</h4>
+TODO: ADD IMAGE
+
+<h2 id="put-it-all-together">Putting it all together</h2>
+<h3>Combining all feature suggestions into a single dashboard</h3>
+
+<h3 id="reworked-dash-sketch">Reworked Dashboard Sketch</h3>
+<h4>All proposed changes implemented</h4>
+
+TODO: Add Image

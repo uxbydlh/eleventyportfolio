@@ -1771,6 +1771,10 @@ article p {
   grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
 }
 
+.card-list.full-width {
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+}
+
 .card {
   display: flex;
   flex-direction: column;

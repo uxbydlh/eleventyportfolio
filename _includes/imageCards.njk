@@ -1,15 +1,30 @@
 {%-macro imageCards(params)-%}
 
-<ul class="card-list">
+<ul class="card-list {{params.width}}">
     {% for card in params.cards %}
     <li class="card">
-        <img src="{{card.img.src | toAbsoluteUrl }}" alt={{card.img.alt}}">
+        {%if card.img %}
+            <img src="{{card.img.src | toAbsoluteUrl }}" alt={{card.img.alt}}">
+        {% endif %}
         <h4>{{card.titleText}}</h4>
-        <h5>{{card.subtitle}}</h5>
-        <p>{{card.text}}</p>
-        <a class="btn secondary" href="{{card.link}}" target="_blank" rel="noopener noreferrer">
-            Visit <i class="ri-arrow-drop-right-fill"></i>
-        </a>
+        {% if card.subtitle %}
+            <h5>{{card.subtitle}}</h5>
+        {% endif %}
+        {%if card.text %}
+            <p>{{card.text}}</p>
+        {%endif%}
+        {% if card.listItems %}
+            <ul>
+                {%for listItem in card.listItems%}
+                <li>{{listItem}}</li>
+                {%endfor%}
+            </ul>
+        {% endif %}
+        {%if card.link %}
+            <a class="btn secondary" href="{{card.link}}" target="_blank" rel="noopener noreferrer">
+                Visit <i class="ri-arrow-drop-right-fill"></i>
+            </a>
+        {% endif %}
     </li>
     {% endfor %}
 </ul>
