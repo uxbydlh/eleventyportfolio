@@ -1574,8 +1574,12 @@ nav.toc ol li a {
   transform: rotate(-90deg);
 }
 
-.contentParent ol li a{
-  padding-left: 2.5em !important;
+.contentParent ol li .toc_nav_link{
+  padding-left: 1.5em !important;
+}
+
+.contentParent ol li a:not(.contentParent ol li .toc_nav_link a) {
+  padding-left: 3em !important;
 }
 
 .toc_nav_link {
