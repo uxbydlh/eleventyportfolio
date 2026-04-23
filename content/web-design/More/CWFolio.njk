@@ -12,12 +12,81 @@ const tags = ["project","web-design"];
 const date = "2024-06-06";
 
 const title = "Writers Folio";
-const subheading = "for Morses Club";
+const subheading = "Prospective creative writing folio for a client who specialised in magazines.";
 const bannerImg = "assets/images/case-studies/writer-folio/writerFolioBanner.webp";
 ---
+{%- from 'inlineTable.njk' import inlineTable %}
+{%- from 'imageGallery.njk' import gallery %}
+{%- from 'alpineCarousel.njk' import alpineCarousel %}
+{%- from 'personas.njk' import personas %}
+{%- from 'filteredTestimonials.njk' import filteredTestimonials %}
+<img class="banner-image" src='{{bannerImg | toAbsoluteUrl}}'>
 
 {#TODO ADD A SMALL WRITE UP HERE ABOUT THIS PROJECT#}
 {#TODO ADD A BANNER #}
 {#TODO ADD A BUTTON THAT ALLOWS YOU TO VISIT #}
 
-Prospective creative writing folio for a client who specialised in magazines.
+<h2 id="disclaimer">Disclaimer</h2>
+<div class="article-section">
+	Client stopped responding upon template completion.
+	Linked site will contain placeholder and anonymised template data.
+</div>
+<div class="btn row">
+	<a class="btn primary"
+				href="https://writer-folio.neocities.org/"
+				target="_blank" rel="noopener noreferrer">View Site Template<i class="ri-arrow-right-s-fill"></i>
+	</a>
+</div>
+
+<h2 id="details">Details</h2>
+<div class="article-section">
+	{{ inlineTable ({
+			table: [
+				{
+					header: "Scope",
+					bodyItems: [
+						"Contract Work",
+						"Creator of design system",
+						"Full-site development from scratch",
+						"Client provided portfolio files"
+					]
+				},
+				{
+					header: "Role",
+					bodyItems: [
+						"Research",
+						"UX & UI design",
+						"Web Development"
+					]
+				},
+				{
+					header: "Tools",
+					bodyItems: [
+						"Figma",
+						"Figjam",
+						"VSCode",
+						"HTML",
+						"CSS",
+						"JS",
+						"Alpine"
+					]
+				}
+			]
+		})
+	}}
+</div>
+
+<h2 id="project-inspo">Project Inspirations</h2>
+{{ gallery({ galleryId: "moodhGal",
+					images: [
+						"assets/images/case-studies/writer-folio/visnovMoodBoard.webp"
+					]
+				})
+	}}
+<div class="article-section">
+	The client's illustrative style was soft and nostalgic.
+	The goal was to highlight this style while retaining a degree of professionalism so that the site could be used in a variety of work applications.
+	The client also had created many narrative-based Twine (TODO: ADD LINK) games and wanted to highlight those.
+	With all this in mind, I looked towards visual novel games for UI inspiration.
+</div>
+
