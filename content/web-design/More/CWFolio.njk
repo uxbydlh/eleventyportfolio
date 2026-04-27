@@ -76,6 +76,32 @@ const bannerImg = "assets/images/case-studies/writer-folio/writerFolioBanner.web
 	}}
 </div>
 
+<h2 id="project-research">Research</h2>
+<h3>Presentation as shown to Client</h3>
+<p class="carousel-caption">Note: presentation has been censored in places in order to protect the identity of the client.</p>
+{{ alpineCarousel({ carouselId: "uxrCarousel",
+					images: [
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/0Title.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/1SiteGoals.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/2Research.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/3IssuesSolutions.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/4Structure.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/5Formatting.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/6Components.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/7Copy.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/8Relevance.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/9Categories.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/10Language.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/11Tone.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/12Aesthetics.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/13YourPotentialSite.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/14Sketch.webp"}
+					],
+					orientation: "slides-horiz"
+				}) 
+	}}
+
+
 <h2 id="project-inspo">Project Inspirations</h2>
 {{ gallery({ galleryId: "moodhGal",
 					images: [
@@ -89,4 +115,56 @@ const bannerImg = "assets/images/case-studies/writer-folio/writerFolioBanner.web
 	The client also had created many narrative-based Twine (TODO: ADD LINK) games and wanted to highlight those.
 	With all this in mind, I looked towards visual novel games for UI inspiration.
 </div>
+
+
+<h2 id="components">Key Components</h2>
+
+<h3 id="components-cards">Highlighted Project Cards</h3>
+{{ gallery({ galleryId: "projCardGal",
+					images: [
+						"assets/images/case-studies/writer-folio/components/cards/highlightCard1.webp",
+						"assets/images/case-studies/writer-folio/components/cards/highlightCard2.webp",
+						"assets/images/case-studies/writer-folio/components/cards/highlightCard3.webp"
+					]
+				})
+	}}
+<div class="article-section">
+	These cards were designed to resemble a typical visual novel dialogue screen. Their unique look helps them to stand out.
+</div>
+
+<h3 id="components-tabs">Sticky Tabs</h3>
+{{ gallery({ galleryId: "tabsGal",
+					images: [
+						"assets/images/case-studies/writer-folio/components/stickyTabs/projectTabs.webp",
+						"assets/images/case-studies/writer-folio/components/stickyTabs/storyTabs.webp"
+					]
+				})
+	}}
+<div class="article-section">
+	In the original CV, different works and their descriptions were listed in blue, graphic depictions of folders.
+	I decided to carry this idea through to the web portfolio, separating projects into their own "folders", with tabs that stuck to the top of the page as the user scrolled.
+	For longer works, like full articles and stories, this meant that the title and key actions such as "go back" remained visible at all times.
+</div>
+
+<h3 id="components-buttons">Icon Buttons</h3>
+<div class="section-row article-section">
+	<div class="row-column">
+		{{ gallery({ galleryId: "btnGal",
+					images: [
+						"assets/images/case-studies/writer-folio/components/buttons.webp"
+					]
+				})
+	}}
+	</div>
+	<div class="row-column">
+		Buttons with large, round icons were added to resemble those from several handheld visual novel games.
+		These allow the user to determine what action will be performed at a glance, whilst balancing the aesthetics between professionalism and fun.
+	</div>
+</div>
+
+<h2 id="screens">Screens</h2>
+
+<h3 id="screens-template">Final Template Site</h3>
+
+
 
