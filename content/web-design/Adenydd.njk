@@ -15,9 +15,11 @@ const title = "Adenydd";
 const subheading = "Website Redesign";
 const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 ---
+{%- from 'filteredTestimonials.njk' import filteredTestimonials%}
 {%- from 'alpineCarousel.njk' import alpineCarousel %}
 {%- from 'imageGallery.njk' import gallery %}
 {%- from 'inlineTable.njk' import inlineTable %}
+{%- from 'imageCards.njk' import imageCards %}
 
 <img class="banner-image" src='{{bannerImg | toAbsoluteUrl}}'>
 <div class="article-section">
@@ -64,9 +66,23 @@ const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 </div>
 
 <h2 id="impact">Impact</h2>
+<h3 id="impact-before">Before</h3>
 <div class="article-section">
-	{#TODO AWAITING RESPONSE - get this information from Dafydd#}
+	Before the redesign, users were having trouble navigating the site overall.
+	People were struggling to sign up for the courses and services that they sorely needed.
+	Adenydd had to use their valuable time answering questions about the site on their social media accounts.
+	They were struggling to get paying participants and fill spaces on their sensory regulation course.
 </div>
+<h3 id="impact-after">After</h3>
+<div class="article-section">
+	Since the redesign has taken place, Adenydd has seen a dramatic decline in the number of people reaching out with website and sign-up related questions.
+	They have also completely sold out their latest Sensory Regulation course.
+</div>
+{{ filteredTestimonials({
+		listOfAll: testimonials,
+		filter: "Adenydd-2"
+}) }}
+
 
 <h2 id="research-u-a">Research - User Archetypes</h2>
 <div class="article-section">
@@ -78,17 +94,28 @@ const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 	Someone who cares deeply about the welfare of children. They may have been helped by, or know someone who was helped by Adenydd or a similar organisation in the past and are now looking to give back.
 </div>
 
-<h3 id="one-off-goals">Goals</h3>
-<div class="article-section">
-	To easily be able to donate and see the value and impact of their donations.
-	May want to help in other ways, such as donating their time
-</div>
+{{
+    imageCards({
+        cards: [
+            {
+                titleText: "Goals",
+                listItems: [
+                    "To easily be able to donate and see the value and impact of their donations.",
+                    "May want to help in other ways, such as donating their time."
+                ]
+            },
+			{
+                titleText: "Barriers",
+                listItems: [
+                    "No specialised areas for different types of donations.",
+                    "No reasons to donate beyond “we rely on your support”. Unclear what the money is being used for - no examples provided."
+                ]
+            }
 
-<h3 id="one-off-barriers">Barriers</h3>
-<div class="article-section">
-	No specialised areas for different types of donations.
-	No reasons to donate beyond “we rely on your support”. Unclear what the money is being used for - no examples provided.
-</div>
+        ],
+        width: "testimonials"
+    })
+}}
 
 <h2 id="one-off-improvements">Improvements for One Off Donors</h2>
 
@@ -160,17 +187,26 @@ const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 	Business owners looking to make a significant charitable donation.
 </div>
 
-<h3 id="big-give-goals">Goals</h3>
-<div class="article-section">
-	Attach their name and donation to an organisation that is visibly making good changes in the world.
-</div>
-
-<h3 id="big-give-barriers">Barriers</h3>
-<div class="article-section">
-	No dedicated page for the Big Give campaign. No other on-site information about the campaign. Adenydd is unable to provide potential funders with a simple link when contacting them.
-	No publicly available examples of where funding from previous campaigns has gone.
-	{#TODO - listification #}
-</div>
+{{
+    imageCards({
+        cards: [
+            {
+                titleText: "Goals",
+                listItems: [
+                    "Attach their name and donation to an organisation that is visibly making good changes in the world."
+                ]
+            },
+			{
+                titleText: "Barriers",
+                listItems: [
+                    "No dedicated page for the Big Give campaign. No other on-site information about the campaign. Adenydd is unable to provide potential funders with a simple link when contacting them.",
+                    "No publicly available examples of where funding from previous campaigns has gone."
+                ]
+            }
+        ],
+        width: "testimonials"
+    })
+}}
 
 <h2 id="big-give-improvements">Improvements for Big Give Funders</h2>
 <div class="article-section">
@@ -210,17 +246,26 @@ const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 	Teachers and practitioners working with children who have additional needs on a regular basis.
 </div>
 
-<h3 id="childcare-prof-goals">Goals</h3>
-<div class="article-section">
-	Expand their professional development and learn how to better accommodate the children they work with.
-</div>
-
-<h3 id="childcare-prof-barriers">Barriers</h3>
-<div class="article-section">
-	Course pages exist, but information is either unclear, unavailable or locked to an external file.
-	Basic things like pricing, dates and course content are not immediately visible.
-	{#TODO - listification#}
-</div>
+{{
+    imageCards({
+        cards: [
+            {
+                titleText: "Goals",
+                listItems: [
+                    "Expand their professional development and learn how to better accommodate the children they work with."
+                ]
+            },
+			{
+                titleText: "Barriers",
+                listItems: [
+                    "Course pages exist, but information is either unclear, unavailable or locked to an external file.",
+                    "Basic things like pricing, dates and course content are not immediately visible."
+                ]
+            }
+        ],
+        width: "testimonials"
+    })
+}}
 
 <h2 id="childcare-prof-improvements">Improvements for Childcare Professionals</h2>
 <div class="article-section">
@@ -260,19 +305,27 @@ const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 	Guardians and carers of children living with trauma, additional needs and adverse childhood experiences.
 </div>
 
-<h3 id="parents-goals">Goals</h3>
-<div class="article-section">
-	Find out what currently-running projects that they and their children can access from Adenydd.
-	Access free resources that they can utilise to help themselves and their children at home.
-	{#TODO - listification#}
-</div>
-
-<h3 id="parents-barriers">Barriers</h3>
-<div class="article-section">
-	Family-focussed services are currently mixed in with projects, and some of them are not labelled clearly.
-	Project pages that are currently running lack dates, times, relevant information and photographs.
-	{#TODO - listification #}
-</div>
+{{
+    imageCards({
+        cards: [
+            {
+                titleText: "Goals",
+                listItems: [
+                    "Find out what currently-running projects that they and their children can access from Adenydd.",
+                    "Access free resources that they can utilise to help themselves and their children at home."
+                ]
+            },
+			{
+                titleText: "Barriers",
+                listItems: [
+                    "Family-focussed services are currently mixed in with projects, and some of them are not labelled clearly.",
+                    "Project pages that are currently running lack dates, times, relevant information and photographs."
+                ]
+            }
+        ],
+        width: "testimonials"
+    })
+}}
 
 <h2 id="parents-improvements">Improvements for Parents, Informal Carers and Guardians</h2>
 <div class="article-section">
@@ -320,9 +373,10 @@ const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 
 <h3 id="readability-issues">Readability Issues</h3>
 <div class="article-section">
-	{#TODO - listification #}
-	Dark text on dark backgrounds with poor contrast present across the site.
-	Walls of text prevalent over the whole site, but particularly within project descriptions and case studies.
+	<ul>
+		<li>Dark text on dark backgrounds with poor contrast present across the site.</li>
+		<li>Walls of text prevalent over the whole site, but particularly within project descriptions and case studies.</li>
+	</ul>
 </div>
 
 <h3 id="improving-readability">Improving Readability Issues</h3>
@@ -333,9 +387,10 @@ const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 
 <h3 id="unclear-brand">Unclear Brand Image</h3>
 <div class="article-section">
-	{#TODO - listification#}
-	Not many image assets used and those that are used are mostly generic stock images
-	No consistent colour or type scheme across the website
+	<ul>
+		<li>Not many image assets used and those that are used are mostly generic stock images</li>
+		<li>No consistent colour or type scheme across the website</li>
+	</ul>
 </div>
 
 <h3 id="improving-brand">Improving Brand Image</h3>
@@ -367,10 +422,11 @@ const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 
 <h3 id="nav-issues">Navigation Issues</h3>
 <div class="article-section">
-	{#TODO listification#}
-	Buttons and links do not use consistent styling so it can be difficult to know what to look for and where to click at a glance.
-	Navbar is incredibly full, with many items under a single submenus. This could cause decision fatigue when visiting the site.
-	Note: limitations of the site builder prevent us from changing the menu to something more suitable like a mega menu, or hiding certain menu elements on mobile. We will have to work within these limitations by prioritising the most relevant projects and recategorising pages.
+	<ul>
+		<li>Buttons and links do not use consistent styling so it can be difficult to know what to look for and where to click at a glance.</li>
+		<li>Navbar is incredibly full, with many items under a single submenus. This could cause decision fatigue when visiting the site.</li>
+		<li>Note: limitations of the site builder prevent us from changing the menu to something more suitable like a mega menu, or hiding certain menu elements on mobile. We will have to work within these limitations by prioritising the most relevant projects and recategorising pages.</li>
+	</ul>
 </div>
 
 <h3 id="improving-nav">Improving Navigation</h3>
@@ -398,7 +454,10 @@ const bannerImg = "assets/images/case-studies/Adenydd/adenydd-banner.webp"
 </div>
 
 <h2 id="testimonials">Testimonials</h2>
-{#TODO Add testimonial from Dafydd here#}
+	{{ filteredTestimonials({
+		listOfAll: testimonials,
+		filter: "Adenydd"
+	}) }}
 
 <h2 id="newsletter">Newsletter Shoutout</h2>
 <div class="article-section">
