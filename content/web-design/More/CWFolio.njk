@@ -22,10 +22,6 @@ const bannerImg = "assets/images/case-studies/writer-folio/writerFolioBanner.web
 {%- from 'filteredTestimonials.njk' import filteredTestimonials %}
 <img class="banner-image" src='{{bannerImg | toAbsoluteUrl}}'>
 
-{#TODO ADD A SMALL WRITE UP HERE ABOUT THIS PROJECT#}
-{#TODO ADD A BANNER #}
-{#TODO ADD A BUTTON THAT ALLOWS YOU TO VISIT #}
-
 <h2 id="disclaimer">Disclaimer</h2>
 <div class="article-section">
 	Client stopped responding upon template completion.
@@ -164,7 +160,49 @@ const bannerImg = "assets/images/case-studies/writer-folio/writerFolioBanner.web
 
 <h2 id="screens">Screens</h2>
 
+<h3 id="screens-proto">Figma Prototype Screens</h3>
+
+{{ alpineCarousel({ carouselId: "protoCarousel",
+					images: [
+						{src:"assets/images/case-studies/writer-folio/figmaMockups/1-About.webp"},
+						{src:"assets/images/case-studies/writer-folio/figmaMockups/2-PublicationsCV.webp"},
+						{src:"assets/images/case-studies/writer-folio/figmaMockups/3-SocialMedia.webp"},
+						{src:"assets/images/case-studies/writer-folio/figmaMockups/4-CreativeWriting.webp"},
+						{src:"assets/images/case-studies/writer-folio/figmaMockups/5-Illustration.webp"},
+						{src:"assets/images/case-studies/writer-folio/figmaMockups/6-Interactive.webp"}
+						],
+						orientation: "slides-vert",
+						slideType: "slides-mobile-screens"
+				}) 
+			}}
+
+<div class="article-section">
+	Note: sections depicting the clients work have been blurred and censored.
+</div>
+
 <h3 id="screens-template">Final Template Site</h3>
 
+{{ alpineCarousel({ carouselId: "finalTempCarousel",
+					images: [
+						{src:"assets/images/case-studies/writer-folio/finalTemplate/1-Home.webp"},
+						{src:"assets/images/case-studies/writer-folio/finalTemplate/2-About.webp"},
+						{src:"assets/images/case-studies/writer-folio/finalTemplate/3-Publications.webp"},
+						{src:"assets/images/case-studies/writer-folio/finalTemplate/4-SocialMedia.webp"},
+						{src:"assets/images/case-studies/writer-folio/finalTemplate/5-Writing.webp"},
+						{src:"assets/images/case-studies/writer-folio/finalTemplate/6-Story.webp"},
+						{src:"assets/images/case-studies/writer-folio/finalTemplate/7-Illustration.webp"},
+						{src:"assets/images/case-studies/writer-folio/finalTemplate/8-Contact.webp"},
+						{src:"assets/images/case-studies/writer-folio/finalTemplate/9-Menu.webp"}
+						],
+						orientation: "slides-vert" 
+				}) 
+			}}
+
+<div class="btn row">
+	<a class="btn primary"
+				href="https://writer-folio.neocities.org/"
+				target="_blank" rel="noopener noreferrer">View Site Template<i class="ri-arrow-right-s-fill"></i>
+	</a>
+</div>
 
 
