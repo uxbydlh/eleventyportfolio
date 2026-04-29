@@ -32,7 +32,7 @@
 
             {##- TOP LEVEL NAVIGATION #}
             {#- Attempting to add Eleventy Navigation to the template via a macro-#}
-                  {% set navPages = collections.all | eleventyNavigation %}
+                  {% set navPages = collections.all | reverse | eleventyNavigation %}
                   {% macro renderNavListItem(index, entry) -%}
                   {#- Check if the page has any sub-pages for list rendering-#}
                      <li {%if entry.children.length%} class="dropdown__item" {%endif%} >
