@@ -1298,7 +1298,7 @@ a:hover {
 /*#region Inputs*/
 
 form {
-  max-width: 30em;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1306,8 +1306,9 @@ form {
 
 label {
   font-size: var(--normal-font-size);
-  font-family: var(--body-font);
-  color: var(--text-dark-colour);
+  font-family: var(--font-family-heading);
+  text-transform: uppercase;
+  color: var(--text-on-action);
   font-weight: bold;
 
   display: inline-flex;
@@ -1325,45 +1326,42 @@ label.below.right {
 }
 
 input {
-  font-size: var(--normal-font-size);
-  font-family: var(--body-font);
-  color: var(--text-dark-colour);
+  font-size: var(--font-size-body);
+  font-family: var(--font-family-mono);
+  color: var(--text-body);
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 30em;
   padding: 12px;
 
-  border: 2px solid var(--dark-muddy-green);
+  border: 2px solid var(--border-action);
   border-radius: 0.25rem;
-  background-color: var(--text-light-colour);
+  background-color: var(--surface-action-2);
   cursor: pointer;
 }
 
 .text-area-container {
   display: flex;
   flex-direction: column;
-  max-width: 30em;
 }
 
 textarea {
-  font-size: var(--normal-font-size);
-  font-family: var(--body-font);
-  color: var(--text-dark-colour);
+  font-size: var(--font-size-body);
+  font-family: var(--font-family-mono);
+  color: var(--text-body);
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 30em;
   min-height: 200px;
   padding: 12px;
 
-  border: 2px solid var(--dark-muddy-green);
+  border: 2px solid var(--border-action);
   border-radius: 0.25rem;
-  background-color: var(--text-light-colour);
+  background-color: var(--surface-action-2);
   cursor: pointer;
 
   resize: vertical;
@@ -1375,7 +1373,7 @@ textarea {
 
 input[type=checkbox] {
   max-width: 24px;
-  color: var(--bright-purple-colour);
+  accent-color: var(--text-link);
 }
 
 .check-with-desc {
@@ -2083,12 +2081,15 @@ summary {
   align-items: center;
   border-radius: 8px;
 
-  background-color: var(--turq-colour);
+  background-color: var(--surface-nav);
   cursor: pointer;
 }
 
 summary h3 {
   width: 100%;
+  background-color: transparent;
+  border: none;
+  padding-left: var(--space-none);
 }
 
 summary::marker {
@@ -2110,7 +2111,7 @@ details:not([open]) summary i {
 }
 
 details[open] {
-  background-color: var(--turq-colour);
+  background-color: var(--surface-nav);
 }
 
 details[open] .faq-answer {

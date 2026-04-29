@@ -5,24 +5,17 @@ const eleventyNavigation = {
 };
 
 const title = "Contact";
-const subheading = "To learn more about our work, please feel free to get in touch. <br><br> Whether you want to volunteer, sign up for tutoring, or just ask a question, we're ready to hear from you! <br><br> Got a question? Check out our FAQ - we may have already answered your query!";
-const heroImagePath = "../assets/images/hero/Hero-Contact.webp";
-const heroBtn = {
-	sectionLink: "#FAQ",
-	txt: "Visit FAQ",
-	icon: "ri-arrow-right-line"
-};
 
 const contactInfo = [
 	{
 		type: "Email",
-		info: "give.and.grow.cic (at) gmail.com",
+		info: "uxbydlh (at) gmail.com",
 		icon: "ri-mail-line"
 	},
 	{
 		type: "LinkedIn",
 		info: "Visit",
-		link: "https://www.linkedin.com/company/give-and-grow-cic",
+		link: "www.linkedin.com/in/dorian-h-a1b8b0302",
 		icon: "ri-linkedin-box-fill"
 	}
 ];
@@ -30,60 +23,25 @@ const contactInfo = [
 const FAQs = [
 {
 id: "faq1",
-question: "What do I need to do to get free tutoring?",
+question: "Are you available for volunteer work?",
 answer: `
-**Our tutoring acquisition process has two key stages:**  
-  
-### Stage One  
-- You will need to fill out a short, 5-question form on your situation.  
-- No ID documents or references will be required at this stage. However, they are appreciated and will help us with processing your application. 
-
-### Stage Two
-- At this stage, your application has been selected to be progressed.  
-- We will request proof of ID at this stage.  
-- We may also request supporting information to confirm your eligibility.  
-- **Supporting information may include:** A letter from your school, a note from a parent or guardian, etc.
-
-Any information that you share will be kept confidential and used only for assessing eligibility. Please view our [Privacy Policy](#WIPLINK) for more details.
+Yes! 
+Please send me a description of the role and a link to your organisation's website or linkedIn profile.
 `
 },
 {
 id: "faq2",
-question: "How are free tutoring sessions funded?",
+question: "Can I redesign your site/improve your seo/sell you something?",
 answer: `
-For every paying student who books lessons, one free spot is created for a student in financial need.
-Additional support may come from grants and small community donations.
-It's a **community powered model** - where one student's access helps another.
+No.
 `,
-},
-{
-id: "faq3",
-question: "What subjects and year groups are available?",
-answer: `
-- **GCSE:** Maths, English, Biology
-- **A-level:** Psychology, Biology
-- University personal statement guidance
-All lessons are remotely held.
-`
-},
-{
-id: "faq4",
-question: "Who are your tutors?",
-answer: `
-- All tutors are DBS-checked and have been trained to deliver quality online sessions.
-- Many are university students with relevant subject expertise and a passion for education.
-- Tutors are also supported with ongoing guidance to ensure safe and effective learning.
-`
 }
 ];
 ---
-{#TODO REWRITE SUBHEADING AS MORE APPROPRIATE MESSAGE#}
-{#TODO REMOVE OR CHANGE FAQS#}
 
 <section class="centre" id="contact-us">
 	<div class="section-row">
 		<div class="row-column text">
-			{#TODO ADD CLASSES AND STYLING TO THIS FORM#}
 			<h2>Contact Form</h2>	
 			<!--from https://web3forms.com/ -->
 			<form action="https://api.web3forms.com/submit" method="POST">
@@ -133,11 +91,9 @@ answer: `
 				<li>
 					<i class="{{contact.icon}} ri-xl"></i>
 					<div>
-						{#TODO CHANGE EMAIL TO BE CORRECT#}
-						{#TODO CHANGE LINKEDIN TO BE CORRECT#}
-						<label for="{{contact.type}}"><h3>{{contact.type}}</h3></label>
+						<label for="{{contact.type}}"><h4>{{contact.type}}</h4></label>
 						{% if contact.link %}
-						<a class="transparent smallBtn" href="{{contact.link}}" target="_blank" rel="noopener noreferrer">{{contact.info}}<i class="ri-arrow-right-line"></i></a>
+						<a class="smallBtn secondary" href="{{contact.link}}" target="_blank" rel="noopener noreferrer">{{contact.info}}<i class="ri-arrow-right-line"></i></a>
 						{% else %}
 						<p id="{{contact.type}}">{{contact.info}}</p>
 						{% endif %}
@@ -146,16 +102,24 @@ answer: `
 				{% endfor %}
 			</ul>
 			<br>
-			{#TODO REMOVE OR CHANGE#}
-			<h2>Got a question?</h2>
-			<p>Before getting in touch, consider visiting our <a href="#FAQ" class="inline">FAQ</a> - we may have already answered your query!</p>
+			<section id="FAQ" class="FAQ">
+				<h2> Frequently Asked Questions </h2>
+				<div class="faq-list">
+					{% for faq in FAQs%}
+						<details class="expand-box" id="{{faq.id}}" name="faq-question">
+							<summary><h3>{{faq.question}}</h3><i class="ri-add-line"></i></summary>
+							<div class="faq-answer">
+								{{ faq.answer | safe}}
+							</div>
+						</details>
+					{% endfor %}
+				</div>
+			</section>
 		</div>
 	</div>
 </section>
 
-<section id="FAQ" class="FAQ">
-	<h1> Frequently Asked Questions </h1>
-</section>
+
 
 <script>
 	document.getElementById('input-message').onkeyup = function () {
