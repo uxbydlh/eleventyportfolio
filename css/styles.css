@@ -704,6 +704,12 @@ section.violet {
   background-color: var(--deep-green);
 }
 
+.article-container .content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
 .content,
 .donate,
 article,
@@ -1526,6 +1532,16 @@ aside {
 
 aside h3 {
   justify-content: center;
+}
+
+.article-section {
+  display: flex;
+  align-self: stretch;
+  width: 100%;
+  flex-direction: column;
+  gap: var(--space-lg);
+  background-color: var(--surface-primary);
+  padding: var(--space-lg) var(--space-ml);
 }
 
 /*TODO CREATE STYLING FOR ARTICLE-SECTION*/
