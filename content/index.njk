@@ -9,39 +9,48 @@ const title = 'Dorian H.';
 const logos = [
 	{
 		file: "logo-adenydd.png",
-		link: "web-design/Adenydd"
+		link: "web-design/Adenydd",
+		org: "Adenydd"
 	},
 	{
 		file: "logo-DHH.png",
-		link: "web-design/DHH"
+		link: "web-design/DHH",
+		org: "Devon Healing Horsemanship"
 	},
 	{
 		file: "logo-dotdot.svg",
-		link: "case-studies/Morses-Club/DDL"
+		link: "case-studies/Morses-Club/DDL",
+		org: "Dot Dot Loans"
 	},
 	{
 		file: "logo-EcoCentre.png",
-		link: "case-studies/E-Save"
+		link: "case-studies/E-Save",
+		org: "Eco Centre Southwest"
 	},
 	{
 		file: "logo-GiveGrow.svg",
-		link: "web-design/give-and-grow"
+		link: "web-design/give-and-grow",
+		org: "Give and Grow: Community Powered Education"
 	},
 	{
 		file: "logo-morses.svg",
-		link: "case-studies/Morses-Club"
+		link: "case-studies/Morses-Club",
+		org: "Morses Club PLC"
 	},
 	{
 		file: "logo-ncr.svg",
-		link: "about/#ncr-atleos"
+		link: "about/#ncr-atleos",
+		org: "NCR Atleos"
 	},
 	{
 		file: "logo-oakbrook.svg",
-		link: "about/#oakbrook-finance-limited"
+		link: "about/#oakbrook-finance-limited",
+		org: "Oakbrook Finance Limited"
 	},
 	{
 		file: "logo-VED.webp",
-		link: "web-design/VED"
+		link: "web-design/VED",
+		org: "Very Evil Demons"
 	}
 ];
 
@@ -59,7 +68,7 @@ const logos = [
 							<div class="marquee-item dynamic-item" role="listitem">
 								<div class="marquee-image">
 									<a href="{{logo.link}}">
-										<img class="image" src="{{'../assets/images/3rd-party-logos/' + logo.file}}" loading="lazy" alt="#TODO">
+										<img class="image" src="{{'../assets/images/3rd-party-logos/' + logo.file}}" loading="lazy" alt="{{logo.org}}">
 									</a>
 								</div>
 							</div>
