@@ -48,15 +48,15 @@ description: "Designer, Developer, Dilligent-worker. Adept at creating design sy
                         {% endfor %}
                     {% for uniqueCategory in uniqueCategories %}
                     
-                    <a  x-on:click="changeFilter('{{uniqueCategory}}')">
-                        <li>
+                    <a class="post-tag" x-on:click="changeFilter('{{uniqueCategory}}')">
+                        <li class="tag">
                             {{uniqueCategory}}
                         </li>
                     </a>
                     {% endfor %}
 
-                    <a x-on:click="changeFilter('all')">
-                        <li>
+                    <a class="post-tag" x-on:click="changeFilter('all')">
+                        <li class="tag">
                             all
                         </li>
                     </a>
@@ -89,9 +89,9 @@ description: "Designer, Developer, Dilligent-worker. Adept at creating design sy
                 <h3>{{job.company}}</h3>
                 <ul class="roles-list">
                     {% for role in job.roles %}
-                    {#TODO TURN THESE INTO CLICKABLE TAGS#}
-                    {#TODO ADD NEWSLETTER LINK IN ADENYDD JSON#}
-                    <li>{{role}}</li>
+                    <li class="tag">
+                        <a class="post-tag" href="/tags/{{ role.tag | slugify }}">{{role.title}}</a>
+                    </li>
                     {% endfor %}
                 </ul>
             </div>

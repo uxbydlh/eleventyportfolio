@@ -1,7 +1,11 @@
 [
     {
         "company":"Give and Grow CIC",
-        "roles": ["Frontend Programming", "Web Design", "Brand Design"],
+        "roles": [
+            {"title":"Frontend Programming", "tag":"dev"}, 
+            {"title":"Web Design", "tag":"web-design"}, 
+            {"title":"Brand Design", "tag":"brand"}
+        ],
         "logo": "logo-GiveGrow.svg",
         "location": "Welwyn Garden City (Remote)",
         "timePeriod": "Present",
@@ -24,7 +28,11 @@
     },
     {
         "company":"Eco Centre CBS Limited",
-        "roles": ["UX Design", "UI Design", "User Research"],
+        "roles": [
+            {"title": "UX Design", "tag":"UX"},
+            {"title": "UI Design", "tag":"UI"},
+            {"title":"User Research", "tag":"UXR"}
+        ],
         "logo": "logo-EcoCentre.png",
         "location": "Somerset (Remote)",
         "timePeriod": "Present",
@@ -43,7 +51,11 @@
     },
     {
         "company":"Adenydd",
-        "roles": ["UX Design", "Graphic Design", "Copywriting"],
+        "roles": [
+            {"title":"UX Design", "tag":"UX"}, 
+            {"title":"Graphic Design", "tag":"graphic-design"}, 
+            {"title":"Copywriting", "tag":"copy"}
+        ],
         "logo": "logo-adenydd.png",
         "location": "Swansea (Remote)",
         "timePeriod": "Present",
@@ -66,7 +78,10 @@
     },
     {
         "company":"V.E.D",
-        "roles": ["Web Design", "UX Design"],
+        "roles": [
+            {"title":"Web Design", "tag":"web-design"},
+            {"title":"UX Design", "tag":"UX"}
+        ],
         "logo": "logo-VED.webp",
         "location": "Dundee (Remote)",
         "timePeriod": "2024",
@@ -85,7 +100,11 @@
     },
     {
         "company":"Devon Healing Horsemanship",
-        "roles": ["Web Design", "UX Design", "Brand Design"],
+        "roles": [
+            {"title":"Web Design", "tag":"web-design"}, 
+            {"title":"UX Design", "tag":"UX"}, 
+            {"title":"Brand Design", "tag":"brand"}
+        ],
         "logo": "logo-DHH.png",
         "location": "Devon (Remote)",
         "timePeriod": "2024",
@@ -104,7 +123,11 @@
     },
     {
         "company":"Morses Club PLC",
-        "roles": ["UX Design", "UI Design", "User Research"],
+        "roles": [
+            {"title":"UX Design", "tag":"UX"}, 
+            {"title":"UI Design", "tag":"UI"}, 
+            {"title":"User Research", "tag":"UXR"}
+        ],
         "logo": "logo-morses.svg",
         "location": "Nottingham (Remote)",
         "timePeriod": "2022-2024",
@@ -135,7 +158,9 @@
     },
     {
         "company":"Oakbrook Finance Limited",
-        "roles": ["Software Engineer"],
+        "roles": [
+            {"title":"Software Engineer", "tag":"dev"}
+        ],
         "logo": "logo-oakbrook.svg",
         "location": "Nottingham (Remote)",
         "timePeriod": "2021-2022",
@@ -148,7 +173,9 @@
     },
     {
         "company":"NCR Atleos",
-        "roles": ["Software Engineer"],
+        "roles": [
+            {"title":"Software Engineer", "tag":"dev"}
+        ],
         "logo": "logo-ncr.svg",
         "location": "Dundee (Remote)",
         "timePeriod": "2020-2021",
