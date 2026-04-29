@@ -1,5 +1,5 @@
 ---js
-const layout = "layouts/post.njk";
+const layout = "layouts/subpage.njk";
 
 const eleventyNavigation = {
 	key: "More",
@@ -7,8 +7,13 @@ const eleventyNavigation = {
 	parentUrl: "/web-design/"
 };
 
+const title = "More"
+
 const date = "2000"
 ---
 
-{#TODO GIVE THIS A SUPER FUTURE OR SUPER PAST DATE AND SEE IF THAT MAKES IT APPEAR AT THE BOTTOM#}
-{#TODO - PROJECTS LABELLED MISC OR MORE ARE DISPLAYED HERE AS CARDS#}
+{%- from 'projectCards.njk' import filteredProjects %}
+{{ filteredProjects ({ 
+        projectList: collections.projects,
+        filter: 'other'
+     }) }}
