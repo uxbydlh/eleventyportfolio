@@ -2,7 +2,7 @@
 
 <ul class="card-list {{params.width}}">
     {% for card in params.cards %}
-    <li class="card">
+    <li class="card image-card">
         {%if card.img %}
             <img src="{{card.img.src | toAbsoluteUrl }}" alt={{card.img.alt}}">
         {% endif %}
@@ -14,7 +14,7 @@
             <p>{{card.text}}</p>
         {%endif%}
         {% if card.listItems %}
-            <ul>
+            <ul class="{{card.listStyle}}">
                 {%for listItem in card.listItems%}
                 <li>{{listItem}}</li>
                 {%endfor%}

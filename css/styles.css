@@ -857,6 +857,12 @@ ul.list-bullet {
   list-style-type: disc;
 }
 
+ul.list-bullet ul {
+  padding-left: var(--space-lg);
+  list-style-position: inside;
+  list-style-type: circle;
+}
+
 ul.list-bullet li+li {
   margin-top: 0.5rem;
 }
@@ -1849,12 +1855,16 @@ article p {
   font-size: large;
 }
 
-.card ul {
+.card:not(.image-card) ul{
   display: flex;
   flex-direction: row;
   gap: 12px;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.card ul.list-bullet {
+  justify-content: start;
 }
 
 .card li i {
