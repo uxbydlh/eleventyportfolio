@@ -295,7 +295,7 @@ h1, h2, h3, h4 {
 p {
   font-family: var(--font-family-body);
   font-size: var(--font-size-body);
-  line-height: 1.4rem;
+  line-height: 1.6rem;
   max-width: 60vw;
 }
 
@@ -1548,9 +1548,8 @@ aside h3 {
   gap: var(--space-lg);
   background-color: var(--surface-primary);
   padding: var(--space-lg) var(--space-ml);
+  line-height: 1.6rem;
 }
-
-/*TODO CREATE STYLING FOR ARTICLE-SECTION*/
 
 /*#region table of contents*/
 
