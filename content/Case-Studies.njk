@@ -14,25 +14,27 @@ pagination:
 ---
 {%- from 'projectCards.njk' import filteredProjects %}
 
-<div class="article-section">
-    Longer-form projects with larger scopes. Think dashboards, saas, multiple research stages, etc.
+<div class="tag-card-container">
+    <div class="article-section centre-text">
+        Longer-form projects with larger scopes. Think dashboards, saas, multiple research stages, etc.
+    </div>
+    
+    <h2>E-Save</h2>
+    
+    {{ filteredProjects ({
+            projectList: studies,
+            filter: 'e-save'
+         }) }}
+    
+    <h2>Morses Club</h2>
+        {{ filteredProjects ({
+            projectList: studies,
+            filter: 'morses'
+         }) }}
+    
+    <h2>Other</h2>
+        {{ filteredProjects ({
+            projectList: studies,
+            filter: 'misc'
+         }) }}
 </div>
-
-<h2>E-Save</h2>
-
-{{ filteredProjects ({ 
-        projectList: studies,
-        filter: 'e-save'
-     }) }}
-
-<h2>Morses Club</h2>
-    {{ filteredProjects ({ 
-        projectList: studies,
-        filter: 'morses'
-     }) }}
-
-<h2>Other</h2>
-    {{ filteredProjects ({ 
-        projectList: studies,
-        filter: 'misc'
-     }) }}

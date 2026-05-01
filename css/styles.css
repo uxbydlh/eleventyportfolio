@@ -607,6 +607,10 @@ section.violet {
   padding-left: 4rem;
 }
 
+div.centre-text {
+  text-align: center;
+}
+
 /*Column within a row*/
 .row-column {
   display: flex;
@@ -1774,6 +1778,13 @@ article p {
 /*#endregion Policies*/
 
 /*#region cards*/
+.tag-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding-bottom: var(--space-xl);
+}
+
 .card-list {
   width: 100%;
 

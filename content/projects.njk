@@ -11,7 +11,7 @@ var pagination = {
 ---
 {%- from 'projectCards.njk' import filteredProjects %}
 
-{#TODO RESTRUCTURE ALL PROJECTS SO THAT THEIR CONTENTS WORK PROPERLY#}
+<div class="content tag-card-container">
 <h2>Case Studies</h2>
 {{ filteredProjects ({ 
         projectList: collections.projects,
@@ -30,5 +30,6 @@ var pagination = {
         projectList: collections.projects,
         filter: 'misc'
      }) }}
+</div>
 
 

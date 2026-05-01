@@ -20,33 +20,35 @@ const eleventyComputed = {
 
 ---
 
-<ul class="card-list">
-		{% set latest_projects = collections[tag] | reverse %}
-		{% for item in latest_projects %}
-                    <li class="card">
-						<a class="card-content" href="{{item.url | toAbsoluteUrl }}">
-							{%if item.data.bannerImg %}
-								<img class="card-photo" src="{{item.data.bannerImg | toAbsoluteUrl}}">
-							{%endif%}
-								<h4>{{item.data.title}}</h4>
-							{% if item.templateContent %}
-								{% set safeExcerpt = item.templateContent | striptags | truncate(140, false, "...") %}
-								<p>{{safeExcerpt}}</p>
-								<meta name="description" content = "{{ safeExcerpt }}">
-								<meta property="og:description" content="{{ safeExcerpt }}">
-							{% endif%}
-						</a>
-						<ul class="card-tags">
-							{%- for tag in item.data.tags | filterTagList %}
-							{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-							<li>
-								<a href="{{ tagUrl }}" class="post-tag">
-									{{ tag }}
-								</a>
-							</li>
-							{%- endfor %}
-						</ul>
-                    </li>
-                </a>    
-		{% endfor %}
-	</ul>
+<div class="tag-card-container">
+	<ul class="card-list">
+			{% set latest_projects = collections[tag] | reverse %}
+			{% for item in latest_projects %}
+						<li class="card">
+							<a class="card-content" href="{{item.url | toAbsoluteUrl }}">
+								{%if item.data.bannerImg %}
+									<img class="card-photo" src="{{item.data.bannerImg | toAbsoluteUrl}}">
+								{%endif%}
+									<h4>{{item.data.title}}</h4>
+								{% if item.templateContent %}
+									{% set safeExcerpt = item.templateContent | striptags | truncate(140, false, "...") %}
+									<p>{{safeExcerpt}}</p>
+									<meta name="description" content = "{{ safeExcerpt }}">
+									<meta property="og:description" content="{{ safeExcerpt }}">
+								{% endif%}
+							</a>
+							<ul class="card-tags">
+								{%- for tag in item.data.tags | filterTagList %}
+								{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+								<li>
+									<a href="{{ tagUrl }}" class="post-tag">
+										{{ tag }}
+									</a>
+								</li>
+								{%- endfor %}
+							</ul>
+						</li>
+					</a>
+			{% endfor %}
+		</ul>
+</div>
