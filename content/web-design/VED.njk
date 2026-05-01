@@ -97,16 +97,16 @@ const bannerImg = "assets/images/case-studies/VED/VED-banner.webp";
 <div class="article-section">
 	The idea was to create a site that would properly showcase VED’s unique style and their collective works, aiming to attract potential investors, employers, and collaborators.
 </div>
+<h3 id="high-level-goals">High Level Goals</h3>
 <div class="article-section">
-	<h3 id="high-level-goals">High Level Goals</h3>
-	<ul>
+	<ul class="list-bullet">
 		<li>Bring in more work and contacts to VED.</li>
 		<li>Present a variety of interesting projects.</li>
 		<li>Showcase VED's distinct brand image.</li>
 	</ul>
 </div>
+<h3 id="role">Role</h3>
 <div class="article-section">
-	<h3 id="role">Role</h3>
 	I lead the design of the website during late June and early July of 2024. 
 	This involved research, UX & UI design, and a little bit of graphic design.
 	The site launched fully in August 2024. 
@@ -119,8 +119,8 @@ const bannerImg = "assets/images/case-studies/VED/VED-banner.webp";
 	I initially pulled from 8 of their listed inspirations. 
 	Those with their own websites or online content were prioritised, so that I could get a better idea of how they presented their works in a digital context.
 </div>
+<h3 id="all-one">All In One</h3>
 <div class="article-section">
-	<h3>All In One</h3>
 	Many of those web pages examined had the vast majority of the information the user would require within their landing page. 
 	Although this is considered a design standard, it is clear that in these cases, there is an artistic flair that sets them apart.
 	{{ gallery({ galleryId: "vedAllInOne",
@@ -131,8 +131,8 @@ const bannerImg = "assets/images/case-studies/VED/VED-banner.webp";
 				})
 	}}
 </div>
+<h3 id="bold-illust">Bold and Illustrative</h3>
 <div class="article-section">
-	<h3>Bold and Illustrative</h3>
 	Many of the examined web pages utilised an assortment of custom illustrations to signpost different areas of the site.
 	{{ alpineCarousel({ carouselId: "inspoCarousel",
 					images: [
@@ -143,8 +143,8 @@ const bannerImg = "assets/images/case-studies/VED/VED-banner.webp";
 				}) 
 			}}
 </div>
+<h3 id="goth-myst">Gothic Mystery</h3>
 <div class="article-section">
-	<h3>Gothic Mystery</h3>
 	{{ alpineCarousel({ carouselId: "vermisCarousel",
 					images: [
 						{src:"/assets/images/case-studies/VED/Vermis.webp"}
@@ -170,12 +170,10 @@ const bannerImg = "assets/images/case-studies/VED/VED-banner.webp";
 	On paper, the information you present is much the same as that of your competitors. 
 	To stand out, you need more than a unique aesthetic - which VED has definitely got covered - you need to maximise usability for your target audience.
 </div>
+<h3 id="target-audience">Target Audience</h3>
 <div class="article-section">
-	<h3 id="target-audience">Target Audience</h3>
 	With suggestions from VED, I created a list of potential user archetypes, keeping the major goals for this project in mind.
 </div>
-
-<div class="article-section">
 	{{ personas({
 		personas: [
 			{
@@ -213,15 +211,14 @@ const bannerImg = "assets/images/case-studies/VED/VED-banner.webp";
 			}
 		]
 	})}}
-</div>
 
 <div class="article-section">
 	<i>* Future Collaborators are not the primary target audience at this stage for the company. However, connecting with other creatives is useful for expanding one’s network, so it’s important to consider them.</i>
 </div>
 
 <h2 id="site-breakdown">Site Breakdown</h2>
+<h3 id="site-landing">Landing Page</h3>
 <div class="article-section">
-	<h3 id="site-landing">Landing Page</h3>
 	The new landing page acts as a concise introduction to VED, and a “hub” for everything that they want you to see.
 	{{ gallery({ galleryId: "vedLandingGal",
 					images: [
@@ -242,8 +239,8 @@ const bannerImg = "assets/images/case-studies/VED/VED-banner.webp";
 	}}
 	To ensure that the user would not reach a dead end, even the 404 page funnels into Contact Us.
 </div>
+<h3 id="site-illustrations">Illustrations</h3>
 <div class="article-section">
-	<h3 id="site-illustrations">Illustrations</h3>
 	In my initial designs, I wanted to give VED a good idea of how to theme their sections and where they could put icons, illustrations and photos. 
 	VED expressed that they would prefer to use their own custom illustrations in the final product, but agreed that it would be good for me to use public domain, medieval artworks to help outline the “feel” for each page
 	{{ gallery({ galleryId: "vedAboutGal",
@@ -264,8 +261,8 @@ const bannerImg = "assets/images/case-studies/VED/VED-banner.webp";
 				})
 	}}
 </div>
+<h3 id="goth-feel">Gothic Feel</h3>
 <div class="article-section">
-	<h3>Gothic Feel</h3>
 	With the goal of creating an experience as well as a website, each page follows an eerie, magical theme. 
 	Tarot readings, alchemical circles and spirit boards evoke feelings of mystery as you explore the dark corners of this digital dungeon.
 	{{ gallery({ galleryId: "vedGothGal",
@@ -279,8 +276,7 @@ const bannerImg = "assets/images/case-studies/VED/VED-banner.webp";
 </div>
 
 <h2 id="all-screens">Screens</h2>
-<div class="article-section">
-	<div class="section-row">
+	<div class="section-row top-align">
 		<div class="row-column">
 			<h3>Wireframes</h3>
 			{{ alpineCarousel({ carouselId: "wireCarousel",
@@ -322,12 +318,9 @@ const bannerImg = "assets/images/case-studies/VED/VED-banner.webp";
 			}}
 		</div>
 	</div>
-</div>	
 
 <h2 id="testimonial-section">Testimonials</h2>
-<section class="centre" id="testimonials">
 	{{ filteredTestimonials({
 		listOfAll: testimonials,
 		filter: "VED"
 	}) }}
-</section>

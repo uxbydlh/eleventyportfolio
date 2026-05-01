@@ -591,6 +591,10 @@ section.violet {
   padding-right: 2rem;
 }
 
+.top-align {
+  align-items: start;
+}
+
 .section-row.image-right {
   flex-wrap: wrap-reverse;
 }
