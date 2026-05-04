@@ -707,7 +707,6 @@ div.centre-text {
 
 /*#endregion Labels*/
 
-/*TODO ENSURE THAT THIS HAS A GAP - CHANGE HOW IT DISPLAYS PERHAPS*/
 .content {
   background-color: var(--deep-green);
 }
@@ -728,7 +727,6 @@ footer {
 
 /*#region Buttons*/
 
-/*TODO SET A MAX WIDTH*/
 .btn {
   display: flex;
   padding: 12px 20px;
@@ -737,6 +735,7 @@ footer {
   gap: 8px;
   border-radius: 0px;
   border: none;
+  max-width: 250px;
 
   font-family: var(--font-family-heading);
   font-weight: bold;
@@ -1072,7 +1071,6 @@ picture:has(.divider-hr){
 }
 
 /*back to top button*/
-/*TODO ADD AESTHETIC STYLING THAT GOES BEYOND POSITION*/
 .scroll-top {
   position: absolute; /* relative to its positioned parent */
   top: 120vh; /* starts below the bottom of the screen */
@@ -2408,8 +2406,6 @@ div:has(.embedded-google-form) {
   gap: var(--space-md);
 }
 
-/*TODO CHANGE THE TEXT COLOUR TO BE ON ACTION*/
-/*TODO CHANGE HOW THE SURFACE ACTS ON HOVER*/
 .CV .roles-list li {
   font-size: var(--font-size-body-sm);
   text-align: center;
@@ -2419,7 +2415,10 @@ div:has(.embedded-google-form) {
   padding: var(--space-xs) var(--space-md);
 }
 
-
+.CV .roles-list li:hover {
+  background-color: var(--surface-action-hover-2);
+  border: var(--border-width-sm) solid var(--text-link-hover);
+}
 
 .location {
   display: flex;
