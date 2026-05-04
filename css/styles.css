@@ -732,7 +732,6 @@ footer {
   gap: 8px;
   border-radius: 0px;
   border: none;
-  max-width: 250px;
 
   font-family: var(--font-family-heading);
   font-weight: bold;
@@ -1673,6 +1672,9 @@ nav.toc ol li a:only-child:hover {
   }
   aside {
   top: calc(var(--header-height) + 2em );
+  }
+  aside .back-to {
+    width: fit-content;
   }
   aside:has(.toc-container.open){
     background-color: var(--surface-nav);
