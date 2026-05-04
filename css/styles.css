@@ -1666,6 +1666,12 @@ nav.toc ol li a:only-child:hover {
 }*/
 
 /*TOC MOBILE*/
+@media screen and (min-width: 800px) {
+  .toc-reveal {
+    display: none;
+  }
+}
+
 @media screen and (max-width :800px) {
   aside {
     z-index: 995;
