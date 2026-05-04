@@ -108,12 +108,22 @@ layout: layouts/base.njk
         });
     });
 
+    var tocLinks = document.querySelectorAll("nav.toc a");
+    tocLinks.forEach(element => {
+        element.classList.add("toc-link");
+    })
+
     ;(function($) {
          $('.swipebox').swipebox();
       }) (jQuery);
 
       $(document).ready(function(){
+
         $('.toc-reveal__btn').click(function() {
+        $("#tocID").toggleClass('open');
+        });
+
+        $('.toc-link').click(function() {
         $("#tocID").toggleClass('open');
         });
       })
