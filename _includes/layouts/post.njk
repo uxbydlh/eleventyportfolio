@@ -22,7 +22,7 @@ layout: layouts/base.njk
 <div class="article-container">
     <aside>
         {% if eleventyNavigation.parent %}
-            <a href="{{eleventyNavigation.parentUrl | toAbsoluteUrl }}" class="btn primary"><i></i>Back to {{eleventyNavigation.parent}}</a>
+            <a href="{{eleventyNavigation.parentUrl | toAbsoluteUrl }}" class="btn primary back-to"><i></i>Back to {{eleventyNavigation.parent}}</a>
         {% endif %}
         <div class="toc-container" id="tocID">
             <h3>Contents</h3>
