@@ -27,6 +27,9 @@ layout: layouts/base.njk
         <div class="toc-container" id="tocID">
             <h3>Contents</h3>
             {{ content | toc | safe }}
+            <div class="toc-close"> <!--closes the table of contents on mobile-->
+                <button class="btn primary toc-close__btn"><i class="ri-close-line"></i></button> <!--TODO: CREATE ACTION TO CLOSE TOC ON MOB-->
+            </div>
         </div>
     </aside>
     <div class="content">
@@ -120,6 +123,10 @@ layout: layouts/base.njk
       $(document).ready(function(){
 
         $('.toc-reveal__btn').click(function() {
+        $("#tocID").toggleClass('open');
+        });
+
+        $('.toc-close__btn').click(function() {
         $("#tocID").toggleClass('open');
         });
 
