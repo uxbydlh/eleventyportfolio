@@ -1669,12 +1669,11 @@ nav.toc ol li a:only-child:hover {
     z-index: 999;
   }
   .toc-container {
+    position: relative;
     display: none;
-    z-index: 999;
   }
   .toc-container.open {
     display: flex;
-    z-index: 999;
   }
   aside {
   top: calc(var(--header-height) + 2em );
