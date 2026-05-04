@@ -1083,6 +1083,20 @@ picture:has(.divider-hr){
   position: sticky; /* 'relative' until element reaches ... */
   top: 90vh; /* 90% viewport height from the top, when it becomes 'fixed' - until its container toggles it back to 'relative' */
 }
+
+/*reveal toc button*/
+.toc-reveal {
+  position: absolute; /* relative to its positioned parent */
+  top: 90vh; /* starts below the bottom of the screen */
+  bottom: 3rem; /* stops scrolling before the end */
+  left: 2rem; /* offset from left hand side */
+}
+
+.toc-reveal__btn {
+  position: -webkit-sticky; /* for Safari */
+  position: sticky; /* 'relative' until element reaches ... */
+  top: 90vh; /* 90% viewport height from the top, when it becomes 'fixed' - until its container toggles it back to 'relative' */
+}
 /*#endregion navigation*/
 
 /*=============== DROPDOWN ===============*/
