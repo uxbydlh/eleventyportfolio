@@ -1874,12 +1874,19 @@ article p {
 
 .card-list {
   width: 100%;
-
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30%, 30%));
   grid-auto-rows: minmax(0, auto);
   gap: 24px;
   justify-content: center;
+}
+
+@media screen and (max-width:800px) {
+  .card-list {
+    grid-template-columns: 1fr;
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
 }
 
 .card-list.personas {
