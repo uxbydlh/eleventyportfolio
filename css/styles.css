@@ -1571,6 +1571,15 @@ aside h3 {
   line-height: 1.6rem;
 }
 
+/*MOBILE ARTICLES*/
+
+@media screen and (max-width :800px) {
+  .article-container {
+    grid-template-columns: 1fr;
+    padding-inline: 2rem;
+  }
+}
+
 /*#region table of contents*/
 
 .toc-container {
@@ -1652,6 +1661,18 @@ nav.toc ol li a:only-child:hover {
 /*nav.toc ol li ol {
   display: none;
 }*/
+
+/*TOC MOBILE*/
+@media screen and (max-width :800px) {
+    .toc-container {
+    display: none;
+  }
+  aside {
+  top: calc(var(--header-height) + 2em );
+  }
+}
+
+
 
 /*#endregion table of contents*/
 
