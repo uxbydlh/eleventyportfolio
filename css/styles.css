@@ -1664,8 +1664,11 @@ nav.toc ol li a:only-child:hover {
 
 /*TOC MOBILE*/
 @media screen and (max-width :800px) {
-    .toc-container {
+  .toc-container {
     display: none;
+  }
+  .toc-container.open {
+    display: flex;
   }
   aside {
   top: calc(var(--header-height) + 2em );

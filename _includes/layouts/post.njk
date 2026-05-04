@@ -24,7 +24,7 @@ layout: layouts/base.njk
         {% if eleventyNavigation.parent %}
             <a href="{{eleventyNavigation.parentUrl | toAbsoluteUrl }}" class="btn primary"><i></i>Back to {{eleventyNavigation.parent}}</a>
         {% endif %}
-        <div class="toc-container">
+        <div class="toc-container" id="tocID">
             <h3>Contents</h3>
             {{ content | toc | safe }}
         </div>
@@ -111,4 +111,11 @@ layout: layouts/base.njk
     ;(function($) {
          $('.swipebox').swipebox();
       }) (jQuery);
+
+      $(document).ready(function(){
+        $('.toc-reveal__btn').click(function() {
+        $("#tocID").toggleClass('open');
+        });
+      })
+      
 </script>
