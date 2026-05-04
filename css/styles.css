@@ -1090,6 +1090,7 @@ picture:has(.divider-hr){
   top: 90vh; /* starts below the bottom of the screen */
   bottom: 3rem; /* stops scrolling before the end */
   left: 2rem; /* offset from left hand side */
+  z-index: 0;
 }
 
 .toc-reveal__btn {
@@ -1664,11 +1665,16 @@ nav.toc ol li a:only-child:hover {
 
 /*TOC MOBILE*/
 @media screen and (max-width :800px) {
+  aside {
+    z-index: 999;
+  }
   .toc-container {
     display: none;
+    z-index: 999;
   }
   .toc-container.open {
     display: flex;
+    z-index: 999;
   }
   aside {
   top: calc(var(--header-height) + 2em );
