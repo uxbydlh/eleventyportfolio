@@ -17,6 +17,7 @@ const bannerImg = "/assets/images/case-studies/Morses/PAM/1Banner.webp";
 ---
 
 {%- from 'alpineCarousel.njk' import alpineCarousel %}
+{%- from 'imageGallery.njk' import gallery %}
 {%- from 'filteredTestimonials.njk' import filteredTestimonials%}
 {%- from 'inlineTable.njk' import inlineTable %}
 
@@ -35,7 +36,6 @@ const bannerImg = "/assets/images/case-studies/Morses/PAM/1Banner.webp";
 </div>
 
 <h2 id="details">Details</h2>
-<div class="article-section">
 	{{ inlineTable ({
 			table: [
 				{
@@ -65,7 +65,6 @@ const bannerImg = "/assets/images/case-studies/Morses/PAM/1Banner.webp";
 			]
 		})
 	}}
-</div>
 
 <h2 id="impact">Impact</h2>
 <div class="article-section">
@@ -126,17 +125,15 @@ const bannerImg = "/assets/images/case-studies/Morses/PAM/1Banner.webp";
 <h3 id="branding">Branding</h3>
 <div class="article-section">
 	<div class="section-row">
-		<div class="row-column image">
-			{{ alpineCarousel({ carouselId: "brandingCarousel",
+		<div class="row-column">
+			{{ gallery ({ galleryId: "brandingGallery",
 					images: [
-						{src:"/assets/images/case-studies/Morses/PAM/4VisDev.webp"}
-						],
-					orientation: "slides-horiz",
-					plurality: "single-image"
+							"/assets/images/case-studies/Morses/PAM/4VisDev.webp"
+						]
 				}) 
 			}}
 		</div>
-		<div class="row-column text">
+		<div class="row-column">
 			As an internal tool, the design did not require the same “flash” as that of the website. Simplicity was the aim from the start. The reduced need for strong branding was acknowledged, but there was still a desire to align with Morses’ colours.
 			Orange took on a primary role here, rather than its usual use as a secondary colour. This helped to maintain alignment with the brand, whilst differentiating it from what we would present to customers.
 			Consulting with employees throughout ensured strict prioritisation of necessary information and actions, enhancing clarity and usability within the interface.

@@ -13,7 +13,7 @@ layout: layouts/base.njk
                         <li>Tags:</li>
                         {%- for tag in tags | filterTagList %}
                         {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-                        <li class="tag"><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
+                        <li class="tag"><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %} {% endif %}</li>
                         {%- endfor %}
         </ul>
     </div>

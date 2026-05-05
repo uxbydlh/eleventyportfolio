@@ -168,6 +168,9 @@
   margin: 0;
 }
 
+/*TODO TROUBLESHOOTING, REVERT WHEN DONE*/
+* { outline: 1px solid red; }
+
 html,
 body {
   padding: 0;
@@ -354,7 +357,6 @@ main:first-child {
   display: flex;
   flex-grow: 1;
   max-width: 100em;
-  width: 100em;
   padding-inline: 3rem;
   margin-inline: auto;
 }
@@ -717,6 +719,7 @@ div.centre-text {
 
 .article-container .content {
   display: flex;
+  max-width: 100%;
   flex-direction: column;
   gap: var(--space-lg);
 }
@@ -1556,7 +1559,6 @@ input[type=checkbox] {
   /*Page width stuff - may not be relevant later*/
   max-width: 100em;
   padding-inline: 3rem;
-  margin-inline: auto;
 
   padding-block: 2rem;
   display: grid;
@@ -1595,6 +1597,7 @@ aside h3 {
 
 @media screen and (max-width :800px) {
   .article-container {
+    display: block;
     grid-template-columns: 1fr;
     padding-inline: 2rem;
   }
