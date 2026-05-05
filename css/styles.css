@@ -358,7 +358,7 @@ main:first-child {
   flex-grow: 1;
   max-width: 100em;
   padding-inline: 3rem;
-  margin-inline: auto;
+  padding-bottom: 6rem;
 }
 
 .links-nextprev {
@@ -371,9 +371,16 @@ main:first-child {
 	padding: 1em 0;
 }
 
+@media screen and (max-width: 800px) {
+  .links-nextprev {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .links-nextprev > * {
 	flex-grow: 1;
-  max-width: 20%;
+  max-width: 250px;
 }
 
 .links-nextprev li i {
