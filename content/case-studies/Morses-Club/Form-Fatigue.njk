@@ -22,6 +22,8 @@ const bannerImg = "/assets/images/case-studies/Morses/Form-Fatigue/1Banner.webp"
 <img class="banner-image" src='{{ bannerImg | toAbsoluteUrl}}'>
 <div class="article-section">
 	Tackling pain points within the “Income and Outgoings” portion of the digital customer journey. Created for Morses Club - a loan company that provided non-standard credit options.
+</div>
+<div class="btn row">
 	<a class="btn primary"
 		href="https://www.figma.com/proto/9BpfEDVuj9KOsCtXJpJDUv/?scaling=scale-down&show-proto-sidebar=1"
 		target="_blank" rel="noopener noreferrer">View Final Prototype<i class="ri-arrow-right-s-fill"></i></a>
@@ -34,7 +36,6 @@ const bannerImg = "/assets/images/case-studies/Morses/Form-Fatigue/1Banner.webp"
 </div>
 
 <h2 id="details">Details</h2>
-<div class="article-section">
 	{{ inlineTable ({
 			table: [
 				{
@@ -63,7 +64,6 @@ const bannerImg = "/assets/images/case-studies/Morses/Form-Fatigue/1Banner.webp"
 			]
 		})
 	}}
-</div>
 
 <h2 id="impact">Impact</h2>
 <div class="article-section">
@@ -126,7 +126,7 @@ const bannerImg = "/assets/images/case-studies/Morses/Form-Fatigue/1Banner.webp"
 <h3 id="id-prog-disc">Pure Progressive Disclosure</h3>
 <div class="article-section">
 	<div class="section-row">
-		<div class="row-column image">
+		<div class="row-column">
 			{{ alpineCarousel({ carouselId: "ppdCarousel",
 					images: [
 						{src:"/assets/images/case-studies/Morses/Form-Fatigue/2PPD.webp",
@@ -137,20 +137,23 @@ const bannerImg = "/assets/images/case-studies/Morses/Form-Fatigue/1Banner.webp"
 				}) 
 			}}
 		</div>
-		<div class="row-column text">
+		<div class="row-column">
 			Initially, only the employment input would be shown to the user. 
 			Additional fields remain hidden until interaction with a checkbox or button triggers their display. 
 			This strategy aimed to create a more concise and approachable initial page and percent aimless scrolling through similar fields for a more focussed experience.
+			<div class="row">
+				<a class="btn primary"
+					href="https://www.figma.com/proto/9BpfEDVuj9KOsCtXJpJDUv/?node-id=11-10529&scaling=scale-down&show-proto-sidebar=1"
+					target="_blank" rel="noopener noreferrer">View Demo<i class="ri-arrow-right-s-fill"></i></a>
+			</div>
 		</div>
 	</div>
 </div>
-<a class="btn primary"
-				href="https://www.figma.com/proto/9BpfEDVuj9KOsCtXJpJDUv/?node-id=11-10529&scaling=scale-down&show-proto-sidebar=1"
-				target="_blank" rel="noopener noreferrer">View Demo<i class="ri-arrow-right-s-fill"></i></a>
+
 <h3 id="id-int">Interspersed</h3>
 <div class="article-section">
 	<div class="section-row">
-		<div class="row-column image">
+		<div class="row-column">
 			{{ alpineCarousel({ carouselId: "interspersedCarousel",
 					images: [
 						{src:"/assets/images/case-studies/Morses/Form-Fatigue/3Interspersed.webp",
@@ -161,14 +164,17 @@ const bannerImg = "/assets/images/case-studies/Morses/Form-Fatigue/1Banner.webp"
 				}) 
 			}}
 		</div>
-		<div class="row-column text">
+		<div class="row-column">
 			Income and expenditure inquiries would be grouped with related questions. For example: housing benefits and rent payment questions would be situated alongside address-related questions. This arrangement aimed to deter question skipping, and ensure that customers were in the appropriate mindset to provide accurate responses.
+			<div class="row">
+				<a class="btn primary"
+						href="https://www.figma.com/proto/9BpfEDVuj9KOsCtXJpJDUv/?node-id=11-34180&scaling=scale-down&show-proto-sidebar=1"
+						target="_blank" rel="noopener noreferrer">View Demo<i class="ri-arrow-right-s-fill"></i></a>
+			</div>
 		</div>
 	</div>
 </div>
-<a class="btn primary"
-		href="https://www.figma.com/proto/9BpfEDVuj9KOsCtXJpJDUv/?node-id=11-34180&scaling=scale-down&show-proto-sidebar=1"
-		target="_blank" rel="noopener noreferrer">View Demo<i class="ri-arrow-right-s-fill"></i></a>
+
 <h3 id="id-micro">Micro-Solutions</h3>
 <div class="article-section">
 	{{ alpineCarousel({ carouselId: "microCarousel",
@@ -201,9 +207,7 @@ const bannerImg = "/assets/images/case-studies/Morses/Form-Fatigue/1Banner.webp"
 </div>
 
 <h2 id="testimonial-section">Testimonials</h2>
-<section class="centre" id="testimonials">
 	{{ filteredTestimonials({
 		listOfAll: testimonials,
 		filter: "Morses"
 	}) }}
-</section>
