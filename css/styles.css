@@ -1564,6 +1564,11 @@ input[type=checkbox] {
   padding-top: 3rem;
 }
 
+.article-header h1 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 .article-container {
   /*Page width stuff - may not be relevant later*/
   max-width: 100em;
@@ -1770,6 +1775,7 @@ nav.toc ol li a:only-child:hover {
 .post-metadata {
   display: flex;
   gap: var(--space-md);
+  flex-wrap: wrap;
 
   max-width: 100em;
   margin-inline: auto;
@@ -1779,6 +1785,13 @@ nav.toc ol li a:only-child:hover {
 
 .post-metadata .date {
   flex-grow: 1;
+}
+
+.post-metadata ul {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .post-metadata .tag {

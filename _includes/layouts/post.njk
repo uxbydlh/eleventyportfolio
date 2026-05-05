@@ -10,11 +10,13 @@ layout: layouts/base.njk
     <div class="post-metadata-container">
         <ul class="post-metadata">
                         <li class="date"><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
-                        <li>Tags:</li>
-                        {%- for tag in tags | filterTagList %}
-                        {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-                        <li class="tag"><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %} {% endif %}</li>
-                        {%- endfor %}
+                        <ul>
+                            <li>Tags:</li>
+                            {%- for tag in tags | filterTagList %}
+                            {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+                            <li class="tag"><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %} {% endif %}</li>
+                            {%- endfor %}
+                        </ul>
         </ul>
     </div>
 </div>
