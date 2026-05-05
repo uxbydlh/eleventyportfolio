@@ -1925,14 +1925,6 @@ article p {
   justify-content: center;
 }
 
-@media screen and (max-width:800px) {
-  .card-list {
-    grid-template-columns: 1fr;
-    padding-left: 8vw;
-    padding-right: 8vw;
-  }
-}
-
 .card-list.personas {
   display: flex;
   flex-direction: row;
@@ -1945,6 +1937,19 @@ article p {
 .card-list.testimonials {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+}
+
+@media screen and (max-width:800px) {
+  .card-list {
+    grid-template-columns: 1fr;
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
+  .card-list.testimonials {
+    grid-template-columns: 1fr;
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
 }
 
 .card-list.full-width {
