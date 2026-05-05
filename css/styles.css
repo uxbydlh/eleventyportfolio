@@ -216,7 +216,7 @@ h2 {
   text-transform: uppercase;
   align-self: stretch;
   width: 100%;
-  padding: 6px 12%;
+  padding: 6px 3rem;
   gap: 16px;
   border-top: 1px solid #4E5E5F;
   border-bottom: 1px solid #4E5E5F;
@@ -262,7 +262,7 @@ h3 {
 
   display: flex;
   flex-grow: 1;
-  padding: var(--space-sm) 8vw;
+  padding: var(--space-sm) 3rem;
   gap: var(--space-md);
   border-top: 1px solid #4E5E5F;
   border-bottom: 1px solid #4E5E5F;
@@ -729,6 +729,8 @@ div.centre-text {
   max-width: 100%;
   flex-direction: column;
   gap: var(--space-lg);
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .content,
@@ -1565,7 +1567,8 @@ input[type=checkbox] {
 .article-container {
   /*Page width stuff - may not be relevant later*/
   max-width: 100em;
-  padding-inline: 3rem;
+  padding-inline: 2.5rem;
+  align-self: center;
 
   padding-block: 2rem;
   display: grid;
@@ -1604,9 +1607,13 @@ aside h3 {
 
 @media screen and (max-width :800px) {
   .article-container {
-    display: block;
-    grid-template-columns: 1fr;
-    padding-inline: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 0;
+  }
+  .article-container .content {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -1702,6 +1709,7 @@ nav.toc ol li a:only-child:hover {
 @media screen and (max-width :800px) {
   aside {
     z-index: 995;
+    padding-left: 2em;
   }
   aside {
   top: calc(var(--header-height) + 2em );
@@ -1717,6 +1725,7 @@ nav.toc ol li a:only-child:hover {
     position: fixed;
     top: var(--header-height);
     left: 0;
+    padding-left: 0;
   }
   aside:has(.toc-container.open) .back-to {
     /*Remove the back button temporarily*/
