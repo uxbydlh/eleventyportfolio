@@ -303,7 +303,6 @@ p {
   font-family: var(--font-family-body);
   font-size: var(--font-size-body);
   line-height: 1.6rem;
-  max-width: 60vw;
 }
 
 /*#endregion TEXT FORMATTING*/
@@ -2138,7 +2137,8 @@ article p {
 .table {
   display: flex;
   flex-direction: row;
-  
+  margin-left: 3rem;
+  margin-right: 3rem;
   background-color: var(--surface-primary);
 }
 
@@ -2160,6 +2160,7 @@ article p {
 .table-column p {
   min-height: 32px;
   padding: 8px;
+  border-bottom: var(--border-width-sm) solid var(--border-action);
 }
 
 @media only screen and (max-width: 600px) {
