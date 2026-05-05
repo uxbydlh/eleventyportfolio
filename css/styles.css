@@ -522,6 +522,10 @@ main:first-child {
 
 .banner-text .article-section{
   align-self: center;
+  align-items: center;
+  text-align: justify;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 @media screen and (max-width: 700px) {
@@ -1216,7 +1220,7 @@ picture:has(.divider-hr){
     transform: rotate(45deg);
   }
 
-  .dropdown__sublink{
+  .dropdown__submenu .dropdown__sublink{
     padding-left: 4.5rem;
   }
 }
