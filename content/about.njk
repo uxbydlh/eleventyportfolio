@@ -13,7 +13,7 @@ description: "Designer, Developer, Dilligent-worker. Adept at creating design sy
     <div class="section-row">
         <div class="row-column text">
             <h2 style="text-align: center;">{{roles}}</h2>
-            <p class="text-div">{{description}}</p>
+            <div class="article-section">{{description}}</div>
             {% set testList = testimonials | shuffle %}
             {% for testimonial in testList.slice(0,1) %}
             <li class="card testimonial">
@@ -107,16 +107,18 @@ description: "Designer, Developer, Dilligent-worker. Adept at creating design sy
                     <li>{{point}}</li>
                 {% endfor %}
                 </ul>
-                <div class="btn-row-inline">
-                    {% for project in job.projects %}
-                    <a class="btn secondary" href="{{project.link | toAbsoluteUrl}}">{{project.title}}<i class="ri-arrow-right-s-fill"></i></a>
-                    {% endfor %}
-                </div>
             </div>
             <div class="row-column image job-image">
                 <img class="image" src="{{'../assets/images/3rd-party-logos/' + job.logo}}" loading="lazy" alt="logo">
             </div>
         </div>
+        {%if job.projects%}
+            <div class="btn-row-inline">
+                        {% for project in job.projects %}
+                        <a class="btn secondary" href="{{project.link | toAbsoluteUrl}}">{{project.title}}<i class="ri-arrow-right-s-fill"></i></a>
+                        {% endfor %}
+            </div>
+        {%endif%}
     </div>
     {% endfor %}
 </section>

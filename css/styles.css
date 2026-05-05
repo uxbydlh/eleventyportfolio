@@ -220,6 +220,13 @@ h2 {
   background-color: var(--surface-primary);
 }
 
+@media screen and (max-width: 800px) {
+  h2 {
+    align-self: center;
+    width: 100vw;
+  }
+}
+
 .subdisplay {
   display: flex;
   flex-direction: row;
@@ -252,7 +259,7 @@ h3 {
 
   display: flex;
   flex-grow: 1;
-  padding: var(--space-sm) 12%;
+  padding: var(--space-sm) 8vw;
   gap: var(--space-md);
   border-top: 1px solid #4E5E5F;
   border-bottom: 1px solid #4E5E5F;
@@ -804,8 +811,11 @@ footer {
 .btn-row-inline {
   display: inline-flex;
   flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
+  padding-left: 8vw;
+  padding-right: 8vw;
 }
 
 .nav__buttons {
@@ -2500,7 +2510,7 @@ div:has(.embedded-google-form) {
   flex-direction: column;
   flex-grow: 1;
   width: 100%;
-  padding-right: 6%;
+  padding-right: 4vw;
   padding-bottom: var(--space-sm);
   border-top: 1px solid #4E5E5F;
   border-bottom: 1px solid #4E5E5F;
@@ -2514,6 +2524,7 @@ div:has(.embedded-google-form) {
 }
 
 .company-role h3 {
+  padding-left: 8vw;
   border-top: none;
   border-bottom: none;
   background-color: transparent;
@@ -2543,7 +2554,7 @@ div:has(.embedded-google-form) {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 12%;
+  padding-left: 8vw;
 }
 
 .job-info {
@@ -2553,7 +2564,7 @@ div:has(.embedded-google-form) {
 }
 
 .job-info .text-div {
-  padding-left: 12%;
+  padding-left: 8vw;
 }
 
 .job-info .image-div {
@@ -2574,15 +2585,25 @@ div:has(.embedded-google-form) {
 @media screen and (max-width: 800px) {
   .CV .heading {
     gap: var(--space-md);
+    padding-top: var(--space-md);
     padding-bottom: var(--space-md);
+    padding-right: 8vw;
   }
   .company-role {
+    padding-left: 8vw;
     flex-direction: column;
-    align-items:flex-start ;
-    padding-left: 12%;
+    align-items: flex-start;
   }
   .company-role h3 {
     padding-left: 0%;
+  }
+  .job-info {
+    padding-left: 8vw;
+    padding-right: 8vw;
+    flex-direction: column-reverse;
+  }
+  .job-image{
+    max-width: 100%;
   }
 }
 
