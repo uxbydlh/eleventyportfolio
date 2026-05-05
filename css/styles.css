@@ -355,6 +355,8 @@ main:first-child {
 .meta-container {
   display: flex;
   flex-grow: 1;
+  align-self: center;
+  width: 100%;
   max-width: 100em;
   padding-inline: 3rem;
   padding-bottom: 6rem;
