@@ -296,7 +296,7 @@ h5 {
 }
 
 h1, h2, h3, h4 {
-  scroll-margin-top: calc(var(--header-height) + 1em);
+  scroll-margin-top: calc(var(--header-height) + 1em + var(--space-lg));
 }
 
 p {
@@ -1031,6 +1031,7 @@ picture:has(.divider-hr){
     justify-content: flex-start;
     gap: 16px;
     background-color: var(--surface-nav);
+    overscroll-behavior: contain;
     /*transition: top .4s, opacity .3s;*/
   }
   .nav__menu::-webkit-scrollbar {
@@ -1637,6 +1638,7 @@ aside h3 {
 nav.toc {
   flex-shrink: 1;
   overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 nav.toc ol li {
@@ -1742,6 +1744,7 @@ nav.toc ol li a:only-child:hover {
   }
   .toc-container.open {
     display: flex;
+    overscroll-behavior: contain;
   }
   .toc-container.open #contents {
     flex-grow: 0;
