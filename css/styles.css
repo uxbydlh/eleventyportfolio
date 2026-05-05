@@ -520,6 +520,10 @@ main:first-child {
   gap: 12px;
 }
 
+.banner-text .article-section{
+  align-self: center;
+}
+
 @media screen and (max-width: 700px) {
   .subpage-banner {
     flex-direction: column-reverse;
@@ -1612,7 +1616,7 @@ aside h3 {
 
 /*MOBILE ARTICLES*/
 
-@media screen and (max-width :800px) {
+@media screen and (max-width :1118px) {
   .article-container {
     display: flex;
     flex-direction: column;
@@ -1708,13 +1712,13 @@ nav.toc ol li a:only-child:hover {
 }*/
 
 /*TOC MOBILE*/
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1118px) {
   .toc-reveal {
     display: none;
   }
 }
 
-@media screen and (max-width :800px) {
+@media screen and (max-width :1118px) {
   aside {
     z-index: 995;
     padding-left: 2em;
