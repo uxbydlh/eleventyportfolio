@@ -284,6 +284,7 @@ h4 {
   font-weight: 700;
   line-height: var(--line-height-h4);
   text-transform: uppercase;
+  padding: var(--space-sm) 3rem;
 }
 
 h5 {
