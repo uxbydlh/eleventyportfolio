@@ -2801,6 +2801,14 @@ div:has(.embedded-google-form) {
   object-position: top;
 }
 
+@media screen and (max-width: 1118px) {
+  .button-carousel {
+    padding-left: 2em;
+    padding-right: 2em
+  }
+  
+}
+
 @media screen and (min-width: 700px) {
   .button-carousel-images.slides-vert.slides-mobile-screens a img {
     width: 50%;
