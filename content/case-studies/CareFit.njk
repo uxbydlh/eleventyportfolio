@@ -22,7 +22,6 @@ const bannerImg = "assets/images/case-studies/CareFit/CareFit-Banner.webp";
 <img class="banner-image" src='{{ bannerImg | toAbsoluteUrl}}'>
 
 <h2 id="details">Details</h2>
-<div class="article-section">
 	{{
 		inlineTable ({
 			table: [
@@ -50,7 +49,6 @@ const bannerImg = "assets/images/case-studies/CareFit/CareFit-Banner.webp";
 			]
 		})
 	}}
-</div>
 
 <h2 id="outline">Outline</h2>
 <div class="article-section">
@@ -125,7 +123,7 @@ const bannerImg = "assets/images/case-studies/CareFit/CareFit-Banner.webp";
 <h2 is="suggestions">Suggestions</h2>
 <div class="article-section">
 	<div class="section-row">
-		<div class="row-column image">
+		<div class="row-column">
 			{{ alpineCarousel({ carouselId: "suggestionCarousel",
 					images: [
 						{src: "assets/images/case-studies/CareFit/suggestions.webp",
@@ -136,7 +134,7 @@ const bannerImg = "assets/images/case-studies/CareFit/CareFit-Banner.webp";
 				}) 
 			}}
 		</div>
-		<div class="row-column text">
+		<div class="row-column">
 			More high-intensity exercises were requested, so that users would not become bored if they became fitter as a result of the application. 
 			Built-in guidance was requested, in case the carer was less familiar with exercise apps, or had been unable to use the app for a while. 
 			In response to this, we tutorialised the onboarding process and created an option to revisit the tutorial at any time. 
