@@ -2823,7 +2823,8 @@ div:has(.embedded-google-form) {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap:var(--space-lg)
+  gap:var(--space-lg);
+  z-index: 1;
 }
 /*#endregion button-control carousel*/
 

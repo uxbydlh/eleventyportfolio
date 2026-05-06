@@ -4,10 +4,9 @@
             {%if params.images.length > 2%} multi-image {%endif%}
             {%if params.images.length === 2%} duo-image {%endif%}
             {%if params.images.length === 1%} single-image {%endif%}
-            {{params.galleryId}} swipebox" >
+            {{params.galleryId}}" >
     {% for image in params.images %}
-        <a rel="{{params.galleryId}}" 
-        href="{{image | toAbsoluteUrl}}" title="">
+        <a rel="{{params.galleryId}}" class="swipebox" href="{{image | toAbsoluteUrl}}" title="">
             <img src="{{image | toAbsoluteUrl}}">
         </a>
     {% endfor %}
