@@ -93,5 +93,10 @@
         "name":"trello",
         "icon":"trello.png",
         "type":"mgmt"
+    },
+    {
+        "name":"alpine.js",
+        "icon":"alpine.svg",
+        "type":"dev"
     }
 ]
