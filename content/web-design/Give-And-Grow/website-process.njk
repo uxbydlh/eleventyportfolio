@@ -24,13 +24,14 @@ const bannerImg = "assets/images/case-studies/Give-and-Grow/GAGBanner.webp";
 <img class="banner-image" src='{{bannerImg | toAbsoluteUrl}}'>
 <div class="article-section">
 	Give and Grow is a community interest company dedicated to helping students who are unable to afford full-price tutoring sessions, but are also ineligible for financial support from traditional aid systems.
-	<a class="btn primary"
-				href="https://giveandgrowcic.co.uk/"
-				target="_blank" rel="noopener noreferrer">Visit Give & Grow<i class="ri-arrow-right-s-fill"></i></a>
+	<div class="btn row">
+		<a class="btn primary"
+					href="https://giveandgrowcic.co.uk/"
+					target="_blank" rel="noopener noreferrer">Visit Give & Grow<i class="ri-arrow-right-s-fill"></i></a>
+	</div>
 </div>
 
 <h2 id="details">Details</h2>
-<div class="article-section">
 	{{ inlineTable ({
 			table: [
 				{
@@ -67,7 +68,6 @@ const bannerImg = "assets/images/case-studies/Give-and-Grow/GAGBanner.webp";
 			]
 		})
 	}}
-</div>
 
 <h2 id="impact">Impact</h2>
 <h3 id="completed-screens">Completed Screens</h3>
@@ -162,6 +162,7 @@ const bannerImg = "assets/images/case-studies/Give-and-Grow/GAGBanner.webp";
 <h3 id="user-personas">User Personas</h3>
 <div class="article-section">
 	Before expanding this initial design, it was important to outline the target audience. I created some personas, keeping the info provided by the founder in mind.
+</div>
 	{{ personas({
 		personas: [
 			{
@@ -203,11 +204,11 @@ const bannerImg = "assets/images/case-studies/Give-and-Grow/GAGBanner.webp";
 			
 		]
 	})}}
-</div>
 
 <h3 id="competitor-research">Competitor Research</h3>
 <div class="article-section">
 	I also took the time to examine competing organisations at a variety of scales and noticed some trends in how organisations presented themselves.
+</div>
 	{{ inlineTable ({
 			table: [
 				{
@@ -229,7 +230,6 @@ const bannerImg = "assets/images/case-studies/Give-and-Grow/GAGBanner.webp";
 			]
 		})
 	}}
-</div>
 
 <h3 id="establishing-give-grow">Pain Point - Establishing G&G</h3>
 <div class="article-section">
