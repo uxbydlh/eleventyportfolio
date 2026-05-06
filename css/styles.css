@@ -2827,9 +2827,9 @@ div:has(.embedded-google-form) {
 .swipe-gallery {
   max-width: 100em;
   gap: var(--space-lg);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-  grid-auto-rows: minmax(0, auto);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .swipe-gallery.extra-long {
@@ -2846,6 +2846,16 @@ div:has(.embedded-google-form) {
   max-height: 50vh;
   width: 100%;
   overflow: hidden;
+}
+
+.swipe-gallery.multi-image a {
+  min-width: 180px;
+  max-width: 30%;
+}
+
+.swipe-gallery.duo-image a {
+  min-width: 180px;
+  max-width: 45%;
 }
 
 .swipe-gallery a img {
