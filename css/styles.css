@@ -773,7 +773,10 @@ footer {
   font-weight: bold;
   text-transform: uppercase;
   font-size: var(--normal-font-size);
+  z-index: 1;
 }
+
+
 
 .smallBtn {
   display: flex;
