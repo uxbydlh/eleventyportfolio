@@ -29,7 +29,7 @@
     {
         "company":"Eco Centre CBS Limited",
         "roles": [
-            {"title": "UX Design", "tag":"UX"},
+            {"title": "UX Design", "tag":"ux"},
             {"title": "UI Design", "tag":"UI"},
             {"title":"User Research", "tag":"UXR"}
         ],
@@ -44,8 +44,16 @@
             "Designed and reworked page layouts and paths based on user research."],
         "projects": [
             {
-                "title":"Landing Page UXR",
-                "link": "/current-work/E-Save/UXR-Reports/"
+                "title":"View \"Help Me Save\"",
+                "link": "/case-studies/E-Save/Help-Me-Save/"
+            },
+            {
+                "title":"View Dashboard Changes",
+                "link": "/case-studies/E-Save/Dashboard-Changes/"
+            },
+            {
+                "title":"View \"Confirm Action\"",
+                "link": "/case-studies/E-Save/Confirm-Action/"
             }
         ]
     },
