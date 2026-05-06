@@ -14,10 +14,14 @@ pagination:
 ---
 {%- from 'projectCards.njk' import filteredProjects %}
 
-Websites designed by me. Projects marked "dev" indicate that I worked on the site as a developer, too.
-
-{{ filteredProjects ({ 
-        projectList: websites,
-        filter: 'web-design'
-     }) }}
+<div class="tag-card-container">
+    <div class="article-section centre-text">
+            Websites designed by me. Projects marked "dev" indicate that I worked on the site as a developer, too.
+    </div>
+    
+    {{ filteredProjects ({
+            projectList: websites,
+            filter: 'web-design'
+         }) }}
+</div>
 
