@@ -2858,6 +2858,14 @@ div:has(.embedded-google-form) {
   cursor: zoom-in;
 }
 
+@media screen and (max-width: 1118px) {
+  .swipe-gallery {
+    padding-left: 2em;
+    padding-right: 2em
+  }
+  
+}
+
 /*#endregion gallery*/
 
 /*#endregion Image Styling*/
