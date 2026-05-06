@@ -1954,6 +1954,10 @@ article p {
   gap: var(--space-lg);
 }
 
+.card-list.personas li {
+  min-width: 45%;
+}
+
 .card-list.testimonials {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));

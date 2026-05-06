@@ -28,7 +28,6 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 </div>
 
 <h2 id="details">Details</h2>
-<div class="article-section">
 		{{ inlineTable ({
 			table: [
 				{
@@ -59,7 +58,6 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 			]
 		})
 	}}
-</div>
 
 <h2 id="impact">Impact</h2>
 <div class="article-section">
@@ -81,10 +79,12 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 <div class="article-section">
 	<img class="banner-image" src='{{"assets/images/case-studies/DHH/DHHAdBanner.webp" | toAbsoluteUrl}}'>
 	Founded in 2023, Devon Healing Horsemanship is the only approved charity providing interventions from The Horse Course in Devon. They primarily deliver The Horse Course ReStart: an action-based intervention utilising horsemanship to teach, rehearse and repeat key resilience skills. These skills are taught to those facing a mental health difficulty as an alternative when talk-based therapy practices have proven ineffective.
-</div>
-<a class="btn primary"
+	<div class="btn row">
+		<a class="btn primary"
 		href="https://www.thehorsecourse.org/"
 		target="_blank" rel="noopener noreferrer">Visit The Horse Course<i class="ri-arrow-right-s-fill"></i></a>
+	</div>
+</div>
 <div class="article-section">
 	DHH’s existing website – designed in 2023, was attempting to stand out among other providers of The Horse Course with its unique appearance. However, it did not reflect the founder’s distinct outlook, it wasn’t optimised for mobile, and it wasn’t driving donations.
 	It was time for a change.
@@ -351,9 +351,11 @@ const bannerImg = "assets/images/case-studies/DHH/DHHMultibanner.webp";
 							orientation: "slides-horiz"
 						}) 
 	}}
-	<a class="btn primary"
-		href="https://www.figma.com/proto/FoRFXZcn7CpRTfWI8wL58A/Design-Files?node-id=292-1013&t=5YgWHFzdhtAecRwu-1&scaling=min-zoom&content-scaling=fixed&page-id=160%3A1098&starting-point-node-id=292%3A1013"
-		target="_blank" rel="noopener noreferrer">View Widget Demo<i class="ri-arrow-right-s-fill"></i></a>
+	<div class="btn row">
+		<a class="btn primary"
+			href="https://www.figma.com/proto/FoRFXZcn7CpRTfWI8wL58A/Design-Files?node-id=292-1013&t=5YgWHFzdhtAecRwu-1&scaling=min-zoom&content-scaling=fixed&page-id=160%3A1098&starting-point-node-id=292%3A1013"
+			target="_blank" rel="noopener noreferrer">View Widget Demo<i class="ri-arrow-right-s-fill"></i></a>
+	</div>
 	<h5>Unexpected Constraints</h5>
 	Budget constraints were tight, and we could not afford to implement a widget that accurately represented the designs. While I still think the core elements of impact-based donation are there, I had hoped to include it in the Monthly section as well as the One-Off section. In the future, we may be able to cover the cost of a more accurate widget.
 
