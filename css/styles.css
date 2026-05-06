@@ -1934,6 +1934,7 @@ article p {
   grid-auto-rows: minmax(0, auto);
   gap: 24px;
   justify-content: center;
+  place-items: center;
 }
 
 .card-list.personas {
