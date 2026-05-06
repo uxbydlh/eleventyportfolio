@@ -1762,6 +1762,11 @@ nav.toc ol li a:only-child:hover {
   .toc-container.open #contents {
     flex-grow: 0;
   }
+
+  .toc-container.open .toc {
+    margin-bottom: calc(12vh + var(--header-height));
+  }
+
   .toc-close {
     display: block;
     position: absolute; /* relative to its positioned parent */
