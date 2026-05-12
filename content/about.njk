@@ -6,12 +6,14 @@ eleventyNavigation:
 title: About
 
 roles: "UX / UI | Web Design | Frontend"
-description: "Designer, Developer, Dilligent-worker. Adept at creating design systems suitable for a variety of scope sizes. Experienced mainly in the finance and non-profit sectors."
+description: "Designer, Developer, Dilligent-worker. Adept at creating design systems suitable for a variety of scope sizes. Experienced mainly in the finance and non-profit sectors. Solo dev for this site."
+
+tags: main_page
 
 ---
 <section class="centre" id="about-snippet">
-    <div class="section-row">
-        <div class="row-column text">
+    <div class="section-row image-right">
+        <div class="row-column">
             <h2 style="text-align: center;">{{roles}}</h2>
             <div class="article-section">{{description}}</div>
             {% set testList = testimonials | shuffle %}
@@ -22,8 +24,8 @@ description: "Designer, Developer, Dilligent-worker. Adept at creating design sy
             </li>
             {% endfor %}
         </div>
-        <div class ="row-column image">
-            <img src="https://picsum.photos/800/800">
+        <div class ="row-column self-portrait">
+            <img src="{{'assets/images/case-studies/SelfPort.webp' | toAbsoluteUrl}}">
         </div>
     </div>
 </section>

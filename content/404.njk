@@ -1,0 +1,23 @@
+---
+permalink: 404.html
+eleventyExcludeFromCollections: true
+
+title: Content Not Found
+subheading: Maybe you're looking for one of these?
+
+pagination:
+    data: collections.main-pages
+    size: 100
+    alias: mains
+---
+{%- from 'projectCards.njk' import filteredProjects -%}
+
+<div class="tag-card-container">
+
+    {{ filteredProjects ({
+        projectList: mains,
+        filter: 'main_page'
+    })
+    }}
+
+</div>

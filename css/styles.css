@@ -50,7 +50,7 @@
   --text-action-hover: #0B1312;
   --text-selected: #E8F6F3;
 
-  --background-image-location: url("https://www.transparenttextures.com/patterns/noisy-grid.png");
+  --background-image-location: url("http://localhost:8080/assets/images/case-studies/noisy-grid.webp");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 
   --surface-page: #232E2D;
@@ -168,8 +168,8 @@
   margin: 0;
 }
 
-/*TODO TROUBLESHOOTING, REVERT WHEN DONE*/
-* { outline: 1px solid red; }
+/*TROUBLESHOOTING, REVERT WHEN DONE*/
+/** { outline: 1px solid red; }*/
 
 html,
 body {
@@ -654,6 +654,20 @@ div.centre-text {
   justify-content: center;
   aspect-ratio: 16/9;
   max-height: 100%;
+}
+
+.row-column.self-portrait {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  aspect-ratio: auto;
+  max-height: 40vh;
+}
+
+.row-column.self-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .diagram {

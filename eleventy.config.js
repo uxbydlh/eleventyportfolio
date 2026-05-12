@@ -102,9 +102,9 @@ export default async function(eleventyConfig) {
 		},
 		metadata: {
 			language: "en",
-			title: "Give and Grow CIC",
-			subtitle: "Accessible tutoring services for students at every level of financing.",
-			base: "https://giveandgrowcic.co.uk/",
+			title: "UXbyDLH",
+			subtitle: "UX Design, Research, Development",
+			base: "https://uxbydlh.com/",
 			author: {
 				name: "UXbyDLH"
 			}
@@ -127,6 +127,12 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addCollection("web-design", function(collection) {
 		var webdesignCollection = collection.getFilteredByTag("web-design");
 		return webdesignCollection;
+	})
+
+	//Adding a main page collection
+	eleventyConfig.addCollection("main-pages", function(collection) {
+		var mainPageCollection = collection.getFilteredByTag("main_page");
+		return mainPageCollection;
 	})
 
 	//Adding an images folder
