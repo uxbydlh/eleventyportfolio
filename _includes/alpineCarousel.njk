@@ -4,8 +4,8 @@
     {#TODO SWAP OUT URLS BEFORE GO LIVE#}
     <template x-for="(image, index) in images" :key="index">
         <div x-show="activeSlide === index" class="button-carousel-images {{params.orientation}} {{params.slideType}} {{params.plurality}}">
-            <a rel="{{params.carouselId}}" class="swipebox" :href="new URL(`${image.src}`,'http://localhost:8080/').href" :title="image.caption">
-                <img :src="new URL(`${image.src}`,'http://localhost:8080/').href">
+            <a rel="{{params.carouselId}}" class="swipebox" :href="new URL(`${image.src}`,'https://uxbydlh.com/').href" :title="image.caption">
+                <img :src="new URL(`${image.src}`,'https://uxbydlh.com/').href">
                 <p class="carousel-caption" x-show="image.caption !=null" x-text="image.caption"></p>
             </a>
         </div>
