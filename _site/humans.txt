@@ -1,0 +1,28 @@
+/* TEAM */
+
+Solo Web Dev / Webmaster (if anyone still says that): Dorian H.
+Contact: uxbydlh [at] gmail.com
+From: Scotland
+
+/* THANKS */
+
+Simple Eleventy Excerpts: Tyler Sticka
+
+Eleventy Dynamic Categories: Bryan Robinson
+
+Table of Contents (TOC) Eleventy Plugin: James Steinbach
+
+jQuery Swipebox: Constantin Saguin
+
+Noisy Grid texture
+Made by: Vectorpile
+Transparent Textures: Mike Hearn
+
+WebP Conversion: ezgif [dot] com
+
+/* SITE */
+
+Last Update: 2026-05-12
+Standards: HTML5, CSS3, JS
+Components: Eleventy, jQuery, Alpine
+Software: VSCode, Figma, Photoshop, Illustrator, Procreate
