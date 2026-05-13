@@ -10,47 +10,47 @@ const tags = ["main_page"];
 
 const logos = [
 	{
-		file: "logo-adenydd.png",
+		file: "assets/images/3rd-party-logos/logo-adenydd.png",
 		link: "web-design/adenydd",
 		org: "Adenydd"
 	},
 	{
-		file: "logo-DHH.png",
+		file: "assets/images/3rd-party-logos/logo-DHH.png",
 		link: "web-design/dhh",
 		org: "Devon Healing Horsemanship"
 	},
 	{
-		file: "logo-dotdot.svg",
+		file: "assets/images/3rd-party-logos/logo-dotdot.svg",
 		link: "case-studies/morses-club/ddl",
 		org: "Dot Dot Loans"
 	},
 	{
-		file: "logo-EcoCentre.png",
+		file: "assets/images/3rd-party-logos/logo-EcoCentre.png",
 		link: "case-studies/e-save",
 		org: "Eco Centre Southwest"
 	},
 	{
-		file: "logo-GiveGrow.svg",
+		file: "assets/images/3rd-party-logos/logo-GiveGrow.svg",
 		link: "web-design/give-and-grow",
 		org: "Give and Grow: Community Powered Education"
 	},
 	{
-		file: "logo-morses.svg",
+		file: "assets/images/3rd-party-logos/logo-morses.svg",
 		link: "case-studies/morses-club",
 		org: "Morses Club PLC"
 	},
 	{
-		file: "logo-ncr.svg",
+		file: "assets/images/3rd-party-logos/logo-ncr.svg",
 		link: "about/#ncr-atleos",
 		org: "NCR Atleos"
 	},
 	{
-		file: "logo-oakbrook.svg",
+		file: "assets/images/3rd-party-logos/logo-oakbrook.svg",
 		link: "about/#oakbrook-finance-limited",
 		org: "Oakbrook Finance Limited"
 	},
 	{
-		file: "logo-VED.webp",
+		file: "assets/images/3rd-party-logos/logo-VED.webp",
 		link: "web-design/ved",
 		org: "Very Evil Demons"
 	}
@@ -73,7 +73,7 @@ const logos = [
 							<div class="marquee-item dynamic-item" role="listitem">
 								<div class="marquee-image">
 									<a href="{{logo.link}}">
-										<img class="image" src="{{'/assets/images/3rd-party-logos/' + logo.file | toAbsoluteUrl}}" loading="lazy" alt="{{logo.org}}">
+										<img class="image" src="{{ logo.file | toAbsoluteUrl}}" loading="lazy" alt="{{logo.org}}">
 									</a>
 								</div>
 							</div>
