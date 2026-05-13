@@ -11,22 +11,22 @@ const tags = ["main_page"];
 const logos = [
 	{
 		file: "logo-adenydd.png",
-		link: "web-design/Adenydd",
+		link: "web-design/adenydd",
 		org: "Adenydd"
 	},
 	{
 		file: "logo-DHH.png",
-		link: "web-design/DHH",
+		link: "web-design/dhh",
 		org: "Devon Healing Horsemanship"
 	},
 	{
 		file: "logo-dotdot.svg",
-		link: "case-studies/Morses-Club/DDL",
+		link: "case-studies/morses-club/ddl",
 		org: "Dot Dot Loans"
 	},
 	{
 		file: "logo-EcoCentre.png",
-		link: "case-studies/E-Save",
+		link: "case-studies/e-save",
 		org: "Eco Centre Southwest"
 	},
 	{
@@ -36,7 +36,7 @@ const logos = [
 	},
 	{
 		file: "logo-morses.svg",
-		link: "case-studies/Morses-Club",
+		link: "case-studies/morses-club",
 		org: "Morses Club PLC"
 	},
 	{
@@ -51,7 +51,7 @@ const logos = [
 	},
 	{
 		file: "logo-VED.webp",
-		link: "web-design/VED",
+		link: "web-design/ved",
 		org: "Very Evil Demons"
 	}
 ];
@@ -73,7 +73,7 @@ const logos = [
 							<div class="marquee-item dynamic-item" role="listitem">
 								<div class="marquee-image">
 									<a href="{{logo.link}}">
-										<img class="image" src="{{'../assets/images/3rd-party-logos/' + logo.file}}" loading="lazy" alt="{{logo.org}}">
+										<img class="image" src="{{'/assets/images/3rd-party-logos/' + logo.file | toAbsoluteUrl}}" loading="lazy" alt="{{logo.org}}">
 									</a>
 								</div>
 							</div>
