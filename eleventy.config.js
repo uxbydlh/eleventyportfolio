@@ -48,6 +48,7 @@ export default async function(eleventyConfig) {
 		.addPassthroughCopy("./assets/images/case-studies") //slides and such for case studies
 		.addPassthroughCopy("./_data/tools.json")
 		.addPassthroughCopy("./assets/images/3rd-party-logos/tools")
+		.addPassthroughCopy("./assets/images/3rd-party-logos")
 		.addPassthroughCopy({
 			'./node_modules/alpinejs/dist/cdn.js': './js/alpine.js',
 		}) //Alpine
