@@ -1,0 +1,213 @@
+---js
+const layout = "layouts/post.njk";
+
+const eleventyNavigation = {
+	key: "Form Fatigue Solution",
+	parent: "Morses Club",
+	parentUrl: "/case-studies/Morses-Club/"
+};
+
+const tags = ["project","morses","case-study","UXR","UX","UI"];
+
+const date = "2023-01-01";
+
+const title = "Reducing Form Fatigue";
+const subheading = "With Strategic Income & Outgoings Page Enhancements";
+const bannerImg = "/assets/images/case-studies/Morses/Form-Fatigue/1Banner.webp";
+---
+
+{%- from 'filteredTestimonials.njk' import filteredTestimonials%}
+{%- from 'inlineTable.njk' import inlineTable %}
+
+<img class="banner-image" src='{{ bannerImg | toAbsoluteUrl}}'>
+<div class="article-section">
+	Tackling pain points within the “Income and Outgoings” portion of the digital customer journey. Created for Morses Club - a loan company that provided non-standard credit options.
+</div>
+<div class="btn row">
+	<a class="btn primary"
+		href="https://www.figma.com/proto/9BpfEDVuj9KOsCtXJpJDUv/?scaling=scale-down&show-proto-sidebar=1"
+		target="_blank" rel="noopener noreferrer">View Final Prototype<i class="ri-arrow-right-s-fill"></i></a>
+</div>
+
+<h2 id="context">Context</h2>
+<div class="article-section">
+	Morses Club PLC was a UK consumer finance company that offered a variety of loan products including home collected credit and online lending. 
+	At the time of this project, Morses were making a push to move the majority of their services to digital and improve the usability of their existing digital lending services.
+</div>
+
+<h2 id="details">Details</h2>
+	{{ inlineTable ({
+			table: [
+				{
+					header: "Scope",
+					bodyItems: [
+						"Full-time",
+						"Improvement on existing product"
+					]
+				},
+				{
+					header: "Role",
+					bodyItems: [
+						"Concept",
+						"Research",
+						"UX & UI design"
+					]
+				},
+				{
+					header: "Tools",
+					bodyItems: [
+						"Figma",
+						"Figjam",
+						"HotJar"
+					]
+				}
+			]
+		})
+	}}
+
+<h2 id="impact">Impact</h2>
+<div class="article-section">
+	The implementation of the new Income and Outgoings structure resulted in an 18% increase in acquisition journey leads during it's first week in use.
+	Embracing the interspersed solution ensured that users had ample time to review and consider their answers, contributing to improved accuracy.
+	Further research and feedback revealed the necessity for a "summary" page, aggregating all Income and Outgoings inputs from the form, offering customers a final opportunity to rectify errors before proceeding.
+</div>
+
+<h2 id="problem">Problem</h2>
+<div class="article-section">
+	Having no existing customer data to rely on meant that the initial design for the digital customer journey had a degree of freedom and exploration in its design. However, it also meant that the initial Income and Expenditure page design was primarily driven by business interests and compliance guidelines, rather than being more tailored to fit Morses’ actual user base.
+	The Income and Expenditure section of our online form faced poor customer reception. Customers could not figure out the purpose of the disposable income calculation, or why certain inputs were required from them. This was not aided by the length of the page, which was much longer than other pages in the form.
+</div>
+<h3 id="problem-question">Key Question</h3>
+<div class="article-section">
+	How can we reduce form-fatigue while still essentially keeping the same number of questions that we had before?
+</div>
+
+<h2 id="proposed-solution">Proposed Solution</h2>
+<div class="article-section">
+	Rather than sticking with a single page, we opted to take the Income and Outgoings inputs and spread them across our existing form pages. Relevant Income and/or Outgoings questions would be grouped with other existing questions in a similar vein. For example: mortgage and rent payment questions would be placed next to address and household questions.
+	{%- from 'alpineCarousel.njk' import alpineCarousel %}
+	{{ alpineCarousel({ carouselId: "asistobeCarousel",
+					images: [
+						{src:"assets/images/case-studies/Morses/Form-Fatigue/AsIs-ToBe/1AsIs.webp"},
+						{src:"assets/images/case-studies/Morses/Form-Fatigue/AsIs-ToBe/2ToBe.webp"}
+						],
+					orientation: "slides-horiz"
+				}) 
+	}}
+</div>
+
+<h2 id="research">Research</h2>
+<div class="article-section">
+	To gain a clearer understanding of where we stood among our competitors in terms of I\&E questions, other online lenders were examined. The majority of them had significantly shorter I\&E sections, with some of the longer variants splitting the questions across the rest of the form, and others providing a summary detailing the monetary amounts entered by the user.
+	HotJar analysis helped to determine which areas of the form were most likely to be filled incorrectly. It also revealed that users failed to make use of the tooltips most of the time. What was notable however, was that when a customer did manage to use the tooltips, they would go on to use them for most inputs on the form.
+	This made two things apparent:
+	• Customers did not know the majority of their I\&E input data off the top of their head, and were either filling them in incorrectly, or not at al
+	• Customers needed to be shown more information to feel like they could comfortably answer our questions.
+</div>
+<h3 id="research-presentation">Research Presentation</h3>
+<div class="article-section">
+	{{ alpineCarousel({ carouselId: "researchCarousel",
+					images: [
+						{src:"assets/images/case-studies/Morses/Form-Fatigue/Research/research1.webp"},
+						{src:"assets/images/case-studies/Morses/Form-Fatigue/Research/research2.webp"},
+						{src:"assets/images/case-studies/Morses/Form-Fatigue/Research/research3.webp"},
+						{src:"assets/images/case-studies/Morses/Form-Fatigue/Research/research4.webp"},
+						{src:"assets/images/case-studies/Morses/Form-Fatigue/Research/research5.webp"}
+						],
+					orientation: "slides-horiz"
+				}) 
+	}}
+</div>
+
+<h2 id="ideation">Ideation</h2>
+<div class="article-section">
+	Following data examination, a strategic choice was made to develop two distinct and innovative UX solutions, each presenting a radical departure from each other.
+</div>
+<h3 id="id-prog-disc">Pure Progressive Disclosure</h3>
+<div class="article-section">
+	<div class="section-row">
+		<div class="row-column">
+			{{ alpineCarousel({ carouselId: "ppdCarousel",
+					images: [
+						{src:"/assets/images/case-studies/Morses/Form-Fatigue/2PPD.webp",
+						caption: "Click for full view"}
+						],
+					orientation: "slides-vert",
+					plurality: "single-image"
+				}) 
+			}}
+		</div>
+		<div class="row-column">
+			Initially, only the employment input would be shown to the user. 
+			Additional fields remain hidden until interaction with a checkbox or button triggers their display. 
+			This strategy aimed to create a more concise and approachable initial page and percent aimless scrolling through similar fields for a more focussed experience.
+			<div class="row">
+				<a class="btn primary"
+					href="https://www.figma.com/proto/9BpfEDVuj9KOsCtXJpJDUv/?node-id=11-10529&scaling=scale-down&show-proto-sidebar=1"
+					target="_blank" rel="noopener noreferrer">View Demo<i class="ri-arrow-right-s-fill"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<h3 id="id-int">Interspersed</h3>
+<div class="article-section">
+	<div class="section-row">
+		<div class="row-column">
+			{{ alpineCarousel({ carouselId: "interspersedCarousel",
+					images: [
+						{src:"/assets/images/case-studies/Morses/Form-Fatigue/3Interspersed.webp",
+						caption:"Click for full view"}
+						],
+					orientation: "slides-vert",
+					plurality: "single-image"
+				}) 
+			}}
+		</div>
+		<div class="row-column">
+			Income and expenditure inquiries would be grouped with related questions. For example: housing benefits and rent payment questions would be situated alongside address-related questions. This arrangement aimed to deter question skipping, and ensure that customers were in the appropriate mindset to provide accurate responses.
+			<div class="row">
+				<a class="btn primary"
+						href="https://www.figma.com/proto/9BpfEDVuj9KOsCtXJpJDUv/?node-id=11-34180&scaling=scale-down&show-proto-sidebar=1"
+						target="_blank" rel="noopener noreferrer">View Demo<i class="ri-arrow-right-s-fill"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<h3 id="id-micro">Micro-Solutions</h3>
+<div class="article-section">
+	{{ alpineCarousel({ carouselId: "microCarousel",
+					images: [
+						{src:"/assets/images/case-studies/Morses/Form-Fatigue/4MicroSolutions.webp"}
+						],
+					orientation: "slides-vert",
+					plurality: "single-image"
+				}) 
+			}}
+	Before the development of the two larger solutions, we prioritised the development of micro-solutions such as progressive disclosure and automatic tooltips. We did this to target specific pain-points in a shorter time before overhauling the whole page.
+	An “I need help” button was also implemented to facilitate direct customer contact for assistance with completing the page. This feature aimed to support users with the existing page, and served as a driving force for future user research and iterative improvements to enhance the pages’ usability.
+</div>
+
+<h2 id="development">Development</h2>
+<div class="article-section">
+	Opting for the “Interspersed” solution diversified the page layout, reducing the risk of visual overload that the original Income and Expenditure (I\&E) page carried. By breaking up the page across several existing pages, we reduced the monotony that was previously there when the user had to scroll through every I\&E question at once.
+	Replacing manual tooltip icon buttons with an automated process that makes additional information appear when the user clicks on the actual input reduces visual clutter. This enabled us to ask more elaborate questions where needed.
+	Implementing progressive disclosure allowed us to conceal non-applicable or optional questions, streamlining the user interaction for increased efficiency.
+</div>
+
+<h2 id="demos">Demos</h2>
+<h3 id="demos-input">Input Demos</h3>
+<div class="article-section">
+	<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450px" src="https://embed.figma.com/proto/9BpfEDVuj9KOsCtXJpJDUv/Demos---Income-%26-Expenditure?node-id=11-33811&amp;scaling=scale-down&amp;show-proto-sidebar=1&amp;starting-point-node-id=11%3A33811&amp;embed-host=share" allowfullscreen=""></iframe>
+</div>
+<h3 id="demos-final">Final Prototypes</h3>
+<div class="article-section">
+	<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450px" src="https://embed.figma.com/proto/9BpfEDVuj9KOsCtXJpJDUv/Demos---Income-%26-Expenditure?scaling=scale-down&amp;show-proto-sidebar=1&amp;node-id=1-10915&amp;starting-point-node-id=1%3A10915&amp;embed-host=share" allowfullscreen=""></iframe>
+</div>
+
+<h2 id="testimonial-section">Testimonials</h2>
+	{{ filteredTestimonials({
+		listOfAll: testimonials,
+		filter: "Morses"
+	}) }}

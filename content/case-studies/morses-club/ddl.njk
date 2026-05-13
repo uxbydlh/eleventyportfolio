@@ -1,0 +1,239 @@
+---js
+const layout = "layouts/post.njk";
+
+const eleventyNavigation = {
+	key: "Dot Dot Loans",
+	parent: "Morses Club",
+	parentUrl: "/case-studies/Morses-Club/"
+};
+
+const tags = ["design","project","morses","case-study","UX","UI"];
+
+const date = "2023-01-01";
+
+const title = "UI/UX Groundwork for Dot Dot Loans";
+const subheading = "Design Systems and Customer Journeys";
+const bannerImg = "/assets/images/case-studies/Morses/Dot-Dot/1Banner.webp";
+---
+{%- from 'alpineCarousel.njk' import alpineCarousel %}
+{%- from 'filteredTestimonials.njk' import filteredTestimonials%}
+{%- from 'inlineTable.njk' import inlineTable %}
+
+<img class="banner-image" src='{{ bannerImg | toAbsoluteUrl}}'>
+
+<h2 id="context">Context</h2>
+<div class="article-section">
+	Dot Dot Loans were a subsidiary of Morses Club PLC a UK consumer finance company that offered a variety of loan products including home collected credit and online lending. 
+	Dot Dot Loans provided online loans between £100 and £1000. 
+	At the time of this project, Morses were making a push to move the majority of their services to digital and improve the usability of their existing digital lending services. 
+	They had a few screens already prepared in Figma representing the Dot Dot Loans brand, but not much more.
+	<div class="section-row">
+		<div class="row-column">
+			<a class="btn primary"
+				href="https://www.figma.com/proto/l5lKpkcBl5x742ctIOWKVN/DDL-Style-_-Portal-\(Editable\)?node-id=1395-13989&node-type=canvas&t=Lym7iIhknFv8ycng-9&scaling=contain&content-scaling=fixed&page-id=1388%3A13948&starting-point-node-id=1395%3A13989&show-proto-sidebar=1"
+				target="_blank" rel="noopener noreferrer">View Customer Journey Demos<i class="ri-arrow-right-s-fill"></i></a>
+		</div>
+		<div class="row-column">
+			<a class="btn primary"
+				href="https://www.figma.com/proto/7rMxT217dE4Nw5yz6xEupn/Repayment-Plan-Tool?node-id=74-16440&node-type=canvas&t=fDEtU8RCiE0k1SRx-9&scaling=scale-down&content-scaling=fixed&page-id=74%3A15518&starting-point-node-id=74%3A16440&show-proto-sidebar=1"
+				target="_blank" rel="noopener noreferrer">View Repayment Plan Tool Prototypes<i class="ri-arrow-right-s-fill"></i></a>
+		</div>
+		<div class="row-column">
+			<a class="btn primary"
+				href="https://www.figma.com/proto/ECGjYEjfDSab2tYyG9ZfSk/?scaling=scale-down&show-proto-sidebar=1"
+				target="_blank" rel="noopener noreferrer">View Maintenance Feature Prototypes<i class="ri-arrow-right-s-fill"></i></a>
+		</div>
+	</div>
+</div>
+
+<h2 id="details">Details</h2>
+	{{ inlineTable ({
+			table: [
+				{
+					header: "Scope",
+					bodyItems: [
+						"Full-time",
+						"Improvement on existing product"
+					]
+				},
+				{
+					header: "Role",
+					bodyItems: [
+						"Research",
+						"UX & UI design"
+					]
+				},
+				{
+					header: "Tools",
+					bodyItems: [
+						"Figma",
+						"HotJar"
+					]
+				}
+			]
+		})
+	}}
+
+<h2 id="impact">Impact</h2>
+<h3 id="impact-design-system">Design System and Interactive Journey</h3>
+<div class="article-section">
+	Building out the design system helped to maintain the consistency of visual elements across future designs. 
+	It also allowed for much faster prototyping of and iteration on new features. 
+	This increased overall confidence in new features before they were sent to the third-party to be implemented.
+	Recreating the customer journey allowed us to properly visualise and understand how users navigate through the website, leading to more informed decisions about what features could be added, moved, etc.
+</div>
+<div class="article-section">
+	Providing the third-party with clear, interactive reference also meant that less revisions needed to be made to the final product. 
+	This saved Morses both time and money.
+</div>
+<div class="article-section">
+	The demos also served as a good visual guide to our journey for new team members, and aided with training and onboarding. 
+	They reduced set-up time for employee training, as new employees could be provided with a link right to the demos and a password, rather than waiting on accounts to be set up by IT.
+</div>
+
+<h3 id="impact-repayment">Repayment Plan Tool</h3>
+<div class="article-section">
+	The Integration of this tool reduced the strain on DDL customer service agents, allowing for more journeys to be processed more efficiently.
+	Customer satisfaction also increased, as it allowed customers to partially progress with creating a repayment plan without having to wait or make any phone calls.
+</div>
+<h3 id="impact-maintenance">Maintenance Enhancements</h3>
+<div class="article-section">
+	These customer portal and journey enhancements created a more smooth and unified experience for customers of the brand, strengthening their trust.
+	There was a significant increase in journey acquisitions and positive customer feedback after the implementation of these designs.
+</div>
+
+<h2 id="design-system">Design System and Interactive Journey</h2>
+<h3 id="design-system-problem">Problem</h3>
+<div class="article-section">
+	<p>Morses were looking to expand the Dot Dot Loans product, but had no way of quickly prototyping out new features.
+	At the time, they were relying on a third-party company to build out the DDL website.</p>
+	This meant that testing out new features, or even just getting an example of how they would look could sometimes take weeks. 
+	They needed a way to test out new features more quickly and a way to provide the third-party with a clearer reference point, so that there would be less need for revisions.
+</div>
+<h3 id="design-system-solution">Solution</h3>
+<div class="article-section">
+	The design system was built out with the intention of enabling faster prototyping of new features. 
+	It was created in Figma, based on assets from the existing Dot Dot Loans website and portal. 
+	Interactive components were modelled on existing interactions on the site.
+	{{ alpineCarousel({ carouselId: "des-sys-Carousel",
+					images: [
+						{src:"assets/images/case-studies/Morses/Dot-Dot/2Solution.webp"}
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
+	The design system was then used to build out screens for the existing customer portal and sales journeys available on Dot Dot Loans. 
+	The primary intent of this was to create a baseline to test new customer interactions on.
+	The secondary intent of this was to create more up to date employee training for customer agents, which could show them the most up to date screens that a customer would be working with. 
+	This was done by creating interactive Figma demos based on the customer journeys.
+	<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450px" src="https://embed.figma.com/proto/l5lKpkcBl5x742ctIOWKVN/DDL-Style-_-Portal-(Editable)?node-id=1395-13989&amp;node-type=canvas&amp;scaling=contain&amp;content-scaling=fixed&amp;page-id=1388%3A13948&amp;starting-point-node-id=1395%3A13989&amp;show-proto-sidebar=1&amp;embed-host=share" allowfullscreen=""></iframe>
+	<div class="btn row">
+		<a class="btn primary"
+					href="https://www.figma.com/proto/l5lKpkcBl5x742ctIOWKVN/DDL-Style-_-Portal-\(Editable\)?node-id=1395-13989&node-type=canvas&t=Lym7iIhknFv8ycng-9&scaling=contain&content-scaling=fixed&page-id=1388%3A13948&starting-point-node-id=1395%3A13989&show-proto-sidebar=1"
+					target="_blank" rel="noopener noreferrer">View Customer Journey Demos<i class="ri-arrow-right-s-fill"></i></a>
+	</div>
+</div>
+<h3 id="design-system-screens">Screens</h3>
+<div class="article-section">
+	{{ alpineCarousel({ carouselId: "screensCarousel",
+					images: [
+						{src:"assets/images/case-studies/Morses/Dot-Dot/Screens/screen1.webp",
+						caption: "Login | Click to view more"},
+						{src:"assets/images/case-studies/Morses/Dot-Dot/Screens/screen2.webp",
+						caption: "Home Screen | Click to view more"},
+						{src:"assets/images/case-studies/Morses/Dot-Dot/Screens/screen3.webp",
+						caption: "Approval | Click to view more"},
+						{src:"assets/images/case-studies/Morses/Dot-Dot/Screens/screen4.webp",
+						caption: "Active Loan | Click to view more"},
+						{src:"assets/images/case-studies/Morses/Dot-Dot/Screens/screen5.webp",
+						caption: "Inbox | Click to view more"},
+						{src:"assets/images/case-studies/Morses/Dot-Dot/Screens/screen6.webp",
+						caption: "Add to Home Screen | Click to view more"}
+						],
+					orientation: "slides-vert",
+					slideType: "slides-mobile-screens"
+				}) 
+	}}
+	A small selection of the screens created.
+</div>
+
+<h2 id="repayment-tool">Repayment Plan Tool</h2>
+<div class="article-section">
+	Designed a “Repayment Plan Tool” that would be seamlessly integrated into our contact form. 
+	Developed flows where user selects a query indicative of financial challenges i.e. “I am unable to make a payment”. 
+	<p>On selection, users are given the option to redirect to the Repayment Plan Tool.
+	This tool acted as an early intervention mechanism for users facing such difficulties and allowed them to independently access help even when a customer service agent was unavailable.</p>
+	
+	{{ alpineCarousel({ carouselId: "repayment-plan-Carousel",
+					images: [
+						{src:"assets/images/case-studies/Morses/Dot-Dot/4Repayment.webp"}
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
+</div>
+<h3 id="repayment-tool-screens">Screens</h3>
+<div class="article-section">
+	{{ alpineCarousel({ carouselId: "repaymentCarousel",
+					images: [
+						{src:"assets/images/case-studies/Morses/Dot-Dot/Repayment/Repay1.webp",
+						caption: "Opening the contact form"},
+						{src:"assets/images/case-studies/Morses/Dot-Dot/Repayment/Repay2.webp",
+						caption: "Selecting an option that indicates financial difficulty"},
+						{src:"assets/images/case-studies/Morses/Dot-Dot/Repayment/Repay3.webp",
+						caption: "Being redirected to the repayment tool"}
+						],
+					orientation: "slides-vert",
+					slideType: "slides-mobile-screens"
+				}) 
+	}}
+</div>
+<h3 id="repayment-tool-demo">Demo</h3>
+<div class="article-section">
+	<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450px" src="https://embed.figma.com/proto/7rMxT217dE4Nw5yz6xEupn/Repayment-Plan-Tool?node-id=74-16440&amp;node-type=canvas&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=74%3A15518&amp;starting-point-node-id=74%3A16440&amp;show-proto-sidebar=1&amp;embed-host=share" allowfullscreen=""></iframe>
+	<div class="btn row">
+		<a class="btn primary"
+					href="https://www.figma.com/proto/7rMxT217dE4Nw5yz6xEupn/Repayment-Plan-Tool?node-id=74-16440&node-type=canvas&t=fDEtU8RCiE0k1SRx-9&scaling=scale-down&content-scaling=fixed&page-id=74%3A15518&starting-point-node-id=74%3A16440&show-proto-sidebar=1"
+					target="_blank" rel="noopener noreferrer">View Repayment Plan Tool Prototypes<i class="ri-arrow-right-s-fill"></i></a>
+	</div>
+</div>
+
+<h2 id="maintenance-enhancements">Maintenance Enhancements</h2>
+<div class="article-section">
+	Conducted comprehensive maintenance on the DDL main website and customer portal, prioritising user-centric design and addressing key usability concerns. 
+	Improvements were conceptualised based on direct customer feedback, and statistics from HotJar.
+	<p><b>Notable enhancements include:</b></p>
+	<ul class="list-bullet">
+		<li>Implementation of collapsible sections on the Terms & Conditions page for improved readability.</li>
+		<li>Introduction of a dedicated “Money Worries” page and tab to assist financially unstable customers.</li>
+		<li>Addition of “Add to Homescreen” notices within the portal to encourage users to bookmark the site on their mobile devices.</li>
+	</ul>
+
+	{{ alpineCarousel({ carouselId: "maintenance-Carousel",
+					images: [
+						{src:"assets/images/case-studies/Morses/Dot-Dot/5Maintenance.webp"}
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
+</div>
+<h3 id="maintenance-demo">Demo</h3>
+<div class="article-section">
+	<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450px" src="https://embed.figma.com/proto/ECGjYEjfDSab2tYyG9ZfSk/Demos---DDL?scaling=scale-down&amp;show-proto-sidebar=1&amp;node-id=4-20126&amp;starting-point-node-id=4%3A20126&amp;embed-host=share" allowfullscreen=""></iframe>
+	<div class="row-column">
+			<div class="btn row">
+				<a class="btn primary"
+					href="https://www.figma.com/proto/ECGjYEjfDSab2tYyG9ZfSk/?scaling=scale-down&show-proto-sidebar=1"
+					target="_blank" rel="noopener noreferrer">View Maintenance Feature Prototypes<i class="ri-arrow-right-s-fill"></i></a>
+			</div>
+		</div>
+</div>
+
+<h2 id="testimonial-section">Testimonials</h2>
+	{{ filteredTestimonials({
+		listOfAll: testimonials,
+		filter: "Morses"
+	}) }}

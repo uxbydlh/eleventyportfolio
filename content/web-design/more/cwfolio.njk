@@ -1,0 +1,208 @@
+---js
+const layout = "layouts/post.njk";
+
+const eleventyNavigation = {
+	key: "Writers Folio",
+	parent: "More",
+	parentUrl: "/web-design/more"
+};
+
+const tags = ["project","web-design","dev","UXR","UX","UI","more-web"];
+
+const date = "2024-06-06";
+
+const title = "Writers Folio";
+const subheading = "Prospective creative writing folio for a client who specialised in magazines.";
+const bannerImg = "assets/images/case-studies/writer-folio/writerFolioBanner.webp";
+---
+{%- from 'inlineTable.njk' import inlineTable %}
+{%- from 'imageGallery.njk' import gallery %}
+{%- from 'alpineCarousel.njk' import alpineCarousel %}
+{%- from 'personas.njk' import personas %}
+{%- from 'filteredTestimonials.njk' import filteredTestimonials %}
+<img class="banner-image" src='{{bannerImg | toAbsoluteUrl}}'>
+
+<h2 id="disclaimer">Disclaimer</h2>
+<div class="article-section">
+	Client stopped responding upon template completion.
+	Linked site will contain placeholder and anonymised template data.
+</div>
+<div class="btn row">
+	<a class="btn primary"
+				href="https://writer-folio.neocities.org/"
+				target="_blank" rel="noopener noreferrer">View Site Template<i class="ri-arrow-right-s-fill"></i>
+	</a>
+</div>
+
+<h2 id="details">Details</h2>
+<div class="article-section">
+	{{ inlineTable ({
+			table: [
+				{
+					header: "Scope",
+					bodyItems: [
+						"Contract Work",
+						"Creator of design system",
+						"Full-site development from scratch",
+						"Client provided portfolio files"
+					]
+				},
+				{
+					header: "Role",
+					bodyItems: [
+						"Research",
+						"UX & UI design",
+						"Web Development"
+					]
+				},
+				{
+					header: "Tools",
+					bodyItems: [
+						"Figma",
+						"Figjam",
+						"VSCode",
+						"HTML",
+						"CSS",
+						"JS",
+						"Alpine"
+					]
+				}
+			]
+		})
+	}}
+</div>
+
+<h2 id="project-research">Research</h2>
+<h3>Presentation as shown to Client</h3>
+<p class="carousel-caption">Note: presentation has been censored in places in order to protect the identity of the client.</p>
+{{ alpineCarousel({ carouselId: "uxrCarousel",
+					images: [
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/0Title.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/1SiteGoals.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/2Research.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/3IssuesSolutions.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/4Structure.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/5Formatting.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/6Components.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/7Copy.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/8Relevance.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/9Categories.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/10Language.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/11Tone.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/12Aesthetics.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/13YourPotentialSite.webp"},
+						{src:"assets/images/case-studies/writer-folio/uxr-presentation/14Sketch.webp"}
+					],
+					orientation: "slides-horiz"
+				}) 
+	}}
+
+
+<h2 id="project-inspo">Project Inspirations</h2>
+{{ gallery({ galleryId: "moodhGal",
+					images: [
+						"assets/images/case-studies/writer-folio/visnovMoodBoard.webp"
+					]
+				})
+	}}
+<div class="article-section">
+	The client's illustrative style was soft and nostalgic.
+	The goal was to highlight this style while retaining a degree of professionalism so that the site could be used in a variety of work applications.
+	The client also had created many narrative-based Twine (TODO: ADD LINK) games and wanted to highlight those.
+	With all this in mind, I looked towards visual novel games for UI inspiration.
+</div>
+
+
+<h2 id="components">Key Components</h2>
+
+<h3 id="components-cards">Highlighted Project Cards</h3>
+{{ gallery({ galleryId: "projCardGal",
+					images: [
+						"assets/images/case-studies/writer-folio/components/cards/highlightCard1.webp",
+						"assets/images/case-studies/writer-folio/components/cards/highlightCard2.webp",
+						"assets/images/case-studies/writer-folio/components/cards/highlightCard3.webp"
+					]
+				})
+	}}
+<div class="article-section">
+	These cards were designed to resemble a typical visual novel dialogue screen. Their unique look helps them to stand out.
+</div>
+
+<h3 id="components-tabs">Sticky Tabs</h3>
+{{ gallery({ galleryId: "tabsGal",
+					images: [
+						"assets/images/case-studies/writer-folio/components/stickyTabs/projectTabs.webp",
+						"assets/images/case-studies/writer-folio/components/stickyTabs/storyTabs.webp"
+					]
+				})
+	}}
+<div class="article-section">
+	In the original CV, different works and their descriptions were listed in blue, graphic depictions of folders.
+	I decided to carry this idea through to the web portfolio, separating projects into their own "folders", with tabs that stuck to the top of the page as the user scrolled.
+	For longer works, like full articles and stories, this meant that the title and key actions such as "go back" remained visible at all times.
+</div>
+
+<h3 id="components-buttons">Icon Buttons</h3>
+<div class="section-row article-section">
+	<div class="row-column">
+		{{ gallery({ galleryId: "btnGal",
+					images: [
+						"assets/images/case-studies/writer-folio/components/buttons.webp"
+					]
+				})
+	}}
+	</div>
+	<div class="row-column">
+		Buttons with large, round icons were added to resemble those from several handheld visual novel games.
+		These allow the user to determine what action will be performed at a glance, whilst balancing the aesthetics between professionalism and fun.
+	</div>
+</div>
+
+<h2 id="screens">Screens</h2>
+
+<h3 id="screens-proto">Figma Prototype Screens</h3>
+
+{{ alpineCarousel({ carouselId: "protoCarousel",
+					images: [
+						{src:"assets/images/case-studies/writer-folio/figmaMockups/1-About.webp"},
+						{src:"assets/images/case-studies/writer-folio/figmaMockups/2-PublicationsCV.webp"},
+						{src:"assets/images/case-studies/writer-folio/figmaMockups/3-SocialMedia.webp"},
+						{src:"assets/images/case-studies/writer-folio/figmaMockups/4-CreativeWriting.webp"},
+						{src:"assets/images/case-studies/writer-folio/figmaMockups/5-Illustration.webp"},
+						{src:"assets/images/case-studies/writer-folio/figmaMockups/6-Interactive.webp"}
+						],
+						orientation: "slides-vert",
+						slideType: "slides-mobile-screens"
+				}) 
+			}}
+
+<div class="article-section">
+	Note: sections depicting the clients work have been blurred and censored.
+</div>
+
+<h3 id="screens-template">Final Template Site</h3>
+
+{{ alpineCarousel({ carouselId: "finalTempCarousel",
+					images: [
+						{src:"assets/images/case-studies/writer-folio/finalTemplate/1-Home.webp"},
+						{src:"assets/images/case-studies/writer-folio/finalTemplate/2-About.webp"},
+						{src:"assets/images/case-studies/writer-folio/finalTemplate/3-Publications.webp"},
+						{src:"assets/images/case-studies/writer-folio/finalTemplate/4-SocialMedia.webp"},
+						{src:"assets/images/case-studies/writer-folio/finalTemplate/5-Writing.webp"},
+						{src:"assets/images/case-studies/writer-folio/finalTemplate/6-Story.webp"},
+						{src:"assets/images/case-studies/writer-folio/finalTemplate/7-Illustration.webp"},
+						{src:"assets/images/case-studies/writer-folio/finalTemplate/8-Contact.webp"},
+						{src:"assets/images/case-studies/writer-folio/finalTemplate/9-Menu.webp"}
+						],
+						orientation: "slides-vert" 
+				}) 
+			}}
+
+<div class="btn row">
+	<a class="btn primary"
+				href="https://writer-folio.neocities.org/"
+				target="_blank" rel="noopener noreferrer">View Site Template<i class="ri-arrow-right-s-fill"></i>
+	</a>
+</div>
+
+

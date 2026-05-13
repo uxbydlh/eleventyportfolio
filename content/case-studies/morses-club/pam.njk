@@ -1,0 +1,170 @@
+---js
+const layout = "layouts/post.njk";
+
+const eleventyNavigation = {
+	key: "PAM",
+	parent: "Morses Club",
+	parentUrl: "/case-studies/Morses-Club/"
+};
+
+const tags = ["project","morses","case-study","brand","UXR","UX","UI"];
+
+const date = "2023-01-01";
+
+const title = "Principle Application Manager";
+const subheading = "Empowering MCL Employees with PAM for Efficient Customer Application Checks";
+const bannerImg = "/assets/images/case-studies/Morses/PAM/1Banner.webp";
+---
+
+{%- from 'alpineCarousel.njk' import alpineCarousel %}
+{%- from 'imageGallery.njk' import gallery %}
+{%- from 'filteredTestimonials.njk' import filteredTestimonials%}
+{%- from 'inlineTable.njk' import inlineTable %}
+
+<img class="banner-image" src='{{ bannerImg | toAbsoluteUrl}}'>
+<div class="article-section">
+	Internal tool created for Morses Club, with intent to replace external tools for additional customer application checks. Its implementation resulted in a 75% increase in acquisition journey leads while reducing dependency on third-party tools, leading to cost savings for the business.
+</div>
+<div class="btn row">
+		<a class="btn primary"
+			href="https://www.figma.com/proto/lkFi4IzOTT4JCdLZPHmFfz/?scaling=scale-down&show-proto-sidebar=1"
+			target="_blank" rel="noopener noreferrer">View Full Prototype<i class="ri-arrow-right-s-fill"></i></a>
+	</div>
+
+<h2 id="context">Context</h2>
+<div class="article-section">
+	Morses Club PLC was a UK consumer finance company that offered a variety of loan products including home collected credit and online lending. 
+	At the time of this project, Morses were making a push towards creating more internal tools that would empower their agents to process customer applications through an all-in-one system.
+</div>
+
+<h2 id="details">Details</h2>
+	{{ inlineTable ({
+			table: [
+				{
+					header: "Scope",
+					bodyItems: [
+						"Full-time",
+						"Improvement on existing product"
+					]
+				},
+				{
+					header: "Role",
+					bodyItems: [
+						"Concept",
+						"Research",
+						"UX & UI design"
+					]
+				},
+				{
+					header: "Tools",
+					bodyItems: [
+						"Figma",
+						"Figjam",
+						"HotJar",
+						"User Feedback Forms (Various)"
+					]
+				}
+			]
+		})
+	}}
+
+<h2 id="impact">Impact</h2>
+<div class="article-section">
+	PAM empowered MCL employees to aid customers with applications and bolstered risk investigation, ensuring alignment with Consumer Duty and FCA guidelines. Its implementation resulted in a 75% increase in acquisition journey leads while reducing dependency on third-party tools, leading to cost savings for the business.
+</div>
+
+<h2 id="problem">Problem</h2>
+<div class="article-section">
+	Previously, the customer application-checking process was fragmented, time-consuming and limited to specific managerial levels. This resulted in an unnecessarily prolonged and inconvenient journey for the customer.
+</div>
+<h3>Key Question</h3>
+<div class="article-section">
+	How can we reduce form-fatigue while still essentially keeping the same number of questions that we had before?
+</div>
+<h3 id="proposed-solution">Proposed Solution</h3>
+<div class="article-section">
+	{{ alpineCarousel({ carouselId: "oldNewFlowCarousel",
+					images: [
+						{src:"/assets/images/case-studies/Morses/PAM/2OldFlowNewFlow.webp"}
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+			}}
+	We proposed to create a unified process, enabling all necessary internal staff to conduct customer check-ins through streamlined question-and-answer forms. The aim was to simplify the process for increased accessibility and efficiency.
+</div>
+
+<h2 id="research">Research</h2>
+<div class="article-section">
+	Investigated the original MAP solution architecture to determine what features could be kept as is and what could be improved, cut or conglomerated.
+	Conducted Figjam-based Q&A sessions with Morses employees to prioritise essential customer information and features. This collaborative approach ensured alignment with user needs, enhancing the efficiency of feature prioritisation and ensuring a user-centric design focus.
+	{{ alpineCarousel({ carouselId: "comparisonCarousel",
+					images: [
+						{src:"assets/images/case-studies/Morses/PAM/Analysis.webp",
+						caption: "Click for full view"}
+						],
+					orientation: "slides-vert",
+					plurality: "single-image"
+				}) 
+	}}
+
+</div>
+<h3 id="ideation">Ideation</h3>
+<div class="article-section">
+	Developed two initial web-tool designs – a single-page solution and a multi-page solution. The single-page solution was determined to be too overwhelming, so we opted for navigation between multiple pages to answer the necessary forms.
+	Implemented iterative enhancements until all necessary features were incorporated. This iterative process allowed for continuous improvement, ensuring the final design included all essential features while refining usability and functionality based on users’ feedback and their evolving needs
+	{{ alpineCarousel({ carouselId: "ideationCarousel",
+					images: [
+						{src:"assets/images/case-studies/Morses/PAM/Ideation/ideation1.webp"},
+						{src:"assets/images/case-studies/Morses/PAM/Ideation/ideation2.webp"}
+						],
+					orientation: "slides-horiz"
+				}) 
+	}}
+</div>
+
+<h2 id="visual-development">Visual Development</h2>
+<h3 id="branding">Branding</h3>
+<div class="article-section">
+	<div class="section-row">
+		<div class="row-column">
+			{{ gallery ({ galleryId: "brandingGallery",
+					images: [
+							"/assets/images/case-studies/Morses/PAM/4VisDev.webp"
+						]
+				}) 
+			}}
+		</div>
+		<div class="row-column">
+			As an internal tool, the design did not require the same “flash” as that of the website. Simplicity was the aim from the start. The reduced need for strong branding was acknowledged, but there was still a desire to align with Morses’ colours.
+			Orange took on a primary role here, rather than its usual use as a secondary colour. This helped to maintain alignment with the brand, whilst differentiating it from what we would present to customers.
+			Consulting with employees throughout ensured strict prioritisation of necessary information and actions, enhancing clarity and usability within the interface.
+		</div>
+	</div>
+</div>
+
+<h3 id="component-library">Component Library</h3>
+<div class="article-section">
+	{{ alpineCarousel({ carouselId: "componentCarousel",
+					images: [
+						{src:"/assets/images/case-studies/Morses/PAM/5CompLib.webp"}
+						],
+					orientation: "slides-horiz",
+					plurality: "single-image"
+				}) 
+	}}
+	Established a Figma Component Library post-wireframe development, housing reusable elements for consistency and scalability across current and future designs.
+	This approach streamlined implementation for programmers and QA testers by ensuring cohesion across current and future designs. 
+	The library’s creation promoted design consistency, easting implementation and facilitating efficient testing and development without extensive oversight.
+</div>
+<h2 id="demos">Demos</h2>
+<div class="article-section">
+	<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450px" src="https://embed.figma.com/proto/lkFi4IzOTT4JCdLZPHmFfz/Demos---PAM?scaling=scale-down&amp;show-proto-sidebar=1&amp;node-id=5-7010&amp;starting-point-node-id=1%3A1256&amp;embed-host=share" allowfullscreen=""></iframe>
+</div>
+
+<h2 id="testimonial-section">Testimonials</h2>
+	{{ filteredTestimonials({
+		listOfAll: testimonials,
+		filter: "Morses"
+	}) }}
+
