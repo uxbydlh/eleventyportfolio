@@ -1,5 +1,5 @@
 export default {
-	title: "Give and Grow CIC",
+	title: "UX by DLH",
 	url: "https://uxbydlh.com/",
 	devUrl: "http://localhost:8080/",
 	language: "en",
