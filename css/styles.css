@@ -394,6 +394,11 @@ main:first-child {
   flex-direction: row !important;
 }
 
+.links-nextprev-prev h4 {
+  padding: 0;
+  text-align: left;
+}
+
 .card.links-nextprev-next {
   justify-content: end;
 }
@@ -401,6 +406,11 @@ main:first-child {
 .links-nextprev-next {
   flex-direction: row !important;
 	text-align: right;
+}
+
+.links-nextprev-next h4 {
+  padding: 0;
+  text-align: right;
 }
 
 .container {
