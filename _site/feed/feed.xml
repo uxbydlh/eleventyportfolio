@@ -5,19 +5,11 @@
   <subtitle>UX Design, Research, Development</subtitle>
   <link href="https://uxbydlh.com/feed/feed.xml" rel="self" />
   <link href="https://uxbydlh.com/" />
-  <updated>2023-01-23T00:00:00Z</updated>
+  <updated>2018-09-30T00:00:00Z</updated>
   <id>https://uxbydlh.com/</id>
   <author>
     <name>UXbyDLH</name>
   </author>
-  <entry>
-    <title>This is a fifth post (draft)</title>
-    <link href="https://uxbydlh.com/blog/fifthpost/" />
-    <updated>2023-01-23T00:00:00Z</updated>
-    <id>https://uxbydlh.com/blog/fifthpost/</id>
-    <content type="html">&lt;p&gt;This is a draft post&lt;/p&gt;
-</content>
-  </entry>
   <entry>
     <title>This is my fourth post</title>
     <link href="https://uxbydlh.com/blog/fourthpost/" />
