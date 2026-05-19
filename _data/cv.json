@@ -18,11 +18,11 @@
         "projects": [
             {
                 "title":"Creation Process",
-                "link": "web-design/Give-And-Grow/website-process/"
+                "link": "web-design/give-and-grow/website-process/"
             },
             {
                 "title":"Graphic Gallery",
-                "link": "web-design/Give-And-Grow/graphic-gallery/"
+                "link": "web-design/give-and-grow/graphic-gallery/"
             }
         ]
     },
@@ -45,15 +45,15 @@
         "projects": [
             {
                 "title":"View \"Help Me Save\"",
-                "link": "/case-studies/E-Save/Help-Me-Save/"
+                "link": "/case-studies/e-save/help-me-save/"
             },
             {
                 "title":"View Dashboard Changes",
-                "link": "/case-studies/E-Save/Dashboard-Changes/"
+                "link": "/case-studies/e-save/dashboard-changes/"
             },
             {
                 "title":"View \"Confirm Action\"",
-                "link": "/case-studies/E-Save/Confirm-Action/"
+                "link": "/case-studies/e-save/confirm-action/"
             }
         ]
     },
@@ -76,11 +76,11 @@
         "projects": [
             {
                 "title":"Website Redesign",
-                "link": "/web-design/Adenydd/"
+                "link": "/web-design/adenydd/"
             },
             {
                 "title": "Newsletter Shoutout",
-                "link": "/web-design/Adenydd/#newsletter"
+                "link": "/web-design/adenydd/#newsletter"
             }
         ]
     },
@@ -102,7 +102,7 @@
         "projects": [
             {
                 "title":"Creation Process",
-                "link": "/web-design/VED/"
+                "link": "/web-design/ved/"
             }
         ]
     },
@@ -125,7 +125,7 @@
         "projects": [
             {
                 "title":"Creation Process",
-                "link": "/web-design/DHH/"
+                "link": "/web-design/dhh/"
             }
         ]
     },
@@ -148,19 +148,19 @@
         "projects": [
             {
                 "title":"Dot Dot Loans",
-                "link": "case-studies/Morses-Club/DDL/"
+                "link": "case-studies/morses-club/ddl/"
             },
             {
                 "title":"Finance Portal",
-                "link": "case-studies/Morses-Club/Finance-Portal/"
+                "link": "case-studies/morses-club/finance-portal/"
             },
             {
                 "title":"Form Fatigue",
-                "link": "case-studies/Morses-Club/Form-Fatigue/"
+                "link": "case-studies/morses-club/form-fatigue/"
             },
             {
                 "title":"P.A.M",
-                "link": "case-studies/Morses-Club/PAM/"
+                "link": "case-studies/morses-club/pam/"
             }
         ]
     },
