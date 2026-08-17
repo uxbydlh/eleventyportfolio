@@ -1,0 +1,202 @@
+---js
+const layout = "layouts/post.njk";
+
+const eleventyNavigation = {
+    key: "William's Embrace",
+    parent: "More",
+    parentUrl: "/web-design/more"
+};
+
+const tags = ["project","web-design","web-builder","copy","squarespace","more-web"];
+
+const date = "2026-08-17";
+
+const title = "William's Embrace - Site Improvements";
+const subheading = "Web Design improvements, Copywriting, and Graphic Design for a Welsh baby loss charity.";
+const bannerImg = "#TODO";
+---
+{%- from 'inlineTable.njk' import inlineTable %}
+{%- from 'imageGallery.njk' import gallery %}
+{%- from 'filteredTestimonials.njk' import filteredTestimonials %}
+
+<img class="banner-image" src='{{bannerImg | toAbsoluteUrl}}'>
+<div class="article-section">
+    William's Embrace is a Swansea-based charity, creating free, bespoke memorial hand and foot castings for families experiencing baby loss. 
+    I had my first meeting with their founder, Danika, on the 23rd of June, 2026. During my time as a volunteer, I wrote copy for their web pages, 
+    redesigned the look of their Squarespace site, and created bespoke graphics for them to use across their site and social media pages.
+</div>
+<div class="btn row">
+    <a class="btn primary" href="{{'#TODO' | toAbsoluteUrl}}" target="_blank" rel="noopener noreferrer">Visit William's Embrace<i class="ri-arrow-right-s-fill"></i></a>
+    <a class="btn secondary" href="{{'#TODO' | toAbsoluteUrl}}" target="_blank" rel="noopener noreferrer">Donate<i class="ri-arrow-right-s-fill"></i></a>
+</div>
+
+<h2 id="details">Details</h2>
+	{{ inlineTable ({
+			table: [
+				{
+					header: "Scope",
+					bodyItems: [
+						"Volunteer - Part-time basis",
+						"Simple site redesign via web-builder",
+						"Creation of written and graphic content from scratch"
+					]
+				},
+				{
+					header: "Role",
+					bodyItems: [
+						"Web Designer",
+						"Copywriter",
+						"Graphic Designer"
+					]
+				},
+				{
+					header: "Tools",
+					bodyItems: [
+                        "Figma",
+						"Squarespace Website Builder",
+						"Adobe Illustrator",
+						"CSS"
+					]
+				}
+			]
+		})
+	}}
+
+<h2 id="web-design">Web Design</h2>
+<div class="article-section">
+    I created a selection of wireframes in Figma to present to Danika so that she could approve them for the redesign. 
+    The images below depict the "About" page at different stages in the redesign process.  
+    Simple navigation and clean layouts were prioritised, as the site was designed to be navigated by families in distress. 
+    The goal was to inform, not to overwhelm.  
+    Note the sketches for illustrated graphics in the wireframe iteration.
+    {{
+        gallery ({
+            galleryId: "wireGallery",
+            images: [
+                {src:"#TODO",
+                caption: "Original layout"},
+                {src:"#TODO",
+                caption: "Initial Wireframe"},
+                {src:"#TODO",
+                caption: "Final Layout"}
+            ]
+        })
+    }}
+    Alongside page redesign, I reworked their navigation by changing their header to better support sub-pages and providing relevant links to other sections of the site on the pages themselves. 
+    I also made improvements to their footer, adding a logo, page navigation, all contact info and a final referral CTA to draw attention back to the sites most important function. 
+    {{
+        gallery ({
+            galleryId: "footerGallery",
+            images: [
+                {src:"#TODO",
+                caption: "Original footer"},
+                {src:"#TODO",
+                caption: "Final footer"}
+            ]
+        })
+    }}
+    I also created a new page for this redesign, which explains the details of the casting process for those who may not understand it. 
+    This page is designed to put those who are interested in taking part in this process with their baby at ease by taking them through each step, with photographs, so they can see exactly what will happen.
+    {{
+        gallery ({
+            galleryId: "castGallery",
+            images: [
+                {src:"#TODO"}
+            ]
+        })
+    }}
+    <div class="btn row">
+        <a class="btn primary" href="{{'#TODO' | toAbsoluteUrl}}" target="_blank" rel="noopener noreferrer">Visit Casting Page<i class="ri-arrow-right-s-fill"></i></a>
+    </div>
+</div>
+
+<h2 id="copywriting">Copywriting</h2>
+<div class="article-section">
+    For this project, I drew on similar experiences I had writing for <a href="{{'#TODO' | toAbsoluteUrl}}">Adenydd</a>, to create copy that was warm, without being patronising. 
+    William's Embrace works in a highly sensitive area, so I wanted to ensure that those viewing the site felt they were being treated with the appropriate respect and sensitivity. 
+    I followed the supportive, compassionate tone that Danika had initially laid out, so that visitors would know that this charity was founded by someone who has lived through the experience of baby loss and doing this work from a genuine place of understanding and a desire to help other's going through the same. 
+    #TODO: QUOTE - SITE OPENING
+    I also tried to keep key information clear without compromising that warmth, ensuring that the fact that these services were <b>free</b> was emphasises whenever possible to do so. 
+    Other key information on the site was placed on it's own line, usually in a larger font size, to make it extra clear to visitors.
+    #TODO: QUOTE - FREE
+</div>
+
+<h2 id="graphic-design">Graphic Design</h2>
+<div class="article-section">
+    I created bespoke graphics to support the visual identity of the site.
+</div>
+<h3 id="graphic-design-logo">Logo</h3>
+<div class="article-section">
+    The original William's Embrace logo was created by Danika and features a line drawing of her own hand holding her baby, William's hand. 
+    This logo can be found on their packaging and on their desktop site.  
+    A smaller logo was required for a favicon, and for the mobile navbar. 
+    I created this small version of the logo in Adobe Illustrator.
+    {{
+        gallery ({
+            galleryId: "logoGallery",
+            images: [
+                {src:"#TODO",
+                caption: "Original Logo - Danika"},
+                {src:"#TODO",
+                caption: "Small Logo - Dorian"}
+            ]
+        })
+    }}
+</div>
+<h3 id="graphic-design-art">Illustrations</h3>
+<div class="article-section">
+    Based on Danika's original artwork, I created these vector line drawings in Adobe Illustrator to illustrate certain sections of the site. 
+    Each line drawing extends into an outer, circular frame, partially split to represent two arms giving an "embrace".
+    {{
+        gallery ({
+            galleryId: "artGallery",
+            images: [
+                {src:"#TODO",
+                caption: "Compassion"},
+                {src:"#TODO",
+                caption: "Dignity"},
+                {src:"#TODO",
+                caption: "Charity"},
+                {src:"#TODO",
+                caption: "Event"},
+                {src:"#TODO",
+                caption: "Remembrance"},
+                {src:"#TODO",
+                caption: "Midwives"},
+                {src:"#TODO",
+                caption: "Community"},
+                {src:"#TODO",
+                caption: "Admin"},
+                {src:"#TODO",
+                caption: "Hospitals"},
+                {src:"#TODO",
+                caption: "Bereavement"},
+                {src:"#TODO",
+                caption: "Families"}
+            ]
+        })
+    }}
+</div>
+
+<h2 id="maintenance">Maintenance</h2>
+<div class="article-section">
+    <ul class="list-bullet">
+        <li>
+            I migrated information from the original "News" page into blog posts that would automatically change and display 
+            as they were written, making the page easier to update with new events or posts by Danika or another, future volunteer.
+        </li>
+        <li>
+            I gathered images from William's Embrace's multiple social media channels to flesh out the visual content for the site. 
+            This resulted in the final web pages looking a lot more tied to the organisation and their branding.
+        </li>
+        <li>
+            I created some frames to highlight photographs of the trustees using the floral frame from the original logo.
+        </li>
+    </ul>
+</div>
+
+<h2 id="testimonial-section">Testimonials</h2>
+{{ filteredTestimonials({
+		listOfAll: testimonials,
+		filter: "William"
+	}) }}
