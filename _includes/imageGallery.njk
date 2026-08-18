@@ -6,7 +6,7 @@
             {%if params.images.length === 1%} single-image {%endif%}
             {{params.galleryId}}" >
     {% for image in params.images %}
-        <a rel="{{params.galleryId}}" class="swipebox" href="{{image.src | toAbsoluteUrl}}" title="">
+        <a rel="{{params.galleryId}}" class="swipebox" href="{{image.src | toAbsoluteUrl}}" title="{{image.caption}}">
             <img src="{{image.src | toAbsoluteUrl}}">
             {%if image.caption != null%}
                 <p class="carousel-caption">{{image.caption}}</p>

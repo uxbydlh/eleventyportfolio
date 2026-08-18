@@ -20,9 +20,10 @@ import pluginPDFembed from "eleventy-plugin-pdfembed";
 import pluginTOC from "eleventy-plugin-toc";
 
 //Ensure urls are converted to use site base (for images, navigation, etc.)
+//#TODO: change to url for final push
 import metadata from "./_data/metadata.js";
 const toAbsoluteUrl = (url) => {
-	return new URL (url, metadata.url).href;
+	return new URL (url, metadata.devUrl).href;
 }
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */

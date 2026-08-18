@@ -306,6 +306,26 @@ p {
   line-height: 1.6rem;
 }
 
+blockquote {
+  padding-inline: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-inline-start: 4px solid var(--border-primary);
+  border-inline-end: 4px solid var(--border-primary);
+  background-color: var(--surface-nav);
+}
+
+blockquote p {
+  font-family: var(--font-family-mono);
+  padding-bottom: 1rem;
+}
+
+blockquote cite {
+  display: inline-block;
+  width: 100%;
+  text-align: end;
+}
+
 /*#endregion TEXT FORMATTING*/
 
 main{
@@ -2883,6 +2903,7 @@ div:has(.embedded-google-form) {
 
 .swipe-gallery a {
   display: flex;
+  flex-direction: column;
   align-content: center;
   justify-content: center;
 

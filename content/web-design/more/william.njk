@@ -13,7 +13,7 @@ const date = "2026-08-17";
 
 const title = "William's Embrace - Site Improvements";
 const subheading = "Web Design improvements, Copywriting, and Graphic Design for a Welsh baby loss charity.";
-const bannerImg = "#TODO";
+const bannerImg = "assets/images/case-studies/William/WE-Banner.webp";
 ---
 {%- from 'inlineTable.njk' import inlineTable %}
 {%- from 'imageGallery.njk' import gallery %}
@@ -26,8 +26,8 @@ const bannerImg = "#TODO";
     redesigned the look of their Squarespace site, and created bespoke graphics for them to use across their site and social media pages.
 </div>
 <div class="btn row">
-    <a class="btn primary" href="{{'#TODO' | toAbsoluteUrl}}" target="_blank" rel="noopener noreferrer">Visit William's Embrace<i class="ri-arrow-right-s-fill"></i></a>
-    <a class="btn secondary" href="{{'#TODO' | toAbsoluteUrl}}" target="_blank" rel="noopener noreferrer">Donate<i class="ri-arrow-right-s-fill"></i></a>
+    <a class="btn primary" href="{{'https://www.williamsembrace.com/' | toAbsoluteUrl}}" target="_blank" rel="noopener noreferrer">Visit William's Embrace<i class="ri-arrow-right-s-fill"></i></a>
+    <a class="btn secondary" href="{{'https://www.williamsembrace.com/donate' | toAbsoluteUrl}}" target="_blank" rel="noopener noreferrer">Donate<i class="ri-arrow-right-s-fill"></i></a>
 </div>
 
 <h2 id="details">Details</h2>
@@ -73,11 +73,11 @@ const bannerImg = "#TODO";
         gallery ({
             galleryId: "wireGallery",
             images: [
-                {src:"#TODO",
+                {src:"assets/images/case-studies/William/About-Old-Desk.webp",
                 caption: "Original layout"},
-                {src:"#TODO",
+                {src:"assets/images/case-studies/William/About-Wireframe-Desk.webp",
                 caption: "Initial Wireframe"},
-                {src:"#TODO",
+                {src:"assets/images/case-studies/William/About-Current-Desk.webp",
                 caption: "Final Layout"}
             ]
         })
@@ -88,9 +88,9 @@ const bannerImg = "#TODO";
         gallery ({
             galleryId: "footerGallery",
             images: [
-                {src:"#TODO",
+                {src:"assets/images/case-studies/William/footer-old.webp",
                 caption: "Original footer"},
-                {src:"#TODO",
+                {src:"assets/images/case-studies/William/footer-current.webp",
                 caption: "Final footer"}
             ]
         })
@@ -101,25 +101,44 @@ const bannerImg = "#TODO";
         gallery ({
             galleryId: "castGallery",
             images: [
-                {src:"#TODO"}
+                {src:"assets/images/case-studies/William/Castings-page.webp",
+                caption:"Casting page content"}
             ]
         })
     }}
     <div class="btn row">
-        <a class="btn primary" href="{{'#TODO' | toAbsoluteUrl}}" target="_blank" rel="noopener noreferrer">Visit Casting Page<i class="ri-arrow-right-s-fill"></i></a>
+        <a class="btn primary" href="{{'https://www.williamsembrace.com/castings' | toAbsoluteUrl}}" target="_blank" rel="noopener noreferrer">Visit Casting Page<i class="ri-arrow-right-s-fill"></i></a>
     </div>
 </div>
 
 <h2 id="copywriting">Copywriting</h2>
 <div class="article-section">
-    For this project, I drew on similar experiences I had writing for <a href="{{'#TODO' | toAbsoluteUrl}}">Adenydd</a>, to create copy that was warm, without being patronising. 
-    William's Embrace works in a highly sensitive area, so I wanted to ensure that those viewing the site felt they were being treated with the appropriate respect and sensitivity. 
-    I followed the supportive, compassionate tone that Danika had initially laid out, so that visitors would know that this charity was founded by someone who has lived through the experience of baby loss and doing this work from a genuine place of understanding and a desire to help other's going through the same. 
-    #TODO: QUOTE - SITE OPENING
-    I also tried to keep key information clear without compromising that warmth, ensuring that the fact that these services were <b>free</b> was emphasises whenever possible to do so. 
-    Other key information on the site was placed on it's own line, usually in a larger font size, to make it extra clear to visitors.
-    #TODO: QUOTE - FREE
+    <p>
+        For this project, I drew on similar experiences I had writing for <a class="inline" href="{{'/web-design/adenydd' | toAbsoluteUrl}}">Adenydd</a>, to create copy that was warm, without being patronising.
+        William's Embrace works in a highly sensitive area, so I wanted to ensure that those viewing the site felt they were being treated with the appropriate respect and sensitivity.
+        I followed the supportive, compassionate tone that Danika had initially laid out, so that visitors would know that this charity was founded by someone who has lived through the experience of baby loss and doing this work from a genuine place of understanding and a desire to help other's going through the same.
+    </p>
 </div>
+    <blockquote>
+        <p>
+            "<b>In moments filled with shock, grief and silence, small acts of care can mean the world.</b><br>
+            At William’s Embrace, we create bespoke memorial hand and foot castings for families experiencing the heartbreak of baby loss - offering something tangible to hold onto when words are not enough.<br>
+            William’s Embrace exists to gently support families during these most difficult times, helping to preserve precious memories though free, bespoke memorial castings, made with dignity, respect, and love."
+        </p>
+        <cite>Homepage, William’s Embrace</cite>
+    </blockquote>
+<div class="article-section">
+    <p>
+        I also tried to keep key information clear without compromising that warmth, ensuring that the fact that these services were <b>free</b> was emphasises whenever possible to do so.
+        Other key information on the site was placed on it's own line, usually in a larger font size, to make it extra clear to visitors.
+    </p>
+</div>
+   <blockquote>
+        <p>
+            "We support families affected by pregnancy and baby loss by providing <b>free, personalised memorial castings</b> that help preserve your precious memories and offer comfort in times of grief."
+        </p>
+        <cite>Services, William’s Embrace</cite>
+    </blockquote>
 
 <h2 id="graphic-design">Graphic Design</h2>
 <div class="article-section">
@@ -135,9 +154,9 @@ const bannerImg = "#TODO";
         gallery ({
             galleryId: "logoGallery",
             images: [
-                {src:"#TODO",
+                {src:"assets/images/case-studies/William/illustrations/Logo.webp",
                 caption: "Original Logo - Danika"},
-                {src:"#TODO",
+                {src:"assets/images/case-studies/William/illustrations/LogoSmall.webp",
                 caption: "Small Logo - Dorian"}
             ]
         })
@@ -151,27 +170,27 @@ const bannerImg = "#TODO";
         gallery ({
             galleryId: "artGallery",
             images: [
-                {src:"#TODO",
+                {src:"assets/images/case-studies/William/illustrations/Compassion.webp",
                 caption: "Compassion"},
-                {src:"#TODO",
+                {src:"assets/images/case-studies/William/illustrations/Dignity.webp",
                 caption: "Dignity"},
-                {src:"#TODO",
+                {src:"assets/images/case-studies/William/illustrations/Charity.webp",
                 caption: "Charity"},
-                {src:"#TODO",
+                {src:"assets/images/case-studies/William/illustrations/Event.webp",
                 caption: "Event"},
-                {src:"#TODO",
+                {src:"assets/images/case-studies/William/illustrations/Remembrance.webp",
                 caption: "Remembrance"},
-                {src:"#TODO",
+                {src:"assets/images/case-studies/William/illustrations/Midwives.webp",
                 caption: "Midwives"},
-                {src:"#TODO",
+                {src:"assets/images/case-studies/William/illustrations/Community.webp",
                 caption: "Community"},
-                {src:"#TODO",
+                {src:"assets/images/case-studies/William/illustrations/Admin.webp",
                 caption: "Admin"},
-                {src:"#TODO",
+                {src:"assets/images/case-studies/William/illustrations/Hospitals.webp",
                 caption: "Hospitals"},
-                {src:"#TODO",
+                {src:"assets/images/case-studies/William/illustrations/Bereavement.webp",
                 caption: "Bereavement"},
-                {src:"#TODO",
+                {src:"assets/images/case-studies/William/illustrations/Families.webp",
                 caption: "Families"}
             ]
         })
